@@ -1,1 +1,1 @@
-// client side javascript for Messages page
+// client side javascript for messages page

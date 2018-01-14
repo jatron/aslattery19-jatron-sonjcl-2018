@@ -1,1 +1,1 @@
-// client side javascript for MealMatch page
+// client side javascript for meal_match page
