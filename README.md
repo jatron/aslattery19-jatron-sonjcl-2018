@@ -1,4 +1,4 @@
-# Instruction to run the server
+# Instructions to run the server
 
 Enter the following commands in your terminal
 
