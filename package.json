@@ -19,5 +19,8 @@
   "homepage": "https://github.com/mit6148/aslattery19-jatron-sonjcl-2018#readme",
   "dependencies": {
     "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.11"
   }
 }
