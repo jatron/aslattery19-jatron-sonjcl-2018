@@ -2,9 +2,11 @@
 const http = require('http');
 const bodyParser = require('body-parser');
 const express = require('express');
+const session = require('express-session');
 
 // local dependencies
 const db = require('./db');
+const passport = require('./passport');
 const views = require('./routes/views');
 const api = require('./routes/api');
 
@@ -14,6 +16,36 @@ const app = express();
 // Use middleware that parses urlencoded bodies and json
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+// set up sessions
+app.use(session({
+  secret: 'session-secret',
+  resave: 'false',
+  saveUninitialized: 'true'
+}));
+
+// hook up passport
+app.use(passport.initialize());
+app.use(passport.session());
+
+// authentication routes
+app.get('/auth/facebook', passport.authenticate('facebook'));
+
+app.get(
+  '/auth/facebook/callback',
+  passport.authenticate(
+    'facebook',
+    { failureRedirect: '/' }
+  ),
+  function(req, res) {
+    res.redirect('/meal_match?' + req.user._id);
+  }
+);
+
+app.get('/logout', function(req, res) {
+  req.logout();
+  res.redirect('/');
+});
 
 // set routes
 app.use('/', views);
