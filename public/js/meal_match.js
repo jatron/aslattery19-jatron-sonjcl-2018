@@ -12,4 +12,6 @@ function renderUserData(user) {
   document.body.appendChild(nameContainer);
 }
 
+function 
+
 main();
