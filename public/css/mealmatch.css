@@ -17,7 +17,7 @@
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .column {
     flex: 50%;
     max-width: 50%;
@@ -31,3 +31,38 @@
     max-width: 100%;
   }
 }
+
+.card {
+  width:400px;
+  height: 400px;
+}
+.card-img-top{
+  width:350px;
+  height:350px;
+}
+
+/* position information icon */
+.fa-info-circle {
+  font-size: 40px;
+  color: white;
+}
+
+.btn {
+  background: gray;
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
+.btn-group {
+  position: absolute;
+  width: 300px;
+  top:300px;
+  left:225px;
+}
+
+
+
+
