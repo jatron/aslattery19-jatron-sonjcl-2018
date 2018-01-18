@@ -39,7 +39,7 @@ get('api/meal_author_profile', {mealKey : String}, successCallback, failureCallb
       {
         key           :   String,
         url           :   String,
-        caption       :   String,
+        tagline       :   String,
         description   :   String,
         ingredients   :   String,
         allergens     :   String
@@ -68,12 +68,12 @@ get('api/profile', {userId : String}, successCallback, failureCallback);
   school            :   String,
   bio               :   String,
   profilePicture    :   String,
-  meals            :
+  meals             :
     [
       {
         key           :   String,
         url           :   String,
-        caption       :   String,
+        tagline       :   String,
         description   :   String,
         ingredients   :   String,
         allergens     :   String
@@ -97,7 +97,7 @@ post('api/upload_meal', {userId : String,
   meal :
     {
       path          :   String,
-      caption       :   String,
+      tagline       :   String,
       description   :   String,
       ingredients   :   String,
       allergens     :   String
