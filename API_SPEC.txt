@@ -1,8 +1,8 @@
 # Meal Match Page
 
-get(‘api/images’, {}, successCallback, failureCallback);
+get(‘api/meals’, {}, successCallback, failureCallback);
 {
-  'images' : [
+  'meals' : [
     {
       key           :   String,
       url           :   String,
@@ -22,19 +22,19 @@ get(‘api/images’, {}, successCallback, failureCallback);
   ]
 }
 
-post('api/like', {userId : String, imageKey : String}, successCallback, failureCallback);
+post('api/like', {userId : String, mealKey : String}, successCallback, failureCallback);
 {
   success : Number
 }
 
-get('api/image_author_profile', {imageKey : String}, successCallback, failureCallback);
+get('api/meal_author_profile', {mealKey : String}, successCallback, failureCallback);
 {
   userId            :   String,
   name              :   String,
   school            :   String,
   bio               :   String,
   profilePicture    :   String,
-  images            :
+  meals            :
     [
       {
         key           :   String,
@@ -54,7 +54,7 @@ get('api/image_author_profile', {imageKey : String}, successCallback, failureCal
     ]
 }
 
-post('api/unlike', {userId : String, imageKey : String}, successCallback, failureCallback);
+post('api/unlike', {userId : String, mealKey : String}, successCallback, failureCallback);
 {
   success : Number
 }
@@ -68,7 +68,7 @@ get('api/profile', {userId : String}, successCallback, failureCallback);
   school            :   String,
   bio               :   String,
   profilePicture    :   String,
-  images            :
+  meals            :
     [
       {
         key           :   String,
@@ -93,8 +93,8 @@ post('api/bio', {userId : String, bio : String}, successCallback, failureCallbac
   success : Number
 }
 
-post('api/upload_image', {userId : String,
-  image :
+post('api/upload_meal', {userId : String,
+  meal :
     {
       path          :   String,
       caption       :   String,
@@ -107,7 +107,7 @@ post('api/upload_image', {userId : String,
   success : Number
 }
 
-post('api/delete_image', {imageKey : String}, successCallback, failureCallback);
+post('api/delete_meal', {mealKey : String}, successCallback, failureCallback);
 {
   success : Number
 }
