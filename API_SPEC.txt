@@ -1,4 +1,4 @@
-# Meal Match Page
+################################################### Meal Match Page ###################################################
 
 get(‘api/meals’, {}, successCallback, failureCallback);
 {
@@ -22,7 +22,7 @@ get(‘api/meals’, {}, successCallback, failureCallback);
   ]
 }
 
-post('api/like', {userId : String, mealKey : String}, successCallback, failureCallback);
+post('api/like', {userId : String, mealKey : String}, successCallback, failureCallback); // Note: userId is user that is currently logged in 
 {
   success : Number
 }
@@ -59,7 +59,7 @@ post('api/unlike', {userId : String, mealKey : String}, successCallback, failure
   success : Number
 }
 
-# Profile Page
+################################################### Profile Page ###################################################
 
 get('api/profile', {userId : String}, successCallback, failureCallback);
 {
@@ -112,7 +112,7 @@ post('api/delete_meal', {mealKey : String}, successCallback, failureCallback);
   success : Number
 }
 
-# Messages Page
+################################################### Messages Page ###################################################
 
 get('api/matches', {userId : String}, successCallback, failureCallback);
 {
