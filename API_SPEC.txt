@@ -1,6 +1,6 @@
 # Meal Match Page
 
-get(‘api/images’, {}, successCallback, failureCallback);
+get(‘api/images’, {userId : String}, successCallback, failureCallback);
 {
   'images' : [
     {
