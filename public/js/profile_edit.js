@@ -1,4 +1,12 @@
-// client side javascript for Profile page
+/*
+To be handled: make editpage responsive to edits:
+let user 
+        type into bio/give input
+        add meals (image, name, allergens)
+        delete meals
+         
+*/
+
 function main() {
   const profileId = window.location.search.substring(1);
   get('/api/user', {'_id': profileId}, function(profileUser) {
@@ -10,29 +18,29 @@ function main() {
 }
 
 function renderUserData(user) {
-	// rendering name
-	const nameContainer = document.getElementById('name-container');
-	const nameHeader = document.createElement('h1');
-	nameHeader.innerHTML = user.name;
-	nameContainer.prepend(nameHeader);
+    // rendering name
+    const nameContainer = document.getElementById('name-container');
+    const nameHeader = document.createElement('h1');
+    nameHeader.innerHTML = user.name;
+    nameContainer.prepend(nameHeader);
 
-	// rendering profile image
-	const profileImage = document.getElementById('profile-image');
-	profileImage.style = 'background-image:url(https://i.pinimg.com/736x/98/e0/7d/98e07decc7c1ca58236995de3567e46a--cat-shirts-kitties-cutest.jpg)';
+    // rendering profile image
+    const profileImage = document.getElementById('profile-image');
+    profileImage.style = 'background-image:url(https://i.pinimg.com/736x/98/e0/7d/98e07decc7c1ca58236995de3567e46a--cat-shirts-kitties-cutest.jpg)';
 
-	// rendering cookbook
-	const cookbookCard = document.getElementById('cookbook-card');
+    // rendering cookbook
+    const cookbookCard = document.getElementById('cookbook-card');
 
     // rendering meals list for cookbook
     const mealCount = user.meals.length;
 
     // let mealList = document.createElement('div');
 
-	user.meals.forEach(renderMeals);
+    user.meals.forEach(renderMeals);
 
 // Use bootstrap, see how to make a grid
-	function renderMeals(meal, index, arr) {
-		// let li = document.createElement('li');
+    function renderMeals(meal, index, arr) {
+        // let li = document.createElement('li');
         const card = document.createElement('div');
         card.setAttribute('id', meal.name);
         card.className = 'mt-4';
@@ -97,10 +105,10 @@ function renderUserData(user) {
         };
 
         cookbookCard.appendChild(card);
-		// mealList.appendChild(card);
+        // mealList.appendChild(card);
     };
 
-	// cookbookCard.appendChild(mealCards);
+    // cookbookCard.appendChild(mealCards);
 
 }
 

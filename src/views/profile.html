@@ -1,1 +1,76 @@
-<!-- html for profile page -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Profile Page</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <!-- RESOLVE THIS!! add style sheet-->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="navbar-brand">Let's Eat</div>
+      <div class="navbar-nav" id="nav-item-container">
+        <!-- navbar items are inserted here -->
+      </div>
+    </nav>
+
+      <!-- Test dropdown menu -->
+     <!--  <div class="dropdown">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+          Dropdown button
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Link 1</a>
+          <a class="dropdown-item" href="#">Link 2</a>
+          <a class="dropdown-item" href="#">Link 3</a>
+        </div>
+      </div> -->
+
+
+    <div class="container text-center" id="profile-container">
+      <div class="large-profile-container text-center my-4">
+        <div class="circle-avatar" id="profile-image"></div>
+      </div>
+      <hr>
+      <div id="name-container">
+        <!-- name inserted here -->
+        <div class="container">
+          <a href="profile_edit" class="btn" role="button">Edit Profile</a>
+        </div>
+      </div>
+      <div class="media">
+        <div class="col-6">
+          <img src="http://www.joewigdahl.com/wp-content/uploads/MG_2407-906x640.jpg" class="img-fluid rounded media-object" style="width: 50%">
+        </div>
+        <div class="col-6">
+          <h4 class="media-heading">Anon</h4>
+          <br>
+          <div class="text" id="profile-description"> 
+            Pie, my name is Anon!
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-12">
+          <h4>My Favorite foods</h4>
+          <br>
+          <div class="" id="cookbook-card">
+              <!-- favorite foods here -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+
+  <!-- added jquery script -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+
+  <script src="/static/js/api.js"></script>
+  <script src="/static/js/navbar.js"></script>
+  <script src="/static/js/profile.js"></script>
+</html>
