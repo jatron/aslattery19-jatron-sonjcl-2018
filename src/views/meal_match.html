@@ -14,10 +14,33 @@
 
 FORMAT FOR ELEMENT ID's
 
-card: 'user-title'
-info button: 'user-title-info'
-info overlay: 'user-title-info-overlay'
-check icon: 'user-title-likeIcon'
+card: 'imgKey'
+info button: 'imgKey-info'
+info overlay: 'imgKey-info-overlay'
+check icon: 'imgKey-likeIcon'
+
+
+FORMAT FROM DATABASE:
+
+json {
+    url:
+    caption:
+    description:
+    ingredients:
+    allergens:
+}
+
+need:
+-image
+-caption
+-description (*)
+-ingredients (*)
+-allergens   (*)
+
+
+send to database:
+-id for user logged in
+-key for image that they liked
 
 -->
   
@@ -144,25 +167,9 @@ check icon: 'user-title-likeIcon'
     </div>
   </div>
 
-
-<!-- jQuery Code 
-
-<script type="text/javascript">
-
-    $(document).ready(function(){
-
-        $("img").click(function() {
-            alert("this is working!");
-            if($(this).hasClass('selected')) {
-                $(this).removeClass('selected');
-            }
-            else {  
-                $(this).addClass('selected');
-            }
-    });
-
-    }); 
-</script>  end of jQuery code --> 
+    <div class = 'next-button-div'>
+        <button type="button" id='next-button' class="next-button"><i class="fa fa-arrow-circle-o-right" aria-hidden="true" style="font-size:50px"></i></button>
+    </div>
 
 <!-- javascript scripts -->
 <script src="https://ajax.googleapis.com/ajax/libs/dojo/1.13.0/dojo/dojo.js"></script>

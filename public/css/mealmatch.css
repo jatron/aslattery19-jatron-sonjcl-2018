@@ -4,11 +4,11 @@
   padding: 0 4px;
 }
 
-/* Create four equal columns that sits next to each other */
+/* Create three equal columns that sits next to each other */
 .column {
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
+  flex: 33%;
+  max-width: 33%;
+  padding: 0px;
 }
 
 .column img {
@@ -16,11 +16,12 @@
   vertical-align: middle;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
+/* Responsive layout - makes a two column-layout instead of three columns */
 @media (max-width: 1000px) {
   .column {
     flex: 50%;
-    max-width: 50%;
+    max-width: 100%;
+    
   }
 }
 
@@ -35,10 +36,12 @@
 .card {
   width:350px;
   height: 350px;
+  padding-bottom:10px;
 }
 .card-img-top{
   width:350px;
   height:350px;
+  padding-top: 20px:;
 }
 
 
@@ -48,6 +51,8 @@
   color: white;
 }
 
+
+/* BUTTONS */
 .btn {
   background: gray;
   border: none; /* Remove borders */
@@ -63,6 +68,25 @@
   top:300px;
   left:225px;
 }
+
+.next-button-div {
+  position: fixed;
+  bottom: 0;
+  left: 90%;
+  font-size: 40px;
+  padding-left: 0px;
+}
+
+#next-button {
+  background: green;
+  color:white;
+  width: 100px;
+  height: 75px;
+  text-align: center;
+  line-height: 20px; 
+}
+
+
 
 .selected {
   border-style: solid;

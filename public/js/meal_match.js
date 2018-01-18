@@ -1,8 +1,12 @@
 function main() {
   const profileId = window.location.search.substring(1);
-  get('/api/user', {'_id': profileId}, function(profileUser) {
-    renderUserData(profileUser);
+    get('/api/meals', {'_id': profileId}, function(mealsData) {
+        console.log(mealsData);
+  }, function(){
+        console.log("failure");
   });
+
+
 }
 
 function renderUserData(user) {
@@ -50,6 +54,18 @@ for (var j = 0; j < infoButtons.length; j++) {
         
     });
 }
+
+const profileButtons = document.getElementsByClassName("profile-button")
+for (var k = 0; k < profileButtons.length; k++) {
+    profileButtons[k].addEventListener("click", function(){
+        alert("display profile info here")
+    })
+}
+
+const nextButton = document.getElementById("next-button");
+nextButton.addEventListener("click", function(){
+    alert("refresh page and sent new GET request");
+})
 
 
 
