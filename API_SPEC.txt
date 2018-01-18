@@ -2,7 +2,7 @@
 
 get(‘api/meals’, {}, successCallback, failureCallback);
 {
-  'meals' : [
+  'meals' : [   // this is an array of 15 meals
     {
       key           :   String,    // unique id for the meal
       url           :   String,    // image url (src)
