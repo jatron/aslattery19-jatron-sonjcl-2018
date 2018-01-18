@@ -4,13 +4,13 @@ get(‘api/meals’, {}, successCallback, failureCallback);
 {
   'meals' : [
     {
-      key           :   String,
-      url           :   String,
-      authorName    :   String,
-      caption       :   String,
-      description   :   String,
-      ingredients   :   String,
-      allergens     :   String
+      key           :   String,    // unique id for the meal
+      url           :   String,    // image url (src)
+      authorName    :   String,    // name of person who uploaded meal
+      tagline       :   String,    // short tagline describing meal  (Alexis: think of it as a title)
+      description   :   String,    // description for the meal 
+      ingredients   :   String,    // 
+      allergens     :   String     // NOTE: is a string for now, but we may change it to an array later
     },
     {
       ...
