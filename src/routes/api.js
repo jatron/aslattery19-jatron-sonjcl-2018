@@ -42,6 +42,23 @@ router.get('/user', function(req, res) {
     })
 });
 
+// who am i (from catbook)
+router.get('/whoami', function(req, res) {
+	res.send({ _id: req.query._id,
+      user:
+		{	name: 'Johnny Cash',
+			image: 'https://fthmb.tqn.com/ggyEhoAmPjVIl4I8PwohsgfjU-E=/768x0/filters:no_upscale()/Made-of-Money-by-Jan-Stromme-GettyImages-641601160-59f4f8f2aad52b001048a0f2.jpg',
+			school: 'Money Insitute of Technology'
+		}
+    })
+  // if(req.isAuthenticated()){
+  //   res.send(req.user);
+  // }
+  // else{
+  //   res.send({});
+});
+
+
 /*
 
 requests for profile page:

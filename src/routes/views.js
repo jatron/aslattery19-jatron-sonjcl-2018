@@ -19,4 +19,8 @@ router.get('/profile_edit', function(req, res) {
   res.sendFile('profile_edit.html', { root: 'src/views' });
 });
 
+router.get('/profile_new_meal', function(req, res) {
+  res.sendFile('profile_new_meal.html', { root: 'src/views' });
+});
+
 module.exports = router;

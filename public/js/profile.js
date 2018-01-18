@@ -7,6 +7,7 @@ function main() {
   get('/api/whoami', {}, function(user) {
     renderNavbar(user);
   });
+
 }
 
 function renderUserData(user) {
@@ -17,8 +18,8 @@ function renderUserData(user) {
 	nameContainer.prepend(nameHeader);
 
 	// rendering profile image
-	const profileImage = document.getElementById('profile-image');
-	profileImage.style = 'background-image:url(https://i.pinimg.com/736x/98/e0/7d/98e07decc7c1ca58236995de3567e46a--cat-shirts-kitties-cutest.jpg)';
+	// const profileImage = document.getElementById('profile-image');
+	// profileImage.style = 'background-image:url(https://i.pinimg.com/736x/98/e0/7d/98e07decc7c1ca58236995de3567e46a--cat-shirts-kitties-cutest.jpg)';
 
 	// rendering cookbook
 	const cookbookCard = document.getElementById('cookbook-card');

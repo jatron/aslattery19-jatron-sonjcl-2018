@@ -65,6 +65,15 @@ function renderUserData(user) {
         renderDropdown(meal.allergens, 'allergens');
         renderDropdown(meal.ingredients, 'ingredients');
 
+        const deleteBtn = document.createElement('button');
+        deleteBtn.className = 'btn delete-btn';
+        deleteBtn.setAttribute('type', 'button');
+        deleteBtn.innerHTML = 'Delete';
+        deleteBtn.addEventListener("click", function(){
+            deleteBtn.innerHTML = 'Deleted!';
+            // delete image here/send request to server to delete, reload page
+        });
+        btnBox.appendChild(deleteBtn);
 
         // render dropdown button
         function renderDropdown(item, itemName) {
@@ -113,3 +122,4 @@ function renderUserData(user) {
 }
 
 main();
+
