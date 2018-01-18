@@ -1,0 +1,134 @@
+# Meal Match Page
+
+get(‘api/images’, {}, successCallback, failureCallback);
+{
+  'images' : [
+    {
+      key           :   String,
+      url           :   String,
+      authorName    :   String,
+      caption       :   String,
+      description   :   String,
+      ingredients   :   String,
+      allergens     :   String
+    },
+    {
+      ...
+    },
+    {
+      ...
+    },
+    ...
+  ]
+}
+
+post('api/like', {userId : String, imageKey : String}, successCallback, failureCallback)
+{
+  success : Number
+}
+
+get('api/image_author_profile', {imageKey : String}, successCallback, failureCallback)
+{
+  userId            :   String,
+  name              :   String,
+  school            :   String,
+  bio               :   String,
+  profilePicture    :   String,
+  images            :
+    [
+      {
+        key           :   String,
+        url           :   String,
+        caption       :   String,
+        description   :   String,
+        ingredients   :   String,
+        allergens     :   String
+      },
+      {
+        ...
+      },
+      {
+        ...
+      },
+      ...
+    ]
+}
+
+post('api/unlike', {userId : String, imageKey : String}, successCallback, failureCallback)
+{
+  success : Number
+}
+
+# Profile Page
+
+get('api/profile', {userId : String}, successCallback, failureCallback)
+{
+  userId            :   String,
+  name              :   String,
+  school            :   String,
+  bio               :   String,
+  profilePicture    :   String,
+  images            :
+    [
+      {
+        key           :   String,
+        url           :   String,
+        caption       :   String,
+        description   :   String,
+        ingredients   :   String,
+        allergens     :   String
+      },
+      {
+        ...
+      },
+      {
+        ...
+      },
+      ...
+    ]
+}
+
+post('api/bio', {userId : String, bio : String}, successCallback, failureCallback)
+{
+  success : Number
+}
+
+post('api/upload_image', {userId : String,
+  image :
+    {
+      path          :   String,
+      caption       :   String,
+      description   :   String,
+      ingredients   :   String,
+      allergens     :   String
+    }
+  }, successCallback, failureCallback)
+{
+  success : Number
+}
+
+post('api/delete_image', {imageKey : String}, successCallback, failureCallback)
+{
+  success : Number
+}
+
+# Messages Page
+
+get('api/matches', {userId : String}, successCallback, failureCallback)
+{
+  matches            :
+    [
+      {
+        userId  :   String,
+        name    :   String
+      },
+      {
+        ...
+      },
+      {
+        ...
+      },
+      ...
+    ]
+}
+
