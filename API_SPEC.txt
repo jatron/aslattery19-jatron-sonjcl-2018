@@ -33,8 +33,8 @@ get('api/meal_author_profile', {mealKey : String}, successCallback, failureCallb
   name              :   String,
   school            :   String,
   bio               :   String,
-  url               :   String,
-  meals             :
+  profilePicture    :   String,
+  meals            :
     [
       {
         key           :   String,
@@ -67,7 +67,7 @@ get('api/profile', {userId : String}, successCallback, failureCallback);
   name              :   String,
   school            :   String,
   bio               :   String,
-  url               :   String,
+  profilePicture    :   String,
   meals             :
     [
       {
