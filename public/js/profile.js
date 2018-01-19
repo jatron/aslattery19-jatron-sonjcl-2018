@@ -1,37 +1,47 @@
 // client side javascript for Profile page
 function main() {
-  const profileId = window.location.search.substring(1);
-  get('/api/user', {'_id': profileId}, function(profileUser) {
-    renderUserData(profileUser);
-  });
-  get('/api/whoami', {}, function(user) {
-    renderNavbar(user);
-  });
+    const profileId = window.location.search.substring(1); // returns url query w/o "?"
 
+    // get all profile info needed to render user profile
+    // add user string later from profileId
+    get('api/profile', {userId : profileId}, function(profileUser) {
+    renderUserData(profileUser);
+    }, function() {
+    console.log("Couldn't access user data :(");
+    });
+
+    get('/api/whoami', {}, function(user) {
+    renderNavbar(user);
+    });
+
+    
 }
+
+
 
 function renderUserData(user) {
 	// rendering name
 	const nameContainer = document.getElementById('name-container');
 	const nameHeader = document.createElement('h1');
 	nameHeader.innerHTML = user.name;
-	nameContainer.prepend(nameHeader);
+    nameContainer.prepend(nameHeader);
 
-	// rendering profile image
-	// const profileImage = document.getElementById('profile-image');
-	// profileImage.style = 'background-image:url(https://i.pinimg.com/736x/98/e0/7d/98e07decc7c1ca58236995de3567e46a--cat-shirts-kitties-cutest.jpg)';
+    // rendering school
+    const schoolHeader = document.createElement('h2');
+    schoolHeader.innerHTML = user.school;
+    nameHeader.appendChild(schoolHeader);
+
+    //render profile pic
+    const profileImage = document.getElementById('user-profile-image');
+    profileImage.setAttribute('src', user.url);
+
+    // render bio w/jquery
+    $("#profile-description").html(user.bio);
 
 	// rendering cookbook
 	const cookbookCard = document.getElementById('cookbook-card');
-
-    // rendering meals list for cookbook
-    const mealCount = user.meals.length;
-
-    // let mealList = document.createElement('div');
-
 	user.meals.forEach(renderMeals);
 
-// Use bootstrap, see how to make a grid
 	function renderMeals(meal, index, arr) {
 		// let li = document.createElement('li');
         const card = document.createElement('div');
@@ -43,17 +53,16 @@ function renderUserData(user) {
         card.appendChild(cardBody);
 
         const mealImage = document.createElement('img');
-        mealImage.className = 'meal-image';
-        mealImage.setAttribute('src', meal.image);
+        mealImage.className = 'meal-image-url';
+        mealImage.setAttribute('src', meal.url);
         mealImage.className = 'rounded img-fluid';
-        mealImage.setAttribute('style', 'border-radius: 50%;');  // (does nothing) 
         cardBody.appendChild(mealImage);
 
         // make button box div so that buttons are together
         const btnBox = document.createElement('div')
         btnBox.className = 'btn-group'
 
-        renderDropdown(meal.caption, 'caption');
+        renderDropdown(meal.tagline, 'tagline');
         renderDropdown(meal.description, 'description');
         renderDropdown(meal.allergens, 'allergens');
         renderDropdown(meal.ingredients, 'ingredients');

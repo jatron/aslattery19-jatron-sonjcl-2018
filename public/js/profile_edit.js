@@ -4,14 +4,20 @@ let user
         type into bio/give input
         add meals (image, name, allergens)
         delete meals
+
+IMPLEMENT "DONE" BUTTON
          
 */
 
 function main() {
   const profileId = window.location.search.substring(1);
-  get('/api/user', {'_id': profileId}, function(profileUser) {
+
+  get('api/profile', {userId : profileId}, function(profileUser) {
     renderUserData(profileUser);
-  });
+    }, function() {
+    console.log("Couldn't access user data :(");
+    });
+
   get('/api/whoami', {}, function(user) {
     renderNavbar(user);
   });
@@ -24,23 +30,23 @@ function renderUserData(user) {
     nameHeader.innerHTML = user.name;
     nameContainer.prepend(nameHeader);
 
-    // rendering profile image
-    const profileImage = document.getElementById('profile-image');
-    profileImage.style = 'background-image:url(https://i.pinimg.com/736x/98/e0/7d/98e07decc7c1ca58236995de3567e46a--cat-shirts-kitties-cutest.jpg)';
+    // rendering school
+    const schoolHeader = document.createElement('h2');
+    nameHeader.appendChild(schoolHeader);
+
+    //render profile pic
+    const profileImage = document.getElementById('user-profile-image');
+    profileImage.setAttribute('src', user.url);
+
+    // render bio w/jquery, let user edit
+    // NEED TO MAKE DONE BUTTON MAKE BIO POST REQUEST
+    $("#user-bio-text").html(user.bio);
 
     // rendering cookbook
     const cookbookCard = document.getElementById('cookbook-card');
-
-    // rendering meals list for cookbook
-    const mealCount = user.meals.length;
-
-    // let mealList = document.createElement('div');
-
     user.meals.forEach(renderMeals);
 
-// Use bootstrap, see how to make a grid
     function renderMeals(meal, index, arr) {
-        // let li = document.createElement('li');
         const card = document.createElement('div');
         card.setAttribute('id', meal.name);
         card.className = 'mt-4';
@@ -50,17 +56,16 @@ function renderUserData(user) {
         card.appendChild(cardBody);
 
         const mealImage = document.createElement('img');
-        mealImage.className = 'meal-image';
-        mealImage.setAttribute('src', meal.image);
+        mealImage.className = 'meal-image-url';
+        mealImage.setAttribute('src', meal.url);
         mealImage.className = 'rounded img-fluid';
-        mealImage.setAttribute('style', 'border-radius: 50%;');  // (does nothing) 
         cardBody.appendChild(mealImage);
 
         // make button box div so that buttons are together
         const btnBox = document.createElement('div')
         btnBox.className = 'btn-group'
 
-        renderDropdown(meal.caption, 'caption');
+        renderDropdown(meal.tagline, 'tagline');
         renderDropdown(meal.description, 'description');
         renderDropdown(meal.allergens, 'allergens');
         renderDropdown(meal.ingredients, 'ingredients');
