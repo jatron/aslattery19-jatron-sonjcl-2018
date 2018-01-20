@@ -8,3 +8,7 @@ body, html {
     font-size: 75px;
     display: inline;
 }
+
+.template.card {
+  display: none;
+}
