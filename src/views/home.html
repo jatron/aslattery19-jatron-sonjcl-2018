@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Let's Eat!</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/home.css">
+    <title>Let's Eat!</title>
 </head>
 <body>
-  <a href='/auth/facebook'>Log In</a>
+    <div class='bg'>
+
+        <div class='button-div'>
+            <button type='button' id='login-button' onclick="window.location='/auth/facebook'"> Log In </button>
+        </div>
+
+        <div>
+            <b id='lets-eat'>Let's Eat!</b>
+        </div>
+    </div>
 </body>
 </html>

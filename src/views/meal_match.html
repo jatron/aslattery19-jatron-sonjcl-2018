@@ -4,10 +4,12 @@
   <title>Let's Eat!</title>
 
     <!-- stylesheets -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/static/css/mealmatch.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+
 
 
 <!-- 
@@ -49,120 +51,42 @@ send to database:
   <h1>Meal Match</h1>
   <div class='row'>
     <div class = 'column'>
-        <div class="card">
-            <img class="card-img-top" id='user-padthai' src="/static/test-images/padthai.jpg" alt="Card image cap";>
-                <div id = 'user-padthai-info-overlay' class = "overlay">
-                    <div class = 'information'> 
-                        <p>This is my homemade pad thai recipe. The recipe is really great... blah blah blah</p>
-                        <b>Ingredients:</b> 
-                        <p></p>
-                        <b>Allergens:</b>
-                    </div>
-                </div>
-                <div class = "check-icon" id="user-padthai-likeIcon"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></div>
-                <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" id= 'user-padthai-info' class="btn info-button"><i class="fa fa-info-circle" aria-hidden="true" style='font-size:30px'></i></button>
-                    <button type="button" class="btn profile-button"><i class="fa fa-user-circle" aria-hidden="true" style='font-size:30px'></i></button>
-                </div>
+        <div class="card card-inverse">
 
         </div>
 
-        <div class="card">
-            <img class="card-img-top" id='user-dumplings' src="/static/test-images/dumplings.jpg" alt="Card image cap">
-                <div id = 'user-dumplings-info-overlay' class = "overlay">
-                    <div class = 'text'> Display info here </div>
-                </div>
-                <div class = "check-icon" id="user-dumplings-likeIcon"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></div>
-                <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" id= 'user-dumplings-info' class="btn info-button"><i class="fa fa-info-circle" aria-hidden="true" style='font-size:30px'></i></button>
-                    <button type="button" class="btn profile-button"><i class="fa fa-user-circle" aria-hidden="true" style='font-size:30px'></i></button>
-                </div>
+        <div class="card card-inverse">
+            
         </div>
 
-        <div class="card">
-            <img class="card-img-top" id='user-hotdog' src="/static/test-images/hotdog.jpg" alt="Card image cap">
-                <div id = 'user-hotdog-info-overlay' class = "overlay">
-                    <div class = 'text'> Display info here </div>
-                </div>
-                <div class = "check-icon" id="user-hotdog-likeIcon"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></div>
-                <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" id= 'user-hotdog-info' class="btn info-button"><i class="fa fa-info-circle" aria-hidden="true" style='font-size:30px'></i></button>
-                    <button type="button" class="btn profile-button"><i class="fa fa-user-circle" aria-hidden="true" style='font-size:30px'></i></button>
-                </div>
+        <div class="card card-inverse">
+            
         </div>
     </div>
     <div class ='column'> 
-        <div class="card">
-            <img class="card-img-top" id='user-milkshake' src="/static/test-images/milkshake.jpg" alt="Card image cap">
-                <div id = 'user-milkshake-info-overlay' class = "overlay">
-                    <div class = 'text'> Display info here </div>
-                </div>
-                <div class = "check-icon" id="user-milkshake-likeIcon"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></div>
-                <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" id='user-milkshake-info' class="btn info-button"><i class="fa fa-info-circle" aria-hidden="true" style='font-size:30px'></i></button>
-                    <button type="button" class="btn profile-button"><i class="fa fa-user-circle" aria-hidden="true" style='font-size:30px'></i></button>
-                </div>
+        <div class="card card-inverse">
+            
         </div>
 
-        <div class="card">
-            <img class="card-img-top" id='user-ramen' src="/static/test-images/ramen.jpg" alt="Card image cap">
-                <div id = 'user-ramen-info-overlay' class = "overlay">
-                    <div class = 'text'> Display info here </div>
-                </div>
-                <div class = "check-icon" id="user-ramen-likeIcon"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></div>
-                <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" id='user-ramen-info' class="btn info-button"><i class="fa fa-info-circle" aria-hidden="true" style='font-size:30px'></i></button>
-                    <button type="button" class="btn profile-button"><i class="fa fa-user-circle" aria-hidden="true" style='font-size:30px'></i></button>
-                </div>
+        <div class="card card-inverse">
+          
         </div>
 
-        <div class="card">
-            <img class="card-img-top" id='user-salad' src="/static/test-images/salad.jpg" alt="Card image cap">
-                <div id = 'user-salad-info-overlay' class = "overlay">
-                    <div class = 'text'> Display info here </div>
-                </div>
-                <div class = "check-icon" id="user-salad-likeIcon"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></div>
-                <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" id='user-salad-info' class="btn info-button"><i class="fa fa-info-circle" aria-hidden="true" style='font-size:30px'></i></button>
-                    <button type="button" class="btn profile-button"><i class="fa fa-user-circle" aria-hidden="true" style='font-size:30px'></i></button>
-                </div>
+        <div class="card card-inverse">
+          
         </div>
     </div>
     <div class = 'column'> 
-        <div class="card">
-            <img class="card-img-top" id='user-sandwich' src="/static/test-images/sandwich.jpg" alt="Card image cap">
-                <div id = 'user-sandwich-info-overlay' class = "overlay">
-                    <div class = 'text'> Display info here </div>
-                </div>
-                <div class = "check-icon" id="user-sandwich-likeIcon"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></div>
-                <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" id='user-sandwich-info' class="btn info-button"><i class="fa fa-info-circle" aria-hidden="true" style='font-size:30px'></i></button>
-                    <button type="button" class="btn profile-button"><i class="fa fa-user-circle" aria-hidden="true" style='font-size:30px'></i></button>
-                </div>
+        <div class="card card-inverse">
+           
         </div>
 
-        <div class="card">
-            <img class="card-img-top" id='user-spaghetti' src="/static/test-images/spaghetti.jpg" alt="Card image cap">
-                <div id = 'user-spaghetti-info-overlay' class = "overlay">
-                    <div class = 'text'> Display info here </div>
-                </div>
-                <div class = "check-icon" id="user-spaghetti-likeIcon"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></div>
-                <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" id='user-spaghetti-info' class="btn info-button"><i class="fa fa-info-circle" aria-hidden="true" style='font-size:30px'></i></button>
-                    <button type="button" class="btn profile-button"><i class="fa fa-user-circle" aria-hidden="true" style='font-size:30px'></i></button>
-                </div>
+        <div class="card card-inverse">
+           
         </div>
 
-        <div class="card">
-            <img class="card-img-top" id='user-sushi' src="/static/test-images/sushi.jpg" alt="Card image cap">
-                <div id = 'user-sushi-info-overlay' class = "overlay">
-                    <div class = 'text'> Display info here </div>
-                </div>
-                <div class = "check-icon" id="user-sushi-likeIcon"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></div>
-                <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" id='user-sushi-info' class="btn info-button"><i class="fa fa-info-circle" aria-hidden="true" style='font-size:30px'></i></button>
-                    <button type="button" class="btn profile-button"><i class="fa fa-user-circle" aria-hidden="true" style='font-size:30px'></i></button>
-                </div>
+        <div class="card card-inverse">
+         
         </div>
     </div>
   </div>

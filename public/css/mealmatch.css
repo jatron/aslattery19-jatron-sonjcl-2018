@@ -36,12 +36,16 @@
 .card {
   width:350px;
   height: 350px;
-  padding-bottom:10px;
+  padding-bottom:0px;
+  border:none;
+  margin: 10px;
 }
-.card-img-top{
+.card-img{
   width:350px;
   height:350px;
-  padding-top: 20px:;
+  padding-top: 0px:;
+  border:none;
+  margin:0;
 }
 
 
