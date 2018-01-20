@@ -1,7 +1,6 @@
 function main() {
   const profileId = window.location.search.substring(1);
     get('/api/images', {'userId': profileId}, function(mealsData) {
-        console.log(profileId);
         renderMeals(mealsData);
         renderButtons(mealsData);
 
@@ -20,7 +19,6 @@ function renderUserData(user) {
 function renderMeals(mealsData) {
     const meals = mealsData.meals;
     const cards = document.getElementsByClassName('card');
-    console.log(meals);
 
     for (var h = 0; h < meals.length; h++) {
 
@@ -115,7 +113,6 @@ function renderButtons() {
 const cards = document.getElementsByClassName("card-img");
 //console.log(cards);
 for (var i = 0; i < cards.length; i++) {
-    console.log(cards[i]);
     // toggle green border and like icon when clicked
     cards[i].addEventListener("click", function(){
         //toggle green border
@@ -136,7 +133,6 @@ for (var i = 0; i < cards.length; i++) {
 const infoButtons = document.getElementsByClassName("info-button");
 for (var j = 0; j < infoButtons.length; j++) {
     infoButtons[j].addEventListener("click", function(){
-        console.log(this);
         const overlay = document.getElementById(this.id + '-overlay');
         if (overlay.style.height == "100%") {
             overlay.setAttribute("style", "height:0%");
