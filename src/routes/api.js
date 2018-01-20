@@ -152,4 +152,55 @@ router.get('/images',
     }
 );
 
+router.get('/profile',
+    connect.ensureLoggedIn(),
+    function(req, res) {
+        // get user from mLab
+        User.findOne({_id: req.query.userId}, function(err, user) {
+            if (err) throw err;
+            var userProfileJson = {
+                userId          : req.query.userId,
+                name            : user.name,
+                school          : user.school,
+                bio             : user.bio,
+                profilePicture  : 'https://image.freepik.com/free-icon/male-profile-user-shadow_318-40244.jpg', // TODO: get profile picture from facebook or Google
+                meals           : []
+            };
+
+            // add all meals belonging to user to userProfileJson.meals
+            var mealIndex = 0;
+            addMealsToUserProfileJson();
+
+            function addMealsToUserProfileJson() {
+                if (mealIndex < user.mealKeys.length) {
+                    // get url from s3
+                    const mealKey = user.mealKeys[mealIndex];
+                    urlParams = {Bucket: bucketName, Key: mealKey};
+                    s3.getSignedUrl('getObject', urlParams, function(err, mealImageUrl) {
+                        if (err) throw err;
+                        // get meal metadata from mLab
+                        Picture.findOne({key: mealKey}, function(err, mealMetadata) {
+                            if (err) throw err;
+                            const mealJson = {
+                                key         : mealKey,
+                                url         : mealImageUrl,
+                                tagline     : mealMetadata.tagline,
+                                description : mealMetadata.description,
+                                ingredients : mealMetadata.ingredients,
+                                allergens   : mealMetadata.allergens
+                            };
+                            // append mealJson to userProfileJson.meals
+                            userProfileJson.meals.push(mealJson);
+                            mealIndex++;
+                            addMealsToUserProfileJson();
+                        });
+                    });
+                } else {
+                    res.send(userProfileJson);
+                }
+            }
+        });
+    }
+);
+
 module.exports = router;
