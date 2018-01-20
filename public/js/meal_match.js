@@ -4,8 +4,8 @@ function main() {
         renderUserData(profileUser);
     });
 
-    get('/api/images', {}, function(imageUrlsObject) {
-        renderImages(imageUrlsObject);
+    get('/api/images', {'userId': profileId}, function(imageUrlsObject) {
+        // renderImages(imageUrlsObject);
     });
 }
 
