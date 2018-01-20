@@ -1,15 +1,13 @@
 function main() {
   const profileId = window.location.search.substring(1);
-    get('/api/meals', {'_id': profileId}, function(mealsData) {
-        //console.log(mealsData);
+    get('/api/images', {'userId': profileId}, function(mealsData) {
+        console.log(profileId);
         renderMeals(mealsData);
         renderButtons(mealsData);
 
   }, function(){
         console.log("failure");
   });
-
-
 }
 
 function renderUserData(user) {
@@ -22,8 +20,9 @@ function renderUserData(user) {
 function renderMeals(mealsData) {
     const meals = mealsData.meals;
     const cards = document.getElementsByClassName('card');
+    console.log(meals);
 
-    for (var h = 0; h < cards.length; h++) {
+    for (var h = 0; h < meals.length; h++) {
 
         // load image
         var img = document.createElement("img");
