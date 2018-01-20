@@ -29,8 +29,33 @@ body, html {
 #lets-eat {
     position: absolute;
     font-size: 100px;
+    font-family: "Arial, Helvetica, sans-serif";
     color: white;
     left:33%;
     top:20%;
 
 }
+
+#home-description {
+    position: absolute;
+    font-size: 40px;
+    color:white;
+    left: 40%;
+    top:29%;
+}
+
+#sign-up-button-div {
+    position: absolute;
+    left:44%;
+    top:43%;
+
+}
+
+#sign-up-button {
+    height: 60px;
+    width: 150px;
+    font-size: 30px;
+}
+
+
+
