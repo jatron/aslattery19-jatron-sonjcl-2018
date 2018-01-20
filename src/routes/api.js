@@ -16,6 +16,15 @@ const router = express.Router();
 const s3 = new AWS.S3();
 
 // api endpoints
+router.get('/whoami', function(req, res) {
+  if(req.isAuthenticated()){
+    res.send(req.user);
+  }
+  else{
+    res.send({});
+  }
+});
+
 router.get('/user', function(req, res) {
     User.findOne({ _id: req.query._id }, function(err, user) {
         if (err) throw err;
@@ -30,37 +39,30 @@ router.post(
     '/upload_meal',
     connect.ensureLoggedIn(),
     function(req, res) {
-        // read image file
-        fs.readFile(req.body.meal.path, function(err, data) {
+        // create meal id
+        const key = uuidv4();
+        // store in mLab pictures collection
+        picture = new Picture({
+            key             :   key,
+            userId          :   req.body.userId,
+            tagline         :   req.body.meal.tagline,
+            description     :   req.body.meal.description,
+            ingredients     :   req.body.meal.ingredients,
+            allergens       :   req.body.meal.allergens
+        });
+        picture.save(function(err) {
             if (err) throw err;
-            // create meal id
-            const key = uuidv4();
-            params = {Bucket: bucketName, Key: key, Body: data, ContentType: 'image/jpg'};
-            // store image in s3
-            s3.putObject(params, function(err, data) {
+            // store in mLab users collection
+            User.findOne({_id: req.body.userId}, function(err, user) {
                 if (err) throw err;
-                // store in mLab pictures collection
-                picture = new Picture({
-                    key             :   key,
-                    userId          :   req.body.userId,
-                    tagline         :   req.body.meal.tagline,
-                    description     :   req.body.meal.description,
-                    ingredients     :   req.body.meal.ingredients,
-                    allergens       :   req.body.meal.allergens
-                });
-                picture.save(function(err) {
-                    if (err) throw err;
-                    // store in mLab users collection
-                    User.findOne({_id: req.body.userId}, function(err, user) {
-                        if (err) throw err;
-                        user.mealKeys.push(key);
-                        user.save();
-                        res.send({success: 1});
-                    });
-                });
+                user.mealKeys.push(key);
+                user.save();
+                res.send({success: 1, mealId : key});
             });
         });
 });
+
+const numberOfMealsDisplayed = 9;
 
 router.get('/images',
     connect.ensureLoggedIn(),
@@ -91,7 +93,7 @@ router.get('/images',
                 if (mealIndex >= mLabMeals.length) mealIndex = 0;
                 const startingMealIndex = mealIndex;
                 var mealsAdded = 0;
-                // iterate through images (starting at mealIndex) until you find 15 meals to display
+                // iterate through images (starting at mealIndex) until you find numberOfMealsDisplayed meals to display
                 getMeals(true);
 
                 // assumes mealIndex < mLabMeals.length, mLabMeals.length > 0
@@ -100,7 +102,7 @@ router.get('/images',
                         // add meal to mealsJson if meal is unliked and doesn't belong to user
                         addMeal();
                     } else {
-                        if ((mealIndex != startingMealIndex) && (mealsAdded < 15)) {
+                        if ((mealIndex != startingMealIndex) && (mealsAdded < numberOfMealsDisplayed)) {
                             // add meal to mealsJson if meal is unliked and doesn't belong to user
                             addMeal();
                         } else {

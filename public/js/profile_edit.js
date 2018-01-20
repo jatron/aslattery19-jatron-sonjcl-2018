@@ -10,6 +10,24 @@ IMPLEMENT "DONE" BUTTON
 */
 // bloop
 
+var albumBucketName = 'lets-eat-images';
+var bucketRegion = 'us-east-1';
+var IdentityPoolId = 'us-east-1:3c377206-22a6-4f06-9d35-f752139cdb1c';
+
+//update the configurations for AWS to use our credentials
+AWS.config.update({
+  region: bucketRegion,
+  credentials: new AWS.CognitoIdentityCredentials({
+    IdentityPoolId: IdentityPoolId
+  })
+});
+
+//create an S3 instance that we can use to access the database
+var s3 = new AWS.S3({
+  apiVersion: '2006-03-01',
+  params: {Bucket: albumBucketName}
+});
+
 function main() {
   const profileId = window.location.search.substring(1);
 
@@ -47,9 +65,14 @@ function renderUserData(user) {
     //upload new meal!
     const addMealBtn = document.getElementById("add-meal-btn");
     addMealBtn.addEventListener("click", function(){
-        const newMealImg = $("#new-meal-image").value;
-        console.log(newMealImg); // test
 
+        const files = document.getElementById("new-meal-image").files;
+        if (!files.length) {
+            return alert('Please choose a file to upload first.');
+        }
+        const file = files[0];
+
+        // add meal to our mLab database
         const newMealTagline = document.getElementById("new-meal-tagline").value;
         // console.log(newMealTagline);
         const newMealDescription = document.getElementById("new-meal-description").value;
@@ -63,18 +86,29 @@ function renderUserData(user) {
         const newMealObject = {};
         newMealObject.userId = userId;
         newMealObject.meal = {};
-        newMealObject.meal.path = newMealImg;
         newMealObject.meal.tagline = newMealTagline;
         newMealObject.meal.description = newMealDescription;
         newMealObject.meal.ingredients = newMealIngredients;
         newMealObject.meal.allergens = newMealAllergens;
         console.log(newMealObject);
 
-        post('api/upload_meal', newMealObject, function() {
-            console.log("meal uploaded!");
-            }, function() {
-            console.log("Couldn't add meal");
+        post('api/upload_meal', newMealObject, function(uploadMealResponse) {
+            console.log("meal uploaded to mLab!");
+            // add photo to our s3 database
+            const fileKey = uploadMealResponse.mealId;
+            // TODO: right now, we only support uploading jpg files
+            s3.upload({
+                Key             : fileKey,
+                Body            : file,
+                ACL             : 'public-read',
+                ContentType     : 'image/jpg'
+            }, function(err, data) {
+                if (err) throw err;
+                console.log('Successfully uploaded meal.');
             });
+        }, function() {
+            console.log("Couldn't add meal");
+        });
     });
 
     // rendering cookbook
