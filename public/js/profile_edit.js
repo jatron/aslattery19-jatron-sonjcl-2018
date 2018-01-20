@@ -25,6 +25,7 @@ function main() {
 }
 
 function renderUserData(user) {
+    const userId = user.userId;
     // rendering name
     const nameContainer = document.getElementById('name-container');
     const nameHeader = document.createElement('h1');
@@ -37,11 +38,38 @@ function renderUserData(user) {
 
     //render profile pic
     const profileImage = document.getElementById('user-profile-image');
-    profileImage.setAttribute('src', user.url);
+    profileImage.setAttribute('src', user.profilePicture);
 
     // render bio w/jquery, let user edit
     // NEED TO MAKE DONE BUTTON MAKE BIO POST REQUEST
     $("#user-bio-text").html(user.bio);
+
+    //upload new meal!
+    const addMealBtn = document.getElementById("add-meal-btn");
+    addMealBtn.addEventListener("click", function(){
+        const newMealImg = $("#new-meal-image").value;
+        console.log(newMealImg); // test
+
+        const newMealTagline = document.getElementById("new-meal-tagline").value;
+        // console.log(newMealTagline);
+        const newMealDescription = document.getElementById("new-meal-description").value;
+        // console.log(newMealDescription);
+        const newMealIngredients = document.getElementById("new-meal-ingredients").value;
+        // console.log(newMealIngredients);
+        const newMealAllergens = document.getElementById("new-meal-allergens").value;
+        // console.log(newMealAllergens);
+
+        // make JSON bio obj
+        const newMealObject = {};
+        newMealObject.userId = userId;
+        newMealObject.meals = {};
+        newMealObject.meals.path = newMealImg;
+        newMealObject.meals.tagline = newMealTagline;
+        newMealObject.meals.description = newMealDescription;
+        newMealObject.meals.ingredients = newMealIngredients;
+        newMealObject.meals.allergens = newMealAllergens;
+        console.log(newMealObject);
+    });
 
     // rendering cookbook
     const cookbookCard = document.getElementById('cookbook-card');
@@ -75,11 +103,44 @@ function renderUserData(user) {
         deleteBtn.className = 'btn delete-btn';
         deleteBtn.setAttribute('type', 'button');
         deleteBtn.innerHTML = 'Delete';
+
+        const deleteMealKey = meal.key
+
+        // delete image here/send request to server to delete, reload page
         deleteBtn.addEventListener("click", function(){
-            deleteBtn.innerHTML = 'Deleted!';
-            // delete image here/send request to server to delete, reload page
-        });
+            // make JSON delete obj
+            const deleteMealObject = {};
+            deleteMealObject.mealKey = meal.key;
+            // console.log(deleteMealObject);
+            //post JSON delete obj
+            post('api/bio', deleteMealObject, function() {
+            console.log("meal deleted!");
+            }, function() {
+            console.log("Couldn't delete meal :(");
+            });
+            // make deleted meal hidden:
+            card.style.display = "none";
+        }); 
         btnBox.appendChild(deleteBtn);
+
+        // make change bio buttton functional 
+        const changeBioBtn = document.getElementById("change-bio-btn");
+        changeBioBtn.addEventListener("click", function(){
+            const newUserBio = document.getElementById("user-bio-text");
+            const newUserBioText = newUserBio.innerHTML;
+            // make JSON bio obj
+            const newBioObject = {};
+
+            newBioObject.userId = profileId;
+            newBioObject.bio = newUserBioText;
+            //post JSON bio obj
+            post('api/bio', newBioObject, function() {
+            console.log("bio uploaded!");
+            }, function() {
+            console.log("Couldn't change bio");
+            });
+        });
+
 
         // render dropdown button
         function renderDropdown(item, itemName) {

@@ -71,7 +71,7 @@ router.get('/profile', function(req, res) {
       name              :   "Bobby Hill",
       school            :   "MIT",
       bio               :   "I <3 cupcakes",
-      url               :   "https://chwomp.files.wordpress.com/2013/07/bobbyhill.jpg",
+      profilePicture    :   "https://chwomp.files.wordpress.com/2013/07/bobbyhill.jpg",
       meals             : 
       [
         {   key: '1',
@@ -99,6 +99,23 @@ router.get('/profile', function(req, res) {
       ]
     })
 });
+
+
+
+// post new bio
+
+router.post('/bio', function(req, res) {
+// ?? idk what to put here
+});
+
+router.post('/delete_meal', function(req, res) {
+// ?? idk what to put here 
+});
+
+router.post('/upload_meal', function(req, res) {
+// ?? idk what to put here 
+});
+
 
 /*
 

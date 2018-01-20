@@ -33,7 +33,7 @@ function renderUserData(user) {
 
     //render profile pic
     const profileImage = document.getElementById('user-profile-image');
-    profileImage.setAttribute('src', user.url);
+    profileImage.setAttribute('src', user.profilePicture);
 
     // render bio w/jquery
     $("#profile-description").html(user.bio);
