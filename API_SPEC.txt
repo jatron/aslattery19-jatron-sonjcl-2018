@@ -1,0 +1,134 @@
+################################################### Meal Match Page ###################################################
+
+get(‘api/images’, {userId : String}, successCallback, failureCallback);
+{
+  'meals' : [   // this is an array of 15 meals
+    {
+      key           :   String,    // unique id for the meal
+      url           :   String,    // image url (src)
+      authorName    :   String,    // name of person who uploaded meal
+      tagline       :   String,    // short tagline describing meal  (Alexis: think of it as a title)
+      description   :   String,    // description for the meal
+      ingredients   :   String,    //
+      allergens     :   String     // NOTE: is a string for now, but we may change it to an array later
+    },
+    {
+      ...
+    },
+    {
+      ...
+    },
+    ...
+  ]
+}
+
+post('api/like', {userId : String, mealKey : String}, successCallback, failureCallback); // Note: userId is user that is currently logged in 
+{
+  success : Number
+}
+
+get('api/meal_author_profile', {mealKey : String}, successCallback, failureCallback);
+{
+  userId            :   String,
+  name              :   String,
+  school            :   String,
+  bio               :   String,
+  profilePicture    :   String,
+  meals            :
+    [
+      {
+        key           :   String,
+        url           :   String,
+        tagline       :   String,
+        description   :   String,
+        ingredients   :   String,
+        allergens     :   String
+      },
+      {
+        ...
+      },
+      {
+        ...
+      },
+      ...
+    ]
+}
+
+post('api/unlike', {userId : String, mealKey : String}, successCallback, failureCallback);
+{
+  success : Number
+}
+
+################################################### Profile Page ###################################################
+
+get('api/profile', {userId : String}, successCallback, failureCallback);
+{
+  userId            :   String,
+  name              :   String,
+  school            :   String,
+  bio               :   String,
+  profilePicture    :   String,
+  meals             :
+    [
+      {
+        key           :   String,
+        url           :   String,
+        tagline       :   String,
+        description   :   String,
+        ingredients   :   String,
+        allergens     :   String
+      },
+      {
+        ...
+      },
+      {
+        ...
+      },
+      ...
+    ]
+}
+
+post('api/bio', {userId : String, bio : String}, successCallback, failureCallback);
+{
+  success : Number
+}
+
+post('api/upload_meal', {userId : String,
+  meal :
+    {
+      path          :   String,
+      tagline       :   String,
+      description   :   String,
+      ingredients   :   String,
+      allergens     :   String
+    }
+  }, successCallback, failureCallback);
+{
+  success : Number
+}
+
+post('api/delete_meal', {mealKey : String}, successCallback, failureCallback);
+{
+  success : Number
+}
+
+################################################### Messages Page ###################################################
+
+get('api/matches', {userId : String}, successCallback, failureCallback);
+{
+  matches            :
+    [
+      {
+        userId  :   String,
+        name    :   String
+      },
+      {
+        ...
+      },
+      {
+        ...
+      },
+      ...
+    ]
+}
+

@@ -1,130 +1,207 @@
 // dependencies
 const express = require('express');
+const connect = require('connect-ensure-login');
+const AWS = require('aws-sdk');
+const fs = require('fs');
+const uuidv4 = require('uuid/v4');
 
 // models
 const User = require('../models/user');
+const Picture = require('../models/picture');
+const Helpers = require('../helpers/helpers');
 
 const router = express.Router();
 
+// Create an S3 client
+const s3 = new AWS.S3();
+
 // api endpoints
-// router.get('/user', function(req, res) {
-// //  User.findOne({ _id: req.query._id }, function(err, user) {
-// //    if (err) console.log(err);
-// //    else {
-// //      res.send(user);
-// //    }
-// //  });
-// 	res.send({ _id: req.query._id, name: 'Me Myname', fbid: '', // change 'image' to 'url' !!
-//       meals: [
-// 		{	key: '1234',
-// 			tagline: 'spaghetti',  // now tagline fix in profile.js!!
-// 			url: 'http://gbc.blob.core.windows.net/media/img57915.jpg',
-// 			description: 'uses lots of tomatoes', // now description
-// 			allergens: 'peanuts, gluten',
-// 			ingredients: 'spaghetti, spaghetti sauce'
-// 		},
-// 		{	key: '1234',
-// 			tagline: 'meatballs',
-// 			url: 'http://cook.fnr.sndimg.com/content/dam/images/cook/fullset/2011/12/29/0/CCDRD221_meatballs-tomato-sauce_s4x3.jpg.rend.hgtvcom.616.462.suffix/1357779682604.jpeg',
-// 			description: 'not vegetarian-friendly',
-// 			allergens: 'lactose',
-// 			ingredients: 'meat, ball'
-
-// 		},
-// 		{	key: '1234',
-// 			tagline: 'chocolate souffle',
-// 			url: 'https://assets.marthastewart.com/styles/wmax-750/d27/chocolate-souffle-med107742/chocolate-souffle-med107742_horiz.jpg?itok=h6VrTFqc',
-// 			description: 'yummy!',
-// 			allergens: 'cacao, lactose',
-// 			ingredients: 'chocolateflour'
-// 		}
-// 	  ]
-//     });
-// });
-
-// who am i (from catbook)
-router.get('/whoami', function(req, res) {
-	res.send({ _id: req.query._id,
-      user:
-		{	name: 'Johnny Cash',
-			image: 'https://fthmb.tqn.com/ggyEhoAmPjVIl4I8PwohsgfjU-E=/768x0/filters:no_upscale()/Made-of-Money-by-Jan-Stromme-GettyImages-641601160-59f4f8f2aad52b001048a0f2.jpg',
-			school: 'Money Insitute of Technology'
-		}
-    })
-  // if(req.isAuthenticated()){
-  //   res.send(req.user);
-  // }
-  // else{
-  //   res.send({});
+router.get('/user', function(req, res) {
+    User.findOne({ _id: req.query._id }, function(err, user) {
+        if (err) throw err;
+        res.send(user);
+    });
 });
 
-router.get('/profile', function(req, res) {
-//  User.findOne({ _id: req.query._id }, function(err, user) {
-//    if (err) console.log(err);
-//    else {
-//      res.send(user);
-//    }
-//  });
-    res.send(
-        {
-      userId            :   "12345",
-      name              :   "Bobby Hill",
-      school            :   "MIT",
-      bio               :   "I <3 cupcakes",
-      profilePicture    :   "https://chwomp.files.wordpress.com/2013/07/bobbyhill.jpg",
-      meals             : 
-      [
-        {   key: '1',
-            tagline: 'spaghetti',  // now tagline fix in profile.js!!
-            url: 'http://gbc.blob.core.windows.net/media/img57915.jpg',
-            description: 'uses lots of tomatoes', // now description
-            allergens: 'peanuts, gluten',
-            ingredients: 'spaghetti, spaghetti sauce'
-        },
-        {   key: '2',
-            tagline: 'meatballs',
-            url: 'http://cook.fnr.sndimg.com/content/dam/images/cook/fullset/2011/12/29/0/CCDRD221_meatballs-tomato-sauce_s4x3.jpg.rend.hgtvcom.616.462.suffix/1357779682604.jpeg',
-            description: 'not vegetarian-friendly',
-            allergens: 'lactose',
-            ingredients: 'meat, ball'
+var bucketName = 'lets-eat-images';
 
-        },
-        {   key: '3',
-            tagline: 'chocolate souffle',
-            url: 'https://assets.marthastewart.com/styles/wmax-750/d27/chocolate-souffle-med107742/chocolate-souffle-med107742_horiz.jpg?itok=h6VrTFqc',
-            description: 'yummy!',
-            allergens: 'cacao, lactose',
-            ingredients: 'chocolateflour'
-        }
-      ]
-    })
+// XXX: At the moment, the API only supports uploading jpg images
+router.post(
+    '/upload_meal',
+    connect.ensureLoggedIn(),
+    function(req, res) {
+        // read image file
+        fs.readFile(req.body.meal.path, function(err, data) {
+            if (err) throw err;
+            // create meal id
+            const key = uuidv4();
+            params = {Bucket: bucketName, Key: key, Body: data, ContentType: 'image/jpg'};
+            // store image in s3
+            s3.putObject(params, function(err, data) {
+                if (err) throw err;
+                // store in mLab pictures collection
+                picture = new Picture({
+                    key             :   key,
+                    userId          :   req.body.userId,
+                    tagline         :   req.body.meal.tagline,
+                    description     :   req.body.meal.description,
+                    ingredients     :   req.body.meal.ingredients,
+                    allergens       :   req.body.meal.allergens
+                });
+                picture.save(function(err) {
+                    if (err) throw err;
+                    // store in mLab users collection
+                    User.findOne({_id: req.body.userId}, function(err, user) {
+                        if (err) throw err;
+                        user.mealKeys.push(key);
+                        user.save();
+                        res.send({success: 1});
+                    });
+                });
+            });
+        });
 });
 
+router.get('/images',
+    connect.ensureLoggedIn(),
+    function(req, res) {
 
+        // get all meals
+        Picture.find({}, function(err, mLabMeals) {
+            if (err) throw err;
+            // get user
+            User.findOne({_id: req.query.userId}, function(err, user) {
+                if (err) throw err;
 
-// post new bio
+                var mealIndex;
+                if (user.mealIndex) {
+                    mealIndex = user.mealIndex;
+                } else {
+                    mealIndex = 0;
+                }
 
-router.post('/bio', function(req, res) {
-// ?? idk what to put here
-});
+                var mealsJson = {
+                    meals : []
+                };
+                if (mLabMeals.length === 0) {
+                    res.send(mealsJson);
+                    return;
+                }
+                // set mealIndex = 0 if it's greater or equal to the number of meals stored in our database
+                if (mealIndex >= mLabMeals.length) mealIndex = 0;
+                const startingMealIndex = mealIndex;
+                var mealsAdded = 0;
+                // iterate through images (starting at mealIndex) until you find 15 meals to display
+                getMeals(true);
 
-router.post('/delete_meal', function(req, res) {
-// ?? idk what to put here 
-});
+                // assumes mealIndex < mLabMeals.length, mLabMeals.length > 0
+                function getMeals(isFirstCall) {
+                    if (isFirstCall) {
+                        // add meal to mealsJson if meal is unliked and doesn't belong to user
+                        addMeal();
+                    } else {
+                        if ((mealIndex != startingMealIndex) && (mealsAdded < 15)) {
+                            // add meal to mealsJson if meal is unliked and doesn't belong to user
+                            addMeal();
+                        } else {
+                            // update mealIndex in database
+                            user.mealIndex = mealIndex;
+                            user.save();
+                            // send mealsJson
+                            res.send(mealsJson);
+                            return;
+                        }
+                    }
+                }
 
-router.post('/upload_meal', function(req, res) {
-// ?? idk what to put here 
-});
+                function addMeal(){
+                    const mealKey = mLabMeals[mealIndex].key;
+                    // if mealKey is not in user.mealKeys and not in user.mealsLiked, add to mealsJson
+                    if (!Helpers.arrayContains(mealKey, user.mealKeys) && !Helpers.arrayContains(mealKey, user.mealsLiked)) {
+                        // get meal image url
+                        urlParams = {Bucket: bucketName, Key: mealKey};
+                        s3.getSignedUrl('getObject', urlParams, function(err, url) {
+                            // get meal author name
+                            User.findOne({_id: mLabMeals[mealIndex].userId}, function(err, mealOwner) {
+                                if (err) throw err;
+                                // create mealJson
+                                const mealJson = {
+                                    key         : mealKey,
+                                    url         : url,
+                                    authorName  : mealOwner.name,
+                                    tagline     : mLabMeals[mealIndex].tagline,
+                                    description : mLabMeals[mealIndex].description,
+                                    ingredients : mLabMeals[mealIndex].ingredients,
+                                    allergens   : mLabMeals[mealIndex].allergens
+                                };
+                                // add to mealsJson
+                                mealsJson.meals.push(mealJson);
+                                // update mealsAdded and mealIndex
+                                mealsAdded++;
+                                mealIndex = (mealIndex + 1) % mLabMeals.length;
+                                getMeals(false);
+                            });
+                        });
+                    } else {
+                        mealIndex = (mealIndex + 1) % mLabMeals.length;
+                        getMeals(false);
+                    }
+                }
+            });
+        });
+    }
+);
 
+router.get('/profile',
+    connect.ensureLoggedIn(),
+    function(req, res) {
+        // get user from mLab
+        User.findOne({_id: req.query.userId}, function(err, user) {
+            if (err) throw err;
+            var userProfileJson = {
+                userId          : req.query.userId,
+                name            : user.name,
+                school          : user.school,
+                bio             : user.bio,
+                profilePicture  : 'https://image.freepik.com/free-icon/male-profile-user-shadow_318-40244.jpg', // TODO: get profile picture from facebook or Google
+                meals           : []
+            };
 
-/*
+            // add all meals belonging to user to userProfileJson.meals
+            var mealIndex = 0;
+            addMealsToUserProfileJson();
 
-requests for profile page:
-- API request /api/profile: pass user ID, server sends JSON obj with prof pic, user, school, bio, 
+            function addMealsToUserProfileJson() {
+                if (mealIndex < user.mealKeys.length) {
+                    // get url from s3
+                    const mealKey = user.mealKeys[mealIndex];
+                    urlParams = {Bucket: bucketName, Key: mealKey};
+                    s3.getSignedUrl('getObject', urlParams, function(err, mealImageUrl) {
+                        if (err) throw err;
+                        // get meal metadata from mLab
+                        Picture.findOne({key: mealKey}, function(err, mealMetadata) {
+                            if (err) throw err;
+                            const mealJson = {
+                                key         : mealKey,
+                                url         : mealImageUrl,
+                                tagline     : mealMetadata.tagline,
+                                description : mealMetadata.description,
+                                ingredients : mealMetadata.ingredients,
+                                allergens   : mealMetadata.allergens
+                            };
+                            // append mealJson to userProfileJson.meals
+                            userProfileJson.meals.push(mealJson);
+                            mealIndex++;
+                            addMealsToUserProfileJson();
+                        });
+                    });
+                } else {
+                    res.send(userProfileJson);
+                }
+            }
+        });
+    }
+);
 
-
-for adding image:
-send 
-*/
 
 module.exports = router;

@@ -2,9 +2,103 @@
 <html>
 <head>
   <title>Let's Eat!</title>
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/static/css/mealmatch.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+
+
+
+<!-- 
+
+FORMAT FOR ELEMENT ID's
+
+card: 'imgKey'
+info button: 'imgKey-info'
+info overlay: 'imgKey-info-overlay'
+check icon: 'imgKey-likeIcon'
+
+
+FORMAT FROM DATABASE:
+
+json {
+    url:
+    caption:
+    description:
+    ingredients:
+    allergens:
+}
+
+need:
+-image
+-caption
+-description (*)
+-ingredients (*)
+-allergens   (*)
+
+
+send to database:
+-id for user logged in
+-key for image that they liked
+
+-->
+  
 </head>
 <body>
   <h1>Meal Match</h1>
+  <div class='row'>
+    <div class = 'column'>
+        <div class="card card-inverse">
+
+        </div>
+
+        <div class="card card-inverse">
+            
+        </div>
+
+        <div class="card card-inverse">
+            
+        </div>
+    </div>
+    <div class ='column'> 
+        <div class="card card-inverse">
+            
+        </div>
+
+        <div class="card card-inverse">
+          
+        </div>
+
+        <div class="card card-inverse">
+          
+        </div>
+    </div>
+    <div class = 'column'> 
+        <div class="card card-inverse">
+           
+        </div>
+
+        <div class="card card-inverse">
+           
+        </div>
+
+        <div class="card card-inverse">
+         
+        </div>
+    </div>
+  </div>
+
+    <div class = 'next-button-div'>
+        <button type="button" id='next-button' class="next-button"><i class="fa fa-arrow-circle-o-right" aria-hidden="true" style="font-size:50px"></i></button>
+    </div>
+
+<!-- javascript scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/dojo/1.13.0/dojo/dojo.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
 <script src="/static/js/api.js"></script>
 <script src="/static/js/meal_match.js"></script>
