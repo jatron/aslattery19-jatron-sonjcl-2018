@@ -62,20 +62,26 @@ function renderUserData(user) {
         // make JSON bio obj
         const newMealObject = {};
         newMealObject.userId = userId;
-        newMealObject.meals = {};
-        newMealObject.meals.path = newMealImg;
-        newMealObject.meals.tagline = newMealTagline;
-        newMealObject.meals.description = newMealDescription;
-        newMealObject.meals.ingredients = newMealIngredients;
-        newMealObject.meals.allergens = newMealAllergens;
+        newMealObject.meal = {};
+        newMealObject.meal.path = newMealImg;
+        newMealObject.meal.tagline = newMealTagline;
+        newMealObject.meal.description = newMealDescription;
+        newMealObject.meal.ingredients = newMealIngredients;
+        newMealObject.meal.allergens = newMealAllergens;
         console.log(newMealObject);
+
+        post('api/upload_meal', newMealObject, function() {
+            console.log("meal uploaded!");
+            }, function() {
+            console.log("Couldn't add meal");
+            });
     });
 
     // rendering cookbook
     const cookbookCard = document.getElementById('cookbook-card');
     user.meals.forEach(renderMeals);
 
-    function renderMeals(meal, index, arr) {
+    function renderMeals(meal, index, arr, user) {
         const card = document.createElement('div');
         card.setAttribute('id', meal.name);
         card.className = 'mt-4';
@@ -104,8 +110,6 @@ function renderUserData(user) {
         deleteBtn.setAttribute('type', 'button');
         deleteBtn.innerHTML = 'Delete';
 
-        const deleteMealKey = meal.key
-
         // delete image here/send request to server to delete, reload page
         deleteBtn.addEventListener("click", function(){
             // make JSON delete obj
@@ -113,7 +117,7 @@ function renderUserData(user) {
             deleteMealObject.mealKey = meal.key;
             // console.log(deleteMealObject);
             //post JSON delete obj
-            post('api/bio', deleteMealObject, function() {
+            post('api/delete_meal', deleteMealObject, function() {
             console.log("meal deleted!");
             }, function() {
             console.log("Couldn't delete meal :(");
@@ -126,12 +130,11 @@ function renderUserData(user) {
         // make change bio buttton functional 
         const changeBioBtn = document.getElementById("change-bio-btn");
         changeBioBtn.addEventListener("click", function(){
-            const newUserBio = document.getElementById("user-bio-text");
-            const newUserBioText = newUserBio.innerHTML;
+            const newUserBioText = document.getElementById("user-bio-text").innerHTML;
             // make JSON bio obj
             const newBioObject = {};
 
-            newBioObject.userId = profileId;
+            newBioObject.userId = user.userId;
             newBioObject.bio = newUserBioText;
             //post JSON bio obj
             post('api/bio', newBioObject, function() {
