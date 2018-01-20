@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Profile Page</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <!-- RESOLVE THIS!! add style sheet-->
+    <!-- <link rel="stylesheet" href="/static/css/style.css"> -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="navbar-brand">Let's Eat</div>
+      <div class="navbar-nav" id="nav-item-container">
+        <!-- navbar items are inserted here -->
+      </div>
+    </nav>
+    <div class="container text-center" id="profile-container">
+<!--       <div class="large-profile-container text-center my-4">
+        <div class="circle-avatar" id="profile-image"></div>
+      </div> -->
+      <hr>
+      <div id="name-container">
+        <!-- name inserted here -->
+        <div class="container">
+          <a href="profile" class="btn" role="button">Done!</a>
+        </div>
+      </div>
+      <div class="media">
+        <div class="col-6">
+          <img id="user-profile-image" src="http://www.joewigdahl.com/wp-content/uploads/MG_2407-906x640.jpg" class="img-fluid rounded media-object" style="width: 50%">
+        </div>
+        <div class="col-6">
+          <h4 class="media-heading">About Me</h4>
+          <br>
+          <textarea name="bio" form="user-bio" id="user-bio-text" > "user's pre-existing bio 
+            from server, can be edited, when done, need to send this to server and save" </textarea>
+          <div>
+            <button id="change-bio-btn">Save Changes</button> 
+            <!-- ^ Add event listener -->
+          </div>
+
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-12">
+          <h4>My Favorite foods</h4>
+          <br>
+          <!-- <div class="container">
+            <a href="profile_new_meal" class="btn delete-btn" role="button">New Meal</a>
+          </div> -->
+
+
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">New Meal</button>
+
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">New Meal</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <!-- DOESNT NEED TO BE A FORM CAN BE CLEANER CODE -->
+                <div class="modal-body">
+                    <div>
+                      <label>Upload Image:</label>
+                      <input id="new-meal-image" name="new-meal-image" type="file" class="file" data-show-preview="true">
+                    </div>
+                    <div>
+                      <label>Tagline:</label>
+                      <textarea class="form-control" id="new-meal-tagline"></textarea>
+                    </div>
+                    <div>
+                      <label>Description:</label>
+                      <textarea class="form-control" id="new-meal-description"></textarea>
+                    </div>
+                    <div>
+                      <label>Ingredients:</label>
+                      <textarea class="form-control" id="new-meal-ingredients"></textarea>
+                    </div>
+                    <div>
+                      <!-- LATER: MAKE INTO DROPDOWN OPTIONS/FORM TO CHECK OFF BOXES -->
+                      <label >Allergens:</label>
+                      <textarea class="form-control" id="new-meal-allergens"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button id="add-meal-btn" type="button" class="btn btn-primary">Add Meal!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="" id="cookbook-card">
+              <!-- favorite foods here -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+
+  <!-- added jquery script -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+
+  <script src="/static/js/api.js"></script>
+  <script src="/static/js/navbar.js"></script>
+  <script src="/static/js/profile_edit.js"></script>
+</html>
