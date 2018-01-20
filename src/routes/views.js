@@ -14,6 +14,7 @@ router.get('/meal_match', function(req, res) {
 
 router.get('/messages', function(req, res) {
     res.sendFile('messages.html', { root: 'src/views'});
+});
 
 router.get('/profile', function(req, res) {
   res.sendFile('profile.html', { root: 'src/views' });
