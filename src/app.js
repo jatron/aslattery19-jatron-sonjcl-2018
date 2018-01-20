@@ -1,4 +1,5 @@
 // libraries
+require('dotenv').config();
 const http = require('http');
 const bodyParser = require('body-parser');
 const express = require('express');
