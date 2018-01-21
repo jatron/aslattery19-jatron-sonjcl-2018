@@ -158,8 +158,16 @@ router.get('/profile',
     connect.ensureLoggedIn(),
     function(req, res) {
         getUserProfile(req.query.userId, res);
-    }
-);
+});
+
+router.get('/meal_author_profile',
+    connect.ensureLoggedIn(),
+    function(req, res) {
+        // get meal from mLab
+        Picture.findOne({key: req.query.mealKey}, function(err, meal) {
+            getUserProfile(meal.userId, res);
+        });
+});
 
 function getUserProfile(userId, res) {
     // get user from mLab
