@@ -56,8 +56,10 @@ router.post(
             User.findOne({_id: req.body.userId}, function(err, user) {
                 if (err) throw err;
                 user.mealKeys.push(key);
-                user.save();
-                res.send({success: 1, mealId : key});
+                user.save(function(err) {
+                    if (err) throw err;
+                    res.send({success: 1, mealId : key});
+                });
             });
         });
 });
@@ -108,10 +110,12 @@ router.get('/images',
                         } else {
                             // update mealIndex in database
                             user.mealIndex = mealIndex;
-                            user.save();
-                            // send mealsJson
-                            res.send(mealsJson);
-                            return;
+                            user.save(function(err) {
+                                if (err) throw err;
+                                // send mealsJson
+                                res.send(mealsJson);
+                                return;
+                            });
                         }
                     }
                 }
@@ -179,8 +183,10 @@ router.post('/bio',
             if (err) throw err;
             // update bio field in mLab
             user.bio = req.body.bio;
-            user.save();
-            res.send({success : 1});
+            user.save(function(err) {
+                if (err) throw err;
+                res.send({success : 1});
+            });
         });
 });
 
@@ -240,13 +246,13 @@ router.post('/like',
                             user.save(function(err) {
                                 if (err) throw err;
                                 res.send({success: 1});
-                            })
+                            });
                         });
                     } else {
                         user.save(function(err) {
                             if (err) throw err;
                             res.send({succes: 1});
-                        })
+                        });
                     }
                 });
             });
