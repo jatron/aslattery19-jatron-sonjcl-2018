@@ -259,6 +259,42 @@ router.post('/like',
         });
 });
 
+router.get('/matches',
+    connect.ensureLoggedIn(),
+    function(req, res) {
+        // create skeleton of JSON object that will be sent
+        var matchesJson = {
+            matches     : []
+        };
+        // get user from mLab
+        User.findOne({_id: req.query.userId}, function(err, user) {
+            if (err) throw err;
+            var matchIndex = 0;
+            // for each userId in matches, get match from mLab and add match's ID and name to matchesJson
+            addMatches();
+
+            function addMatches() {
+                if (matchIndex >= user.matches.length) {
+                    res.send(matchesJson);
+                    return;
+                } else {
+                    // get match from mLab
+                    User.findOne({_id: user.matches[matchIndex]}, function(err, matchUser) {
+                        if (err) throw err;
+                        // add match's ID and name to matchesJson
+                        const matchJson = {
+                            userId  : user.matches[matchIndex],
+                            name    : matchUser.name
+                        }
+                        matchesJson.matches.push(matchJson);
+                        matchIndex++;
+                        addMatches();
+                    });
+                }
+            }
+        });
+});
+
 function getUserProfile(userId, res) {
     // get user from mLab
     User.findOne({_id: userId}, function(err, user) {
