@@ -54,11 +54,6 @@ get('api/meal_author_profile', {mealKey : String}, successCallback, failureCallb
     ]
 }
 
-post('api/unlike', {userId : String, mealKey : String}, successCallback, failureCallback);
-{
-  success : Number
-}
-
 ################################################### Profile Page ###################################################
 
 get('api/profile', {userId : String}, successCallback, failureCallback);
