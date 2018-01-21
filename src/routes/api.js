@@ -123,6 +123,7 @@ router.get('/images',
                         // get meal image url
                         urlParams = {Bucket: bucketName, Key: mealKey};
                         s3.getSignedUrl('getObject', urlParams, function(err, url) {
+                            if (err) throw err;
                             // get meal author name
                             User.findOne({_id: mLabMeals[mealIndex].userId}, function(err, mealOwner) {
                                 if (err) throw err;
@@ -165,7 +166,21 @@ router.get('/meal_author_profile',
     function(req, res) {
         // get meal from mLab
         Picture.findOne({key: req.query.mealKey}, function(err, meal) {
+            if (err) throw err;
             getUserProfile(meal.userId, res);
+        });
+});
+
+router.post('/bio',
+    connect.ensureLoggedIn(),
+    function(req, res) {
+        // get user from mLab
+        User.findOne({_id: req.body.userId}, function(err, user) {
+            if (err) throw err;
+            // update bio field in mLab
+            user.bio = req.body.bio;
+            user.save();
+            res.send({success : 1});
         });
 });
 
