@@ -184,6 +184,75 @@ router.post('/bio',
         });
 });
 
+router.post('/delete_meal',
+    connect.ensureLoggedIn(),
+    function(req, res) {
+        // delete meal from mLab
+        // get meal owner from mLab
+        // remove meal from mealKeys
+        // save user on mLab
+        // delete meal from s3
+});
+
+router.post('/like',
+    connect.ensureLoggedIn(),
+    function(req, res) {
+        // get meal from mLab
+        Picture.findOne({key: req.body.mealKey}, function(err, meal) {
+            if (err) throw err;
+            // get id of meal owner
+            const mealOwnerId = meal.userId;
+            // get user from mLab
+            User.findOne({_id: req.body.userId}, function(err, user) {
+                if (err) throw err;
+                // add id of meal owner to usersLiked[]
+                if (!user.usersLiked) {
+                    user.usersLiked = [];
+                }
+                user.usersLiked.push(mealOwnerId);
+                // add meal to mealsLiked
+                if (!user.mealLiked) {
+                    user.mealsLiked = [];
+                }
+                user.mealsLiked.push(req.body.mealKey);
+                // get meal owner from mLab
+                User.findOne({_id: mealOwnerId}, function(err, mealOwner) {
+                    if (err) throw err;
+                    // if meal owner likes user
+                    if (!mealOwner.usersLiked) {
+                        mealOwner.usersLiked = [];
+                    }
+                    if (Helpers.arrayContains(req.body.userId, mealOwner.usersLiked)) {
+                        // add user to meal owner's matches
+                        if (!mealOwner.matches) {
+                            mealOwner.matches = [];
+                        }
+                        mealOwner.matches.push(req.body.userId);
+                        // add meal owner to user's matches
+                        if (!user.matches) {
+                            user.matches = [];
+                        }
+                        user.matches.push(mealOwnerId);
+                        // save updates to meal owner in mLab
+                        mealOwner.save(function(err) {
+                            if (err) throw err;
+                            // save updates to user in mLab
+                            user.save(function(err) {
+                                if (err) throw err;
+                                res.send({success: 1});
+                            })
+                        });
+                    } else {
+                        user.save(function(err) {
+                            if (err) throw err;
+                            res.send({succes: 1});
+                        })
+                    }
+                });
+            });
+        });
+});
+
 function getUserProfile(userId, res) {
     // get user from mLab
     User.findOne({_id: userId}, function(err, user) {
