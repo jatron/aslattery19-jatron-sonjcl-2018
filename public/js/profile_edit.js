@@ -105,6 +105,7 @@ function renderUserData(user) {
             }, function(err, data) {
                 if (err) throw err;
                 console.log('Successfully uploaded meal.');
+                location.reload();
             });
         }, function() {
             console.log("Couldn't add meal");
