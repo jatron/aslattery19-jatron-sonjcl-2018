@@ -119,7 +119,8 @@ function renderUserData(user) {
     const cookbookCard = document.getElementById('cookbook-card');
     user.meals.forEach(renderMeals);
 
-    function renderMeals(meal, index, arr, user) {
+    function renderMeals(meal, index, arr) {
+        console.log(userId);
         const card = document.createElement('div');
         card.setAttribute('id', meal.name);
         card.className = 'mt-4';
@@ -168,11 +169,12 @@ function renderUserData(user) {
         // make change bio buttton functional 
         const changeBioBtn = document.getElementById("change-bio-btn");
         changeBioBtn.addEventListener("click", function(){
-            const newUserBioText = document.getElementById("user-bio-text").innerHTML;
+            const newUserBioText = document.getElementById("user-bio-text").value;
+            console.log(newUserBioText);
             // make JSON bio obj
             const newBioObject = {};
 
-            newBioObject.userId = user.userId;
+            newBioObject.userId = userId;
             newBioObject.bio = newUserBioText;
             //post JSON bio obj
             post('api/bio', newBioObject, function() {
