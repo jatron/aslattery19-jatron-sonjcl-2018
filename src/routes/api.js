@@ -27,7 +27,10 @@ router.get('/whoami', function(req, res) {
 
 router.get('/user', function(req, res) {
     User.findOne({ _id: req.query._id }, function(err, user) {
-        if (err) throw err;
+        if (err) {
+            console.log(err);
+            return;
+        }
         res.send(user);
     });
 });
@@ -51,13 +54,22 @@ router.post(
             allergens       :   req.body.meal.allergens
         });
         picture.save(function(err) {
-            if (err) throw err;
+            if (err) {
+                console.log(err);
+                return;
+            }
             // store in mLab users collection
             User.findOne({_id: req.body.userId}, function(err, user) {
-                if (err) throw err;
+                if (err) {
+                    console.log(err);
+                    return;
+                }
                 user.mealKeys.push(key);
                 user.save(function(err) {
-                    if (err) throw err;
+                    if (err) {
+                        console.log(err);
+                        return;
+                    }
                     res.send({success: 1, mealId : key});
                 });
             });
@@ -72,10 +84,16 @@ router.get('/images',
 
         // get all meals
         Picture.find({}, function(err, mLabMeals) {
-            if (err) throw err;
+            if (err) {
+                console.log(err);
+                return;
+            }
             // get user
             User.findOne({_id: req.query.userId}, function(err, user) {
-                if (err) throw err;
+                if (err) {
+                    console.log(err);
+                    return;
+                }
 
                 var mealIndex;
                 if (user.mealIndex) {
@@ -111,7 +129,10 @@ router.get('/images',
                             // update mealIndex in database
                             user.mealIndex = mealIndex;
                             user.save(function(err) {
-                                if (err) throw err;
+                                if (err) {
+                                    console.log(err);
+                                    return;
+                                }
                                 // send mealsJson
                                 res.send(mealsJson);
                                 return;
@@ -127,10 +148,16 @@ router.get('/images',
                         // get meal image url
                         urlParams = {Bucket: bucketName, Key: mealKey};
                         s3.getSignedUrl('getObject', urlParams, function(err, url) {
-                            if (err) throw err;
+                            if (err) {
+                                console.log(err);
+                                return;
+                            }
                             // get meal author name
                             User.findOne({_id: mLabMeals[mealIndex].userId}, function(err, mealOwner) {
-                                if (err) throw err;
+                                if (err) {
+                                    console.log(err);
+                                    return;
+                                }
                                 // create mealJson
                                 const mealJson = {
                                     key         : mealKey,
@@ -170,7 +197,10 @@ router.get('/meal_author_profile',
     function(req, res) {
         // get meal from mLab
         Picture.findOne({key: req.query.mealKey}, function(err, meal) {
-            if (err) throw err;
+            if (err) {
+                console.log(err);
+                return;
+            }
             getUserProfile(meal.userId, res);
         });
 });
@@ -180,11 +210,17 @@ router.post('/bio',
     function(req, res) {
         // get user from mLab
         User.findOne({_id: req.body.userId}, function(err, user) {
-            if (err) throw err;
+            if (err) {
+                console.log(err);
+                return;
+            }
             // update bio field in mLab
             user.bio = req.body.bio;
             user.save(function(err) {
-                if (err) throw err;
+                if (err) {
+                    console.log(err);
+                    return;
+                }
                 res.send({success : 1});
             });
         });
@@ -195,20 +231,32 @@ router.post('/delete_meal',
     function(req, res) {
         // find meal owner
         Picture.findOne({key: req.body.mealKey}, function(err, meal) {
-            if (err) throw err;
+            if (err) {
+                console.log(err);
+                return;
+            }
             const mealOwnerId = meal.userId;
             // get meal owner from mLab
             User.findOne({_id: mealOwnerId}, function(err, mealOwner) {
-                if (err) throw err;
+                if (err) {
+                    console.log(err);
+                    return;
+                }
                 // remove meal from mealKeys
                 const mealIndex = mealOwner.mealKeys.indexOf(req.body.mealKey);
                 mealOwner.mealKeys.splice(mealIndex, 1);
                 // save updates to mealOwner on mLab
                 mealOwner.save(function(err) {
-                    if (err) throw err;
+                    if (err) {
+                        console.log(err);
+                        return;
+                    }
                     // get all users from mLab
                     User.find({}, function(err, allUsers) {
-                        if (err) throw err;
+                        if (err) {
+                            console.log(err);
+                            return;
+                        }
                         for (var i = 0; i < allUsers.length; i++) {
                             var currentUser = allUsers[i];
                             // remove meal from mealsLiked
@@ -236,14 +284,23 @@ router.post('/delete_meal',
                         }
                         // save updates to all users on mLab
                         User.bulkWrite(bulkWriteArray, function(err) {
-                            if (err) throw err;
+                            if (err) {
+                                console.log(err);
+                                return;
+                            }
                             // delete meal from mLab
                             meal.remove(function(err, mealCopy) {
-                                if (err) throw err;
+                                if (err) {
+                                    console.log(err);
+                                    return;
+                                }
                                 // delete meal from s3
                                 s3MealParams = {Bucket: bucketName, Key: req.body.mealKey};
                                 s3.deleteObject(s3MealParams, function(err, data) {
-                                    if (err) throw err;
+                                    if (err) {
+                                        console.log(err);
+                                        return;
+                                    }
                                     res.send({success: 1});
                                 });
                             });
@@ -259,12 +316,18 @@ router.post('/like',
     function(req, res) {
         // get meal from mLab
         Picture.findOne({key: req.body.mealKey}, function(err, meal) {
-            if (err) throw err;
+            if (err) {
+                console.log(err);
+                return;
+            }
             // get id of meal owner
             const mealOwnerId = meal.userId;
             // get user from mLab
             User.findOne({_id: req.body.userId}, function(err, user) {
-                if (err) throw err;
+                if (err) {
+                    console.log(err);
+                    return;
+                }
                 // add id of meal owner to usersLiked[]
                 if (!user.usersLiked) {
                     user.usersLiked = [];
@@ -277,7 +340,10 @@ router.post('/like',
                 user.mealsLiked.push(req.body.mealKey);
                 // get meal owner from mLab
                 User.findOne({_id: mealOwnerId}, function(err, mealOwner) {
-                    if (err) throw err;
+                    if (err) {
+                        console.log(err);
+                        return;
+                    }
                     // if meal owner likes user
                     if (!mealOwner.usersLiked) {
                         mealOwner.usersLiked = [];
@@ -295,16 +361,25 @@ router.post('/like',
                         user.matches.push(mealOwnerId);
                         // save updates to meal owner in mLab
                         mealOwner.save(function(err) {
-                            if (err) throw err;
+                            if (err) {
+                                console.log(err);
+                                return;
+                            }
                             // save updates to user in mLab
                             user.save(function(err) {
-                                if (err) throw err;
+                                if (err) {
+                                    console.log(err);
+                                    return;
+                                }
                                 res.send({success: 1});
                             });
                         });
                     } else {
                         user.save(function(err) {
-                            if (err) throw err;
+                            if (err) {
+                                console.log(err);
+                                return;
+                            }
                             res.send({succes: 1});
                         });
                     }
@@ -322,7 +397,10 @@ router.get('/matches',
         };
         // get user from mLab
         User.findOne({_id: req.query.userId}, function(err, user) {
-            if (err) throw err;
+            if (err) {
+                console.log(err);
+                return;
+            }
             var matchIndex = 0;
             // for each userId in matches, get match from mLab and add match's ID and name to matchesJson
             addMatches();
@@ -334,7 +412,10 @@ router.get('/matches',
                 } else {
                     // get match from mLab
                     User.findOne({_id: user.matches[matchIndex]}, function(err, matchUser) {
-                        if (err) throw err;
+                        if (err) {
+                            console.log(err);
+                            return;
+                        }
                         // add match's ID and name to matchesJson
                         const matchJson = {
                             userId  : user.matches[matchIndex],
@@ -353,8 +434,8 @@ function getUserProfile(userId, res) {
     // get user from mLab
     User.findOne({_id: userId}, function(err, user) {
         if (err) {
-            console.log('Error in getUserProfile(), User.findOne({_id: userId}). Message:', err.message);
-            throw err;
+            console.log(err);
+            return;
         }
         var userProfileJson = {
             userId          : userId,
@@ -375,10 +456,16 @@ function getUserProfile(userId, res) {
                 const mealKey = user.mealKeys[mealIndex];
                 urlParams = {Bucket: bucketName, Key: mealKey};
                 s3.getSignedUrl('getObject', urlParams, function(err, mealImageUrl) {
-                    if (err) throw err;
+                    if (err) {
+                        console.log(err);
+                        return;
+                    }
                     // get meal metadata from mLab
                     Picture.findOne({key: mealKey}, function(err, mealMetadata) {
-                        if (err) throw err;
+                        if (err) {
+                            console.log(err);
+                            return;
+                        }
                         const mealJson = {
                             key         : mealKey,
                             url         : mealImageUrl,
