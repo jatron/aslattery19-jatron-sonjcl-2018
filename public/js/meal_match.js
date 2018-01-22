@@ -1,12 +1,16 @@
 function main() {
-  const profileId = window.location.search.substring(1);
+    const profileId = window.location.search.substring(1);
+    // added navbar render
+    get('/api/whoami', {}, function(user) {
+    renderNavbar(user);
+    });
     get('/api/images', {'userId': profileId}, function(mealsData) {
         renderMeals(mealsData);
         renderButtons(mealsData);
 
-  }, function(){
+    }, function(){
         console.log("failure");
-  });
+    });
 }
 
 function renderUserData(user) {
@@ -156,7 +160,7 @@ for (var k = 0; k < profileButtons.length; k++) {
 
 const nextButton = document.getElementById("next-button");
 nextButton.addEventListener("click", function(){
-    alert("refresh page and sent new GET request");
+    location.reload();
 })
 }
 
