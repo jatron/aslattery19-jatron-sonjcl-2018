@@ -2,6 +2,14 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="/static/css/messages.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io();
+        socket.on('event', function (data) {
+        console.log(data);
+        });
+    </script>
+      
 
 </head>
 <body>
@@ -32,5 +40,15 @@
 
 // need to worry about room ids -> link 2 user's ids, which one comes first tho? -> need logic to do this
 // socket connection needs to join a specific room
+// follow catbook feed.js
+// if you want to keep messages, you need to save them to the database
 
 -->
+<!-- 
+    PROCESS:
+        - open connection on back end
+        - write function on front end saying what app should do when a message happens
+        - you should save messages in callback function and send them to the database
+
+        - later: you will need to use rooms/namespaces to only open connections between specific users
+ -->
