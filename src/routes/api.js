@@ -104,7 +104,7 @@ router.get('/images',
                         // add meal to mealsJson if meal is unliked and doesn't belong to user
                         addMeal();
                     } else {
-                        if ((mealIndex != startingMealIndex) && (mealsAdded < numberOfMealsDisplayed)) {
+                        if ((mealIndex !== startingMealIndex) && (mealsAdded < numberOfMealsDisplayed)) {
                             // add meal to mealsJson if meal is unliked and doesn't belong to user
                             addMeal();
                         } else {
@@ -193,11 +193,65 @@ router.post('/bio',
 router.post('/delete_meal',
     connect.ensureLoggedIn(),
     function(req, res) {
-        // delete meal from mLab
-        // get meal owner from mLab
-        // remove meal from mealKeys
-        // save user on mLab
-        // delete meal from s3
+        // find meal owner
+        Picture.findOne({key: req.body.mealKey}, function(err, meal) {
+            if (err) throw err;
+            const mealOwnerId = meal.userId;
+            // get meal owner from mLab
+            User.findOne({_id: mealOwnerId}, function(err, mealOwner) {
+                if (err) throw err;
+                // remove meal from mealKeys
+                const mealIndex = mealOwner.mealKeys.indexOf(req.body.mealKey);
+                mealOwner.mealKeys.splice(mealIndex, 1);
+                // save updates to mealOwner on mLab
+                mealOwner.save(function(err) {
+                    if (err) throw err;
+                    // get all users from mLab
+                    User.find({}, function(err, allUsers) {
+                        if (err) throw err;
+                        for (var i = 0; i < allUsers.length; i++) {
+                            var currentUser = allUsers[i];
+                            // remove meal from mealsLiked
+                            var mealLikedIndex = -1; // -1 indicates that the meal isn't in mealsLiked
+                            for (var j = 0; j < currentUser.mealsLiked.length; j++) {
+                                if (currentUser.mealsLiked[j] === req.body.mealKey) {
+                                    mealLikedIndex = j;
+                                    break;
+                                }
+                            }
+                            if (mealLikedIndex !== -1) {
+                                allUsers[i].mealsLiked.splice(mealLikedIndex, 1);
+                            }
+                        }
+                        // make bulkWrite array
+                        bulkWriteArray = [];
+                        for (var i = 0; i < allUsers.length; i++) {
+                            const bulkWriteElement = {
+                                updateOne: {
+                                    filter: {_id        : allUsers[i]._id},
+                                    update: {mealsLiked : allUsers[i].mealsLiked}
+                                }
+                            };
+                            bulkWriteArray.push(bulkWriteElement);
+                        }
+                        // save updates to all users on mLab
+                        User.bulkWrite(bulkWriteArray, function(err) {
+                            if (err) throw err;
+                            // delete meal from mLab
+                            meal.remove(function(err, mealCopy) {
+                                if (err) throw err;
+                                // delete meal from s3
+                                s3MealParams = {Bucket: bucketName, Key: req.body.mealKey};
+                                s3.deleteObject(s3MealParams, function(err, data) {
+                                    if (err) throw err;
+                                    res.send({success: 1});
+                                });
+                            });
+                        });
+                    });
+                });
+            });
+        });
 });
 
 router.post('/like',
