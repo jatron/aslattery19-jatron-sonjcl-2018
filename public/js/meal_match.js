@@ -1,12 +1,16 @@
 function main() {
-  const profileId = window.location.search.substring(1);
+    const profileId = window.location.search.substring(1);
+    // added navbar render
+    get('/api/whoami', {}, function(user) {
+    renderNavbar(user);
+    });
     get('/api/images', {'userId': profileId}, function(mealsData) {
         renderMeals(mealsData);
         renderButtons(mealsData);
 
-  }, function(){
+    }, function(){
         console.log("failure");
-  });
+    });
 }
 
 function renderUserData(user) {
@@ -116,16 +120,29 @@ for (var i = 0; i < cards.length; i++) {
     // toggle green border and like icon when clicked
     cards[i].addEventListener("click", function(){
         //toggle green border
-        this.classList.toggle('selected');
-        //toggle like icon
+        //this.classList.toggle('selected');
+        this.classList.add('selected');
+
+        // only let them like - no unliking
         const checkIcon = document.getElementById(this.id + '-likeIcon');
-        if (checkIcon.style.opacity == "100") {
-            checkIcon.setAttribute("style", "opacity:0");
-        }
-        else {
-            checkIcon.setAttribute("style", "opacity:100");
+        checkIcon.setAttribute("style", "opacity:100");
+
+        post('api/like', {userId : window.location.search.substring(1), mealKey : this.id}, function(){
+            console.log("like was a success!");
+        }, function(){
+            console.log("like failed");
+        }); // Note: userId is user that is currently logged in 
+
+
+        // //toggle like icon
+        // const checkIcon = document.getElementById(this.id + '-likeIcon');
+        // if (checkIcon.style.opacity == "100") {
+        //     checkIcon.setAttribute("style", "opacity:0");
+        // }
+        // else {
+        //     checkIcon.setAttribute("style", "opacity:100");
             
-        }
+        // }
     });
 }
 

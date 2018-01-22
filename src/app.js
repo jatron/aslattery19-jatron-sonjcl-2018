@@ -35,9 +35,9 @@ io.on('connection', function (socket) {
 
 // set up sessions
 app.use(session({
-  secret: 'session-secret',
-  resave: 'false',
-  saveUninitialized: 'true'
+    secret: process.env.SESSION_SECRET,
+    resave: 'false',
+    saveUninitialized: 'true'
 }));
 
 // hook up passport
@@ -45,22 +45,16 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // authentication routes
-app.get('/auth/facebook', passport.authenticate('facebook'));
+app.get('/auth/google', passport.authenticate('google', { scope: ['profile'] }));
 
-app.get(
-  '/auth/facebook/callback',
-  passport.authenticate(
-    'facebook',
-    { failureRedirect: '/' }
-  ),
-  function(req, res) {
-    res.redirect('/meal_match?' + req.user._id);
-  }
-);
+app.get('/auth/google/callback', passport.authenticate('google',{ failureRedirect: '/' }),
+    function(req, res) {
+        res.redirect('/meal_match?' + req.user._id);
+});
 
 app.get('/logout', function(req, res) {
-  req.logout();
-  res.redirect('/');
+    req.logout();
+    res.redirect('/');
 });
 
 // set routes
@@ -70,22 +64,22 @@ app.use('/static', express.static('public'));
 
 // 404 route
 app.use(function(req, res, next) {
-  const err = new Error('Not Found');
-  err.status = 404;
-  next(err);
+    const err = new Error('Not Found');
+    err.status = 404;
+    next(err);
 });
 
 // route error handler
 app.use(function(err, req, res, next) {
-  res.status(err.status || 500);
-  res.send({
-    status: err.status,
-    message: err.message,
-  });
+    res.status(err.status || 500);
+    res.send({
+        status: err.status,
+        message: err.message,
+    });
 });
 
 // port config
-const port = 3000; // config variable
+const port = process.env.PORT || 3000; // config variable
 server.listen(port, function() {
-  console.log('Server running on port: ' + port);
+    console.log('Server running on port: ' + port);
 });

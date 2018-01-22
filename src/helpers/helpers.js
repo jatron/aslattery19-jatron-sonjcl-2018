@@ -1,7 +1,7 @@
 module.exports = {
     arrayContains: function(element, array) {
-        for (var e in array) {
-            if (e === element) {
+        for (var i = 0; i < array.length; i++) {
+            if (array[i] === element) {
                 return true;
             }
         }

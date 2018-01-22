@@ -16,6 +16,15 @@ const router = express.Router();
 const s3 = new AWS.S3();
 
 // api endpoints
+router.get('/whoami', function(req, res) {
+  if(req.isAuthenticated()){
+    res.send(req.user);
+  }
+  else{
+    res.send({});
+  }
+});
+
 router.get('/user', function(req, res) {
     User.findOne({ _id: req.query._id }, function(err, user) {
         if (err) throw err;
@@ -30,37 +39,32 @@ router.post(
     '/upload_meal',
     connect.ensureLoggedIn(),
     function(req, res) {
-        // read image file
-        fs.readFile(req.body.meal.path, function(err, data) {
+        // create meal id
+        const key = uuidv4();
+        // store in mLab pictures collection
+        picture = new Picture({
+            key             :   key,
+            userId          :   req.body.userId,
+            tagline         :   req.body.meal.tagline,
+            description     :   req.body.meal.description,
+            ingredients     :   req.body.meal.ingredients,
+            allergens       :   req.body.meal.allergens
+        });
+        picture.save(function(err) {
             if (err) throw err;
-            // create meal id
-            const key = uuidv4();
-            params = {Bucket: bucketName, Key: key, Body: data, ContentType: 'image/jpg'};
-            // store image in s3
-            s3.putObject(params, function(err, data) {
+            // store in mLab users collection
+            User.findOne({_id: req.body.userId}, function(err, user) {
                 if (err) throw err;
-                // store in mLab pictures collection
-                picture = new Picture({
-                    key             :   key,
-                    userId          :   req.body.userId,
-                    tagline         :   req.body.meal.tagline,
-                    description     :   req.body.meal.description,
-                    ingredients     :   req.body.meal.ingredients,
-                    allergens       :   req.body.meal.allergens
-                });
-                picture.save(function(err) {
+                user.mealKeys.push(key);
+                user.save(function(err) {
                     if (err) throw err;
-                    // store in mLab users collection
-                    User.findOne({_id: req.body.userId}, function(err, user) {
-                        if (err) throw err;
-                        user.mealKeys.push(key);
-                        user.save();
-                        res.send({success: 1});
-                    });
+                    res.send({success: 1, mealId : key});
                 });
             });
         });
 });
+
+const numberOfMealsDisplayed = 9;
 
 router.get('/images',
     connect.ensureLoggedIn(),
@@ -91,7 +95,7 @@ router.get('/images',
                 if (mealIndex >= mLabMeals.length) mealIndex = 0;
                 const startingMealIndex = mealIndex;
                 var mealsAdded = 0;
-                // iterate through images (starting at mealIndex) until you find 15 meals to display
+                // iterate through images (starting at mealIndex) until you find numberOfMealsDisplayed meals to display
                 getMeals(true);
 
                 // assumes mealIndex < mLabMeals.length, mLabMeals.length > 0
@@ -100,16 +104,18 @@ router.get('/images',
                         // add meal to mealsJson if meal is unliked and doesn't belong to user
                         addMeal();
                     } else {
-                        if ((mealIndex != startingMealIndex) && (mealsAdded < 15)) {
+                        if ((mealIndex !== startingMealIndex) && (mealsAdded < numberOfMealsDisplayed)) {
                             // add meal to mealsJson if meal is unliked and doesn't belong to user
                             addMeal();
                         } else {
                             // update mealIndex in database
                             user.mealIndex = mealIndex;
-                            user.save();
-                            // send mealsJson
-                            res.send(mealsJson);
-                            return;
+                            user.save(function(err) {
+                                if (err) throw err;
+                                // send mealsJson
+                                res.send(mealsJson);
+                                return;
+                            });
                         }
                     }
                 }
@@ -121,6 +127,7 @@ router.get('/images',
                         // get meal image url
                         urlParams = {Bucket: bucketName, Key: mealKey};
                         s3.getSignedUrl('getObject', urlParams, function(err, url) {
+                            if (err) throw err;
                             // get meal author name
                             User.findOne({_id: mLabMeals[mealIndex].userId}, function(err, mealOwner) {
                                 if (err) throw err;
@@ -155,53 +162,239 @@ router.get('/images',
 router.get('/profile',
     connect.ensureLoggedIn(),
     function(req, res) {
+        getUserProfile(req.query.userId, res);
+});
+
+router.get('/meal_author_profile',
+    connect.ensureLoggedIn(),
+    function(req, res) {
+        // get meal from mLab
+        Picture.findOne({key: req.query.mealKey}, function(err, meal) {
+            if (err) throw err;
+            getUserProfile(meal.userId, res);
+        });
+});
+
+router.post('/bio',
+    connect.ensureLoggedIn(),
+    function(req, res) {
+        // get user from mLab
+        User.findOne({_id: req.body.userId}, function(err, user) {
+            if (err) throw err;
+            // update bio field in mLab
+            user.bio = req.body.bio;
+            user.save(function(err) {
+                if (err) throw err;
+                res.send({success : 1});
+            });
+        });
+});
+
+router.post('/delete_meal',
+    connect.ensureLoggedIn(),
+    function(req, res) {
+        // find meal owner
+        Picture.findOne({key: req.body.mealKey}, function(err, meal) {
+            if (err) throw err;
+            const mealOwnerId = meal.userId;
+            // get meal owner from mLab
+            User.findOne({_id: mealOwnerId}, function(err, mealOwner) {
+                if (err) throw err;
+                // remove meal from mealKeys
+                const mealIndex = mealOwner.mealKeys.indexOf(req.body.mealKey);
+                mealOwner.mealKeys.splice(mealIndex, 1);
+                // save updates to mealOwner on mLab
+                mealOwner.save(function(err) {
+                    if (err) throw err;
+                    // get all users from mLab
+                    User.find({}, function(err, allUsers) {
+                        if (err) throw err;
+                        for (var i = 0; i < allUsers.length; i++) {
+                            var currentUser = allUsers[i];
+                            // remove meal from mealsLiked
+                            var mealLikedIndex = -1; // -1 indicates that the meal isn't in mealsLiked
+                            for (var j = 0; j < currentUser.mealsLiked.length; j++) {
+                                if (currentUser.mealsLiked[j] === req.body.mealKey) {
+                                    mealLikedIndex = j;
+                                    break;
+                                }
+                            }
+                            if (mealLikedIndex !== -1) {
+                                allUsers[i].mealsLiked.splice(mealLikedIndex, 1);
+                            }
+                        }
+                        // make bulkWrite array
+                        bulkWriteArray = [];
+                        for (var i = 0; i < allUsers.length; i++) {
+                            const bulkWriteElement = {
+                                updateOne: {
+                                    filter: {_id        : allUsers[i]._id},
+                                    update: {mealsLiked : allUsers[i].mealsLiked}
+                                }
+                            };
+                            bulkWriteArray.push(bulkWriteElement);
+                        }
+                        // save updates to all users on mLab
+                        User.bulkWrite(bulkWriteArray, function(err) {
+                            if (err) throw err;
+                            // delete meal from mLab
+                            meal.remove(function(err, mealCopy) {
+                                if (err) throw err;
+                                // delete meal from s3
+                                s3MealParams = {Bucket: bucketName, Key: req.body.mealKey};
+                                s3.deleteObject(s3MealParams, function(err, data) {
+                                    if (err) throw err;
+                                    res.send({success: 1});
+                                });
+                            });
+                        });
+                    });
+                });
+            });
+        });
+});
+
+router.post('/like',
+    connect.ensureLoggedIn(),
+    function(req, res) {
+        // get meal from mLab
+        Picture.findOne({key: req.body.mealKey}, function(err, meal) {
+            if (err) throw err;
+            // get id of meal owner
+            const mealOwnerId = meal.userId;
+            // get user from mLab
+            User.findOne({_id: req.body.userId}, function(err, user) {
+                if (err) throw err;
+                // add id of meal owner to usersLiked[]
+                if (!user.usersLiked) {
+                    user.usersLiked = [];
+                }
+                user.usersLiked.push(mealOwnerId);
+                // add meal to mealsLiked
+                if (!user.mealLiked) {
+                    user.mealsLiked = [];
+                }
+                user.mealsLiked.push(req.body.mealKey);
+                // get meal owner from mLab
+                User.findOne({_id: mealOwnerId}, function(err, mealOwner) {
+                    if (err) throw err;
+                    // if meal owner likes user
+                    if (!mealOwner.usersLiked) {
+                        mealOwner.usersLiked = [];
+                    }
+                    if (Helpers.arrayContains(req.body.userId, mealOwner.usersLiked)) {
+                        // add user to meal owner's matches
+                        if (!mealOwner.matches) {
+                            mealOwner.matches = [];
+                        }
+                        mealOwner.matches.push(req.body.userId);
+                        // add meal owner to user's matches
+                        if (!user.matches) {
+                            user.matches = [];
+                        }
+                        user.matches.push(mealOwnerId);
+                        // save updates to meal owner in mLab
+                        mealOwner.save(function(err) {
+                            if (err) throw err;
+                            // save updates to user in mLab
+                            user.save(function(err) {
+                                if (err) throw err;
+                                res.send({success: 1});
+                            });
+                        });
+                    } else {
+                        user.save(function(err) {
+                            if (err) throw err;
+                            res.send({succes: 1});
+                        });
+                    }
+                });
+            });
+        });
+});
+
+router.get('/matches',
+    connect.ensureLoggedIn(),
+    function(req, res) {
+        // create skeleton of JSON object that will be sent
+        var matchesJson = {
+            matches     : []
+        };
         // get user from mLab
         User.findOne({_id: req.query.userId}, function(err, user) {
             if (err) throw err;
-            var userProfileJson = {
-                userId          : req.query.userId,
-                name            : user.name,
-                school          : user.school,
-                bio             : user.bio,
-                profilePicture  : 'https://image.freepik.com/free-icon/male-profile-user-shadow_318-40244.jpg', // TODO: get profile picture from facebook or Google
-                meals           : []
-            };
+            var matchIndex = 0;
+            // for each userId in matches, get match from mLab and add match's ID and name to matchesJson
+            addMatches();
 
-            // add all meals belonging to user to userProfileJson.meals
-            var mealIndex = 0;
-            addMealsToUserProfileJson();
-
-            function addMealsToUserProfileJson() {
-                if (mealIndex < user.mealKeys.length) {
-                    // get url from s3
-                    const mealKey = user.mealKeys[mealIndex];
-                    urlParams = {Bucket: bucketName, Key: mealKey};
-                    s3.getSignedUrl('getObject', urlParams, function(err, mealImageUrl) {
-                        if (err) throw err;
-                        // get meal metadata from mLab
-                        Picture.findOne({key: mealKey}, function(err, mealMetadata) {
-                            if (err) throw err;
-                            const mealJson = {
-                                key         : mealKey,
-                                url         : mealImageUrl,
-                                tagline     : mealMetadata.tagline,
-                                description : mealMetadata.description,
-                                ingredients : mealMetadata.ingredients,
-                                allergens   : mealMetadata.allergens
-                            };
-                            // append mealJson to userProfileJson.meals
-                            userProfileJson.meals.push(mealJson);
-                            mealIndex++;
-                            addMealsToUserProfileJson();
-                        });
-                    });
+            function addMatches() {
+                if (matchIndex >= user.matches.length) {
+                    res.send(matchesJson);
+                    return;
                 } else {
-                    res.send(userProfileJson);
+                    // get match from mLab
+                    User.findOne({_id: user.matches[matchIndex]}, function(err, matchUser) {
+                        if (err) throw err;
+                        // add match's ID and name to matchesJson
+                        const matchJson = {
+                            userId  : user.matches[matchIndex],
+                            name    : matchUser.name
+                        }
+                        matchesJson.matches.push(matchJson);
+                        matchIndex++;
+                        addMatches();
+                    });
                 }
             }
         });
-    }
-);
+});
 
+function getUserProfile(userId, res) {
+    // get user from mLab
+    User.findOne({_id: userId}, function(err, user) {
+        if (err) throw err;
+        var userProfileJson = {
+            userId          : userId,
+            name            : user.name,
+            school          : user.school,
+            bio             : user.bio,
+            profilePicture  : 'https://image.freepik.com/free-icon/male-profile-user-shadow_318-40244.jpg', // TODO: get profile picture from facebook or Google
+            meals           : []
+        };
+
+        // add all meals belonging to user to userProfileJson.meals
+        var mealIndex = 0;
+        addMealsToUserProfileJson();
+
+        function addMealsToUserProfileJson() {
+            if (mealIndex < user.mealKeys.length) {
+                // get url from s3
+                const mealKey = user.mealKeys[mealIndex];
+                urlParams = {Bucket: bucketName, Key: mealKey};
+                s3.getSignedUrl('getObject', urlParams, function(err, mealImageUrl) {
+                    if (err) throw err;
+                    // get meal metadata from mLab
+                    Picture.findOne({key: mealKey}, function(err, mealMetadata) {
+                        if (err) throw err;
+                        const mealJson = {
+                            key         : mealKey,
+                            url         : mealImageUrl,
+                            tagline     : mealMetadata.tagline,
+                            description : mealMetadata.description,
+                            ingredients : mealMetadata.ingredients,
+                            allergens   : mealMetadata.allergens
+                        };
+                        // append mealJson to userProfileJson.meals
+                        userProfileJson.meals.push(mealJson);
+                        mealIndex++;
+                        addMealsToUserProfileJson();
+                    });
+                });
+            } else {
+                res.send(userProfileJson);
+            }
+        }
+    });
+}
 
 module.exports = router;

@@ -1,7 +1,11 @@
 // client side javascript for Profile page
 function main() {
-    const profileId = window.location.search.substring(1); // returns url query w/o "?"
+    get('/api/whoami', {}, function(user) {
+    renderNavbar(user);
+    });
 
+    const profileId = window.location.search.substring(1); // returns url query w/o "?"
+    console.log(profileId);
     // get all profile info needed to render user profile
     // add user string later from profileId
     get('api/profile', {userId : profileId}, function(profileUser) {
@@ -9,17 +13,12 @@ function main() {
     }, function() {
     console.log("Couldn't access user data :(");
     });
-
-    get('/api/whoami', {}, function(user) {
-    renderNavbar(user);
-    });
-
-    
 }
 
 
 
 function renderUserData(user) {
+    console.log(user.userId);
 	// rendering name
 	const nameContainer = document.getElementById('name-container');
 	const nameHeader = document.createElement('h1');
@@ -37,6 +36,11 @@ function renderUserData(user) {
 
     // render bio w/jquery
     $("#profile-description").html(user.bio);
+
+    // direct edit button
+    const editProfileBtn = document.getElementById('edit-profile-btn');
+    editProfileBtn.setAttribute('href', "profile_edit?" + user.userId);
+    // $("#edit-profile-btn").href("profile_edit?" + userId);
 
 	// rendering cookbook
 	const cookbookCard = document.getElementById('cookbook-card');
