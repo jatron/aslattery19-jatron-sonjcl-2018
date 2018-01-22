@@ -18,6 +18,6 @@ function renderNavbar(user) {
     navbarDiv.appendChild(newNavbarItem('Profile', '/profile?'+user._id));
     navbarDiv.appendChild(newNavbarItem('Logout', '/logout'));
   } else {
-    navbarDiv.appendChild(newNavbarItem('Login', '/auth/facebook'));
+    navbarDiv.appendChild(newNavbarItem('Login', '/auth/google'));
   }
 }

@@ -1,13 +1,13 @@
 const passport = require('passport');
-const fbp = require('passport-facebook');
+var GoogleStrategy = require('passport-google-oauth20').Strategy;
 
 const User = require('./models/user');
 
 // set up passport configs
-passport.use(new fbp.Strategy({
-  clientID: '142634889753380', // load these from environment variables
-  clientSecret: '2a28316f82f64ff29357deb65675b1d1', // load these from environment variables
-  callbackURL: '/auth/facebook/callback'
+passport.use(new GoogleStrategy({
+  clientID: process.env.GOOGLE_CLIENT_ID,
+  clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+  callbackURL: '/auth/google/callback'
 }, function(accessToken, BrefreshToken, profile, done) {
   User.findOne({'fbid': profile.id }, function(err, user) {
     if (err) return done(err);
