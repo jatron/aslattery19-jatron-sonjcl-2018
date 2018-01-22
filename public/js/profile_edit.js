@@ -59,8 +59,11 @@ function renderUserData(user) {
     profileImage.setAttribute('src', user.profilePicture);
 
     // render bio w/jquery, let user edit
-    // NEED TO MAKE DONE BUTTON MAKE BIO POST REQUEST
     $("#user-bio-text").html(user.bio);
+
+    //render done btn take user back to profile page
+    document.getElementById('done-btn').setAttribute('href', "profile?" + userId);
+
 
     //upload new meal!
     const addMealBtn = document.getElementById("add-meal-btn");
