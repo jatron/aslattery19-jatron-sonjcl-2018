@@ -160,7 +160,7 @@ for (var k = 0; k < profileButtons.length; k++) {
 
 const nextButton = document.getElementById("next-button");
 nextButton.addEventListener("click", function(){
-    alert("refresh page and sent new GET request");
+    location.reload();
 })
 }
 
