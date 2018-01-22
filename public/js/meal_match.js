@@ -1,12 +1,16 @@
 function main() {
-  const profileId = window.location.search.substring(1);
+    const profileId = window.location.search.substring(1);
+    // added navbar render
+    get('/api/whoami', {}, function(user) {
+    renderNavbar(user);
+    });
     get('/api/images', {'userId': profileId}, function(mealsData) {
         renderMeals(mealsData);
         renderButtons(mealsData);
 
-  }, function(){
+    }, function(){
         console.log("failure");
-  });
+    });
 }
 
 function renderUserData(user) {
