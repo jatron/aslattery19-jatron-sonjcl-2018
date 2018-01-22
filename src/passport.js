@@ -5,8 +5,8 @@ const User = require('./models/user');
 
 // set up passport configs
 passport.use(new fbp.Strategy({
-  clientID: '142634889753380',
-  clientSecret: '2a28316f82f64ff29357deb65675b1d1',
+  clientID: '142634889753380', // load these from environment variables
+  clientSecret: '2a28316f82f64ff29357deb65675b1d1', // load these from environment variables
   callbackURL: '/auth/facebook/callback'
 }, function(accessToken, BrefreshToken, profile, done) {
   User.findOne({'fbid': profile.id }, function(err, user) {
