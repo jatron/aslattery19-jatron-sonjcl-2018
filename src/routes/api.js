@@ -352,7 +352,10 @@ router.get('/matches',
 function getUserProfile(userId, res) {
     // get user from mLab
     User.findOne({_id: userId}, function(err, user) {
-        if (err) throw err;
+        if (err) {
+            console.log('Error in getUserProfile(), User.findOne({_id: userId}). Message:', err.message);
+            throw err;
+        }
         var userProfileJson = {
             userId          : userId,
             name            : user.name,
