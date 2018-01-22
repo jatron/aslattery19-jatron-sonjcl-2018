@@ -54,11 +54,6 @@ get('api/meal_author_profile', {mealKey : String}, successCallback, failureCallb
     ]
 }
 
-post('api/unlike', {userId : String, mealKey : String}, successCallback, failureCallback);
-{
-  success : Number
-}
-
 ################################################### Profile Page ###################################################
 
 get('api/profile', {userId : String}, successCallback, failureCallback);
@@ -96,7 +91,6 @@ post('api/bio', {userId : String, bio : String}, successCallback, failureCallbac
 post('api/upload_meal', {userId : String,
   meal :
     {
-      path          :   String,
       tagline       :   String,
       description   :   String,
       ingredients   :   String,
@@ -104,7 +98,8 @@ post('api/upload_meal', {userId : String,
     }
   }, successCallback, failureCallback);
 {
-  success : Number
+  success : Number,
+  mealId  : String
 }
 
 post('api/delete_meal', {mealKey : String}, successCallback, failureCallback);

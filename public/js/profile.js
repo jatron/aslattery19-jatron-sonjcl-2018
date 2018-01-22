@@ -1,7 +1,10 @@
 // client side javascript for Profile page
 function main() {
-    const profileId = window.location.search.substring(1); // returns url query w/o "?"
+    get('/api/whoami', {}, function(user) {
+    renderNavbar(user);
+    });
 
+    const profileId = window.location.search.substring(1); // returns url query w/o "?"
     // get all profile info needed to render user profile
     // add user string later from profileId
     get('api/profile', {userId : profileId}, function(profileUser) {
@@ -9,12 +12,6 @@ function main() {
     }, function() {
     console.log("Couldn't access user data :(");
     });
-
-    get('/api/whoami', {}, function(user) {
-    renderNavbar(user);
-    });
-
-    
 }
 
 
