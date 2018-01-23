@@ -4,6 +4,8 @@ const http = require('http');
 const bodyParser = require('body-parser');
 const express = require('express');
 const session = require('express-session');
+const socketio = require('socket.io');
+
 
 // local dependencies
 const db = require('./db');
@@ -17,6 +19,17 @@ const app = express();
 // Use middleware that parses urlencoded bodies and json
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+
+// // configure socketio
+const server = http.Server(app);
+const io = socketio(server);
+io.on('connection', function(socket){
+  socket.on('chat message', function(msg){
+    io.emit('chat message', msg);
+  });
+});
+
 
 // set up sessions
 app.use(session({
@@ -65,7 +78,6 @@ app.use(function(err, req, res, next) {
 
 // port config
 const port = process.env.PORT || 3000; // config variable
-const server = http.Server(app);
 server.listen(port, function() {
     console.log('Server running on port: ' + port);
 });

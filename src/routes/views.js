@@ -24,6 +24,9 @@ router.get('/profile_edit', function(req, res) {
   res.sendFile('profile_edit.html', { root: 'src/views' });
 });
 
+router.get('/socket', function(req, res) {
+  res.sendFile('socket_test.html', { root: 'src/views' });
+});
 
 module.exports = router;
 

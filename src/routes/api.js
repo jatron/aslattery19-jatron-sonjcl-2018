@@ -28,6 +28,7 @@ router.get('/whoami', function(req, res) {
 router.get('/user', function(req, res) {
     User.findOne({ _id: req.query._id }, function(err, user) {
         if (err) {
+            console.log('XXX: Error in get(/user)->User.findOne({ _id: req.query._id })');
             console.log(err);
             return;
         }
@@ -55,18 +56,21 @@ router.post(
         });
         picture.save(function(err) {
             if (err) {
+                console.log('XXX: Error in post(/upload_meal)->picture.save()');
                 console.log(err);
                 return;
             }
             // store in mLab users collection
             User.findOne({_id: req.body.userId}, function(err, user) {
                 if (err) {
+                    console.log('XXX: Error in post(/upload_meal)->picture.save()->User.findOne()');
                     console.log(err);
                     return;
                 }
                 user.mealKeys.push(key);
                 user.save(function(err) {
                     if (err) {
+                        console.log('XXX: Error in post(/upload_meal)->picture.save()->User.findOne()->user.save()');
                         console.log(err);
                         return;
                     }
@@ -85,12 +89,14 @@ router.get('/images',
         // get all meals
         Picture.find({}, function(err, mLabMeals) {
             if (err) {
+                console.log('XXX: Error in get(/images)->Picture.find()');
                 console.log(err);
                 return;
             }
             // get user
             User.findOne({_id: req.query.userId}, function(err, user) {
                 if (err) {
+                    console.log('XXX: Error in get(/images)->Picture.find()->User.findOne({_id: req.query.userId})');
                     console.log(err);
                     return;
                 }
@@ -130,6 +136,7 @@ router.get('/images',
                             user.mealIndex = mealIndex;
                             user.save(function(err) {
                                 if (err) {
+                                    console.log('XXX: Error in getMeals()->user.save()');
                                     console.log(err);
                                     return;
                                 }
@@ -149,12 +156,14 @@ router.get('/images',
                         urlParams = {Bucket: bucketName, Key: mealKey};
                         s3.getSignedUrl('getObject', urlParams, function(err, url) {
                             if (err) {
+                                console.log('XXX: Error in addMeal()->s3.getSignedUrl(getObject, urlParams)');
                                 console.log(err);
                                 return;
                             }
                             // get meal author name
                             User.findOne({_id: mLabMeals[mealIndex].userId}, function(err, mealOwner) {
                                 if (err) {
+                                    console.log('XXX: Error in addMeal()->s3.getSignedUrl(getObject, urlParams)->User.findOne({_id: mLabMeals[mealIndex].userId})');
                                     console.log(err);
                                     return;
                                 }
@@ -198,6 +207,7 @@ router.get('/meal_author_profile',
         // get meal from mLab
         Picture.findOne({key: req.query.mealKey}, function(err, meal) {
             if (err) {
+                console.log('XXX: Error get(/meal_author_profile)->Picture.findOne({key: req.query.mealKey})');
                 console.log(err);
                 return;
             }
@@ -211,6 +221,7 @@ router.post('/bio',
         // get user from mLab
         User.findOne({_id: req.body.userId}, function(err, user) {
             if (err) {
+                console.log('XXX: Error in post(/bio)->User.findOne({_id: req.body.userId})');
                 console.log(err);
                 return;
             }
@@ -218,6 +229,7 @@ router.post('/bio',
             user.bio = req.body.bio;
             user.save(function(err) {
                 if (err) {
+                    console.log('XXX: Error in post(/bio)->User.findOne({_id: req.body.userId})->user.save()');
                     console.log(err);
                     return;
                 }
@@ -232,6 +244,7 @@ router.post('/delete_meal',
         // find meal owner
         Picture.findOne({key: req.body.mealKey}, function(err, meal) {
             if (err) {
+                console.log('XXX: Error in post(/delete_meal)->Picture.findOne({key: req.body.mealKey})');
                 console.log(err);
                 return;
             }
@@ -239,6 +252,7 @@ router.post('/delete_meal',
             // get meal owner from mLab
             User.findOne({_id: mealOwnerId}, function(err, mealOwner) {
                 if (err) {
+                    console.log('XXX: Error in post(/delete_meal)->Picture.findOne({key: req.body.mealKey})->User.findOne({_id: mealOwnerId})');
                     console.log(err);
                     return;
                 }
@@ -248,12 +262,14 @@ router.post('/delete_meal',
                 // save updates to mealOwner on mLab
                 mealOwner.save(function(err) {
                     if (err) {
+                        console.log('XXX: Error in post(/delete_meal)->Picture.findOne({key: req.body.mealKey})->User.findOne({_id: mealOwnerId})->mealOwner.save()');
                         console.log(err);
                         return;
                     }
                     // get all users from mLab
                     User.find({}, function(err, allUsers) {
                         if (err) {
+                            console.log('XXX: Error in post(/delete_meal)->Picture.findOne({key: req.body.mealKey})->User.findOne({_id: mealOwnerId})->mealOwner.save()->User.find({})');
                             console.log(err);
                             return;
                         }
@@ -285,12 +301,14 @@ router.post('/delete_meal',
                         // save updates to all users on mLab
                         User.bulkWrite(bulkWriteArray, function(err) {
                             if (err) {
+                                console.log('XXX: Error in post(/delete_meal)->Picture.findOne({key: req.body.mealKey})->User.findOne({_id: mealOwnerId})->mealOwner.save()->User.find({})->User.bulkWrite(bulkWriteArray)');
                                 console.log(err);
                                 return;
                             }
                             // delete meal from mLab
                             meal.remove(function(err, mealCopy) {
                                 if (err) {
+                                    console.log('XXX: Error in post(/delete_meal)->Picture.findOne({key: req.body.mealKey})->User.findOne({_id: mealOwnerId})->mealOwner.save()->User.find({})->User.bulkWrite(bulkWriteArray)->meal.remove()');
                                     console.log(err);
                                     return;
                                 }
@@ -298,6 +316,7 @@ router.post('/delete_meal',
                                 s3MealParams = {Bucket: bucketName, Key: req.body.mealKey};
                                 s3.deleteObject(s3MealParams, function(err, data) {
                                     if (err) {
+                                        console.log('XXX: Error in post(/delete_meal)->Picture.findOne({key: req.body.mealKey})->User.findOne({_id: mealOwnerId})->mealOwner.save()->User.find({})->User.bulkWrite(bulkWriteArray)->meal.remove()->s3.deleteObject(s3MealParams)');
                                         console.log(err);
                                         return;
                                     }
@@ -317,6 +336,7 @@ router.post('/like',
         // get meal from mLab
         Picture.findOne({key: req.body.mealKey}, function(err, meal) {
             if (err) {
+                console.log('XXX: Error in post(/like)->Picture.findOne({key: req.body.mealKey})');
                 console.log(err);
                 return;
             }
@@ -325,6 +345,7 @@ router.post('/like',
             // get user from mLab
             User.findOne({_id: req.body.userId}, function(err, user) {
                 if (err) {
+                    console.log('XXX: Error in post(/like)->Picture.findOne({key: req.body.mealKey})->User.findOne({_id: req.body.userId})');
                     console.log(err);
                     return;
                 }
@@ -341,6 +362,7 @@ router.post('/like',
                 // get meal owner from mLab
                 User.findOne({_id: mealOwnerId}, function(err, mealOwner) {
                     if (err) {
+                        console.log('XXX: Error in post(/like)->Picture.findOne({key: req.body.mealKey})->User.findOne({_id: req.body.userId})->User.findOne({_id: mealOwnerId})');
                         console.log(err);
                         return;
                     }
@@ -362,12 +384,14 @@ router.post('/like',
                         // save updates to meal owner in mLab
                         mealOwner.save(function(err) {
                             if (err) {
+                                console.log('XXX: Error in post(/like)->Picture.findOne({key: req.body.mealKey})->User.findOne({_id: req.body.userId})->User.findOne({_id: mealOwnerId})->mealOwner.save()');
                                 console.log(err);
                                 return;
                             }
                             // save updates to user in mLab
                             user.save(function(err) {
                                 if (err) {
+                                    console.log('XXX: Error in post(/like)->Picture.findOne({key: req.body.mealKey})->User.findOne({_id: req.body.userId})->User.findOne({_id: mealOwnerId})->mealOwner.save()->user.save()');
                                     console.log(err);
                                     return;
                                 }
@@ -377,6 +401,7 @@ router.post('/like',
                     } else {
                         user.save(function(err) {
                             if (err) {
+                                console.log('XXX: Error in post(/like)->Picture.findOne({key: req.body.mealKey})->User.findOne({_id: req.body.userId})->User.findOne({_id: mealOwnerId})->user.save()');
                                 console.log(err);
                                 return;
                             }
@@ -398,6 +423,7 @@ router.get('/matches',
         // get user from mLab
         User.findOne({_id: req.query.userId}, function(err, user) {
             if (err) {
+                console.log('XXX: Error in get(/matches)->User.findOne({_id: req.query.userId})');
                 console.log(err);
                 return;
             }
@@ -413,6 +439,7 @@ router.get('/matches',
                     // get match from mLab
                     User.findOne({_id: user.matches[matchIndex]}, function(err, matchUser) {
                         if (err) {
+                            console.log('XXX: Error in addMatches()->User.findOne({_id: user.matches[matchIndex]})');
                             console.log(err);
                             return;
                         }
@@ -434,6 +461,7 @@ function getUserProfile(userId, res) {
     // get user from mLab
     User.findOne({_id: userId}, function(err, user) {
         if (err) {
+            console.log('XXX: Error in getUserProfile()->User.findOne({_id: userId})');
             console.log(err);
             return;
         }
@@ -457,12 +485,14 @@ function getUserProfile(userId, res) {
                 urlParams = {Bucket: bucketName, Key: mealKey};
                 s3.getSignedUrl('getObject', urlParams, function(err, mealImageUrl) {
                     if (err) {
+                        console.log('XXX: error in addMealsToUserProfileJson()->s3.getSignedUrl(getObject, urlParams)');
                         console.log(err);
                         return;
                     }
                     // get meal metadata from mLab
                     Picture.findOne({key: mealKey}, function(err, mealMetadata) {
                         if (err) {
+                            console.log('XXX: error in addMealsToUserProfileJson()->s3.getSignedUrl(getObject, urlParams)->Picture.findOne({key: mealKey})');
                             console.log(err);
                             return;
                         }
