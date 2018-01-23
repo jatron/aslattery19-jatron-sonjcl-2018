@@ -24,27 +24,11 @@ app.use(bodyParser.json());
 // // configure socketio
 const server = http.Server(app);
 const io = socketio(server);
-// io.on('connection', function (socket) {
-//   console.log('socket is connected');
-//   //socket.emit("event", { hello: 'world' });
-//   socket.on('disconnect', function () {
-//     console.log("user disconnected!");
-//     });
-//   socket.on('chat message', function(msg){
-//      io.emit('message: ', msg);
-//      console.log("emitting message:", msg);
-//    });
-// });
 io.on('connection', function(socket){
   socket.on('chat message', function(msg){
     io.emit('chat message', msg);
   });
 });
-
-
-
-// app.set('socketio', io);
-
 
 
 // set up sessions

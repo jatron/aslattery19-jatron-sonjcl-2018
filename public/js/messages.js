@@ -31,15 +31,25 @@ function main() {
     console.log("Couldn't access matches :(");
     });
 
-
     get('/api/whoami', {}, function(user) {
     renderNavbar(user);
     });
 
-
+    get('api/profile', {userId : profileId}, function(userData) {
+        name = userData.name;
+        socket(name);
+    }, function(){
+        console.log("was unable to get user info :(");
+    });
     
 }
 
+function socket(name) {
+    var socket = io();
+    socket.on('chat message', function(msg){
+             $('#messages').append($('<li>').text(name + ": " + msg));
+         });
+}
 
 
 function renderMatches(matchObj){
