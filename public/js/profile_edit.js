@@ -106,7 +106,10 @@ function renderUserData(user) {
                 ACL             : 'public-read',
                 ContentType     : 'image/jpg'
             }, function(err, data) {
-                if (err) throw err;
+                if (err) {
+                    console.log(err);
+                    return;
+                }
                 console.log('Successfully uploaded meal.');
                 location.reload();
             });
