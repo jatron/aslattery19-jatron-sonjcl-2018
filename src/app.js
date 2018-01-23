@@ -7,7 +7,6 @@ const session = require('express-session');
 const socketio = require('socket.io');
 
 
-
 // local dependencies
 const db = require('./db');
 const passport = require('./passport');
@@ -22,13 +21,28 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
-// configure socketio
+// // configure socketio
 const server = http.Server(app);
 const io = socketio(server);
-io.on('connection', function (socket) {
-  console.log('im connected');
-  socket.emit("event", { hello: 'world' });
+// io.on('connection', function (socket) {
+//   console.log('socket is connected');
+//   //socket.emit("event", { hello: 'world' });
+//   socket.on('disconnect', function () {
+//     console.log("user disconnected!");
+//     });
+//   socket.on('chat message', function(msg){
+//      io.emit('message: ', msg);
+//      console.log("emitting message:", msg);
+//    });
+// });
+io.on('connection', function(socket){
+  socket.on('chat message', function(msg){
+    io.emit('chat message', msg);
+  });
 });
+
+
+
 // app.set('socketio', io);
 
 

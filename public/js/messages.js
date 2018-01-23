@@ -66,6 +66,21 @@ function renderUserData(user) {
     };
 
 
+// tells socket what to do when we get a new message
+// function newMessage(msg, user) {
+//     console.log(msg);
+//     console.log(user);
+//     //const messageDiv = document.createElement("div");
+//     // const messagesBar = document.getElementById("messages-bar");
+//     // messageDiv.innerHTML = msg;
+//     // messagesBar.appendChild(messageDiv);
+
+// }
+
+
+
+
+
     // // rendering cookbook
     // const cookbookCard = document.getElementById('cookbook-card');
     // user.meals.forEach(renderMeals);
