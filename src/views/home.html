@@ -11,41 +11,53 @@
  <!--    <div id="background">
         <img src="/static/home-images/home_1.jpg"/>
     </div> -->
-
-
     <div class="bgimg-1">
         <div class="caption">
-            <span class="">POTLUCK</span>
-            <br>
+            <span class="">potluck</span>
+            <hr style="height:0px; visibility:hidden;" />
             <span class="subtitle"> <i> feast together </i> </span>
-            <br>
-
+            <div style="line-height:0%;">
+                <br>
+            </div>
             <button class="btn danger-btn" type='button' id='login-button' onclick="window.location='/auth/google'"> 
-                <span class="">begin</span> 
+                <span class="white">begin</span> 
             </button>
+            <!-- </div id="scrolldown">
+                <a href="#info-box">
+                    <span></span>
+                </a>
+            </div>
+            <div class="info-box">
+                <a id="info-box"></a>
+                <h1>what is potluck?</h1>
+                <p>
+                    If you've ever found yourself hungry for food and company, look no further. If you have even one dish that you're proud to put you name on, potluck is here. Share your favorite meals and browse the dishes that other are making. If you get a mutual matching, you're all set to potluck. Enjoy! 
+                </p>
+                <br>
+                <p>potluck. find your feast</p>
+            </div> -->
         </div>
     </div>
-
-        <!-- <div class= "row" align="center">
-            <div class="col-sm-4"> </div>
-            <div class="col-sm-4" align="center">
-                <div class="container-fluid ">
-                    <b class="" id='potluck'>potluck</b>
-                    <p class="" id='tagline'> get cookin' </p>
-                    <br>
-                    <button class=" btn danger-btn" type='button' id='login-button' onclick="window.location='/auth/google'"> Log In </button>
-                </div> 
-            </div>  
-            <div class="col-sm-4"> </div>
-            
-        </div> -->
-
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 <!-- <script type="text/javascript" src="scripts/jquery.cycle.all.2.74.js"></script> -->
 <script src="https://malsup.github.com/jquery.cycle.all.js"></script>  
+<!-- <script type="text/javascript">
+    $('a[href*="#"]:not([href="#"])').click(function() {
+  if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+    if (target.length) {
+      $('html, body').animate({
+        scrollTop: target.offset().top - 130
+      }, 1000);
+      return false;
+    }
+  }
+});
+</script> -->
 
 <!--   <script src="/static/js/api.js"></script>
   <script src="/static/js/navbar.js"></script> -->
