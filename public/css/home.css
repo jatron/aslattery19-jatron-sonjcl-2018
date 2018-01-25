@@ -3,7 +3,9 @@ body, html {
     line-height: .5;
 }
 
-
+.btn{
+    cursor: pointer;
+}
 
 .bgimg-1 {
     background-image: url("/static/home-images/home_1.jpg");
