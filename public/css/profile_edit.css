@@ -1,1 +1,9 @@
-/*edit profile page css*/
+body, html {
+    height: 100%;
+    line-height: .5;
+    font-family:'Unica One';
+}
+
+.btn{
+    cursor: pointer;
+}

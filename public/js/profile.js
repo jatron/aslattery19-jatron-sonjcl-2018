@@ -26,9 +26,9 @@ function renderUserData(user) {
     nameContainer.prepend(nameHeader);
 
     // rendering school
-    const schoolHeader = document.createElement('h2');
-    schoolHeader.innerHTML = user.school;
-    nameHeader.appendChild(schoolHeader);
+    // const schoolHeader = document.createElement('h2');
+    // schoolHeader.innerHTML = user.school;
+    // nameHeader.appendChild(schoolHeader);
 
     //render profile pic
     const profileImage = document.getElementById('user-profile-image');
