@@ -7,10 +7,10 @@ function main() {
     get('/api/images', {'userId': profileId}, function(mealsData) {
         renderMeals(mealsData);
         renderButtons(mealsData);
-
     }, function(){
         console.log("failure");
     });
+
 }
 
 function renderUserData(user) {
@@ -29,7 +29,7 @@ function renderMeals(mealsData) {
         // load image
         var img = document.createElement("img");
         img.setAttribute("id", meals[h].key);
-        img.className = "card-img";
+        img.className = "card-img img-fluid";
         img.setAttribute("src", meals[h].url);
         cards[h].appendChild(img);
 
@@ -107,9 +107,8 @@ function renderMeals(mealsData) {
         profileButtonIcon.setAttribute("style", "font-size:30px")
         profileButtonIcon.setAttribute('aria-hidden', 'true');
         profileButton.appendChild(profileButtonIcon);
-
-
     }
+    refreshGrid(); 
 }
 
 function renderButtons() {
@@ -177,6 +176,27 @@ nextButton.addEventListener("click", function(){
 })
 }
 
+function refreshGrid(){
+  var grid = document.querySelector('.grid');
 
+  var msnry = new Masonry( grid, {
+    itemSelector: '.grid__item',
+    columnWidth: '.grid__sizer',
+    gutter: 15,
+    percentPosition: true
+  });
+
+  imagesLoaded( grid ).on( 'progress', function() {
+    // layout Masonry after each image loads
+    msnry.layout();
+  });
+
+}
 
 main();
+// masonry grid
+// $('.grid').masonry({ 
+//     columnWidth: 50,
+//     itemSelector: '.grid-item',
+//     percentPosition: true
+// });

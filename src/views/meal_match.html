@@ -7,10 +7,63 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/static/css/mealmatch.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">  
+</head>
+<body id="body">
+    <nav class="navbar navbar-inverse bg-inverse navbar-expand-lg navbar-light" style="background-color: #fff; box-shadow: 3px 3px 5px grey;">
+            <a class="navbar-brand" href="#">
+                <img src="https://image.freepik.com/free-icon/chef-hat-on-a-plate-from-side-view_318-61041.jpg" width="30" height="30" class="d-inline-block align-top" alt="">potluck
+            </a>
+            <div class="navbar-nav" id="nav-item-container">
+            <!-- navbar items are inserted here -->
+            </div>
+        </nav>
+<h1>find your (meal) match</h1>
+<div class="grid ">
+<!--   <div class='row'>
+    <div class = 'column'> -->
+       <!--  <div class="card card-inverse grid-sizer"></div> -->
+        <div class="card card-inverse grid-item"></div>
 
+        <div class="card card-inverse grid-item"></div>
 
+        <div class="card card-inverse grid-item"></div>
+<!--     </div>
+    <div class ='column'>  -->
+        <div class="card card-inverse grid-item"></div>
 
+        <div class="card card-inverse grid-item"></div>
+
+        <div class="card card-inverse grid-item"></div>
+<!--     </div>
+    <div class = 'column'>  -->
+        <div class="card card-inverse grid-item"></div>
+
+        <div class="card card-inverse grid-item"></div>
+
+        <div class="card card-inverse grid-item"></div>
+<!--     </div>
+  </div> -->
+</div>
+
+    <div class = 'next-button-div'>
+        <button type="button" id='next-button' class="next-button"><i class="fa fa-arrow-circle-o-right" aria-hidden="true" style="font-size:50px"></i></button>
+    </div>
+</body>
+<!-- javascript scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/dojo/1.13.0/dojo/dojo.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js'></script> 
+<script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+<script src="/static/js/api.js"></script>
+<script src="/static/js/navbar.js"></script>
+<script src="/static/js/meal_match.js"></script>
+</html>
 
 <!-- 
 
@@ -45,70 +98,3 @@ send to database:
 -key for image that they liked
 
 -->
-  
-</head>
-<body id="body">
-    <nav class="navbar navbar-inverse bg-inverse navbar-expand-lg navbar-light" style="background-color: #fff; box-shadow: 3px 3px 5px grey;">
-            <a class="navbar-brand" href="#">
-                <img src="https://image.freepik.com/free-icon/chef-hat-on-a-plate-from-side-view_318-61041.jpg" width="30" height="30" class="d-inline-block align-top" alt="">potluck
-            </a>
-            <div class="navbar-nav" id="nav-item-container">
-            <!-- navbar items are inserted here -->
-            </div>
-        </nav>
-<h1>find your (meal) match</h1>
-  <div class='row'>
-    <div class = 'column'>
-        <div class="card card-inverse">
-
-        </div>
-
-        <div class="card card-inverse">
-            
-        </div>
-
-        <div class="card card-inverse">
-            
-        </div>
-    </div>
-    <div class ='column'> 
-        <div class="card card-inverse">
-            
-        </div>
-
-        <div class="card card-inverse">
-          
-        </div>
-
-        <div class="card card-inverse">
-          
-        </div>
-    </div>
-    <div class = 'column'> 
-        <div class="card card-inverse">
-           
-        </div>
-
-        <div class="card card-inverse">
-           
-        </div>
-
-        <div class="card card-inverse">
-         
-        </div>
-    </div>
-  </div>
-
-    <div class = 'next-button-div'>
-        <button type="button" id='next-button' class="next-button"><i class="fa fa-arrow-circle-o-right" aria-hidden="true" style="font-size:50px"></i></button>
-    </div>
-
-<!-- javascript scripts -->
-<script src="https://ajax.googleapis.com/ajax/libs/dojo/1.13.0/dojo/dojo.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</body>
-<script src="/static/js/api.js"></script>
-<script src="/static/js/navbar.js"></script>
-<script src="/static/js/meal_match.js"></script>
-</html>
