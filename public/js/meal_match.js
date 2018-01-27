@@ -5,6 +5,7 @@ function main() {
     renderNavbar(user);
     });
     get('/api/images', {'userId': profileId}, function(mealsData) {
+        console.log(mealsData);
         renderMeals(mealsData);
         renderButtons(mealsData);
     }, function(){
@@ -22,21 +23,23 @@ function renderUserData(user) {
 
 function renderMeals(mealsData) {
     const meals = mealsData.meals;
-    const cards = document.getElementsByClassName('card');
+    console.log(meals);
+    const cards = document.getElementsByClassName('meal-card');
+
 
     for (var h = 0; h < meals.length; h++) {
 
         // load image
         var img = document.createElement("img");
         img.setAttribute("id", meals[h].key);
-        img.className = "card-img img-fluid";
+        img.className = "card-img img-fluid grid-item";
         img.setAttribute("src", meals[h].url);
         cards[h].appendChild(img);
 
         // add overlay with information
         var overlay = document.createElement("div");
         overlay.setAttribute("id", meals[h].key + "-info-overlay");
-        overlay.className = 'overlay';
+        overlay.className = 'overlay grid-item';
         cards[h].appendChild(overlay)
 
         var overlayInfo = document.createElement("div");
@@ -200,10 +203,14 @@ nextButton.addEventListener("click", function(){
 //   itemSelector: '.grid-item'
 // });
 
+
+
 main();
-// masonry grid
-$('.grid').masonry({ 
-    columnWidth: 50,
-    itemSelector: '.grid-item',
-    percentPosition: true
+
+// jQuery
+var $container = jQuery('#masonry-grid');
+// initialize
+$container.masonry({
+  columnWidth: 200,
+  itemSelector: '.grid-item'
 });
