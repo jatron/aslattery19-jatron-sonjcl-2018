@@ -512,7 +512,7 @@ function getUserProfile(userId, res) {
             name            : user.name,
             school          : user.school,
             bio             : user.bio,
-            profilePicture  : 'https://image.freepik.com/free-icon/male-profile-user-shadow_318-40244.jpg', // TODO: get profile picture from facebook or Google
+            profilePicture  : user.profilePicture,
             meals           : []
         };
 
