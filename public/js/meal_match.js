@@ -108,7 +108,6 @@ function renderMeals(mealsData) {
         profileButtonIcon.setAttribute('aria-hidden', 'true');
         profileButton.appendChild(profileButtonIcon);
     }
-    refreshGrid(); 
 }
 
 function renderButtons() {
@@ -176,27 +175,35 @@ nextButton.addEventListener("click", function(){
 })
 }
 
-function refreshGrid(){
-  var grid = document.querySelector('.grid');
+// function refreshGrid(){
+//   var grid = document.querySelector('.grid');
 
-  var msnry = new Masonry( grid, {
-    itemSelector: '.grid__item',
-    columnWidth: '.grid__sizer',
-    gutter: 15,
-    percentPosition: true
-  });
+//   var msnry = new Masonry( grid, {
+//     itemSelector: '.grid__item',
+//     columnWidth: '.grid__sizer',
+//     gutter: 15,
+//     percentPosition: true
+//   });
 
-  imagesLoaded( grid ).on( 'progress', function() {
-    // layout Masonry after each image loads
-    msnry.layout();
-  });
+//   imagesLoaded( grid ).on( 'progress', function() {
+//     // layout Masonry after each image loads
+//     msnry.layout();
+//   });
 
-}
+// }
+
+// // Javascript
+// var container = document.querySelector('#masonry-grid');
+// var msnry = new Masonry( container, {
+//   // options
+//   columnWidth: 200,
+//   itemSelector: '.grid-item'
+// });
 
 main();
 // masonry grid
-// $('.grid').masonry({ 
-//     columnWidth: 50,
-//     itemSelector: '.grid-item',
-//     percentPosition: true
-// });
+$('.grid').masonry({ 
+    columnWidth: 50,
+    itemSelector: '.grid-item',
+    percentPosition: true
+});
