@@ -349,16 +349,36 @@ router.post('/like',
                     console.log(err);
                     return;
                 }
-                // add id of meal owner to usersLiked[]
                 if (!user.usersLiked) {
                     user.usersLiked = [];
                 }
-                user.usersLiked.push(mealOwnerId);
-                // add meal to mealsLiked
-                if (!user.mealLiked) {
+                // check if mealOwnerId is already in usersLiked
+                var isMealOwnerIdInUsersLiked = false;
+                for (var i = 0; i < user.usersLiked.length; i++) {
+                    if (mealOwnerId === user.usersLiked[i]) {
+                        isMealOwnerIdInUsersLiked = true;
+                        break;
+                    }
+                }
+                if (isMealOwnerIdInUsersLiked === false) {
+                    // add id of meal owner to usersLiked[]
+                    user.usersLiked.push(mealOwnerId);
+                }
+                if (!user.mealsLiked) {
                     user.mealsLiked = [];
                 }
-                user.mealsLiked.push(req.body.mealKey);
+                // check if meal is already in mealsLiked
+                var isMealInMealsLiked = false;
+                for (var i = 0; i < user.mealsLiked.length; i++) {
+                    if (req.body.mealKey === user.mealsLiked[i]) {
+                        isMealInMealsLiked = true;
+                        break;
+                    }
+                }
+                if (isMealInMealsLiked === false) {
+                    // add meal to mealsLiked
+                    user.mealsLiked.push(req.body.mealKey);
+                }
                 // get meal owner from mLab
                 User.findOne({_id: mealOwnerId}, function(err, mealOwner) {
                     if (err) {
@@ -371,16 +391,38 @@ router.post('/like',
                         mealOwner.usersLiked = [];
                     }
                     if (Helpers.arrayContains(req.body.userId, mealOwner.usersLiked)) {
-                        // add user to meal owner's matches
                         if (!mealOwner.matches) {
                             mealOwner.matches = [];
                         }
-                        mealOwner.matches.push(req.body.userId);
-                        // add meal owner to user's matches
+                        // check is userId is already in meal owner's matches
+                        var isUserIdInMealOwnersMatches = false;
+                        for (var i = 0; i < mealOwner.matches.length; i++) {
+                            if (req.body.userId === mealOwner.matches[i]) {
+                                isUserIdInMealOwnersMatches = true;
+                                break;
+                            }
+                        }
+                        if (isUserIdInMealOwnersMatches === false) {
+                            // add user to meal owner's matches
+                            mealOwner.matches.push(req.body.userId);
+                        }
+
                         if (!user.matches) {
                             user.matches = [];
                         }
-                        user.matches.push(mealOwnerId);
+                        // check if mealOwnerId is already in user's matches
+                        var isMealOwnerIdInUsersMatches = false;
+                        for (var i = 0; i < user.matches.length; i++) {
+                            if (mealOwnerId === user.matches[i]) {
+                                isMealOwnerIdInUsersMatches = true;
+                                break;
+                            }
+                        }
+                        if (isMealOwnerIdInUsersMatches === false) {
+                            // add meal owner to user's matches
+                            user.matches.push(mealOwnerId);
+                        }
+
                         // save updates to meal owner in mLab
                         mealOwner.save(function(err) {
                             if (err) {
@@ -470,7 +512,7 @@ function getUserProfile(userId, res) {
             name            : user.name,
             school          : user.school,
             bio             : user.bio,
-            profilePicture  : 'https://image.freepik.com/free-icon/male-profile-user-shadow_318-40244.jpg', // TODO: get profile picture from facebook or Google
+            profilePicture  : user.profilePicture,
             meals           : []
         };
 
