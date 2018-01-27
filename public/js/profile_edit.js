@@ -51,8 +51,8 @@ function renderUserData(user) {
     nameContainer.prepend(nameHeader);
 
     // rendering school
-    const schoolHeader = document.createElement('h2');
-    nameHeader.appendChild(schoolHeader);
+    // const schoolHeader = document.createElement('h2');
+    // nameHeader.appendChild(schoolHeader);
 
     //render profile pic
     const profileImage = document.getElementById('user-profile-image');
