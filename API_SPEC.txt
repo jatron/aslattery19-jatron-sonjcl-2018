@@ -22,7 +22,7 @@ get(‘api/images’, {userId : String}, successCallback, failureCallback);
   ]
 }
 
-post('api/like', {userId : String, mealKey : String}, successCallback, failureCallback); // Note: userId is user that is currently logged in 
+post('api/like', {userId : String, mealKey : String}, successCallback, failureCallback); // Note: userId is user that is currently logged in
 {
   success : Number
 }
