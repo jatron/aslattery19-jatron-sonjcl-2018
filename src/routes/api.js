@@ -2,7 +2,6 @@
 const express = require('express');
 const connect = require('connect-ensure-login');
 const AWS = require('aws-sdk');
-const fs = require('fs');
 const uuidv4 = require('uuid/v4');
 
 // models
