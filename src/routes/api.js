@@ -35,7 +35,7 @@ router.get('/user', function(req, res) {
     });
 });
 
-var bucketName = 'lets-eat-images';
+const bucketName = 'lets-eat-images';
 
 // XXX: At the moment, the API only supports uploading jpg images
 router.post(
