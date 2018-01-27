@@ -13,9 +13,13 @@ passport.use(new GoogleStrategy({
         if (err) return done(err);
 
         if (!user) {
+            var profilePictureUrl = profile.photos[0].value;
+            // Hack alert!!! Removing the last 6 characters ('?sz=50') from profilePictureUrl to get full-size image
+            profilePictureUrl = profilePictureUrl.substring(0, profilePictureUrl.length - 6)
             user = new User({
-            name: profile.displayName,
-            fbid: profile.id
+            name            : profile.displayName,
+            fbid            : profile.id,
+            profilePicture  : profilePictureUrl
         });
 
         user.save(function(err) {

@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const UserModelSchema = new mongoose.Schema ({
     name            :   String,
     fbid            :   String,
+    profilePicture  :   String,
     school          :   String,
     bio             :   String,
     profilePicture  :   String,
