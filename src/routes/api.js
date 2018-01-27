@@ -3,11 +3,13 @@ const express = require('express');
 const connect = require('connect-ensure-login');
 const AWS = require('aws-sdk');
 const uuidv4 = require('uuid/v4');
+const socketio = require('socket.io');
 
 // models
 const User = require('../models/user');
 const Picture = require('../models/picture');
 const Helpers = require('../helpers/helpers');
+const server = require('../server');
 
 const router = express.Router();
 
@@ -558,4 +560,12 @@ function getUserProfile(userId, res) {
     });
 }
 
-module.exports = router;
+module.exports.routes = router;
+module.exports.socketioListen = function() {
+    const io = socketio(server.httpServer);
+    io.on('connection', function(socket) {
+        socket.on('chat message', function(msg) {
+            io.emit('chat message', msg);
+        });
+    });
+};

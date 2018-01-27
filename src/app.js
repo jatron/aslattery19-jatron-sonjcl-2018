@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 
 // configure socketio
 const httpServer = server.httpServer;
-server.ioListen();
+api.socketioListen();
 
 
 // set up sessions
@@ -51,7 +51,7 @@ app.get('/logout', function(req, res) {
 
 // set routes
 app.use('/', views);
-app.use('/api', api );
+app.use('/api', api.routes);
 app.use('/static', express.static('public'));
 
 // 404 route
