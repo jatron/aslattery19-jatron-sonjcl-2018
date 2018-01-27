@@ -3,7 +3,6 @@ require('dotenv').config();
 const bodyParser = require('body-parser');
 const express = require('express');
 const session = require('express-session');
-const socketio = require('socket.io');
 
 
 // local dependencies
@@ -21,14 +20,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
-// // configure socketio
+// configure socketio
 const httpServer = server.httpServer;
-const io = socketio(httpServer);
-io.on('connection', function(socket){
-  socket.on('chat message', function(msg){
-    io.emit('chat message', msg);
-  });
-});
+server.ioListen();
 
 
 // set up sessions
