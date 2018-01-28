@@ -114,8 +114,9 @@ get('api/matches', {userId : String}, successCallback, failureCallback);
   matches            :
     [
       {
-        userId  :   String,
-        name    :   String
+        userId      :   String,
+        name        :   String,
+        namespace   :   String
       },
       {
         ...
