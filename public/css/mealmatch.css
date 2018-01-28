@@ -182,3 +182,28 @@
 .btn{
     cursor: pointer;
 }
+
+.close {
+  position: absolute;
+  left: 90%;
+  top:0;
+}
+
+#profileNameDiv {
+    position: absolute;
+    left: 20%;
+    top: 5%;
+}
+
+#bioDiv {
+    position: absolute;
+    top: 20%;
+    height: 20%;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+
+
+
+
