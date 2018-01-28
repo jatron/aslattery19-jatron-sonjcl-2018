@@ -53,11 +53,14 @@ function socket(current_user_name, namespace_id) {
     button[0].setAttribute("id", button_id);
 
     socket.on('chat message', function(msg){
-        $('#messages').append($('<li>').text(current_user_name + ": " + msg));
+        $('#messages').append($('<li>').text(msg.userName + ": " + msg.message));
     });
     
     $('form').submit(function(){
-        socket.emit('chat message', $('#' + button_id).val());
+        socket.emit('chat message', {
+            userName    : 'Fake userName', // TODO: get the actual user's name
+            message     : $('#' + button_id).val()
+        });
         $('#' + button_id).val('');
         return false;
     });
