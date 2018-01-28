@@ -22,7 +22,7 @@ get(‘api/images’, {userId : String}, successCallback, failureCallback);
   ]
 }
 
-post('api/like', {userId : String, mealKey : String}, successCallback, failureCallback); // Note: userId is user that is currently logged in 
+post('api/like', {userId : String, mealKey : String}, successCallback, failureCallback); // Note: userId is user that is currently logged in
 {
   success : Number
 }
@@ -114,8 +114,9 @@ get('api/matches', {userId : String}, successCallback, failureCallback);
   matches            :
     [
       {
-        userId  :   String,
-        name    :   String
+        userId      :   String,
+        name        :   String,
+        namespace   :   String
       },
       {
         ...

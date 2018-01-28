@@ -1,10 +1,8 @@
 // libraries
 require('dotenv').config();
-const http = require('http');
 const bodyParser = require('body-parser');
 const express = require('express');
 const session = require('express-session');
-const socketio = require('socket.io');
 
 
 // local dependencies
@@ -12,23 +10,30 @@ const db = require('./db');
 const passport = require('./passport');
 const views = require('./routes/views');
 const api = require('./routes/api');
+const server = require('./server');
+const socketio = require('./mySocketio')
 
 // initialize express app
-const app = express();
+const app = server.app;
 
 // Use middleware that parses urlencoded bodies and json
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
-// // configure socketio
-const server = http.Server(app);
-const io = socketio(server);
-io.on('connection', function(socket){
-  socket.on('chat message', function(msg){
-    io.emit('chat message', msg);
-  });
-});
+// // // configure socketio
+// const server = http.Server(app);
+// const io = socketio(server);
+// io.on('connection', function(socket){
+//   socket.on('chat message', function(msg){
+//     io.emit('chat message', msg);
+//   });
+// });
+
+// configure socketio
+const httpServer = server.httpServer;
+socketio.socketioListen();
+
 
 // set up sessions
 app.use(session({
@@ -56,7 +61,7 @@ app.get('/logout', function(req, res) {
 
 // set routes
 app.use('/', views);
-app.use('/api', api );
+app.use('/api', api);
 app.use('/static', express.static('public'));
 
 // 404 route
@@ -77,6 +82,6 @@ app.use(function(err, req, res, next) {
 
 // port config
 const port = process.env.PORT || 3000; // config variable
-server.listen(port, function() {
+httpServer.listen(port, function() {
     console.log('Server running on port: ' + port);
 });
