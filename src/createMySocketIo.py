@@ -6,13 +6,6 @@ f.write("\n")
 f.write("const server = require('./server');\n")
 f.write("\n")
 
-f.write("var nextAvailableNamespace = 0;\n")
-f.write("module.exports.getNextAvailableNamespace = function() {\n")
-f.write("    nextAvailableNamespace++;\n")
-f.write("    return '/namespace' + (nextAvailableNamespace - 1);\n")
-f.write("}\n")
-f.write("\n")
-
 f.write("module.exports.socketioListen = function() {\n")
 f.write("    const io = socketio(server.httpServer);\n")
 f.write("\n")
