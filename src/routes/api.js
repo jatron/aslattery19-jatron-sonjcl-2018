@@ -7,7 +7,9 @@ const uuidv4 = require('uuid/v4');
 // models
 const User = require('../models/user');
 const Picture = require('../models/picture');
+const ServerState = require('../models/ServerState');
 const Helpers = require('../helpers/helpers');
+const mySocketio = require('../mySocketio');
 
 const router = express.Router();
 
@@ -35,7 +37,7 @@ router.get('/user', function(req, res) {
     });
 });
 
-var bucketName = 'lets-eat-images';
+const bucketName = 'lets-eat-images';
 
 // XXX: At the moment, the API only supports uploading jpg images
 router.post(
@@ -393,52 +395,101 @@ router.post('/like',
                         if (!mealOwner.matches) {
                             mealOwner.matches = [];
                         }
-                        // check is userId is already in meal owner's matches
+                        // check if userId is already in meal owner's matches
                         var isUserIdInMealOwnersMatches = false;
                         for (var i = 0; i < mealOwner.matches.length; i++) {
-                            if (req.body.userId === mealOwner.matches[i]) {
+                            if (req.body.userId === mealOwner.matches[i].userId) {
                                 isUserIdInMealOwnersMatches = true;
                                 break;
                             }
                         }
                         if (isUserIdInMealOwnersMatches === false) {
-                            // add user to meal owner's matches
-                            mealOwner.matches.push(req.body.userId);
-                        }
-
-                        if (!user.matches) {
-                            user.matches = [];
-                        }
-                        // check if mealOwnerId is already in user's matches
-                        var isMealOwnerIdInUsersMatches = false;
-                        for (var i = 0; i < user.matches.length; i++) {
-                            if (mealOwnerId === user.matches[i]) {
-                                isMealOwnerIdInUsersMatches = true;
-                                break;
-                            }
-                        }
-                        if (isMealOwnerIdInUsersMatches === false) {
-                            // add meal owner to user's matches
-                            user.matches.push(mealOwnerId);
-                        }
-
-                        // save updates to meal owner in mLab
-                        mealOwner.save(function(err) {
-                            if (err) {
-                                console.log('XXX: Error in post(/like)->Picture.findOne({key: req.body.mealKey})->User.findOne({_id: req.body.userId})->User.findOne({_id: mealOwnerId})->mealOwner.save()');
-                                console.log(err);
-                                return;
-                            }
-                            // save updates to user in mLab
-                            user.save(function(err) {
+                            ServerState.findOne({variableName: 'nextAvailableNamespace'}, function(err, stateVariable) {
                                 if (err) {
-                                    console.log('XXX: Error in post(/like)->Picture.findOne({key: req.body.mealKey})->User.findOne({_id: req.body.userId})->User.findOne({_id: mealOwnerId})->mealOwner.save()->user.save()');
+                                    console.log('XXX: Error in post(/like)->Picture.findOne({key: req.body.mealKey})->User.findOne({_id: req.body.userId})->User.findOne({_id: mealOwnerId})->ServerState.findOne.findOne({variableName: nextAvailableNamesapce})');
                                     console.log(err);
                                     return;
                                 }
-                                res.send({success: 1});
+                                if (!stateVariable) {
+                                    stateVariable = new ServerState({
+                                        variableName    : 'nextAvailableNamespace',
+                                        numberValue     : 0
+                                    });
+                                }
+                                const newNamespace = '/namespace' + stateVariable.numberValue;
+                                stateVariable.numberValue++;
+                                stateVariable.save(function(err) {
+                                    if (err) {
+                                        console.log('XXX: Error in post(/like)->Picture.findOne({key: req.body.mealKey})->User.findOne({_id: req.body.userId})->User.findOne({_id: mealOwnerId})->ServerState.findOne.findOne({stateVariable: nextAvailableNamesapce})->stateVariable.save()');
+                                        console.log(err);
+                                    }
+
+                                    // add user to meal owner's matches
+                                    mealOwner.matches.push({
+                                        userId      : req.body.userId,
+                                        namespace   : newNamespace
+                                    });
+
+                                    if (!user.matches) {
+                                        user.matches = [];
+                                    }
+                                    // check if mealOwnerId is already in user's matches
+                                    var isMealOwnerIdInUsersMatched = false;
+                                    for (var i = 0; i < user.matches.length; i++) {
+                                        if (mealOwnerId === user.matches[i].userId) {
+                                            isMealOwnerIdInUsersMatched = true;
+                                            break;
+                                        }
+                                    }
+                                    if (isMealOwnerIdInUsersMatched === false) {
+                                        // add meal owner to user's matches
+                                        user.matches.push({
+                                            userId      : mealOwnerId,
+                                            namespace   : newNamespace
+                                        });
+                                    } else {
+                                        console.log("XXX: Expected isMealOwnerIdInUsersMatched === false")
+                                    }
+
+                                    // save updates to meal owner in mLab
+                                    mealOwner.save(function(err) {
+                                        if (err) {
+                                            console.log('XXX: Error in post(/like)->Picture.findOne({key: req.body.mealKey})->User.findOne({_id: req.body.userId})->User.findOne({_id: mealOwnerId})->mealOwner.save()');
+                                            console.log(err);
+                                            return;
+                                        }
+                                        // save updates to user in mLab
+                                        user.save(function(err) {
+                                            if (err) {
+                                                console.log('XXX: Error in post(/like)->Picture.findOne({key: req.body.mealKey})->User.findOne({_id: req.body.userId})->User.findOne({_id: mealOwnerId})->mealOwner.save()->user.save()');
+                                                console.log(err);
+                                                return;
+                                            }
+                                            res.send({success: 1});
+                                        });
+                                    });
+                                });
                             });
-                        });
+                        } else {
+                            // save updates to meal owner in mLab
+                            mealOwner.save(function(err) {
+                                if (err) {
+                                    console.log('XXX: Error in post(/like)->Picture.findOne({key: req.body.mealKey})->User.findOne({_id: req.body.userId})->User.findOne({_id: mealOwnerId})->mealOwner.save()');
+                                    console.log(err);
+                                    return;
+                                }
+                                // save updates to user in mLab
+                                user.save(function(err) {
+                                    if (err) {
+                                        console.log('XXX: Error in post(/like)->Picture.findOne({key: req.body.mealKey})->User.findOne({_id: req.body.userId})->User.findOne({_id: mealOwnerId})->mealOwner.save()->user.save()');
+                                        console.log(err);
+                                        return;
+                                    }
+                                    res.send({success: 1});
+                                });
+                            });
+                        }
+
                     } else {
                         user.save(function(err) {
                             if (err) {
@@ -469,7 +520,7 @@ router.get('/matches',
                 return;
             }
             var matchIndex = 0;
-            // for each userId in matches, get match from mLab and add match's ID and name to matchesJson
+            // for each userId in matches, get match from mLab and add match's ID, match's namespace, and match's name to matchesJson
             addMatches();
 
             function addMatches() {
@@ -478,16 +529,17 @@ router.get('/matches',
                     return;
                 } else {
                     // get match from mLab
-                    User.findOne({_id: user.matches[matchIndex]}, function(err, matchUser) {
+                    User.findOne({_id: user.matches[matchIndex].userId}, function(err, matchUser) {
                         if (err) {
-                            console.log('XXX: Error in addMatches()->User.findOne({_id: user.matches[matchIndex]})');
+                            console.log('XXX: Error in addMatches()->User.findOne({_id: user.matches[matchIndex].userId})');
                             console.log(err);
                             return;
                         }
                         // add match's ID and name to matchesJson
                         const matchJson = {
-                            userId  : user.matches[matchIndex],
-                            name    : matchUser.name
+                            userId      : user.matches[matchIndex].userId,
+                            name        : matchUser.name,
+                            namespace   : user.matches[matchIndex].namespace
                         }
                         matchesJson.matches.push(matchJson);
                         matchIndex++;
