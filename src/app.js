@@ -11,6 +11,7 @@ const passport = require('./passport');
 const views = require('./routes/views');
 const api = require('./routes/api');
 const server = require('./server');
+const socketio = require('./mySocketio')
 
 // initialize express app
 const app = server.app;
@@ -22,7 +23,7 @@ app.use(bodyParser.json());
 
 // configure socketio
 const httpServer = server.httpServer;
-api.socketioListen();
+socketio.socketioListen();
 
 
 // set up sessions
@@ -51,7 +52,7 @@ app.get('/logout', function(req, res) {
 
 // set routes
 app.use('/', views);
-app.use('/api', api.routes);
+app.use('/api', api);
 app.use('/static', express.static('public'));
 
 // 404 route
