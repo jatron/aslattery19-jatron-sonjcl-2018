@@ -3,23 +3,14 @@ require('dotenv').config();
 const bodyParser = require('body-parser');
 const express = require('express');
 const session = require('express-session');
-
+const http = require('http');
 
 // local dependencies
 const db = require('./db');
 const passport = require('./passport');
 const views = require('./routes/views');
 const api = require('./routes/api');
-const server = require('./server');
 const socketio = require('./mySocketio')
-
-// initialize express app
-const app = server.app;
-
-// Use middleware that parses urlencoded bodies and json
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-
 
 // // // configure socketio
 // const server = http.Server(app);
@@ -30,10 +21,16 @@ app.use(bodyParser.json());
 //   });
 // });
 
-// configure socketio
-const httpServer = server.httpServer;
-socketio.socketioListen();
+// initialize express app
+const app = express();
 
+// Use middleware that parses urlencoded bodies and json
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+// configure socketio
+const server = http.Server(app);
+socketio.socketioListen(server);
 
 // set up sessions
 app.use(session({
@@ -82,6 +79,6 @@ app.use(function(err, req, res, next) {
 
 // port config
 const port = process.env.PORT || 3000; // config variable
-httpServer.listen(port, function() {
+server.listen(port, function() {
     console.log('Server running on port: ' + port);
 });

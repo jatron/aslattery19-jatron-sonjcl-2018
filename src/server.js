@@ -2,10 +2,14 @@
 const http = require('http');
 const express = require('express');
 
-const app = express();
-const httpServer = http.Server(app);
+var app;
+var httpServer;
 
 module.exports = {
+    initialize      : function() {
+        app = express();
+        httpServer = http.Server(app);
+    },
     httpServer      : httpServer,
     app             : app
 }

@@ -7,26 +7,6 @@
     <link rel="stylesheet" type="text/css" href="/static/css/messages.css">
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
-        <!-- this registers each chat message as a "chat message" event with socket -->
-<script>
-
-
-    $(function () {
-        sendButton = document.getElementsByClassName('send-button').item(0);
-        namespace_id = sendButton.id;
-        //console.log("namespace_id: ", namespace_id);
-        
-        var socket = io(namespace_id);
-        $('form').submit(function(){
-            socket.emit('chat message', $('#m').val());
-            $('#m').val('');
-            return false;
-        });
-
-
-
-    });
-</script>
 
 </head>
 <body id="body">

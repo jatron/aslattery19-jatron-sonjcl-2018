@@ -48,15 +48,19 @@ function socket(current_user_name, namespace_id) {
     var socket = io(namespace_id);
 
     // set send button id to namespace id so the message goes to the correct match
-    button = document.getElementsByClassName("send-button");
-    button[0].setAttribute("id", namespace_id);
-    console.log('button-id: ', namespace_id);
+    var button = document.getElementsByClassName("send-button");
+    const button_id = namespace_id.substr(1); // remove '/' character at the beginning of namespace_id
+    button[0].setAttribute("id", button_id);
 
     socket.on('chat message', function(msg){
-             $('#messages').append($('<li>').text(current_user_name + ": " + msg));
-         });
+        $('#messages').append($('<li>').text(current_user_name + ": " + msg));
+    });
     
-    
+    $('form').submit(function(){
+        socket.emit('chat message', $('#' + button_id).val());
+        $('#' + button_id).val('');
+        return false;
+    });
 }
 
 // match button on click:
