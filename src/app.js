@@ -20,11 +20,9 @@ const app = server.app;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-
 // configure socketio
 const httpServer = server.httpServer;
 socketio.socketioListen();
-
 
 // set up sessions
 app.use(session({
