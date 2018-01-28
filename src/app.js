@@ -12,15 +12,6 @@ const views = require('./routes/views');
 const api = require('./routes/api');
 const socketio = require('./mySocketio')
 
-// // // configure socketio
-// const server = http.Server(app);
-// const io = socketio(server);
-// io.on('connection', function(socket){
-//   socket.on('chat message', function(msg){
-//     io.emit('chat message', msg);
-//   });
-// });
-
 // initialize express app
 const app = express();
 
