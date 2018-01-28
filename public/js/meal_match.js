@@ -93,6 +93,7 @@ function renderMeals(mealsData) {
         // add info icon
         var infoIcon = document.createElement('i');
         infoIcon.setAttribute('class', 'fa fa-info-circle');
+        infoIcon.setAttribute('id', 'fa-info-circle');
         infoIcon.setAttribute('aria-hidden', 'true');
         infoIcon.setAttribute('style', "font-size:30px");
         infoButton.appendChild(infoIcon);
@@ -110,7 +111,8 @@ function renderMeals(mealsData) {
 
         var profileButtonIcon = document.createElement("i");
         profileButtonIcon.setAttribute("class", "fa fa-user-circle");
-        profileButtonIcon.setAttribute("style", "font-size:30px")
+        profileButtonIcon.setAttribute("id", "fa-user-circle");
+        profileButtonIcon.setAttribute("style", "font-size:28px")
         profileButtonIcon.setAttribute('aria-hidden', 'true');
         profileButton.appendChild(profileButtonIcon);
 
