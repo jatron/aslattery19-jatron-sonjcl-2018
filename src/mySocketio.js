@@ -3,6 +3,12 @@ const socketio = require('socket.io');
 
 const server = require('./server');
 
+var nextAvailableNamespace = 0;
+module.exports.getNextAvailableNamespace = function() {
+    nextAvailableNamespace++;
+    return '/namespace' + (nextAvailableNamespace - 1);
+}
+
 module.exports.socketioListen = function() {
     const io = socketio(server.httpServer);
 

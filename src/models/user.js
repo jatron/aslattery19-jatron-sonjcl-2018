@@ -13,7 +13,7 @@ const UserModelSchema = new mongoose.Schema ({
     mealsLiked      :   [String],   // allows us to not display meals that users have already liked
     usersLiked      :   [String],   // allows us to identify matches
     mealIndex       :   Number,
-    matches         :   [String]
+    matches         :   [{userId: String, namespace: String}]
 });
 
 // compile model from schema
