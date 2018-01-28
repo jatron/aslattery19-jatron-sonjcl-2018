@@ -12,6 +12,8 @@
 
 
 
+
+
 <!-- 
 
 FORMAT FOR ELEMENT ID's
@@ -47,6 +49,8 @@ send to database:
 -->
   
 </head>
+
+
 <body id="body">
     <nav class="navbar navbar-inverse bg-inverse navbar-expand-lg navbar-light" style="background-color: #fff; box-shadow: 3px 3px 5px grey;">
             <a class="navbar-brand" href="#">
@@ -56,10 +60,49 @@ send to database:
             <!-- navbar items are inserted here -->
             </div>
         </nav>
-<h1>find your (meal) match</h1>
+<!-- <h1>find your (meal) match</h1> -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="profileName"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                <div id='elementsDiv'>
+                <div id='profilePictureDiv'>
+                    <img id='profilePic' src="">
+                </div>
+                <div id='bioDiv'></div>
+                <div id ="mealsDiv">
+                        <div class="imgContainer">
+                            <img class="mealPhoto" src=""/>
+                        </div>
+                        <div class="imgContainer">
+                            <img class="mealPhoto" src="" />
+                        </div>
+                        <div class="imgContainer">
+                             <img class="mealPhoto" src="" />
+                        </div>
+                        <div class="imgContainer">
+                             <img class="mealPhoto" src="" />
+                        </div>
+          
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   <div class='row'>
     <div class = 'column'>
         <div class="card card-inverse">
+
 
         </div>
 
@@ -99,14 +142,17 @@ send to database:
     </div>
   </div>
 
-    <div class = 'next-button-div'>
+    <div class = 'next-button-div container-fluid'>
         <button type="button" id='next-button' class="next-button"><i class="fa fa-arrow-circle-o-right" aria-hidden="true" style="font-size:50px"></i></button>
     </div>
 
 <!-- javascript scripts -->
-<script src="https://ajax.googleapis.com/ajax/libs/dojo/1.13.0/dojo/dojo.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/dojo/1.13.0/dojo/dojo.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
 </body>
 <script src="/static/js/api.js"></script>
 <script src="/static/js/navbar.js"></script>

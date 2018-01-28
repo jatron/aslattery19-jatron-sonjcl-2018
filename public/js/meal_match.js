@@ -11,6 +11,8 @@ function main() {
     }, function(){
         console.log("failure");
     });
+
+
 }
 
 function renderUserData(user) {
@@ -22,7 +24,7 @@ function renderUserData(user) {
 
 function renderMeals(mealsData) {
     const meals = mealsData.meals;
-    const cards = document.getElementsByClassName('card');
+    const cards = document.getElementsByClassName('card-inverse');
 
     for (var h = 0; h < meals.length; h++) {
 
@@ -100,7 +102,11 @@ function renderMeals(mealsData) {
         var profileButton = document.createElement("button");
         profileButton.setAttribute('type', "button");
         profileButton.setAttribute("class", "btn profile-button");
+        profileButton.setAttribute("data-toggle", "modal");
+        profileButton.setAttribute("data-target", "#profileModal");
+        profileButton.setAttribute("id", meals[h].key);
         buttonGroupDiv.appendChild(profileButton);
+
 
         var profileButtonIcon = document.createElement("i");
         profileButtonIcon.setAttribute("class", "fa fa-user-circle");
@@ -167,7 +173,22 @@ for (var j = 0; j < infoButtons.length; j++) {
 const profileButtons = document.getElementsByClassName("profile-button")
 for (var k = 0; k < profileButtons.length; k++) {
     profileButtons[k].addEventListener("click", function(){
-        alert("display profile info here")
+        get('api/meal_author_profile', {mealKey : this.id}, function(authorData){
+            document.getElementById("profileName").innerHTML = authorData.name;
+            document.getElementById("profilePic").setAttribute("src", authorData.profilePicture);
+            document.getElementById("profilePic").setAttribute("style", "height:100px;width:100px");
+            document.getElementById("bioDiv").innerHTML = authorData.bio;
+            
+            mealCards = document.getElementsByClassName("mealPhoto");
+            
+            for (var a=0; a < 4; a++) {
+                meals = authorData.meals;
+                mealCards[a].setAttribute("src", meals[a].url);
+            }
+
+        }, function(){
+            console.log("failed to get author data");
+        });
     })
 }
 
