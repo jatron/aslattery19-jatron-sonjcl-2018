@@ -68,7 +68,7 @@ function renderMatches(matchObj){
     const profileId = window.location.search.substring(1); // returns url query w/o "?"
     const matches = matchObj.matches;
     // var template = $('#match-template');
-    console.log(matches);
+    //console.log(matches);
     matches.forEach(function(match) {
         // // Clone template
         // var newMatch = template.clone();
@@ -92,19 +92,13 @@ function renderMatches(matchObj){
         const matchCard = document.createElement("div");
         const matchBtn = document.createElement("btn");
 
-        // generate namespace id
-        match_id = match.userId;
-        if (profileId < match_id) {
-            namespace_id = profileId + "-" + match_id;
-        }   
-        else{
-            namespace_id = match_id + "-" + profileId;
-        }
-        
+        console.log("INFO: ", match);
+        const namespace_id = match.namespace;
+        console.log("NAMESPACE: ", namespace_id);
         // set button ID to socket room id
         matchBtn.setAttribute("id", namespace_id);
             
-        //console.log("button id: " + matchBtn.id);
+        console.log("button id: " + matchBtn.id);
         //console.log("match name = " + match.name);
         matchCard.className = 'mt-4 card';
         matchBtn.setAttribute("type", "button");
@@ -120,8 +114,8 @@ function renderMatches(matchObj){
             //console.log(match.name);
             renderMatchMeals(match);
 
-            current_user_name = "Alexis Slattery"; // match.nameOfUserLoggedIn
-            namespace_id = this.id;
+            const current_user_name = "Alexis Slattery"; // match.nameOfUserLoggedIn
+            const namespace_id = this.id;
 
             //call socket function to switch the room
             socket(current_user_name, namespace_id);

@@ -14,7 +14,7 @@
     $(function () {
         sendButton = document.getElementsByClassName('send-button').item(0);
         namespace_id = sendButton.id;
-        console.log("namespace_id: ", namespace_id);
+        //console.log("namespace_id: ", namespace_id);
         
         var socket = io(namespace_id);
         $('form').submit(function(){
