@@ -25,7 +25,7 @@ function main() {
     // add user string later from profileId
     // make below work once server routes work
     get('api/matches', {userId : profileId}, function(matchObj) {
-    renderMatches(matchObj);
+        renderMatches(matchObj);
     }, function() {
     console.log("Couldn't access matches :(");
     });
@@ -36,27 +36,43 @@ function main() {
 
     get('api/profile', {userId : profileId}, function(userData) {
         name = userData.name;
-        socket(name);
+        //socket(name);
     }, function(){
         console.log("was unable to get user info :(");
     });
     
 }
 
-function socket(name) {
-    var socket = io();
+function socket(current_user_name, namespace_id) {
+    // join the correct room
+    var socket = io(namespace_id);
+
+    // set send button id to namespace id so the message goes to the correct match
+    var button = document.getElementsByClassName("send-button");
+    const button_id = namespace_id.substr(1); // remove '/' character at the beginning of namespace_id
+    button[0].setAttribute("id", button_id);
+
     socket.on('chat message', function(msg){
-             $('#messages').append($('<li>').text(name + ": " + msg));
-         });
-    //socket.on("new-match")
+        $('#messages').append($('<li>').text(current_user_name + ": " + msg));
+    });
     
+    $('form').submit(function(){
+        socket.emit('chat message', $('#' + button_id).val());
+        $('#' + button_id).val('');
+        return false;
+    });
 }
+
+// match button on click:
+//    - switch the current user to the socket room for that match
+    
 
 
 function renderMatches(matchObj){
+    const profileId = window.location.search.substring(1); // returns url query w/o "?"
     const matches = matchObj.matches;
     // var template = $('#match-template');
-    console.log(matches);
+    //console.log(matches);
     matches.forEach(function(match) {
         // // Clone template
         // var newMatch = template.clone();
@@ -76,34 +92,44 @@ function renderMatches(matchObj){
 
         // // Make visible
         // newMatch.removeClass('template');
-        console.log("hello");
         const matchBar = document.getElementById("match-bar");
         const matchCard = document.createElement("div");
         const matchBtn = document.createElement("btn");
-        console.log("match name = " + match.name);
+
+        console.log("INFO: ", match);
+        const namespace_id = match.namespace;
+        console.log("NAMESPACE: ", namespace_id);
+        // set button ID to socket room id
+        matchBtn.setAttribute("id", namespace_id);
+            
+        console.log("button id: " + matchBtn.id);
+        //console.log("match name = " + match.name);
         matchCard.className = 'mt-4 card';
         matchBtn.setAttribute("type", "button");
 
         matchBtn.value = match.name;
         matchBtn.innerHTML = match.name;
-        console.log(matchBtn.value);
+        //console.log(matchBtn.value);
 
 
         //make match btn clickable and render match's meals
         matchBtn.addEventListener("click", function(){
             // GET meals for that user
-            console.log(match.name);
+            //console.log(match.name);
             renderMatchMeals(match);
+
+            const current_user_name = "Alexis Slattery"; // match.nameOfUserLoggedIn
+            const namespace_id = this.id;
+
+            //call socket function to switch the room
+            socket(current_user_name, namespace_id);
+
         });
 
         matchCard.appendChild(matchBtn);
         matchBar.appendChild(matchCard);
-        console.log("match cards appended?");
 
-
-
-        
-        
+ 
         // newMatch.removeId('match-btn');
     });
 
