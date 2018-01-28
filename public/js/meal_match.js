@@ -23,9 +23,8 @@ function renderUserData(user) {
 
 function renderMeals(mealsData) {
     const meals = mealsData.meals;
-    console.log(meals);
-    const cards = document.getElementsByClassName('meal-card');
-
+    // console.log(meals);
+    const cards = document.getElementsByClassName('card-inverse');
 
     for (var h = 0; h < meals.length; h++) {
 
@@ -103,7 +102,11 @@ function renderMeals(mealsData) {
         var profileButton = document.createElement("button");
         profileButton.setAttribute('type', "button");
         profileButton.setAttribute("class", "btn profile-button");
+        profileButton.setAttribute("data-toggle", "modal");
+        profileButton.setAttribute("data-target", "#profileModal");
+        profileButton.setAttribute("id", meals[h].key);
         buttonGroupDiv.appendChild(profileButton);
+
 
         var profileButtonIcon = document.createElement("i");
         profileButtonIcon.setAttribute("class", "fa fa-user-circle");
@@ -168,7 +171,22 @@ for (var j = 0; j < infoButtons.length; j++) {
 const profileButtons = document.getElementsByClassName("profile-button")
 for (var k = 0; k < profileButtons.length; k++) {
     profileButtons[k].addEventListener("click", function(){
-        alert("display profile info here")
+        get('api/meal_author_profile', {mealKey : this.id}, function(authorData){
+            document.getElementById("profileName").innerHTML = authorData.name;
+            document.getElementById("profilePic").setAttribute("src", authorData.profilePicture);
+            document.getElementById("profilePic").setAttribute("style", "height:100px;width:100px");
+            document.getElementById("bioDiv").innerHTML = authorData.bio;
+            
+            mealCards = document.getElementsByClassName("mealPhoto");
+            
+            for (var a=0; a < 4; a++) {
+                meals = authorData.meals;
+                mealCards[a].setAttribute("src", meals[a].url);
+            }
+
+        }, function(){
+            console.log("failed to get author data");
+        });
     })
 }
 
@@ -178,39 +196,7 @@ nextButton.addEventListener("click", function(){
 })
 }
 
-// function refreshGrid(){
-//   var grid = document.querySelector('.grid');
-
-//   var msnry = new Masonry( grid, {
-//     itemSelector: '.grid__item',
-//     columnWidth: '.grid__sizer',
-//     gutter: 15,
-//     percentPosition: true
-//   });
-
-//   imagesLoaded( grid ).on( 'progress', function() {
-//     // layout Masonry after each image loads
-//     msnry.layout();
-//   });
-
-// }
-
-// // Javascript
-// var container = document.querySelector('#masonry-grid');
-// var msnry = new Masonry( container, {
-//   // options
-//   columnWidth: 200,
-//   itemSelector: '.grid-item'
-// });
-
-
 
 main();
 
-// jQuery
-var $container = jQuery('#masonry-grid');
-// initialize
-$container.masonry({
-  columnWidth: 200,
-  itemSelector: '.grid-item'
-});
+

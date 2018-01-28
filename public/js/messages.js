@@ -21,7 +21,6 @@
 
 function main() {
     const profileId = window.location.search.substring(1); // returns url query w/o "?"
-
     // get all profile info needed to render user profile
     // add user string later from profileId
     // make below work once server routes work
@@ -49,6 +48,8 @@ function socket(name) {
     socket.on('chat message', function(msg){
              $('#messages').append($('<li>').text(name + ": " + msg));
          });
+    //socket.on("new-match")
+    
 }
 
 
