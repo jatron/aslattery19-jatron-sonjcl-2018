@@ -64,7 +64,7 @@ send to database:
 
     <!-- Modal -->
     <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-dialog modal-dialog-centered" role="document" style="width:50%;height:70%">
         <div class="modal-content">
           <div class="modal-body">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -72,27 +72,37 @@ send to database:
                 </button>
 
                 <div id='elementsDiv'>
-                <div id='profilePictureDiv'>
-                    <img id='profilePic' src="">
-                </div>
-                <div id='profileNameDiv' style ="position: absolute;left: 20%;top: 5%;">
-                    <h5 class="modal-title" id="profileName"></h5>
-                </div>
-                
-                <div id='bioDiv' style="position: absolute;top: 20%;height: 20%;border: 1px solid black;border-radius: 8px;"></div>
-                <div id ="mealsDiv">
+                <!-- <div id="profileDiv" style ="position: absolute;left: 0;top: 0; height:50%; width:100%;" > -->
+                    <div id='profilePictureDiv'>
+                        <img id='profilePic' src="">
+                    </div>
+                    <div id='profileNameDiv' style ="position: absolute;left: 20%;top: 5%;">
+                        <h5 class="modal-title" id="profileName"></h5>
+                    </div>
+                    
+                    <textarea id='bioDiv' style="position: absolute;top: 20%;left: 30%;height: 20%;border: 1px solid black;border-radius: 8px; width: 60%;"></textarea>
+                        <!-- <textarea name="bio" id="bioDiv" style="margin-top: 0px;margin-bottom: 0px;height: 50%;width: 90%;"></textarea> -->
+                <!-- </div> -->
+                <div id ="mealsDiv" class="row center container-fluid" style="text-align: center;">
                         <div class="imgContainer">
+                            <img class="mealPhoto img-fluid" src=""/>
+                        </div>
+                        <div class="imgContainer">
+                            <img class="mealPhoto img-fluid" src="" />
+                        </div>
+                        <div class="imgContainer">
+                             <img class="mealPhoto img-fluid" src="" />
+                        </div>
+                        <div class="imgContainer">
+                             <img class="mealPhoto img-fluid" src="" />
+                        </div>
+
+                       <!--  <div class="imgContainer col-sm-3">
                             <img class="mealPhoto" src=""/>
                         </div>
-                        <div class="imgContainer">
+                        <div class="imgContainer col-sm-3">
                             <img class="mealPhoto" src="" />
-                        </div>
-                        <div class="imgContainer">
-                             <img class="mealPhoto" src="" />
-                        </div>
-                        <div class="imgContainer">
-                             <img class="mealPhoto" src="" />
-                        </div>
+                        </div> -->
           
                 </div>
             </div>
