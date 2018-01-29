@@ -44,7 +44,6 @@ function updateSocket(current_user_name, namespace_id) {
     }
     if (isNamespaceInitialized === false) {
         socket.on('chat message', function(msg){
-            console.log('new message; userName:', msg.userName, '; message:', msg.message, '; namespace:', namespace_id);
             $('#messages').append($('<li>').text(msg.userName + ": " + msg.message));
         });
         namespacesInitialized.push(namespace_id);
@@ -61,13 +60,10 @@ function renderMatches(matchObj, current_user_name){
         const matchCard = document.createElement("div");
         const matchBtn = document.createElement("btn");
 
-        console.log("INFO: ", match);
         const namespace_id = match.namespace;
-        console.log("NAMESPACE: ", namespace_id);
         // set button ID to socket room id
         matchBtn.setAttribute("id", namespace_id);
 
-        console.log("button id: " + matchBtn.id);
         matchCard.className = 'mt-4 card';
         matchBtn.setAttribute("type", "button");
 
@@ -140,7 +136,6 @@ function renderMatches(matchObj, current_user_name){
             // render meals in rightmost col ("meals-bar")
             const mealsBar = document.getElementById('meals-bar');
             mealsBar.innerHTML = "Meal Bar";  // clear HTML before loading new user's meals
-            console.log("in render meals function: match ID = " + match.userId);
             get('api/profile', {userId : match.userId}, function(user) {
 
                 user.meals.forEach(renderMeals);  // render all meals for the match
