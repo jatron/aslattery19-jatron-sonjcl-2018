@@ -70,9 +70,36 @@ function renderMatches(matchObj, current_user_name){
 
         //make match btn clickable and render match's meals
         matchBtn.addEventListener("click", function(){
+            // render chat prompt
+            var chatPrompt = document.getElementById("form");
+            if (!chatPrompt) {
+                // chat prompt hasn't been rendered
+                // render it now
+                chatPrompt = document.createElement("form");
+                chatPrompt.setAttribute("id", "form");
+                chatPrompt.setAttribute("action", "");
+
+                // create input box
+                const inputBox = document.createElement("input");
+                inputBox.className = "send-button";
+                inputBox.setAttribute("id", "id") // The id will be changed later upon calling socket()
+                inputBox.setAttribute("autocomplete", "off");
+
+                // create send button
+                const sendButton = document.createElement("button");
+                sendButton.innerHTML = "Send";
+
+                // Add inputBox and snedButton as children of chatPrompt
+                chatPrompt.appendChild(inputBox);
+                chatPrompt.appendChild(sendButton);
+
+                // render chatPrompt
+                const messagesBar = document.getElementById("messages-bar");
+                messagesBar.appendChild(chatPrompt);
+            }
+
             // GET meals for that user
             renderMatchMeals(match);
-
 
             const namespace_id = this.id;
 
