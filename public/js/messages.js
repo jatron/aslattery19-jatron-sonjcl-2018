@@ -43,27 +43,9 @@ function socket(current_user_name, namespace_id) {
 function renderMatches(matchObj){
     const profileId = window.location.search.substring(1); // returns url query w/o "?"
     const matches = matchObj.matches;
-    // var template = $('#match-template');
-    //console.log(matches);
+
     matches.forEach(function(match) {
-        // // Clone template
-        // var newMatch = template.clone();
 
-        // // Update the post
-        // newMatch.find('.match-btn').text(match.name);
-        // // make matches clickable
-        // // matchBtn = newMatch.find('.match-btn')
-        // // document.getElementById('match-btn').addEventListener("click", function(match){
-        // //     // GET meals for that user
-        // //     console.log(match.name);
-        // //     // renderMatchMeals(match);
-        // //     });
-
-        // // Add new post into DOM
-        // template.after(newMatch);
-
-        // // Make visible
-        // newMatch.removeClass('template');
         const matchBar = document.getElementById("match-bar");
         const matchCard = document.createElement("div");
         const matchBtn = document.createElement("btn");
@@ -75,19 +57,16 @@ function renderMatches(matchObj){
         matchBtn.setAttribute("id", namespace_id);
 
         console.log("button id: " + matchBtn.id);
-        //console.log("match name = " + match.name);
         matchCard.className = 'mt-4 card';
         matchBtn.setAttribute("type", "button");
 
         matchBtn.value = match.name;
         matchBtn.innerHTML = match.name;
-        //console.log(matchBtn.value);
 
 
         //make match btn clickable and render match's meals
         matchBtn.addEventListener("click", function(){
             // GET meals for that user
-            //console.log(match.name);
             renderMatchMeals(match);
 
             const current_user_name = "Alexis Slattery"; // match.nameOfUserLoggedIn
@@ -101,8 +80,6 @@ function renderMatches(matchObj){
         matchCard.appendChild(matchBtn);
         matchBar.appendChild(matchCard);
 
-
-        // newMatch.removeId('match-btn');
     });
 
 
@@ -182,61 +159,10 @@ function renderMatches(matchObj){
                     // btnBox.setAttribute('id', meal.key + '-btnbox');
                     card.appendChild(btnBox);
                     // card.setAttribute('id', meal.key + '-card');
-
-
                 };
-
                 mealsBar.appendChild(card);
-
-
             };
-
-
-// tells socket what to do when we get a new message
-// function newMessage(msg, user) {
-//     console.log(msg);
-//     console.log(user);
-//     //const messageDiv = document.createElement("div");
-//     // const messagesBar = document.getElementById("messages-bar");
-//     // messageDiv.innerHTML = msg;
-//     // messagesBar.appendChild(messageDiv);
-
-// }
-
-
-
-
-
-    // // rendering cookbook
-    // const cookbookCard = document.getElementById('cookbook-card');
-    // user.meals.forEach(renderMeals);
-
-    // function renderMeals(meal, index, arr) {
-    //     // let li = document.createElement('li');
-    //     const card = document.createElement('div');
-    //     card.setAttribute('id', meal.name);
-    //     card.className = 'mt-4';
-
-    //     const cardBody = document.createElement('div');
-    //     cardBody.className = 'card-body';
-    //     card.appendChild(cardBody);
-
-    //     const mealImage = document.createElement('img');
-    //     mealImage.className = 'meal-image-url';
-    //     mealImage.setAttribute('src', meal.url);
-    //     mealImage.className = 'rounded img-fluid';
-    //     cardBody.appendChild(mealImage);
-
-    //     cookbookCard.appendChild(card);
-    //     // mealList.appendChild(card);
-    // };
-
-    // cookbookCard.appendChild(mealCards);
     }
 }
-
-
-
-
 
 main();
