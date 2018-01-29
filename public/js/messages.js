@@ -1,24 +1,5 @@
 // client side javascript for messages page
 
-// profileUser = {
-//         matches            :
-//         [
-//           {
-//             userId  :   "1234",
-//             name    :   "bob"
-//           },
-//           {
-//             userId  :   "5678",
-//             name    :   "alexis"
-//           },
-//           {
-//             userId  :   "9000",
-//             name    :   "morty"
-//           }
-//         ]
-//     }
-
-
 function main() {
     const profileId = window.location.search.substring(1); // returns url query w/o "?"
     // get all profile info needed to render user profile
@@ -40,7 +21,7 @@ function main() {
     }, function(){
         console.log("was unable to get user info :(");
     });
-    
+
 }
 
 function socket(current_user_name, namespace_id) {
@@ -55,7 +36,7 @@ function socket(current_user_name, namespace_id) {
     socket.on('chat message', function(msg){
         $('#messages').append($('<li>').text(msg.userName + ": " + msg.message));
     });
-    
+
     $('form').submit(function(){
         socket.emit('chat message', {
             userName    : 'Fake userName', // TODO: get the actual user's name
@@ -68,7 +49,7 @@ function socket(current_user_name, namespace_id) {
 
 // match button on click:
 //    - switch the current user to the socket room for that match
-    
+
 
 
 function renderMatches(matchObj){
@@ -104,7 +85,7 @@ function renderMatches(matchObj){
         console.log("NAMESPACE: ", namespace_id);
         // set button ID to socket room id
         matchBtn.setAttribute("id", namespace_id);
-            
+
         console.log("button id: " + matchBtn.id);
         //console.log("match name = " + match.name);
         matchCard.className = 'mt-4 card';
@@ -132,11 +113,11 @@ function renderMatches(matchObj){
         matchCard.appendChild(matchBtn);
         matchBar.appendChild(matchCard);
 
- 
+
         // newMatch.removeId('match-btn');
     });
 
-        
+
 
         function renderMatchMeals(match){
             // FIX THIS!! IMPLEMENT RENDER MEALS STUFF!! to show on meal render bar!!
@@ -146,12 +127,12 @@ function renderMatches(matchObj){
             mealsBar.innerHTML = "Meal Bar";  // clear HTML before loading new user's meals
             console.log("in render meals function: match ID = " + match.userId);
             get('api/profile', {userId : match.userId}, function(user) {
-                
+
                 user.meals.forEach(renderMeals);  // render all meals for the match
                 }, function() {
                 console.log("Couldn't access user data :(");
             });
-            
+
 
             function renderMeals(meal, index, arr) {
                 // let li = document.createElement('li');
@@ -183,7 +164,7 @@ function renderMatches(matchObj){
                 function renderDropdown(item, itemName) {
                     const dropdownDiv = document.createElement('div');
                     dropdownDiv.className = 'dropdown col-xs-1';
-                    
+
                     const dropdownBtn = document.createElement('button');
                     dropdownBtn.className = 'btn btn-secondary dropdown-toggle';
                     dropdownBtn.setAttribute('type', 'button');
@@ -193,7 +174,7 @@ function renderMatches(matchObj){
                     dropdownBtn.setAttribute('id', 'dropdownMenuButton');
                     dropdownBtn.innerHTML = itemName;
                     dropdownDiv.appendChild(dropdownBtn);
-         
+
                     // rendering dropdown menu
                     const dropdownMenu = document.createElement('div');
                     dropdownMenu.className = 'dropdown-menu';
@@ -220,7 +201,7 @@ function renderMatches(matchObj){
                 mealsBar.appendChild(card);
 
 
-            };      
+            };
 
 
 // tells socket what to do when we get a new message
