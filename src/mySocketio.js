@@ -10,7 +10,6 @@ module.exports.socketioListen = function(server) {
     const namespace0 = io.of('/namespace0');
     namespace0.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace0');
             ChatRoom.findOne({namespace: '/namespace0'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace0'})");
@@ -40,7 +39,6 @@ module.exports.socketioListen = function(server) {
     const namespace1 = io.of('/namespace1');
     namespace1.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace1');
             ChatRoom.findOne({namespace: '/namespace1'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace1'})");
@@ -70,7 +68,6 @@ module.exports.socketioListen = function(server) {
     const namespace2 = io.of('/namespace2');
     namespace2.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace2');
             ChatRoom.findOne({namespace: '/namespace2'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace2'})");
@@ -100,7 +97,6 @@ module.exports.socketioListen = function(server) {
     const namespace3 = io.of('/namespace3');
     namespace3.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace3');
             ChatRoom.findOne({namespace: '/namespace3'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace3'})");
@@ -130,7 +126,6 @@ module.exports.socketioListen = function(server) {
     const namespace4 = io.of('/namespace4');
     namespace4.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace4');
             ChatRoom.findOne({namespace: '/namespace4'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace4'})");
@@ -160,7 +155,6 @@ module.exports.socketioListen = function(server) {
     const namespace5 = io.of('/namespace5');
     namespace5.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace5');
             ChatRoom.findOne({namespace: '/namespace5'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace5'})");
@@ -190,7 +184,6 @@ module.exports.socketioListen = function(server) {
     const namespace6 = io.of('/namespace6');
     namespace6.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace6');
             ChatRoom.findOne({namespace: '/namespace6'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace6'})");
@@ -220,7 +213,6 @@ module.exports.socketioListen = function(server) {
     const namespace7 = io.of('/namespace7');
     namespace7.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace7');
             ChatRoom.findOne({namespace: '/namespace7'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace7'})");
@@ -250,7 +242,6 @@ module.exports.socketioListen = function(server) {
     const namespace8 = io.of('/namespace8');
     namespace8.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace8');
             ChatRoom.findOne({namespace: '/namespace8'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace8'})");
@@ -280,7 +271,6 @@ module.exports.socketioListen = function(server) {
     const namespace9 = io.of('/namespace9');
     namespace9.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace9');
             ChatRoom.findOne({namespace: '/namespace9'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace9'})");
@@ -310,7 +300,6 @@ module.exports.socketioListen = function(server) {
     const namespace10 = io.of('/namespace10');
     namespace10.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace10');
             ChatRoom.findOne({namespace: '/namespace10'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace10'})");
@@ -340,7 +329,6 @@ module.exports.socketioListen = function(server) {
     const namespace11 = io.of('/namespace11');
     namespace11.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace11');
             ChatRoom.findOne({namespace: '/namespace11'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace11'})");
@@ -370,7 +358,6 @@ module.exports.socketioListen = function(server) {
     const namespace12 = io.of('/namespace12');
     namespace12.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace12');
             ChatRoom.findOne({namespace: '/namespace12'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace12'})");
@@ -400,7 +387,6 @@ module.exports.socketioListen = function(server) {
     const namespace13 = io.of('/namespace13');
     namespace13.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace13');
             ChatRoom.findOne({namespace: '/namespace13'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace13'})");
@@ -430,7 +416,6 @@ module.exports.socketioListen = function(server) {
     const namespace14 = io.of('/namespace14');
     namespace14.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace14');
             ChatRoom.findOne({namespace: '/namespace14'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace14'})");
@@ -460,7 +445,6 @@ module.exports.socketioListen = function(server) {
     const namespace15 = io.of('/namespace15');
     namespace15.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace15');
             ChatRoom.findOne({namespace: '/namespace15'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace15'})");
@@ -490,7 +474,6 @@ module.exports.socketioListen = function(server) {
     const namespace16 = io.of('/namespace16');
     namespace16.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace16');
             ChatRoom.findOne({namespace: '/namespace16'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace16'})");
@@ -520,7 +503,6 @@ module.exports.socketioListen = function(server) {
     const namespace17 = io.of('/namespace17');
     namespace17.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace17');
             ChatRoom.findOne({namespace: '/namespace17'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace17'})");
@@ -550,7 +532,6 @@ module.exports.socketioListen = function(server) {
     const namespace18 = io.of('/namespace18');
     namespace18.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace18');
             ChatRoom.findOne({namespace: '/namespace18'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace18'})");
@@ -580,7 +561,6 @@ module.exports.socketioListen = function(server) {
     const namespace19 = io.of('/namespace19');
     namespace19.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace19');
             ChatRoom.findOne({namespace: '/namespace19'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace19'})");
@@ -610,7 +590,6 @@ module.exports.socketioListen = function(server) {
     const namespace20 = io.of('/namespace20');
     namespace20.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace20');
             ChatRoom.findOne({namespace: '/namespace20'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace20'})");
@@ -640,7 +619,6 @@ module.exports.socketioListen = function(server) {
     const namespace21 = io.of('/namespace21');
     namespace21.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace21');
             ChatRoom.findOne({namespace: '/namespace21'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace21'})");
@@ -670,7 +648,6 @@ module.exports.socketioListen = function(server) {
     const namespace22 = io.of('/namespace22');
     namespace22.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace22');
             ChatRoom.findOne({namespace: '/namespace22'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace22'})");
@@ -700,7 +677,6 @@ module.exports.socketioListen = function(server) {
     const namespace23 = io.of('/namespace23');
     namespace23.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace23');
             ChatRoom.findOne({namespace: '/namespace23'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace23'})");
@@ -730,7 +706,6 @@ module.exports.socketioListen = function(server) {
     const namespace24 = io.of('/namespace24');
     namespace24.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace24');
             ChatRoom.findOne({namespace: '/namespace24'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace24'})");
@@ -760,7 +735,6 @@ module.exports.socketioListen = function(server) {
     const namespace25 = io.of('/namespace25');
     namespace25.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace25');
             ChatRoom.findOne({namespace: '/namespace25'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace25'})");
@@ -790,7 +764,6 @@ module.exports.socketioListen = function(server) {
     const namespace26 = io.of('/namespace26');
     namespace26.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace26');
             ChatRoom.findOne({namespace: '/namespace26'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace26'})");
@@ -820,7 +793,6 @@ module.exports.socketioListen = function(server) {
     const namespace27 = io.of('/namespace27');
     namespace27.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace27');
             ChatRoom.findOne({namespace: '/namespace27'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace27'})");
@@ -850,7 +822,6 @@ module.exports.socketioListen = function(server) {
     const namespace28 = io.of('/namespace28');
     namespace28.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace28');
             ChatRoom.findOne({namespace: '/namespace28'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace28'})");
@@ -880,7 +851,6 @@ module.exports.socketioListen = function(server) {
     const namespace29 = io.of('/namespace29');
     namespace29.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace29');
             ChatRoom.findOne({namespace: '/namespace29'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace29'})");
@@ -910,7 +880,6 @@ module.exports.socketioListen = function(server) {
     const namespace30 = io.of('/namespace30');
     namespace30.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace30');
             ChatRoom.findOne({namespace: '/namespace30'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace30'})");
@@ -940,7 +909,6 @@ module.exports.socketioListen = function(server) {
     const namespace31 = io.of('/namespace31');
     namespace31.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace31');
             ChatRoom.findOne({namespace: '/namespace31'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace31'})");
@@ -970,7 +938,6 @@ module.exports.socketioListen = function(server) {
     const namespace32 = io.of('/namespace32');
     namespace32.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace32');
             ChatRoom.findOne({namespace: '/namespace32'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace32'})");
@@ -1000,7 +967,6 @@ module.exports.socketioListen = function(server) {
     const namespace33 = io.of('/namespace33');
     namespace33.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace33');
             ChatRoom.findOne({namespace: '/namespace33'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace33'})");
@@ -1030,7 +996,6 @@ module.exports.socketioListen = function(server) {
     const namespace34 = io.of('/namespace34');
     namespace34.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace34');
             ChatRoom.findOne({namespace: '/namespace34'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace34'})");
@@ -1060,7 +1025,6 @@ module.exports.socketioListen = function(server) {
     const namespace35 = io.of('/namespace35');
     namespace35.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace35');
             ChatRoom.findOne({namespace: '/namespace35'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace35'})");
@@ -1090,7 +1054,6 @@ module.exports.socketioListen = function(server) {
     const namespace36 = io.of('/namespace36');
     namespace36.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace36');
             ChatRoom.findOne({namespace: '/namespace36'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace36'})");
@@ -1120,7 +1083,6 @@ module.exports.socketioListen = function(server) {
     const namespace37 = io.of('/namespace37');
     namespace37.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace37');
             ChatRoom.findOne({namespace: '/namespace37'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace37'})");
@@ -1150,7 +1112,6 @@ module.exports.socketioListen = function(server) {
     const namespace38 = io.of('/namespace38');
     namespace38.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace38');
             ChatRoom.findOne({namespace: '/namespace38'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace38'})");
@@ -1180,7 +1141,6 @@ module.exports.socketioListen = function(server) {
     const namespace39 = io.of('/namespace39');
     namespace39.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace39');
             ChatRoom.findOne({namespace: '/namespace39'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace39'})");
@@ -1210,7 +1170,6 @@ module.exports.socketioListen = function(server) {
     const namespace40 = io.of('/namespace40');
     namespace40.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace40');
             ChatRoom.findOne({namespace: '/namespace40'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace40'})");
@@ -1240,7 +1199,6 @@ module.exports.socketioListen = function(server) {
     const namespace41 = io.of('/namespace41');
     namespace41.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace41');
             ChatRoom.findOne({namespace: '/namespace41'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace41'})");
@@ -1270,7 +1228,6 @@ module.exports.socketioListen = function(server) {
     const namespace42 = io.of('/namespace42');
     namespace42.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace42');
             ChatRoom.findOne({namespace: '/namespace42'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace42'})");
@@ -1300,7 +1257,6 @@ module.exports.socketioListen = function(server) {
     const namespace43 = io.of('/namespace43');
     namespace43.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace43');
             ChatRoom.findOne({namespace: '/namespace43'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace43'})");
@@ -1330,7 +1286,6 @@ module.exports.socketioListen = function(server) {
     const namespace44 = io.of('/namespace44');
     namespace44.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace44');
             ChatRoom.findOne({namespace: '/namespace44'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace44'})");
@@ -1360,7 +1315,6 @@ module.exports.socketioListen = function(server) {
     const namespace45 = io.of('/namespace45');
     namespace45.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace45');
             ChatRoom.findOne({namespace: '/namespace45'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace45'})");
@@ -1390,7 +1344,6 @@ module.exports.socketioListen = function(server) {
     const namespace46 = io.of('/namespace46');
     namespace46.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace46');
             ChatRoom.findOne({namespace: '/namespace46'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace46'})");
@@ -1420,7 +1373,6 @@ module.exports.socketioListen = function(server) {
     const namespace47 = io.of('/namespace47');
     namespace47.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace47');
             ChatRoom.findOne({namespace: '/namespace47'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace47'})");
@@ -1450,7 +1402,6 @@ module.exports.socketioListen = function(server) {
     const namespace48 = io.of('/namespace48');
     namespace48.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace48');
             ChatRoom.findOne({namespace: '/namespace48'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace48'})");
@@ -1480,7 +1431,6 @@ module.exports.socketioListen = function(server) {
     const namespace49 = io.of('/namespace49');
     namespace49.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace49');
             ChatRoom.findOne({namespace: '/namespace49'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace49'})");
@@ -1510,7 +1460,6 @@ module.exports.socketioListen = function(server) {
     const namespace50 = io.of('/namespace50');
     namespace50.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace50');
             ChatRoom.findOne({namespace: '/namespace50'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace50'})");
@@ -1540,7 +1489,6 @@ module.exports.socketioListen = function(server) {
     const namespace51 = io.of('/namespace51');
     namespace51.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace51');
             ChatRoom.findOne({namespace: '/namespace51'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace51'})");
@@ -1570,7 +1518,6 @@ module.exports.socketioListen = function(server) {
     const namespace52 = io.of('/namespace52');
     namespace52.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace52');
             ChatRoom.findOne({namespace: '/namespace52'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace52'})");
@@ -1600,7 +1547,6 @@ module.exports.socketioListen = function(server) {
     const namespace53 = io.of('/namespace53');
     namespace53.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace53');
             ChatRoom.findOne({namespace: '/namespace53'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace53'})");
@@ -1630,7 +1576,6 @@ module.exports.socketioListen = function(server) {
     const namespace54 = io.of('/namespace54');
     namespace54.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace54');
             ChatRoom.findOne({namespace: '/namespace54'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace54'})");
@@ -1660,7 +1605,6 @@ module.exports.socketioListen = function(server) {
     const namespace55 = io.of('/namespace55');
     namespace55.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace55');
             ChatRoom.findOne({namespace: '/namespace55'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace55'})");
@@ -1690,7 +1634,6 @@ module.exports.socketioListen = function(server) {
     const namespace56 = io.of('/namespace56');
     namespace56.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace56');
             ChatRoom.findOne({namespace: '/namespace56'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace56'})");
@@ -1720,7 +1663,6 @@ module.exports.socketioListen = function(server) {
     const namespace57 = io.of('/namespace57');
     namespace57.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace57');
             ChatRoom.findOne({namespace: '/namespace57'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace57'})");
@@ -1750,7 +1692,6 @@ module.exports.socketioListen = function(server) {
     const namespace58 = io.of('/namespace58');
     namespace58.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace58');
             ChatRoom.findOne({namespace: '/namespace58'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace58'})");
@@ -1780,7 +1721,6 @@ module.exports.socketioListen = function(server) {
     const namespace59 = io.of('/namespace59');
     namespace59.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace59');
             ChatRoom.findOne({namespace: '/namespace59'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace59'})");
@@ -1810,7 +1750,6 @@ module.exports.socketioListen = function(server) {
     const namespace60 = io.of('/namespace60');
     namespace60.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace60');
             ChatRoom.findOne({namespace: '/namespace60'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace60'})");
@@ -1840,7 +1779,6 @@ module.exports.socketioListen = function(server) {
     const namespace61 = io.of('/namespace61');
     namespace61.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace61');
             ChatRoom.findOne({namespace: '/namespace61'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace61'})");
@@ -1870,7 +1808,6 @@ module.exports.socketioListen = function(server) {
     const namespace62 = io.of('/namespace62');
     namespace62.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace62');
             ChatRoom.findOne({namespace: '/namespace62'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace62'})");
@@ -1900,7 +1837,6 @@ module.exports.socketioListen = function(server) {
     const namespace63 = io.of('/namespace63');
     namespace63.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace63');
             ChatRoom.findOne({namespace: '/namespace63'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace63'})");
@@ -1930,7 +1866,6 @@ module.exports.socketioListen = function(server) {
     const namespace64 = io.of('/namespace64');
     namespace64.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace64');
             ChatRoom.findOne({namespace: '/namespace64'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace64'})");
@@ -1960,7 +1895,6 @@ module.exports.socketioListen = function(server) {
     const namespace65 = io.of('/namespace65');
     namespace65.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace65');
             ChatRoom.findOne({namespace: '/namespace65'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace65'})");
@@ -1990,7 +1924,6 @@ module.exports.socketioListen = function(server) {
     const namespace66 = io.of('/namespace66');
     namespace66.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace66');
             ChatRoom.findOne({namespace: '/namespace66'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace66'})");
@@ -2020,7 +1953,6 @@ module.exports.socketioListen = function(server) {
     const namespace67 = io.of('/namespace67');
     namespace67.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace67');
             ChatRoom.findOne({namespace: '/namespace67'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace67'})");
@@ -2050,7 +1982,6 @@ module.exports.socketioListen = function(server) {
     const namespace68 = io.of('/namespace68');
     namespace68.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace68');
             ChatRoom.findOne({namespace: '/namespace68'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace68'})");
@@ -2080,7 +2011,6 @@ module.exports.socketioListen = function(server) {
     const namespace69 = io.of('/namespace69');
     namespace69.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace69');
             ChatRoom.findOne({namespace: '/namespace69'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace69'})");
@@ -2110,7 +2040,6 @@ module.exports.socketioListen = function(server) {
     const namespace70 = io.of('/namespace70');
     namespace70.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace70');
             ChatRoom.findOne({namespace: '/namespace70'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace70'})");
@@ -2140,7 +2069,6 @@ module.exports.socketioListen = function(server) {
     const namespace71 = io.of('/namespace71');
     namespace71.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace71');
             ChatRoom.findOne({namespace: '/namespace71'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace71'})");
@@ -2170,7 +2098,6 @@ module.exports.socketioListen = function(server) {
     const namespace72 = io.of('/namespace72');
     namespace72.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace72');
             ChatRoom.findOne({namespace: '/namespace72'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace72'})");
@@ -2200,7 +2127,6 @@ module.exports.socketioListen = function(server) {
     const namespace73 = io.of('/namespace73');
     namespace73.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace73');
             ChatRoom.findOne({namespace: '/namespace73'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace73'})");
@@ -2230,7 +2156,6 @@ module.exports.socketioListen = function(server) {
     const namespace74 = io.of('/namespace74');
     namespace74.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace74');
             ChatRoom.findOne({namespace: '/namespace74'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace74'})");
@@ -2260,7 +2185,6 @@ module.exports.socketioListen = function(server) {
     const namespace75 = io.of('/namespace75');
     namespace75.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace75');
             ChatRoom.findOne({namespace: '/namespace75'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace75'})");
@@ -2290,7 +2214,6 @@ module.exports.socketioListen = function(server) {
     const namespace76 = io.of('/namespace76');
     namespace76.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace76');
             ChatRoom.findOne({namespace: '/namespace76'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace76'})");
@@ -2320,7 +2243,6 @@ module.exports.socketioListen = function(server) {
     const namespace77 = io.of('/namespace77');
     namespace77.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace77');
             ChatRoom.findOne({namespace: '/namespace77'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace77'})");
@@ -2350,7 +2272,6 @@ module.exports.socketioListen = function(server) {
     const namespace78 = io.of('/namespace78');
     namespace78.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace78');
             ChatRoom.findOne({namespace: '/namespace78'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace78'})");
@@ -2380,7 +2301,6 @@ module.exports.socketioListen = function(server) {
     const namespace79 = io.of('/namespace79');
     namespace79.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace79');
             ChatRoom.findOne({namespace: '/namespace79'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace79'})");
@@ -2410,7 +2330,6 @@ module.exports.socketioListen = function(server) {
     const namespace80 = io.of('/namespace80');
     namespace80.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace80');
             ChatRoom.findOne({namespace: '/namespace80'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace80'})");
@@ -2440,7 +2359,6 @@ module.exports.socketioListen = function(server) {
     const namespace81 = io.of('/namespace81');
     namespace81.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace81');
             ChatRoom.findOne({namespace: '/namespace81'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace81'})");
@@ -2470,7 +2388,6 @@ module.exports.socketioListen = function(server) {
     const namespace82 = io.of('/namespace82');
     namespace82.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace82');
             ChatRoom.findOne({namespace: '/namespace82'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace82'})");
@@ -2500,7 +2417,6 @@ module.exports.socketioListen = function(server) {
     const namespace83 = io.of('/namespace83');
     namespace83.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace83');
             ChatRoom.findOne({namespace: '/namespace83'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace83'})");
@@ -2530,7 +2446,6 @@ module.exports.socketioListen = function(server) {
     const namespace84 = io.of('/namespace84');
     namespace84.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace84');
             ChatRoom.findOne({namespace: '/namespace84'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace84'})");
@@ -2560,7 +2475,6 @@ module.exports.socketioListen = function(server) {
     const namespace85 = io.of('/namespace85');
     namespace85.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace85');
             ChatRoom.findOne({namespace: '/namespace85'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace85'})");
@@ -2590,7 +2504,6 @@ module.exports.socketioListen = function(server) {
     const namespace86 = io.of('/namespace86');
     namespace86.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace86');
             ChatRoom.findOne({namespace: '/namespace86'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace86'})");
@@ -2620,7 +2533,6 @@ module.exports.socketioListen = function(server) {
     const namespace87 = io.of('/namespace87');
     namespace87.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace87');
             ChatRoom.findOne({namespace: '/namespace87'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace87'})");
@@ -2650,7 +2562,6 @@ module.exports.socketioListen = function(server) {
     const namespace88 = io.of('/namespace88');
     namespace88.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace88');
             ChatRoom.findOne({namespace: '/namespace88'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace88'})");
@@ -2680,7 +2591,6 @@ module.exports.socketioListen = function(server) {
     const namespace89 = io.of('/namespace89');
     namespace89.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace89');
             ChatRoom.findOne({namespace: '/namespace89'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace89'})");
@@ -2710,7 +2620,6 @@ module.exports.socketioListen = function(server) {
     const namespace90 = io.of('/namespace90');
     namespace90.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace90');
             ChatRoom.findOne({namespace: '/namespace90'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace90'})");
@@ -2740,7 +2649,6 @@ module.exports.socketioListen = function(server) {
     const namespace91 = io.of('/namespace91');
     namespace91.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace91');
             ChatRoom.findOne({namespace: '/namespace91'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace91'})");
@@ -2770,7 +2678,6 @@ module.exports.socketioListen = function(server) {
     const namespace92 = io.of('/namespace92');
     namespace92.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace92');
             ChatRoom.findOne({namespace: '/namespace92'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace92'})");
@@ -2800,7 +2707,6 @@ module.exports.socketioListen = function(server) {
     const namespace93 = io.of('/namespace93');
     namespace93.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace93');
             ChatRoom.findOne({namespace: '/namespace93'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace93'})");
@@ -2830,7 +2736,6 @@ module.exports.socketioListen = function(server) {
     const namespace94 = io.of('/namespace94');
     namespace94.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace94');
             ChatRoom.findOne({namespace: '/namespace94'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace94'})");
@@ -2860,7 +2765,6 @@ module.exports.socketioListen = function(server) {
     const namespace95 = io.of('/namespace95');
     namespace95.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace95');
             ChatRoom.findOne({namespace: '/namespace95'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace95'})");
@@ -2890,7 +2794,6 @@ module.exports.socketioListen = function(server) {
     const namespace96 = io.of('/namespace96');
     namespace96.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace96');
             ChatRoom.findOne({namespace: '/namespace96'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace96'})");
@@ -2920,7 +2823,6 @@ module.exports.socketioListen = function(server) {
     const namespace97 = io.of('/namespace97');
     namespace97.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace97');
             ChatRoom.findOne({namespace: '/namespace97'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace97'})");
@@ -2950,7 +2852,6 @@ module.exports.socketioListen = function(server) {
     const namespace98 = io.of('/namespace98');
     namespace98.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace98');
             ChatRoom.findOne({namespace: '/namespace98'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace98'})");
@@ -2980,7 +2881,6 @@ module.exports.socketioListen = function(server) {
     const namespace99 = io.of('/namespace99');
     namespace99.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace99');
             ChatRoom.findOne({namespace: '/namespace99'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace99'})");
@@ -3010,7 +2910,6 @@ module.exports.socketioListen = function(server) {
     const namespace100 = io.of('/namespace100');
     namespace100.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace100');
             ChatRoom.findOne({namespace: '/namespace100'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace100'})");
@@ -3040,7 +2939,6 @@ module.exports.socketioListen = function(server) {
     const namespace101 = io.of('/namespace101');
     namespace101.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace101');
             ChatRoom.findOne({namespace: '/namespace101'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace101'})");
@@ -3070,7 +2968,6 @@ module.exports.socketioListen = function(server) {
     const namespace102 = io.of('/namespace102');
     namespace102.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace102');
             ChatRoom.findOne({namespace: '/namespace102'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace102'})");
@@ -3100,7 +2997,6 @@ module.exports.socketioListen = function(server) {
     const namespace103 = io.of('/namespace103');
     namespace103.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace103');
             ChatRoom.findOne({namespace: '/namespace103'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace103'})");
@@ -3130,7 +3026,6 @@ module.exports.socketioListen = function(server) {
     const namespace104 = io.of('/namespace104');
     namespace104.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace104');
             ChatRoom.findOne({namespace: '/namespace104'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace104'})");
@@ -3160,7 +3055,6 @@ module.exports.socketioListen = function(server) {
     const namespace105 = io.of('/namespace105');
     namespace105.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace105');
             ChatRoom.findOne({namespace: '/namespace105'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace105'})");
@@ -3190,7 +3084,6 @@ module.exports.socketioListen = function(server) {
     const namespace106 = io.of('/namespace106');
     namespace106.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace106');
             ChatRoom.findOne({namespace: '/namespace106'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace106'})");
@@ -3220,7 +3113,6 @@ module.exports.socketioListen = function(server) {
     const namespace107 = io.of('/namespace107');
     namespace107.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace107');
             ChatRoom.findOne({namespace: '/namespace107'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace107'})");
@@ -3250,7 +3142,6 @@ module.exports.socketioListen = function(server) {
     const namespace108 = io.of('/namespace108');
     namespace108.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace108');
             ChatRoom.findOne({namespace: '/namespace108'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace108'})");
@@ -3280,7 +3171,6 @@ module.exports.socketioListen = function(server) {
     const namespace109 = io.of('/namespace109');
     namespace109.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace109');
             ChatRoom.findOne({namespace: '/namespace109'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace109'})");
@@ -3310,7 +3200,6 @@ module.exports.socketioListen = function(server) {
     const namespace110 = io.of('/namespace110');
     namespace110.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace110');
             ChatRoom.findOne({namespace: '/namespace110'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace110'})");
@@ -3340,7 +3229,6 @@ module.exports.socketioListen = function(server) {
     const namespace111 = io.of('/namespace111');
     namespace111.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace111');
             ChatRoom.findOne({namespace: '/namespace111'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace111'})");
@@ -3370,7 +3258,6 @@ module.exports.socketioListen = function(server) {
     const namespace112 = io.of('/namespace112');
     namespace112.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace112');
             ChatRoom.findOne({namespace: '/namespace112'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace112'})");
@@ -3400,7 +3287,6 @@ module.exports.socketioListen = function(server) {
     const namespace113 = io.of('/namespace113');
     namespace113.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace113');
             ChatRoom.findOne({namespace: '/namespace113'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace113'})");
@@ -3430,7 +3316,6 @@ module.exports.socketioListen = function(server) {
     const namespace114 = io.of('/namespace114');
     namespace114.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace114');
             ChatRoom.findOne({namespace: '/namespace114'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace114'})");
@@ -3460,7 +3345,6 @@ module.exports.socketioListen = function(server) {
     const namespace115 = io.of('/namespace115');
     namespace115.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace115');
             ChatRoom.findOne({namespace: '/namespace115'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace115'})");
@@ -3490,7 +3374,6 @@ module.exports.socketioListen = function(server) {
     const namespace116 = io.of('/namespace116');
     namespace116.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace116');
             ChatRoom.findOne({namespace: '/namespace116'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace116'})");
@@ -3520,7 +3403,6 @@ module.exports.socketioListen = function(server) {
     const namespace117 = io.of('/namespace117');
     namespace117.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace117');
             ChatRoom.findOne({namespace: '/namespace117'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace117'})");
@@ -3550,7 +3432,6 @@ module.exports.socketioListen = function(server) {
     const namespace118 = io.of('/namespace118');
     namespace118.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace118');
             ChatRoom.findOne({namespace: '/namespace118'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace118'})");
@@ -3580,7 +3461,6 @@ module.exports.socketioListen = function(server) {
     const namespace119 = io.of('/namespace119');
     namespace119.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace119');
             ChatRoom.findOne({namespace: '/namespace119'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace119'})");
@@ -3610,7 +3490,6 @@ module.exports.socketioListen = function(server) {
     const namespace120 = io.of('/namespace120');
     namespace120.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace120');
             ChatRoom.findOne({namespace: '/namespace120'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace120'})");
@@ -3640,7 +3519,6 @@ module.exports.socketioListen = function(server) {
     const namespace121 = io.of('/namespace121');
     namespace121.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace121');
             ChatRoom.findOne({namespace: '/namespace121'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace121'})");
@@ -3670,7 +3548,6 @@ module.exports.socketioListen = function(server) {
     const namespace122 = io.of('/namespace122');
     namespace122.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace122');
             ChatRoom.findOne({namespace: '/namespace122'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace122'})");
@@ -3700,7 +3577,6 @@ module.exports.socketioListen = function(server) {
     const namespace123 = io.of('/namespace123');
     namespace123.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace123');
             ChatRoom.findOne({namespace: '/namespace123'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace123'})");
@@ -3730,7 +3606,6 @@ module.exports.socketioListen = function(server) {
     const namespace124 = io.of('/namespace124');
     namespace124.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace124');
             ChatRoom.findOne({namespace: '/namespace124'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace124'})");
@@ -3760,7 +3635,6 @@ module.exports.socketioListen = function(server) {
     const namespace125 = io.of('/namespace125');
     namespace125.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace125');
             ChatRoom.findOne({namespace: '/namespace125'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace125'})");
@@ -3790,7 +3664,6 @@ module.exports.socketioListen = function(server) {
     const namespace126 = io.of('/namespace126');
     namespace126.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace126');
             ChatRoom.findOne({namespace: '/namespace126'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace126'})");
@@ -3820,7 +3693,6 @@ module.exports.socketioListen = function(server) {
     const namespace127 = io.of('/namespace127');
     namespace127.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace127');
             ChatRoom.findOne({namespace: '/namespace127'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace127'})");
@@ -3850,7 +3722,6 @@ module.exports.socketioListen = function(server) {
     const namespace128 = io.of('/namespace128');
     namespace128.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace128');
             ChatRoom.findOne({namespace: '/namespace128'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace128'})");
@@ -3880,7 +3751,6 @@ module.exports.socketioListen = function(server) {
     const namespace129 = io.of('/namespace129');
     namespace129.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace129');
             ChatRoom.findOne({namespace: '/namespace129'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace129'})");
@@ -3910,7 +3780,6 @@ module.exports.socketioListen = function(server) {
     const namespace130 = io.of('/namespace130');
     namespace130.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace130');
             ChatRoom.findOne({namespace: '/namespace130'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace130'})");
@@ -3940,7 +3809,6 @@ module.exports.socketioListen = function(server) {
     const namespace131 = io.of('/namespace131');
     namespace131.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace131');
             ChatRoom.findOne({namespace: '/namespace131'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace131'})");
@@ -3970,7 +3838,6 @@ module.exports.socketioListen = function(server) {
     const namespace132 = io.of('/namespace132');
     namespace132.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace132');
             ChatRoom.findOne({namespace: '/namespace132'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace132'})");
@@ -4000,7 +3867,6 @@ module.exports.socketioListen = function(server) {
     const namespace133 = io.of('/namespace133');
     namespace133.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace133');
             ChatRoom.findOne({namespace: '/namespace133'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace133'})");
@@ -4030,7 +3896,6 @@ module.exports.socketioListen = function(server) {
     const namespace134 = io.of('/namespace134');
     namespace134.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace134');
             ChatRoom.findOne({namespace: '/namespace134'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace134'})");
@@ -4060,7 +3925,6 @@ module.exports.socketioListen = function(server) {
     const namespace135 = io.of('/namespace135');
     namespace135.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace135');
             ChatRoom.findOne({namespace: '/namespace135'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace135'})");
@@ -4090,7 +3954,6 @@ module.exports.socketioListen = function(server) {
     const namespace136 = io.of('/namespace136');
     namespace136.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace136');
             ChatRoom.findOne({namespace: '/namespace136'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace136'})");
@@ -4120,7 +3983,6 @@ module.exports.socketioListen = function(server) {
     const namespace137 = io.of('/namespace137');
     namespace137.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace137');
             ChatRoom.findOne({namespace: '/namespace137'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace137'})");
@@ -4150,7 +4012,6 @@ module.exports.socketioListen = function(server) {
     const namespace138 = io.of('/namespace138');
     namespace138.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace138');
             ChatRoom.findOne({namespace: '/namespace138'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace138'})");
@@ -4180,7 +4041,6 @@ module.exports.socketioListen = function(server) {
     const namespace139 = io.of('/namespace139');
     namespace139.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace139');
             ChatRoom.findOne({namespace: '/namespace139'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace139'})");
@@ -4210,7 +4070,6 @@ module.exports.socketioListen = function(server) {
     const namespace140 = io.of('/namespace140');
     namespace140.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace140');
             ChatRoom.findOne({namespace: '/namespace140'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace140'})");
@@ -4240,7 +4099,6 @@ module.exports.socketioListen = function(server) {
     const namespace141 = io.of('/namespace141');
     namespace141.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace141');
             ChatRoom.findOne({namespace: '/namespace141'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace141'})");
@@ -4270,7 +4128,6 @@ module.exports.socketioListen = function(server) {
     const namespace142 = io.of('/namespace142');
     namespace142.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace142');
             ChatRoom.findOne({namespace: '/namespace142'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace142'})");
@@ -4300,7 +4157,6 @@ module.exports.socketioListen = function(server) {
     const namespace143 = io.of('/namespace143');
     namespace143.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace143');
             ChatRoom.findOne({namespace: '/namespace143'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace143'})");
@@ -4330,7 +4186,6 @@ module.exports.socketioListen = function(server) {
     const namespace144 = io.of('/namespace144');
     namespace144.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace144');
             ChatRoom.findOne({namespace: '/namespace144'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace144'})");
@@ -4360,7 +4215,6 @@ module.exports.socketioListen = function(server) {
     const namespace145 = io.of('/namespace145');
     namespace145.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace145');
             ChatRoom.findOne({namespace: '/namespace145'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace145'})");
@@ -4390,7 +4244,6 @@ module.exports.socketioListen = function(server) {
     const namespace146 = io.of('/namespace146');
     namespace146.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace146');
             ChatRoom.findOne({namespace: '/namespace146'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace146'})");
@@ -4420,7 +4273,6 @@ module.exports.socketioListen = function(server) {
     const namespace147 = io.of('/namespace147');
     namespace147.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace147');
             ChatRoom.findOne({namespace: '/namespace147'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace147'})");
@@ -4450,7 +4302,6 @@ module.exports.socketioListen = function(server) {
     const namespace148 = io.of('/namespace148');
     namespace148.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace148');
             ChatRoom.findOne({namespace: '/namespace148'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace148'})");
@@ -4480,7 +4331,6 @@ module.exports.socketioListen = function(server) {
     const namespace149 = io.of('/namespace149');
     namespace149.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace149');
             ChatRoom.findOne({namespace: '/namespace149'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace149'})");
@@ -4510,7 +4360,6 @@ module.exports.socketioListen = function(server) {
     const namespace150 = io.of('/namespace150');
     namespace150.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace150');
             ChatRoom.findOne({namespace: '/namespace150'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace150'})");
@@ -4540,7 +4389,6 @@ module.exports.socketioListen = function(server) {
     const namespace151 = io.of('/namespace151');
     namespace151.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace151');
             ChatRoom.findOne({namespace: '/namespace151'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace151'})");
@@ -4570,7 +4418,6 @@ module.exports.socketioListen = function(server) {
     const namespace152 = io.of('/namespace152');
     namespace152.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace152');
             ChatRoom.findOne({namespace: '/namespace152'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace152'})");
@@ -4600,7 +4447,6 @@ module.exports.socketioListen = function(server) {
     const namespace153 = io.of('/namespace153');
     namespace153.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace153');
             ChatRoom.findOne({namespace: '/namespace153'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace153'})");
@@ -4630,7 +4476,6 @@ module.exports.socketioListen = function(server) {
     const namespace154 = io.of('/namespace154');
     namespace154.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace154');
             ChatRoom.findOne({namespace: '/namespace154'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace154'})");
@@ -4660,7 +4505,6 @@ module.exports.socketioListen = function(server) {
     const namespace155 = io.of('/namespace155');
     namespace155.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace155');
             ChatRoom.findOne({namespace: '/namespace155'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace155'})");
@@ -4690,7 +4534,6 @@ module.exports.socketioListen = function(server) {
     const namespace156 = io.of('/namespace156');
     namespace156.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace156');
             ChatRoom.findOne({namespace: '/namespace156'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace156'})");
@@ -4720,7 +4563,6 @@ module.exports.socketioListen = function(server) {
     const namespace157 = io.of('/namespace157');
     namespace157.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace157');
             ChatRoom.findOne({namespace: '/namespace157'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace157'})");
@@ -4750,7 +4592,6 @@ module.exports.socketioListen = function(server) {
     const namespace158 = io.of('/namespace158');
     namespace158.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace158');
             ChatRoom.findOne({namespace: '/namespace158'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace158'})");
@@ -4780,7 +4621,6 @@ module.exports.socketioListen = function(server) {
     const namespace159 = io.of('/namespace159');
     namespace159.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace159');
             ChatRoom.findOne({namespace: '/namespace159'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace159'})");
@@ -4810,7 +4650,6 @@ module.exports.socketioListen = function(server) {
     const namespace160 = io.of('/namespace160');
     namespace160.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace160');
             ChatRoom.findOne({namespace: '/namespace160'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace160'})");
@@ -4840,7 +4679,6 @@ module.exports.socketioListen = function(server) {
     const namespace161 = io.of('/namespace161');
     namespace161.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace161');
             ChatRoom.findOne({namespace: '/namespace161'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace161'})");
@@ -4870,7 +4708,6 @@ module.exports.socketioListen = function(server) {
     const namespace162 = io.of('/namespace162');
     namespace162.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace162');
             ChatRoom.findOne({namespace: '/namespace162'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace162'})");
@@ -4900,7 +4737,6 @@ module.exports.socketioListen = function(server) {
     const namespace163 = io.of('/namespace163');
     namespace163.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace163');
             ChatRoom.findOne({namespace: '/namespace163'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace163'})");
@@ -4930,7 +4766,6 @@ module.exports.socketioListen = function(server) {
     const namespace164 = io.of('/namespace164');
     namespace164.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace164');
             ChatRoom.findOne({namespace: '/namespace164'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace164'})");
@@ -4960,7 +4795,6 @@ module.exports.socketioListen = function(server) {
     const namespace165 = io.of('/namespace165');
     namespace165.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace165');
             ChatRoom.findOne({namespace: '/namespace165'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace165'})");
@@ -4990,7 +4824,6 @@ module.exports.socketioListen = function(server) {
     const namespace166 = io.of('/namespace166');
     namespace166.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace166');
             ChatRoom.findOne({namespace: '/namespace166'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace166'})");
@@ -5020,7 +4853,6 @@ module.exports.socketioListen = function(server) {
     const namespace167 = io.of('/namespace167');
     namespace167.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace167');
             ChatRoom.findOne({namespace: '/namespace167'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace167'})");
@@ -5050,7 +4882,6 @@ module.exports.socketioListen = function(server) {
     const namespace168 = io.of('/namespace168');
     namespace168.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace168');
             ChatRoom.findOne({namespace: '/namespace168'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace168'})");
@@ -5080,7 +4911,6 @@ module.exports.socketioListen = function(server) {
     const namespace169 = io.of('/namespace169');
     namespace169.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace169');
             ChatRoom.findOne({namespace: '/namespace169'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace169'})");
@@ -5110,7 +4940,6 @@ module.exports.socketioListen = function(server) {
     const namespace170 = io.of('/namespace170');
     namespace170.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace170');
             ChatRoom.findOne({namespace: '/namespace170'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace170'})");
@@ -5140,7 +4969,6 @@ module.exports.socketioListen = function(server) {
     const namespace171 = io.of('/namespace171');
     namespace171.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace171');
             ChatRoom.findOne({namespace: '/namespace171'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace171'})");
@@ -5170,7 +4998,6 @@ module.exports.socketioListen = function(server) {
     const namespace172 = io.of('/namespace172');
     namespace172.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace172');
             ChatRoom.findOne({namespace: '/namespace172'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace172'})");
@@ -5200,7 +5027,6 @@ module.exports.socketioListen = function(server) {
     const namespace173 = io.of('/namespace173');
     namespace173.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace173');
             ChatRoom.findOne({namespace: '/namespace173'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace173'})");
@@ -5230,7 +5056,6 @@ module.exports.socketioListen = function(server) {
     const namespace174 = io.of('/namespace174');
     namespace174.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace174');
             ChatRoom.findOne({namespace: '/namespace174'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace174'})");
@@ -5260,7 +5085,6 @@ module.exports.socketioListen = function(server) {
     const namespace175 = io.of('/namespace175');
     namespace175.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace175');
             ChatRoom.findOne({namespace: '/namespace175'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace175'})");
@@ -5290,7 +5114,6 @@ module.exports.socketioListen = function(server) {
     const namespace176 = io.of('/namespace176');
     namespace176.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace176');
             ChatRoom.findOne({namespace: '/namespace176'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace176'})");
@@ -5320,7 +5143,6 @@ module.exports.socketioListen = function(server) {
     const namespace177 = io.of('/namespace177');
     namespace177.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace177');
             ChatRoom.findOne({namespace: '/namespace177'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace177'})");
@@ -5350,7 +5172,6 @@ module.exports.socketioListen = function(server) {
     const namespace178 = io.of('/namespace178');
     namespace178.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace178');
             ChatRoom.findOne({namespace: '/namespace178'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace178'})");
@@ -5380,7 +5201,6 @@ module.exports.socketioListen = function(server) {
     const namespace179 = io.of('/namespace179');
     namespace179.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace179');
             ChatRoom.findOne({namespace: '/namespace179'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace179'})");
@@ -5410,7 +5230,6 @@ module.exports.socketioListen = function(server) {
     const namespace180 = io.of('/namespace180');
     namespace180.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace180');
             ChatRoom.findOne({namespace: '/namespace180'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace180'})");
@@ -5440,7 +5259,6 @@ module.exports.socketioListen = function(server) {
     const namespace181 = io.of('/namespace181');
     namespace181.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace181');
             ChatRoom.findOne({namespace: '/namespace181'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace181'})");
@@ -5470,7 +5288,6 @@ module.exports.socketioListen = function(server) {
     const namespace182 = io.of('/namespace182');
     namespace182.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace182');
             ChatRoom.findOne({namespace: '/namespace182'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace182'})");
@@ -5500,7 +5317,6 @@ module.exports.socketioListen = function(server) {
     const namespace183 = io.of('/namespace183');
     namespace183.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace183');
             ChatRoom.findOne({namespace: '/namespace183'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace183'})");
@@ -5530,7 +5346,6 @@ module.exports.socketioListen = function(server) {
     const namespace184 = io.of('/namespace184');
     namespace184.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace184');
             ChatRoom.findOne({namespace: '/namespace184'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace184'})");
@@ -5560,7 +5375,6 @@ module.exports.socketioListen = function(server) {
     const namespace185 = io.of('/namespace185');
     namespace185.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace185');
             ChatRoom.findOne({namespace: '/namespace185'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace185'})");
@@ -5590,7 +5404,6 @@ module.exports.socketioListen = function(server) {
     const namespace186 = io.of('/namespace186');
     namespace186.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace186');
             ChatRoom.findOne({namespace: '/namespace186'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace186'})");
@@ -5620,7 +5433,6 @@ module.exports.socketioListen = function(server) {
     const namespace187 = io.of('/namespace187');
     namespace187.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace187');
             ChatRoom.findOne({namespace: '/namespace187'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace187'})");
@@ -5650,7 +5462,6 @@ module.exports.socketioListen = function(server) {
     const namespace188 = io.of('/namespace188');
     namespace188.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace188');
             ChatRoom.findOne({namespace: '/namespace188'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace188'})");
@@ -5680,7 +5491,6 @@ module.exports.socketioListen = function(server) {
     const namespace189 = io.of('/namespace189');
     namespace189.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace189');
             ChatRoom.findOne({namespace: '/namespace189'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace189'})");
@@ -5710,7 +5520,6 @@ module.exports.socketioListen = function(server) {
     const namespace190 = io.of('/namespace190');
     namespace190.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace190');
             ChatRoom.findOne({namespace: '/namespace190'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace190'})");
@@ -5740,7 +5549,6 @@ module.exports.socketioListen = function(server) {
     const namespace191 = io.of('/namespace191');
     namespace191.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace191');
             ChatRoom.findOne({namespace: '/namespace191'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace191'})");
@@ -5770,7 +5578,6 @@ module.exports.socketioListen = function(server) {
     const namespace192 = io.of('/namespace192');
     namespace192.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace192');
             ChatRoom.findOne({namespace: '/namespace192'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace192'})");
@@ -5800,7 +5607,6 @@ module.exports.socketioListen = function(server) {
     const namespace193 = io.of('/namespace193');
     namespace193.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace193');
             ChatRoom.findOne({namespace: '/namespace193'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace193'})");
@@ -5830,7 +5636,6 @@ module.exports.socketioListen = function(server) {
     const namespace194 = io.of('/namespace194');
     namespace194.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace194');
             ChatRoom.findOne({namespace: '/namespace194'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace194'})");
@@ -5860,7 +5665,6 @@ module.exports.socketioListen = function(server) {
     const namespace195 = io.of('/namespace195');
     namespace195.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace195');
             ChatRoom.findOne({namespace: '/namespace195'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace195'})");
@@ -5890,7 +5694,6 @@ module.exports.socketioListen = function(server) {
     const namespace196 = io.of('/namespace196');
     namespace196.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace196');
             ChatRoom.findOne({namespace: '/namespace196'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace196'})");
@@ -5920,7 +5723,6 @@ module.exports.socketioListen = function(server) {
     const namespace197 = io.of('/namespace197');
     namespace197.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace197');
             ChatRoom.findOne({namespace: '/namespace197'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace197'})");
@@ -5950,7 +5752,6 @@ module.exports.socketioListen = function(server) {
     const namespace198 = io.of('/namespace198');
     namespace198.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace198');
             ChatRoom.findOne({namespace: '/namespace198'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace198'})");
@@ -5980,7 +5781,6 @@ module.exports.socketioListen = function(server) {
     const namespace199 = io.of('/namespace199');
     namespace199.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace199');
             ChatRoom.findOne({namespace: '/namespace199'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace199'})");
@@ -6010,7 +5810,6 @@ module.exports.socketioListen = function(server) {
     const namespace200 = io.of('/namespace200');
     namespace200.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace200');
             ChatRoom.findOne({namespace: '/namespace200'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace200'})");
@@ -6040,7 +5839,6 @@ module.exports.socketioListen = function(server) {
     const namespace201 = io.of('/namespace201');
     namespace201.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace201');
             ChatRoom.findOne({namespace: '/namespace201'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace201'})");
@@ -6070,7 +5868,6 @@ module.exports.socketioListen = function(server) {
     const namespace202 = io.of('/namespace202');
     namespace202.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace202');
             ChatRoom.findOne({namespace: '/namespace202'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace202'})");
@@ -6100,7 +5897,6 @@ module.exports.socketioListen = function(server) {
     const namespace203 = io.of('/namespace203');
     namespace203.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace203');
             ChatRoom.findOne({namespace: '/namespace203'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace203'})");
@@ -6130,7 +5926,6 @@ module.exports.socketioListen = function(server) {
     const namespace204 = io.of('/namespace204');
     namespace204.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace204');
             ChatRoom.findOne({namespace: '/namespace204'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace204'})");
@@ -6160,7 +5955,6 @@ module.exports.socketioListen = function(server) {
     const namespace205 = io.of('/namespace205');
     namespace205.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace205');
             ChatRoom.findOne({namespace: '/namespace205'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace205'})");
@@ -6190,7 +5984,6 @@ module.exports.socketioListen = function(server) {
     const namespace206 = io.of('/namespace206');
     namespace206.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace206');
             ChatRoom.findOne({namespace: '/namespace206'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace206'})");
@@ -6220,7 +6013,6 @@ module.exports.socketioListen = function(server) {
     const namespace207 = io.of('/namespace207');
     namespace207.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace207');
             ChatRoom.findOne({namespace: '/namespace207'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace207'})");
@@ -6250,7 +6042,6 @@ module.exports.socketioListen = function(server) {
     const namespace208 = io.of('/namespace208');
     namespace208.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace208');
             ChatRoom.findOne({namespace: '/namespace208'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace208'})");
@@ -6280,7 +6071,6 @@ module.exports.socketioListen = function(server) {
     const namespace209 = io.of('/namespace209');
     namespace209.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace209');
             ChatRoom.findOne({namespace: '/namespace209'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace209'})");
@@ -6310,7 +6100,6 @@ module.exports.socketioListen = function(server) {
     const namespace210 = io.of('/namespace210');
     namespace210.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace210');
             ChatRoom.findOne({namespace: '/namespace210'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace210'})");
@@ -6340,7 +6129,6 @@ module.exports.socketioListen = function(server) {
     const namespace211 = io.of('/namespace211');
     namespace211.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace211');
             ChatRoom.findOne({namespace: '/namespace211'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace211'})");
@@ -6370,7 +6158,6 @@ module.exports.socketioListen = function(server) {
     const namespace212 = io.of('/namespace212');
     namespace212.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace212');
             ChatRoom.findOne({namespace: '/namespace212'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace212'})");
@@ -6400,7 +6187,6 @@ module.exports.socketioListen = function(server) {
     const namespace213 = io.of('/namespace213');
     namespace213.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace213');
             ChatRoom.findOne({namespace: '/namespace213'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace213'})");
@@ -6430,7 +6216,6 @@ module.exports.socketioListen = function(server) {
     const namespace214 = io.of('/namespace214');
     namespace214.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace214');
             ChatRoom.findOne({namespace: '/namespace214'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace214'})");
@@ -6460,7 +6245,6 @@ module.exports.socketioListen = function(server) {
     const namespace215 = io.of('/namespace215');
     namespace215.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace215');
             ChatRoom.findOne({namespace: '/namespace215'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace215'})");
@@ -6490,7 +6274,6 @@ module.exports.socketioListen = function(server) {
     const namespace216 = io.of('/namespace216');
     namespace216.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace216');
             ChatRoom.findOne({namespace: '/namespace216'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace216'})");
@@ -6520,7 +6303,6 @@ module.exports.socketioListen = function(server) {
     const namespace217 = io.of('/namespace217');
     namespace217.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace217');
             ChatRoom.findOne({namespace: '/namespace217'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace217'})");
@@ -6550,7 +6332,6 @@ module.exports.socketioListen = function(server) {
     const namespace218 = io.of('/namespace218');
     namespace218.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace218');
             ChatRoom.findOne({namespace: '/namespace218'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace218'})");
@@ -6580,7 +6361,6 @@ module.exports.socketioListen = function(server) {
     const namespace219 = io.of('/namespace219');
     namespace219.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace219');
             ChatRoom.findOne({namespace: '/namespace219'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace219'})");
@@ -6610,7 +6390,6 @@ module.exports.socketioListen = function(server) {
     const namespace220 = io.of('/namespace220');
     namespace220.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace220');
             ChatRoom.findOne({namespace: '/namespace220'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace220'})");
@@ -6640,7 +6419,6 @@ module.exports.socketioListen = function(server) {
     const namespace221 = io.of('/namespace221');
     namespace221.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace221');
             ChatRoom.findOne({namespace: '/namespace221'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace221'})");
@@ -6670,7 +6448,6 @@ module.exports.socketioListen = function(server) {
     const namespace222 = io.of('/namespace222');
     namespace222.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace222');
             ChatRoom.findOne({namespace: '/namespace222'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace222'})");
@@ -6700,7 +6477,6 @@ module.exports.socketioListen = function(server) {
     const namespace223 = io.of('/namespace223');
     namespace223.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace223');
             ChatRoom.findOne({namespace: '/namespace223'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace223'})");
@@ -6730,7 +6506,6 @@ module.exports.socketioListen = function(server) {
     const namespace224 = io.of('/namespace224');
     namespace224.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace224');
             ChatRoom.findOne({namespace: '/namespace224'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace224'})");
@@ -6760,7 +6535,6 @@ module.exports.socketioListen = function(server) {
     const namespace225 = io.of('/namespace225');
     namespace225.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace225');
             ChatRoom.findOne({namespace: '/namespace225'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace225'})");
@@ -6790,7 +6564,6 @@ module.exports.socketioListen = function(server) {
     const namespace226 = io.of('/namespace226');
     namespace226.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace226');
             ChatRoom.findOne({namespace: '/namespace226'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace226'})");
@@ -6820,7 +6593,6 @@ module.exports.socketioListen = function(server) {
     const namespace227 = io.of('/namespace227');
     namespace227.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace227');
             ChatRoom.findOne({namespace: '/namespace227'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace227'})");
@@ -6850,7 +6622,6 @@ module.exports.socketioListen = function(server) {
     const namespace228 = io.of('/namespace228');
     namespace228.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace228');
             ChatRoom.findOne({namespace: '/namespace228'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace228'})");
@@ -6880,7 +6651,6 @@ module.exports.socketioListen = function(server) {
     const namespace229 = io.of('/namespace229');
     namespace229.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace229');
             ChatRoom.findOne({namespace: '/namespace229'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace229'})");
@@ -6910,7 +6680,6 @@ module.exports.socketioListen = function(server) {
     const namespace230 = io.of('/namespace230');
     namespace230.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace230');
             ChatRoom.findOne({namespace: '/namespace230'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace230'})");
@@ -6940,7 +6709,6 @@ module.exports.socketioListen = function(server) {
     const namespace231 = io.of('/namespace231');
     namespace231.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace231');
             ChatRoom.findOne({namespace: '/namespace231'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace231'})");
@@ -6970,7 +6738,6 @@ module.exports.socketioListen = function(server) {
     const namespace232 = io.of('/namespace232');
     namespace232.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace232');
             ChatRoom.findOne({namespace: '/namespace232'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace232'})");
@@ -7000,7 +6767,6 @@ module.exports.socketioListen = function(server) {
     const namespace233 = io.of('/namespace233');
     namespace233.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace233');
             ChatRoom.findOne({namespace: '/namespace233'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace233'})");
@@ -7030,7 +6796,6 @@ module.exports.socketioListen = function(server) {
     const namespace234 = io.of('/namespace234');
     namespace234.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace234');
             ChatRoom.findOne({namespace: '/namespace234'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace234'})");
@@ -7060,7 +6825,6 @@ module.exports.socketioListen = function(server) {
     const namespace235 = io.of('/namespace235');
     namespace235.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace235');
             ChatRoom.findOne({namespace: '/namespace235'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace235'})");
@@ -7090,7 +6854,6 @@ module.exports.socketioListen = function(server) {
     const namespace236 = io.of('/namespace236');
     namespace236.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace236');
             ChatRoom.findOne({namespace: '/namespace236'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace236'})");
@@ -7120,7 +6883,6 @@ module.exports.socketioListen = function(server) {
     const namespace237 = io.of('/namespace237');
     namespace237.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace237');
             ChatRoom.findOne({namespace: '/namespace237'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace237'})");
@@ -7150,7 +6912,6 @@ module.exports.socketioListen = function(server) {
     const namespace238 = io.of('/namespace238');
     namespace238.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace238');
             ChatRoom.findOne({namespace: '/namespace238'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace238'})");
@@ -7180,7 +6941,6 @@ module.exports.socketioListen = function(server) {
     const namespace239 = io.of('/namespace239');
     namespace239.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace239');
             ChatRoom.findOne({namespace: '/namespace239'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace239'})");
@@ -7210,7 +6970,6 @@ module.exports.socketioListen = function(server) {
     const namespace240 = io.of('/namespace240');
     namespace240.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace240');
             ChatRoom.findOne({namespace: '/namespace240'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace240'})");
@@ -7240,7 +6999,6 @@ module.exports.socketioListen = function(server) {
     const namespace241 = io.of('/namespace241');
     namespace241.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace241');
             ChatRoom.findOne({namespace: '/namespace241'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace241'})");
@@ -7270,7 +7028,6 @@ module.exports.socketioListen = function(server) {
     const namespace242 = io.of('/namespace242');
     namespace242.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace242');
             ChatRoom.findOne({namespace: '/namespace242'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace242'})");
@@ -7300,7 +7057,6 @@ module.exports.socketioListen = function(server) {
     const namespace243 = io.of('/namespace243');
     namespace243.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace243');
             ChatRoom.findOne({namespace: '/namespace243'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace243'})");
@@ -7330,7 +7086,6 @@ module.exports.socketioListen = function(server) {
     const namespace244 = io.of('/namespace244');
     namespace244.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace244');
             ChatRoom.findOne({namespace: '/namespace244'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace244'})");
@@ -7360,7 +7115,6 @@ module.exports.socketioListen = function(server) {
     const namespace245 = io.of('/namespace245');
     namespace245.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace245');
             ChatRoom.findOne({namespace: '/namespace245'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace245'})");
@@ -7390,7 +7144,6 @@ module.exports.socketioListen = function(server) {
     const namespace246 = io.of('/namespace246');
     namespace246.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace246');
             ChatRoom.findOne({namespace: '/namespace246'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace246'})");
@@ -7420,7 +7173,6 @@ module.exports.socketioListen = function(server) {
     const namespace247 = io.of('/namespace247');
     namespace247.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace247');
             ChatRoom.findOne({namespace: '/namespace247'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace247'})");
@@ -7450,7 +7202,6 @@ module.exports.socketioListen = function(server) {
     const namespace248 = io.of('/namespace248');
     namespace248.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace248');
             ChatRoom.findOne({namespace: '/namespace248'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace248'})");
@@ -7480,7 +7231,6 @@ module.exports.socketioListen = function(server) {
     const namespace249 = io.of('/namespace249');
     namespace249.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace249');
             ChatRoom.findOne({namespace: '/namespace249'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace249'})");
@@ -7510,7 +7260,6 @@ module.exports.socketioListen = function(server) {
     const namespace250 = io.of('/namespace250');
     namespace250.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace250');
             ChatRoom.findOne({namespace: '/namespace250'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace250'})");
@@ -7540,7 +7289,6 @@ module.exports.socketioListen = function(server) {
     const namespace251 = io.of('/namespace251');
     namespace251.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace251');
             ChatRoom.findOne({namespace: '/namespace251'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace251'})");
@@ -7570,7 +7318,6 @@ module.exports.socketioListen = function(server) {
     const namespace252 = io.of('/namespace252');
     namespace252.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace252');
             ChatRoom.findOne({namespace: '/namespace252'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace252'})");
@@ -7600,7 +7347,6 @@ module.exports.socketioListen = function(server) {
     const namespace253 = io.of('/namespace253');
     namespace253.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace253');
             ChatRoom.findOne({namespace: '/namespace253'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace253'})");
@@ -7630,7 +7376,6 @@ module.exports.socketioListen = function(server) {
     const namespace254 = io.of('/namespace254');
     namespace254.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace254');
             ChatRoom.findOne({namespace: '/namespace254'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace254'})");
@@ -7660,7 +7405,6 @@ module.exports.socketioListen = function(server) {
     const namespace255 = io.of('/namespace255');
     namespace255.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace255');
             ChatRoom.findOne({namespace: '/namespace255'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace255'})");
@@ -7690,7 +7434,6 @@ module.exports.socketioListen = function(server) {
     const namespace256 = io.of('/namespace256');
     namespace256.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace256');
             ChatRoom.findOne({namespace: '/namespace256'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace256'})");
@@ -7720,7 +7463,6 @@ module.exports.socketioListen = function(server) {
     const namespace257 = io.of('/namespace257');
     namespace257.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace257');
             ChatRoom.findOne({namespace: '/namespace257'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace257'})");
@@ -7750,7 +7492,6 @@ module.exports.socketioListen = function(server) {
     const namespace258 = io.of('/namespace258');
     namespace258.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace258');
             ChatRoom.findOne({namespace: '/namespace258'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace258'})");
@@ -7780,7 +7521,6 @@ module.exports.socketioListen = function(server) {
     const namespace259 = io.of('/namespace259');
     namespace259.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace259');
             ChatRoom.findOne({namespace: '/namespace259'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace259'})");
@@ -7810,7 +7550,6 @@ module.exports.socketioListen = function(server) {
     const namespace260 = io.of('/namespace260');
     namespace260.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace260');
             ChatRoom.findOne({namespace: '/namespace260'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace260'})");
@@ -7840,7 +7579,6 @@ module.exports.socketioListen = function(server) {
     const namespace261 = io.of('/namespace261');
     namespace261.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace261');
             ChatRoom.findOne({namespace: '/namespace261'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace261'})");
@@ -7870,7 +7608,6 @@ module.exports.socketioListen = function(server) {
     const namespace262 = io.of('/namespace262');
     namespace262.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace262');
             ChatRoom.findOne({namespace: '/namespace262'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace262'})");
@@ -7900,7 +7637,6 @@ module.exports.socketioListen = function(server) {
     const namespace263 = io.of('/namespace263');
     namespace263.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace263');
             ChatRoom.findOne({namespace: '/namespace263'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace263'})");
@@ -7930,7 +7666,6 @@ module.exports.socketioListen = function(server) {
     const namespace264 = io.of('/namespace264');
     namespace264.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace264');
             ChatRoom.findOne({namespace: '/namespace264'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace264'})");
@@ -7960,7 +7695,6 @@ module.exports.socketioListen = function(server) {
     const namespace265 = io.of('/namespace265');
     namespace265.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace265');
             ChatRoom.findOne({namespace: '/namespace265'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace265'})");
@@ -7990,7 +7724,6 @@ module.exports.socketioListen = function(server) {
     const namespace266 = io.of('/namespace266');
     namespace266.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace266');
             ChatRoom.findOne({namespace: '/namespace266'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace266'})");
@@ -8020,7 +7753,6 @@ module.exports.socketioListen = function(server) {
     const namespace267 = io.of('/namespace267');
     namespace267.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace267');
             ChatRoom.findOne({namespace: '/namespace267'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace267'})");
@@ -8050,7 +7782,6 @@ module.exports.socketioListen = function(server) {
     const namespace268 = io.of('/namespace268');
     namespace268.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace268');
             ChatRoom.findOne({namespace: '/namespace268'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace268'})");
@@ -8080,7 +7811,6 @@ module.exports.socketioListen = function(server) {
     const namespace269 = io.of('/namespace269');
     namespace269.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace269');
             ChatRoom.findOne({namespace: '/namespace269'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace269'})");
@@ -8110,7 +7840,6 @@ module.exports.socketioListen = function(server) {
     const namespace270 = io.of('/namespace270');
     namespace270.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace270');
             ChatRoom.findOne({namespace: '/namespace270'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace270'})");
@@ -8140,7 +7869,6 @@ module.exports.socketioListen = function(server) {
     const namespace271 = io.of('/namespace271');
     namespace271.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace271');
             ChatRoom.findOne({namespace: '/namespace271'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace271'})");
@@ -8170,7 +7898,6 @@ module.exports.socketioListen = function(server) {
     const namespace272 = io.of('/namespace272');
     namespace272.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace272');
             ChatRoom.findOne({namespace: '/namespace272'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace272'})");
@@ -8200,7 +7927,6 @@ module.exports.socketioListen = function(server) {
     const namespace273 = io.of('/namespace273');
     namespace273.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace273');
             ChatRoom.findOne({namespace: '/namespace273'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace273'})");
@@ -8230,7 +7956,6 @@ module.exports.socketioListen = function(server) {
     const namespace274 = io.of('/namespace274');
     namespace274.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace274');
             ChatRoom.findOne({namespace: '/namespace274'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace274'})");
@@ -8260,7 +7985,6 @@ module.exports.socketioListen = function(server) {
     const namespace275 = io.of('/namespace275');
     namespace275.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace275');
             ChatRoom.findOne({namespace: '/namespace275'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace275'})");
@@ -8290,7 +8014,6 @@ module.exports.socketioListen = function(server) {
     const namespace276 = io.of('/namespace276');
     namespace276.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace276');
             ChatRoom.findOne({namespace: '/namespace276'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace276'})");
@@ -8320,7 +8043,6 @@ module.exports.socketioListen = function(server) {
     const namespace277 = io.of('/namespace277');
     namespace277.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace277');
             ChatRoom.findOne({namespace: '/namespace277'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace277'})");
@@ -8350,7 +8072,6 @@ module.exports.socketioListen = function(server) {
     const namespace278 = io.of('/namespace278');
     namespace278.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace278');
             ChatRoom.findOne({namespace: '/namespace278'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace278'})");
@@ -8380,7 +8101,6 @@ module.exports.socketioListen = function(server) {
     const namespace279 = io.of('/namespace279');
     namespace279.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace279');
             ChatRoom.findOne({namespace: '/namespace279'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace279'})");
@@ -8410,7 +8130,6 @@ module.exports.socketioListen = function(server) {
     const namespace280 = io.of('/namespace280');
     namespace280.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace280');
             ChatRoom.findOne({namespace: '/namespace280'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace280'})");
@@ -8440,7 +8159,6 @@ module.exports.socketioListen = function(server) {
     const namespace281 = io.of('/namespace281');
     namespace281.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace281');
             ChatRoom.findOne({namespace: '/namespace281'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace281'})");
@@ -8470,7 +8188,6 @@ module.exports.socketioListen = function(server) {
     const namespace282 = io.of('/namespace282');
     namespace282.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace282');
             ChatRoom.findOne({namespace: '/namespace282'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace282'})");
@@ -8500,7 +8217,6 @@ module.exports.socketioListen = function(server) {
     const namespace283 = io.of('/namespace283');
     namespace283.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace283');
             ChatRoom.findOne({namespace: '/namespace283'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace283'})");
@@ -8530,7 +8246,6 @@ module.exports.socketioListen = function(server) {
     const namespace284 = io.of('/namespace284');
     namespace284.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace284');
             ChatRoom.findOne({namespace: '/namespace284'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace284'})");
@@ -8560,7 +8275,6 @@ module.exports.socketioListen = function(server) {
     const namespace285 = io.of('/namespace285');
     namespace285.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace285');
             ChatRoom.findOne({namespace: '/namespace285'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace285'})");
@@ -8590,7 +8304,6 @@ module.exports.socketioListen = function(server) {
     const namespace286 = io.of('/namespace286');
     namespace286.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace286');
             ChatRoom.findOne({namespace: '/namespace286'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace286'})");
@@ -8620,7 +8333,6 @@ module.exports.socketioListen = function(server) {
     const namespace287 = io.of('/namespace287');
     namespace287.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace287');
             ChatRoom.findOne({namespace: '/namespace287'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace287'})");
@@ -8650,7 +8362,6 @@ module.exports.socketioListen = function(server) {
     const namespace288 = io.of('/namespace288');
     namespace288.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace288');
             ChatRoom.findOne({namespace: '/namespace288'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace288'})");
@@ -8680,7 +8391,6 @@ module.exports.socketioListen = function(server) {
     const namespace289 = io.of('/namespace289');
     namespace289.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace289');
             ChatRoom.findOne({namespace: '/namespace289'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace289'})");
@@ -8710,7 +8420,6 @@ module.exports.socketioListen = function(server) {
     const namespace290 = io.of('/namespace290');
     namespace290.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace290');
             ChatRoom.findOne({namespace: '/namespace290'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace290'})");
@@ -8740,7 +8449,6 @@ module.exports.socketioListen = function(server) {
     const namespace291 = io.of('/namespace291');
     namespace291.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace291');
             ChatRoom.findOne({namespace: '/namespace291'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace291'})");
@@ -8770,7 +8478,6 @@ module.exports.socketioListen = function(server) {
     const namespace292 = io.of('/namespace292');
     namespace292.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace292');
             ChatRoom.findOne({namespace: '/namespace292'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace292'})");
@@ -8800,7 +8507,6 @@ module.exports.socketioListen = function(server) {
     const namespace293 = io.of('/namespace293');
     namespace293.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace293');
             ChatRoom.findOne({namespace: '/namespace293'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace293'})");
@@ -8830,7 +8536,6 @@ module.exports.socketioListen = function(server) {
     const namespace294 = io.of('/namespace294');
     namespace294.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace294');
             ChatRoom.findOne({namespace: '/namespace294'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace294'})");
@@ -8860,7 +8565,6 @@ module.exports.socketioListen = function(server) {
     const namespace295 = io.of('/namespace295');
     namespace295.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace295');
             ChatRoom.findOne({namespace: '/namespace295'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace295'})");
@@ -8890,7 +8594,6 @@ module.exports.socketioListen = function(server) {
     const namespace296 = io.of('/namespace296');
     namespace296.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace296');
             ChatRoom.findOne({namespace: '/namespace296'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace296'})");
@@ -8920,7 +8623,6 @@ module.exports.socketioListen = function(server) {
     const namespace297 = io.of('/namespace297');
     namespace297.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace297');
             ChatRoom.findOne({namespace: '/namespace297'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace297'})");
@@ -8950,7 +8652,6 @@ module.exports.socketioListen = function(server) {
     const namespace298 = io.of('/namespace298');
     namespace298.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace298');
             ChatRoom.findOne({namespace: '/namespace298'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace298'})");
@@ -8980,7 +8681,6 @@ module.exports.socketioListen = function(server) {
     const namespace299 = io.of('/namespace299');
     namespace299.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace299');
             ChatRoom.findOne({namespace: '/namespace299'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace299'})");
@@ -9010,7 +8710,6 @@ module.exports.socketioListen = function(server) {
     const namespace300 = io.of('/namespace300');
     namespace300.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace300');
             ChatRoom.findOne({namespace: '/namespace300'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace300'})");
@@ -9040,7 +8739,6 @@ module.exports.socketioListen = function(server) {
     const namespace301 = io.of('/namespace301');
     namespace301.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace301');
             ChatRoom.findOne({namespace: '/namespace301'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace301'})");
@@ -9070,7 +8768,6 @@ module.exports.socketioListen = function(server) {
     const namespace302 = io.of('/namespace302');
     namespace302.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace302');
             ChatRoom.findOne({namespace: '/namespace302'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace302'})");
@@ -9100,7 +8797,6 @@ module.exports.socketioListen = function(server) {
     const namespace303 = io.of('/namespace303');
     namespace303.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace303');
             ChatRoom.findOne({namespace: '/namespace303'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace303'})");
@@ -9130,7 +8826,6 @@ module.exports.socketioListen = function(server) {
     const namespace304 = io.of('/namespace304');
     namespace304.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace304');
             ChatRoom.findOne({namespace: '/namespace304'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace304'})");
@@ -9160,7 +8855,6 @@ module.exports.socketioListen = function(server) {
     const namespace305 = io.of('/namespace305');
     namespace305.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace305');
             ChatRoom.findOne({namespace: '/namespace305'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace305'})");
@@ -9190,7 +8884,6 @@ module.exports.socketioListen = function(server) {
     const namespace306 = io.of('/namespace306');
     namespace306.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace306');
             ChatRoom.findOne({namespace: '/namespace306'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace306'})");
@@ -9220,7 +8913,6 @@ module.exports.socketioListen = function(server) {
     const namespace307 = io.of('/namespace307');
     namespace307.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace307');
             ChatRoom.findOne({namespace: '/namespace307'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace307'})");
@@ -9250,7 +8942,6 @@ module.exports.socketioListen = function(server) {
     const namespace308 = io.of('/namespace308');
     namespace308.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace308');
             ChatRoom.findOne({namespace: '/namespace308'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace308'})");
@@ -9280,7 +8971,6 @@ module.exports.socketioListen = function(server) {
     const namespace309 = io.of('/namespace309');
     namespace309.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace309');
             ChatRoom.findOne({namespace: '/namespace309'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace309'})");
@@ -9310,7 +9000,6 @@ module.exports.socketioListen = function(server) {
     const namespace310 = io.of('/namespace310');
     namespace310.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace310');
             ChatRoom.findOne({namespace: '/namespace310'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace310'})");
@@ -9340,7 +9029,6 @@ module.exports.socketioListen = function(server) {
     const namespace311 = io.of('/namespace311');
     namespace311.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace311');
             ChatRoom.findOne({namespace: '/namespace311'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace311'})");
@@ -9370,7 +9058,6 @@ module.exports.socketioListen = function(server) {
     const namespace312 = io.of('/namespace312');
     namespace312.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace312');
             ChatRoom.findOne({namespace: '/namespace312'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace312'})");
@@ -9400,7 +9087,6 @@ module.exports.socketioListen = function(server) {
     const namespace313 = io.of('/namespace313');
     namespace313.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace313');
             ChatRoom.findOne({namespace: '/namespace313'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace313'})");
@@ -9430,7 +9116,6 @@ module.exports.socketioListen = function(server) {
     const namespace314 = io.of('/namespace314');
     namespace314.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace314');
             ChatRoom.findOne({namespace: '/namespace314'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace314'})");
@@ -9460,7 +9145,6 @@ module.exports.socketioListen = function(server) {
     const namespace315 = io.of('/namespace315');
     namespace315.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace315');
             ChatRoom.findOne({namespace: '/namespace315'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace315'})");
@@ -9490,7 +9174,6 @@ module.exports.socketioListen = function(server) {
     const namespace316 = io.of('/namespace316');
     namespace316.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace316');
             ChatRoom.findOne({namespace: '/namespace316'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace316'})");
@@ -9520,7 +9203,6 @@ module.exports.socketioListen = function(server) {
     const namespace317 = io.of('/namespace317');
     namespace317.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace317');
             ChatRoom.findOne({namespace: '/namespace317'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace317'})");
@@ -9550,7 +9232,6 @@ module.exports.socketioListen = function(server) {
     const namespace318 = io.of('/namespace318');
     namespace318.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace318');
             ChatRoom.findOne({namespace: '/namespace318'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace318'})");
@@ -9580,7 +9261,6 @@ module.exports.socketioListen = function(server) {
     const namespace319 = io.of('/namespace319');
     namespace319.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace319');
             ChatRoom.findOne({namespace: '/namespace319'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace319'})");
@@ -9610,7 +9290,6 @@ module.exports.socketioListen = function(server) {
     const namespace320 = io.of('/namespace320');
     namespace320.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace320');
             ChatRoom.findOne({namespace: '/namespace320'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace320'})");
@@ -9640,7 +9319,6 @@ module.exports.socketioListen = function(server) {
     const namespace321 = io.of('/namespace321');
     namespace321.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace321');
             ChatRoom.findOne({namespace: '/namespace321'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace321'})");
@@ -9670,7 +9348,6 @@ module.exports.socketioListen = function(server) {
     const namespace322 = io.of('/namespace322');
     namespace322.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace322');
             ChatRoom.findOne({namespace: '/namespace322'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace322'})");
@@ -9700,7 +9377,6 @@ module.exports.socketioListen = function(server) {
     const namespace323 = io.of('/namespace323');
     namespace323.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace323');
             ChatRoom.findOne({namespace: '/namespace323'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace323'})");
@@ -9730,7 +9406,6 @@ module.exports.socketioListen = function(server) {
     const namespace324 = io.of('/namespace324');
     namespace324.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace324');
             ChatRoom.findOne({namespace: '/namespace324'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace324'})");
@@ -9760,7 +9435,6 @@ module.exports.socketioListen = function(server) {
     const namespace325 = io.of('/namespace325');
     namespace325.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace325');
             ChatRoom.findOne({namespace: '/namespace325'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace325'})");
@@ -9790,7 +9464,6 @@ module.exports.socketioListen = function(server) {
     const namespace326 = io.of('/namespace326');
     namespace326.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace326');
             ChatRoom.findOne({namespace: '/namespace326'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace326'})");
@@ -9820,7 +9493,6 @@ module.exports.socketioListen = function(server) {
     const namespace327 = io.of('/namespace327');
     namespace327.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace327');
             ChatRoom.findOne({namespace: '/namespace327'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace327'})");
@@ -9850,7 +9522,6 @@ module.exports.socketioListen = function(server) {
     const namespace328 = io.of('/namespace328');
     namespace328.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace328');
             ChatRoom.findOne({namespace: '/namespace328'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace328'})");
@@ -9880,7 +9551,6 @@ module.exports.socketioListen = function(server) {
     const namespace329 = io.of('/namespace329');
     namespace329.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace329');
             ChatRoom.findOne({namespace: '/namespace329'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace329'})");
@@ -9910,7 +9580,6 @@ module.exports.socketioListen = function(server) {
     const namespace330 = io.of('/namespace330');
     namespace330.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace330');
             ChatRoom.findOne({namespace: '/namespace330'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace330'})");
@@ -9940,7 +9609,6 @@ module.exports.socketioListen = function(server) {
     const namespace331 = io.of('/namespace331');
     namespace331.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace331');
             ChatRoom.findOne({namespace: '/namespace331'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace331'})");
@@ -9970,7 +9638,6 @@ module.exports.socketioListen = function(server) {
     const namespace332 = io.of('/namespace332');
     namespace332.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace332');
             ChatRoom.findOne({namespace: '/namespace332'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace332'})");
@@ -10000,7 +9667,6 @@ module.exports.socketioListen = function(server) {
     const namespace333 = io.of('/namespace333');
     namespace333.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace333');
             ChatRoom.findOne({namespace: '/namespace333'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace333'})");
@@ -10030,7 +9696,6 @@ module.exports.socketioListen = function(server) {
     const namespace334 = io.of('/namespace334');
     namespace334.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace334');
             ChatRoom.findOne({namespace: '/namespace334'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace334'})");
@@ -10060,7 +9725,6 @@ module.exports.socketioListen = function(server) {
     const namespace335 = io.of('/namespace335');
     namespace335.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace335');
             ChatRoom.findOne({namespace: '/namespace335'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace335'})");
@@ -10090,7 +9754,6 @@ module.exports.socketioListen = function(server) {
     const namespace336 = io.of('/namespace336');
     namespace336.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace336');
             ChatRoom.findOne({namespace: '/namespace336'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace336'})");
@@ -10120,7 +9783,6 @@ module.exports.socketioListen = function(server) {
     const namespace337 = io.of('/namespace337');
     namespace337.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace337');
             ChatRoom.findOne({namespace: '/namespace337'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace337'})");
@@ -10150,7 +9812,6 @@ module.exports.socketioListen = function(server) {
     const namespace338 = io.of('/namespace338');
     namespace338.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace338');
             ChatRoom.findOne({namespace: '/namespace338'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace338'})");
@@ -10180,7 +9841,6 @@ module.exports.socketioListen = function(server) {
     const namespace339 = io.of('/namespace339');
     namespace339.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace339');
             ChatRoom.findOne({namespace: '/namespace339'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace339'})");
@@ -10210,7 +9870,6 @@ module.exports.socketioListen = function(server) {
     const namespace340 = io.of('/namespace340');
     namespace340.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace340');
             ChatRoom.findOne({namespace: '/namespace340'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace340'})");
@@ -10240,7 +9899,6 @@ module.exports.socketioListen = function(server) {
     const namespace341 = io.of('/namespace341');
     namespace341.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace341');
             ChatRoom.findOne({namespace: '/namespace341'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace341'})");
@@ -10270,7 +9928,6 @@ module.exports.socketioListen = function(server) {
     const namespace342 = io.of('/namespace342');
     namespace342.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace342');
             ChatRoom.findOne({namespace: '/namespace342'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace342'})");
@@ -10300,7 +9957,6 @@ module.exports.socketioListen = function(server) {
     const namespace343 = io.of('/namespace343');
     namespace343.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace343');
             ChatRoom.findOne({namespace: '/namespace343'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace343'})");
@@ -10330,7 +9986,6 @@ module.exports.socketioListen = function(server) {
     const namespace344 = io.of('/namespace344');
     namespace344.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace344');
             ChatRoom.findOne({namespace: '/namespace344'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace344'})");
@@ -10360,7 +10015,6 @@ module.exports.socketioListen = function(server) {
     const namespace345 = io.of('/namespace345');
     namespace345.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace345');
             ChatRoom.findOne({namespace: '/namespace345'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace345'})");
@@ -10390,7 +10044,6 @@ module.exports.socketioListen = function(server) {
     const namespace346 = io.of('/namespace346');
     namespace346.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace346');
             ChatRoom.findOne({namespace: '/namespace346'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace346'})");
@@ -10420,7 +10073,6 @@ module.exports.socketioListen = function(server) {
     const namespace347 = io.of('/namespace347');
     namespace347.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace347');
             ChatRoom.findOne({namespace: '/namespace347'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace347'})");
@@ -10450,7 +10102,6 @@ module.exports.socketioListen = function(server) {
     const namespace348 = io.of('/namespace348');
     namespace348.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace348');
             ChatRoom.findOne({namespace: '/namespace348'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace348'})");
@@ -10480,7 +10131,6 @@ module.exports.socketioListen = function(server) {
     const namespace349 = io.of('/namespace349');
     namespace349.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace349');
             ChatRoom.findOne({namespace: '/namespace349'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace349'})");
@@ -10510,7 +10160,6 @@ module.exports.socketioListen = function(server) {
     const namespace350 = io.of('/namespace350');
     namespace350.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace350');
             ChatRoom.findOne({namespace: '/namespace350'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace350'})");
@@ -10540,7 +10189,6 @@ module.exports.socketioListen = function(server) {
     const namespace351 = io.of('/namespace351');
     namespace351.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace351');
             ChatRoom.findOne({namespace: '/namespace351'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace351'})");
@@ -10570,7 +10218,6 @@ module.exports.socketioListen = function(server) {
     const namespace352 = io.of('/namespace352');
     namespace352.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace352');
             ChatRoom.findOne({namespace: '/namespace352'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace352'})");
@@ -10600,7 +10247,6 @@ module.exports.socketioListen = function(server) {
     const namespace353 = io.of('/namespace353');
     namespace353.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace353');
             ChatRoom.findOne({namespace: '/namespace353'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace353'})");
@@ -10630,7 +10276,6 @@ module.exports.socketioListen = function(server) {
     const namespace354 = io.of('/namespace354');
     namespace354.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace354');
             ChatRoom.findOne({namespace: '/namespace354'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace354'})");
@@ -10660,7 +10305,6 @@ module.exports.socketioListen = function(server) {
     const namespace355 = io.of('/namespace355');
     namespace355.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace355');
             ChatRoom.findOne({namespace: '/namespace355'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace355'})");
@@ -10690,7 +10334,6 @@ module.exports.socketioListen = function(server) {
     const namespace356 = io.of('/namespace356');
     namespace356.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace356');
             ChatRoom.findOne({namespace: '/namespace356'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace356'})");
@@ -10720,7 +10363,6 @@ module.exports.socketioListen = function(server) {
     const namespace357 = io.of('/namespace357');
     namespace357.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace357');
             ChatRoom.findOne({namespace: '/namespace357'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace357'})");
@@ -10750,7 +10392,6 @@ module.exports.socketioListen = function(server) {
     const namespace358 = io.of('/namespace358');
     namespace358.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace358');
             ChatRoom.findOne({namespace: '/namespace358'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace358'})");
@@ -10780,7 +10421,6 @@ module.exports.socketioListen = function(server) {
     const namespace359 = io.of('/namespace359');
     namespace359.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace359');
             ChatRoom.findOne({namespace: '/namespace359'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace359'})");
@@ -10810,7 +10450,6 @@ module.exports.socketioListen = function(server) {
     const namespace360 = io.of('/namespace360');
     namespace360.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace360');
             ChatRoom.findOne({namespace: '/namespace360'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace360'})");
@@ -10840,7 +10479,6 @@ module.exports.socketioListen = function(server) {
     const namespace361 = io.of('/namespace361');
     namespace361.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace361');
             ChatRoom.findOne({namespace: '/namespace361'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace361'})");
@@ -10870,7 +10508,6 @@ module.exports.socketioListen = function(server) {
     const namespace362 = io.of('/namespace362');
     namespace362.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace362');
             ChatRoom.findOne({namespace: '/namespace362'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace362'})");
@@ -10900,7 +10537,6 @@ module.exports.socketioListen = function(server) {
     const namespace363 = io.of('/namespace363');
     namespace363.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace363');
             ChatRoom.findOne({namespace: '/namespace363'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace363'})");
@@ -10930,7 +10566,6 @@ module.exports.socketioListen = function(server) {
     const namespace364 = io.of('/namespace364');
     namespace364.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace364');
             ChatRoom.findOne({namespace: '/namespace364'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace364'})");
@@ -10960,7 +10595,6 @@ module.exports.socketioListen = function(server) {
     const namespace365 = io.of('/namespace365');
     namespace365.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace365');
             ChatRoom.findOne({namespace: '/namespace365'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace365'})");
@@ -10990,7 +10624,6 @@ module.exports.socketioListen = function(server) {
     const namespace366 = io.of('/namespace366');
     namespace366.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace366');
             ChatRoom.findOne({namespace: '/namespace366'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace366'})");
@@ -11020,7 +10653,6 @@ module.exports.socketioListen = function(server) {
     const namespace367 = io.of('/namespace367');
     namespace367.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace367');
             ChatRoom.findOne({namespace: '/namespace367'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace367'})");
@@ -11050,7 +10682,6 @@ module.exports.socketioListen = function(server) {
     const namespace368 = io.of('/namespace368');
     namespace368.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace368');
             ChatRoom.findOne({namespace: '/namespace368'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace368'})");
@@ -11080,7 +10711,6 @@ module.exports.socketioListen = function(server) {
     const namespace369 = io.of('/namespace369');
     namespace369.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace369');
             ChatRoom.findOne({namespace: '/namespace369'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace369'})");
@@ -11110,7 +10740,6 @@ module.exports.socketioListen = function(server) {
     const namespace370 = io.of('/namespace370');
     namespace370.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace370');
             ChatRoom.findOne({namespace: '/namespace370'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace370'})");
@@ -11140,7 +10769,6 @@ module.exports.socketioListen = function(server) {
     const namespace371 = io.of('/namespace371');
     namespace371.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace371');
             ChatRoom.findOne({namespace: '/namespace371'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace371'})");
@@ -11170,7 +10798,6 @@ module.exports.socketioListen = function(server) {
     const namespace372 = io.of('/namespace372');
     namespace372.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace372');
             ChatRoom.findOne({namespace: '/namespace372'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace372'})");
@@ -11200,7 +10827,6 @@ module.exports.socketioListen = function(server) {
     const namespace373 = io.of('/namespace373');
     namespace373.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace373');
             ChatRoom.findOne({namespace: '/namespace373'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace373'})");
@@ -11230,7 +10856,6 @@ module.exports.socketioListen = function(server) {
     const namespace374 = io.of('/namespace374');
     namespace374.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace374');
             ChatRoom.findOne({namespace: '/namespace374'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace374'})");
@@ -11260,7 +10885,6 @@ module.exports.socketioListen = function(server) {
     const namespace375 = io.of('/namespace375');
     namespace375.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace375');
             ChatRoom.findOne({namespace: '/namespace375'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace375'})");
@@ -11290,7 +10914,6 @@ module.exports.socketioListen = function(server) {
     const namespace376 = io.of('/namespace376');
     namespace376.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace376');
             ChatRoom.findOne({namespace: '/namespace376'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace376'})");
@@ -11320,7 +10943,6 @@ module.exports.socketioListen = function(server) {
     const namespace377 = io.of('/namespace377');
     namespace377.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace377');
             ChatRoom.findOne({namespace: '/namespace377'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace377'})");
@@ -11350,7 +10972,6 @@ module.exports.socketioListen = function(server) {
     const namespace378 = io.of('/namespace378');
     namespace378.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace378');
             ChatRoom.findOne({namespace: '/namespace378'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace378'})");
@@ -11380,7 +11001,6 @@ module.exports.socketioListen = function(server) {
     const namespace379 = io.of('/namespace379');
     namespace379.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace379');
             ChatRoom.findOne({namespace: '/namespace379'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace379'})");
@@ -11410,7 +11030,6 @@ module.exports.socketioListen = function(server) {
     const namespace380 = io.of('/namespace380');
     namespace380.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace380');
             ChatRoom.findOne({namespace: '/namespace380'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace380'})");
@@ -11440,7 +11059,6 @@ module.exports.socketioListen = function(server) {
     const namespace381 = io.of('/namespace381');
     namespace381.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace381');
             ChatRoom.findOne({namespace: '/namespace381'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace381'})");
@@ -11470,7 +11088,6 @@ module.exports.socketioListen = function(server) {
     const namespace382 = io.of('/namespace382');
     namespace382.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace382');
             ChatRoom.findOne({namespace: '/namespace382'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace382'})");
@@ -11500,7 +11117,6 @@ module.exports.socketioListen = function(server) {
     const namespace383 = io.of('/namespace383');
     namespace383.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace383');
             ChatRoom.findOne({namespace: '/namespace383'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace383'})");
@@ -11530,7 +11146,6 @@ module.exports.socketioListen = function(server) {
     const namespace384 = io.of('/namespace384');
     namespace384.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace384');
             ChatRoom.findOne({namespace: '/namespace384'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace384'})");
@@ -11560,7 +11175,6 @@ module.exports.socketioListen = function(server) {
     const namespace385 = io.of('/namespace385');
     namespace385.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace385');
             ChatRoom.findOne({namespace: '/namespace385'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace385'})");
@@ -11590,7 +11204,6 @@ module.exports.socketioListen = function(server) {
     const namespace386 = io.of('/namespace386');
     namespace386.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace386');
             ChatRoom.findOne({namespace: '/namespace386'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace386'})");
@@ -11620,7 +11233,6 @@ module.exports.socketioListen = function(server) {
     const namespace387 = io.of('/namespace387');
     namespace387.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace387');
             ChatRoom.findOne({namespace: '/namespace387'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace387'})");
@@ -11650,7 +11262,6 @@ module.exports.socketioListen = function(server) {
     const namespace388 = io.of('/namespace388');
     namespace388.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace388');
             ChatRoom.findOne({namespace: '/namespace388'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace388'})");
@@ -11680,7 +11291,6 @@ module.exports.socketioListen = function(server) {
     const namespace389 = io.of('/namespace389');
     namespace389.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace389');
             ChatRoom.findOne({namespace: '/namespace389'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace389'})");
@@ -11710,7 +11320,6 @@ module.exports.socketioListen = function(server) {
     const namespace390 = io.of('/namespace390');
     namespace390.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace390');
             ChatRoom.findOne({namespace: '/namespace390'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace390'})");
@@ -11740,7 +11349,6 @@ module.exports.socketioListen = function(server) {
     const namespace391 = io.of('/namespace391');
     namespace391.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace391');
             ChatRoom.findOne({namespace: '/namespace391'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace391'})");
@@ -11770,7 +11378,6 @@ module.exports.socketioListen = function(server) {
     const namespace392 = io.of('/namespace392');
     namespace392.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace392');
             ChatRoom.findOne({namespace: '/namespace392'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace392'})");
@@ -11800,7 +11407,6 @@ module.exports.socketioListen = function(server) {
     const namespace393 = io.of('/namespace393');
     namespace393.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace393');
             ChatRoom.findOne({namespace: '/namespace393'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace393'})");
@@ -11830,7 +11436,6 @@ module.exports.socketioListen = function(server) {
     const namespace394 = io.of('/namespace394');
     namespace394.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace394');
             ChatRoom.findOne({namespace: '/namespace394'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace394'})");
@@ -11860,7 +11465,6 @@ module.exports.socketioListen = function(server) {
     const namespace395 = io.of('/namespace395');
     namespace395.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace395');
             ChatRoom.findOne({namespace: '/namespace395'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace395'})");
@@ -11890,7 +11494,6 @@ module.exports.socketioListen = function(server) {
     const namespace396 = io.of('/namespace396');
     namespace396.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace396');
             ChatRoom.findOne({namespace: '/namespace396'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace396'})");
@@ -11920,7 +11523,6 @@ module.exports.socketioListen = function(server) {
     const namespace397 = io.of('/namespace397');
     namespace397.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace397');
             ChatRoom.findOne({namespace: '/namespace397'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace397'})");
@@ -11950,7 +11552,6 @@ module.exports.socketioListen = function(server) {
     const namespace398 = io.of('/namespace398');
     namespace398.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace398');
             ChatRoom.findOne({namespace: '/namespace398'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace398'})");
@@ -11980,7 +11581,6 @@ module.exports.socketioListen = function(server) {
     const namespace399 = io.of('/namespace399');
     namespace399.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace399');
             ChatRoom.findOne({namespace: '/namespace399'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace399'})");
@@ -12010,7 +11610,6 @@ module.exports.socketioListen = function(server) {
     const namespace400 = io.of('/namespace400');
     namespace400.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace400');
             ChatRoom.findOne({namespace: '/namespace400'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace400'})");
@@ -12040,7 +11639,6 @@ module.exports.socketioListen = function(server) {
     const namespace401 = io.of('/namespace401');
     namespace401.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace401');
             ChatRoom.findOne({namespace: '/namespace401'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace401'})");
@@ -12070,7 +11668,6 @@ module.exports.socketioListen = function(server) {
     const namespace402 = io.of('/namespace402');
     namespace402.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace402');
             ChatRoom.findOne({namespace: '/namespace402'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace402'})");
@@ -12100,7 +11697,6 @@ module.exports.socketioListen = function(server) {
     const namespace403 = io.of('/namespace403');
     namespace403.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace403');
             ChatRoom.findOne({namespace: '/namespace403'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace403'})");
@@ -12130,7 +11726,6 @@ module.exports.socketioListen = function(server) {
     const namespace404 = io.of('/namespace404');
     namespace404.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace404');
             ChatRoom.findOne({namespace: '/namespace404'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace404'})");
@@ -12160,7 +11755,6 @@ module.exports.socketioListen = function(server) {
     const namespace405 = io.of('/namespace405');
     namespace405.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace405');
             ChatRoom.findOne({namespace: '/namespace405'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace405'})");
@@ -12190,7 +11784,6 @@ module.exports.socketioListen = function(server) {
     const namespace406 = io.of('/namespace406');
     namespace406.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace406');
             ChatRoom.findOne({namespace: '/namespace406'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace406'})");
@@ -12220,7 +11813,6 @@ module.exports.socketioListen = function(server) {
     const namespace407 = io.of('/namespace407');
     namespace407.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace407');
             ChatRoom.findOne({namespace: '/namespace407'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace407'})");
@@ -12250,7 +11842,6 @@ module.exports.socketioListen = function(server) {
     const namespace408 = io.of('/namespace408');
     namespace408.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace408');
             ChatRoom.findOne({namespace: '/namespace408'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace408'})");
@@ -12280,7 +11871,6 @@ module.exports.socketioListen = function(server) {
     const namespace409 = io.of('/namespace409');
     namespace409.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace409');
             ChatRoom.findOne({namespace: '/namespace409'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace409'})");
@@ -12310,7 +11900,6 @@ module.exports.socketioListen = function(server) {
     const namespace410 = io.of('/namespace410');
     namespace410.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace410');
             ChatRoom.findOne({namespace: '/namespace410'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace410'})");
@@ -12340,7 +11929,6 @@ module.exports.socketioListen = function(server) {
     const namespace411 = io.of('/namespace411');
     namespace411.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace411');
             ChatRoom.findOne({namespace: '/namespace411'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace411'})");
@@ -12370,7 +11958,6 @@ module.exports.socketioListen = function(server) {
     const namespace412 = io.of('/namespace412');
     namespace412.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace412');
             ChatRoom.findOne({namespace: '/namespace412'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace412'})");
@@ -12400,7 +11987,6 @@ module.exports.socketioListen = function(server) {
     const namespace413 = io.of('/namespace413');
     namespace413.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace413');
             ChatRoom.findOne({namespace: '/namespace413'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace413'})");
@@ -12430,7 +12016,6 @@ module.exports.socketioListen = function(server) {
     const namespace414 = io.of('/namespace414');
     namespace414.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace414');
             ChatRoom.findOne({namespace: '/namespace414'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace414'})");
@@ -12460,7 +12045,6 @@ module.exports.socketioListen = function(server) {
     const namespace415 = io.of('/namespace415');
     namespace415.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace415');
             ChatRoom.findOne({namespace: '/namespace415'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace415'})");
@@ -12490,7 +12074,6 @@ module.exports.socketioListen = function(server) {
     const namespace416 = io.of('/namespace416');
     namespace416.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace416');
             ChatRoom.findOne({namespace: '/namespace416'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace416'})");
@@ -12520,7 +12103,6 @@ module.exports.socketioListen = function(server) {
     const namespace417 = io.of('/namespace417');
     namespace417.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace417');
             ChatRoom.findOne({namespace: '/namespace417'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace417'})");
@@ -12550,7 +12132,6 @@ module.exports.socketioListen = function(server) {
     const namespace418 = io.of('/namespace418');
     namespace418.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace418');
             ChatRoom.findOne({namespace: '/namespace418'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace418'})");
@@ -12580,7 +12161,6 @@ module.exports.socketioListen = function(server) {
     const namespace419 = io.of('/namespace419');
     namespace419.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace419');
             ChatRoom.findOne({namespace: '/namespace419'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace419'})");
@@ -12610,7 +12190,6 @@ module.exports.socketioListen = function(server) {
     const namespace420 = io.of('/namespace420');
     namespace420.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace420');
             ChatRoom.findOne({namespace: '/namespace420'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace420'})");
@@ -12640,7 +12219,6 @@ module.exports.socketioListen = function(server) {
     const namespace421 = io.of('/namespace421');
     namespace421.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace421');
             ChatRoom.findOne({namespace: '/namespace421'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace421'})");
@@ -12670,7 +12248,6 @@ module.exports.socketioListen = function(server) {
     const namespace422 = io.of('/namespace422');
     namespace422.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace422');
             ChatRoom.findOne({namespace: '/namespace422'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace422'})");
@@ -12700,7 +12277,6 @@ module.exports.socketioListen = function(server) {
     const namespace423 = io.of('/namespace423');
     namespace423.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace423');
             ChatRoom.findOne({namespace: '/namespace423'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace423'})");
@@ -12730,7 +12306,6 @@ module.exports.socketioListen = function(server) {
     const namespace424 = io.of('/namespace424');
     namespace424.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace424');
             ChatRoom.findOne({namespace: '/namespace424'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace424'})");
@@ -12760,7 +12335,6 @@ module.exports.socketioListen = function(server) {
     const namespace425 = io.of('/namespace425');
     namespace425.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace425');
             ChatRoom.findOne({namespace: '/namespace425'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace425'})");
@@ -12790,7 +12364,6 @@ module.exports.socketioListen = function(server) {
     const namespace426 = io.of('/namespace426');
     namespace426.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace426');
             ChatRoom.findOne({namespace: '/namespace426'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace426'})");
@@ -12820,7 +12393,6 @@ module.exports.socketioListen = function(server) {
     const namespace427 = io.of('/namespace427');
     namespace427.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace427');
             ChatRoom.findOne({namespace: '/namespace427'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace427'})");
@@ -12850,7 +12422,6 @@ module.exports.socketioListen = function(server) {
     const namespace428 = io.of('/namespace428');
     namespace428.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace428');
             ChatRoom.findOne({namespace: '/namespace428'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace428'})");
@@ -12880,7 +12451,6 @@ module.exports.socketioListen = function(server) {
     const namespace429 = io.of('/namespace429');
     namespace429.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace429');
             ChatRoom.findOne({namespace: '/namespace429'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace429'})");
@@ -12910,7 +12480,6 @@ module.exports.socketioListen = function(server) {
     const namespace430 = io.of('/namespace430');
     namespace430.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace430');
             ChatRoom.findOne({namespace: '/namespace430'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace430'})");
@@ -12940,7 +12509,6 @@ module.exports.socketioListen = function(server) {
     const namespace431 = io.of('/namespace431');
     namespace431.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace431');
             ChatRoom.findOne({namespace: '/namespace431'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace431'})");
@@ -12970,7 +12538,6 @@ module.exports.socketioListen = function(server) {
     const namespace432 = io.of('/namespace432');
     namespace432.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace432');
             ChatRoom.findOne({namespace: '/namespace432'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace432'})");
@@ -13000,7 +12567,6 @@ module.exports.socketioListen = function(server) {
     const namespace433 = io.of('/namespace433');
     namespace433.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace433');
             ChatRoom.findOne({namespace: '/namespace433'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace433'})");
@@ -13030,7 +12596,6 @@ module.exports.socketioListen = function(server) {
     const namespace434 = io.of('/namespace434');
     namespace434.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace434');
             ChatRoom.findOne({namespace: '/namespace434'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace434'})");
@@ -13060,7 +12625,6 @@ module.exports.socketioListen = function(server) {
     const namespace435 = io.of('/namespace435');
     namespace435.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace435');
             ChatRoom.findOne({namespace: '/namespace435'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace435'})");
@@ -13090,7 +12654,6 @@ module.exports.socketioListen = function(server) {
     const namespace436 = io.of('/namespace436');
     namespace436.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace436');
             ChatRoom.findOne({namespace: '/namespace436'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace436'})");
@@ -13120,7 +12683,6 @@ module.exports.socketioListen = function(server) {
     const namespace437 = io.of('/namespace437');
     namespace437.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace437');
             ChatRoom.findOne({namespace: '/namespace437'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace437'})");
@@ -13150,7 +12712,6 @@ module.exports.socketioListen = function(server) {
     const namespace438 = io.of('/namespace438');
     namespace438.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace438');
             ChatRoom.findOne({namespace: '/namespace438'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace438'})");
@@ -13180,7 +12741,6 @@ module.exports.socketioListen = function(server) {
     const namespace439 = io.of('/namespace439');
     namespace439.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace439');
             ChatRoom.findOne({namespace: '/namespace439'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace439'})");
@@ -13210,7 +12770,6 @@ module.exports.socketioListen = function(server) {
     const namespace440 = io.of('/namespace440');
     namespace440.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace440');
             ChatRoom.findOne({namespace: '/namespace440'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace440'})");
@@ -13240,7 +12799,6 @@ module.exports.socketioListen = function(server) {
     const namespace441 = io.of('/namespace441');
     namespace441.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace441');
             ChatRoom.findOne({namespace: '/namespace441'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace441'})");
@@ -13270,7 +12828,6 @@ module.exports.socketioListen = function(server) {
     const namespace442 = io.of('/namespace442');
     namespace442.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace442');
             ChatRoom.findOne({namespace: '/namespace442'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace442'})");
@@ -13300,7 +12857,6 @@ module.exports.socketioListen = function(server) {
     const namespace443 = io.of('/namespace443');
     namespace443.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace443');
             ChatRoom.findOne({namespace: '/namespace443'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace443'})");
@@ -13330,7 +12886,6 @@ module.exports.socketioListen = function(server) {
     const namespace444 = io.of('/namespace444');
     namespace444.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace444');
             ChatRoom.findOne({namespace: '/namespace444'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace444'})");
@@ -13360,7 +12915,6 @@ module.exports.socketioListen = function(server) {
     const namespace445 = io.of('/namespace445');
     namespace445.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace445');
             ChatRoom.findOne({namespace: '/namespace445'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace445'})");
@@ -13390,7 +12944,6 @@ module.exports.socketioListen = function(server) {
     const namespace446 = io.of('/namespace446');
     namespace446.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace446');
             ChatRoom.findOne({namespace: '/namespace446'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace446'})");
@@ -13420,7 +12973,6 @@ module.exports.socketioListen = function(server) {
     const namespace447 = io.of('/namespace447');
     namespace447.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace447');
             ChatRoom.findOne({namespace: '/namespace447'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace447'})");
@@ -13450,7 +13002,6 @@ module.exports.socketioListen = function(server) {
     const namespace448 = io.of('/namespace448');
     namespace448.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace448');
             ChatRoom.findOne({namespace: '/namespace448'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace448'})");
@@ -13480,7 +13031,6 @@ module.exports.socketioListen = function(server) {
     const namespace449 = io.of('/namespace449');
     namespace449.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace449');
             ChatRoom.findOne({namespace: '/namespace449'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace449'})");
@@ -13510,7 +13060,6 @@ module.exports.socketioListen = function(server) {
     const namespace450 = io.of('/namespace450');
     namespace450.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace450');
             ChatRoom.findOne({namespace: '/namespace450'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace450'})");
@@ -13540,7 +13089,6 @@ module.exports.socketioListen = function(server) {
     const namespace451 = io.of('/namespace451');
     namespace451.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace451');
             ChatRoom.findOne({namespace: '/namespace451'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace451'})");
@@ -13570,7 +13118,6 @@ module.exports.socketioListen = function(server) {
     const namespace452 = io.of('/namespace452');
     namespace452.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace452');
             ChatRoom.findOne({namespace: '/namespace452'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace452'})");
@@ -13600,7 +13147,6 @@ module.exports.socketioListen = function(server) {
     const namespace453 = io.of('/namespace453');
     namespace453.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace453');
             ChatRoom.findOne({namespace: '/namespace453'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace453'})");
@@ -13630,7 +13176,6 @@ module.exports.socketioListen = function(server) {
     const namespace454 = io.of('/namespace454');
     namespace454.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace454');
             ChatRoom.findOne({namespace: '/namespace454'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace454'})");
@@ -13660,7 +13205,6 @@ module.exports.socketioListen = function(server) {
     const namespace455 = io.of('/namespace455');
     namespace455.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace455');
             ChatRoom.findOne({namespace: '/namespace455'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace455'})");
@@ -13690,7 +13234,6 @@ module.exports.socketioListen = function(server) {
     const namespace456 = io.of('/namespace456');
     namespace456.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace456');
             ChatRoom.findOne({namespace: '/namespace456'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace456'})");
@@ -13720,7 +13263,6 @@ module.exports.socketioListen = function(server) {
     const namespace457 = io.of('/namespace457');
     namespace457.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace457');
             ChatRoom.findOne({namespace: '/namespace457'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace457'})");
@@ -13750,7 +13292,6 @@ module.exports.socketioListen = function(server) {
     const namespace458 = io.of('/namespace458');
     namespace458.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace458');
             ChatRoom.findOne({namespace: '/namespace458'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace458'})");
@@ -13780,7 +13321,6 @@ module.exports.socketioListen = function(server) {
     const namespace459 = io.of('/namespace459');
     namespace459.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace459');
             ChatRoom.findOne({namespace: '/namespace459'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace459'})");
@@ -13810,7 +13350,6 @@ module.exports.socketioListen = function(server) {
     const namespace460 = io.of('/namespace460');
     namespace460.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace460');
             ChatRoom.findOne({namespace: '/namespace460'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace460'})");
@@ -13840,7 +13379,6 @@ module.exports.socketioListen = function(server) {
     const namespace461 = io.of('/namespace461');
     namespace461.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace461');
             ChatRoom.findOne({namespace: '/namespace461'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace461'})");
@@ -13870,7 +13408,6 @@ module.exports.socketioListen = function(server) {
     const namespace462 = io.of('/namespace462');
     namespace462.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace462');
             ChatRoom.findOne({namespace: '/namespace462'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace462'})");
@@ -13900,7 +13437,6 @@ module.exports.socketioListen = function(server) {
     const namespace463 = io.of('/namespace463');
     namespace463.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace463');
             ChatRoom.findOne({namespace: '/namespace463'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace463'})");
@@ -13930,7 +13466,6 @@ module.exports.socketioListen = function(server) {
     const namespace464 = io.of('/namespace464');
     namespace464.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace464');
             ChatRoom.findOne({namespace: '/namespace464'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace464'})");
@@ -13960,7 +13495,6 @@ module.exports.socketioListen = function(server) {
     const namespace465 = io.of('/namespace465');
     namespace465.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace465');
             ChatRoom.findOne({namespace: '/namespace465'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace465'})");
@@ -13990,7 +13524,6 @@ module.exports.socketioListen = function(server) {
     const namespace466 = io.of('/namespace466');
     namespace466.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace466');
             ChatRoom.findOne({namespace: '/namespace466'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace466'})");
@@ -14020,7 +13553,6 @@ module.exports.socketioListen = function(server) {
     const namespace467 = io.of('/namespace467');
     namespace467.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace467');
             ChatRoom.findOne({namespace: '/namespace467'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace467'})");
@@ -14050,7 +13582,6 @@ module.exports.socketioListen = function(server) {
     const namespace468 = io.of('/namespace468');
     namespace468.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace468');
             ChatRoom.findOne({namespace: '/namespace468'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace468'})");
@@ -14080,7 +13611,6 @@ module.exports.socketioListen = function(server) {
     const namespace469 = io.of('/namespace469');
     namespace469.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace469');
             ChatRoom.findOne({namespace: '/namespace469'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace469'})");
@@ -14110,7 +13640,6 @@ module.exports.socketioListen = function(server) {
     const namespace470 = io.of('/namespace470');
     namespace470.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace470');
             ChatRoom.findOne({namespace: '/namespace470'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace470'})");
@@ -14140,7 +13669,6 @@ module.exports.socketioListen = function(server) {
     const namespace471 = io.of('/namespace471');
     namespace471.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace471');
             ChatRoom.findOne({namespace: '/namespace471'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace471'})");
@@ -14170,7 +13698,6 @@ module.exports.socketioListen = function(server) {
     const namespace472 = io.of('/namespace472');
     namespace472.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace472');
             ChatRoom.findOne({namespace: '/namespace472'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace472'})");
@@ -14200,7 +13727,6 @@ module.exports.socketioListen = function(server) {
     const namespace473 = io.of('/namespace473');
     namespace473.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace473');
             ChatRoom.findOne({namespace: '/namespace473'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace473'})");
@@ -14230,7 +13756,6 @@ module.exports.socketioListen = function(server) {
     const namespace474 = io.of('/namespace474');
     namespace474.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace474');
             ChatRoom.findOne({namespace: '/namespace474'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace474'})");
@@ -14260,7 +13785,6 @@ module.exports.socketioListen = function(server) {
     const namespace475 = io.of('/namespace475');
     namespace475.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace475');
             ChatRoom.findOne({namespace: '/namespace475'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace475'})");
@@ -14290,7 +13814,6 @@ module.exports.socketioListen = function(server) {
     const namespace476 = io.of('/namespace476');
     namespace476.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace476');
             ChatRoom.findOne({namespace: '/namespace476'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace476'})");
@@ -14320,7 +13843,6 @@ module.exports.socketioListen = function(server) {
     const namespace477 = io.of('/namespace477');
     namespace477.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace477');
             ChatRoom.findOne({namespace: '/namespace477'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace477'})");
@@ -14350,7 +13872,6 @@ module.exports.socketioListen = function(server) {
     const namespace478 = io.of('/namespace478');
     namespace478.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace478');
             ChatRoom.findOne({namespace: '/namespace478'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace478'})");
@@ -14380,7 +13901,6 @@ module.exports.socketioListen = function(server) {
     const namespace479 = io.of('/namespace479');
     namespace479.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace479');
             ChatRoom.findOne({namespace: '/namespace479'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace479'})");
@@ -14410,7 +13930,6 @@ module.exports.socketioListen = function(server) {
     const namespace480 = io.of('/namespace480');
     namespace480.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace480');
             ChatRoom.findOne({namespace: '/namespace480'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace480'})");
@@ -14440,7 +13959,6 @@ module.exports.socketioListen = function(server) {
     const namespace481 = io.of('/namespace481');
     namespace481.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace481');
             ChatRoom.findOne({namespace: '/namespace481'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace481'})");
@@ -14470,7 +13988,6 @@ module.exports.socketioListen = function(server) {
     const namespace482 = io.of('/namespace482');
     namespace482.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace482');
             ChatRoom.findOne({namespace: '/namespace482'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace482'})");
@@ -14500,7 +14017,6 @@ module.exports.socketioListen = function(server) {
     const namespace483 = io.of('/namespace483');
     namespace483.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace483');
             ChatRoom.findOne({namespace: '/namespace483'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace483'})");
@@ -14530,7 +14046,6 @@ module.exports.socketioListen = function(server) {
     const namespace484 = io.of('/namespace484');
     namespace484.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace484');
             ChatRoom.findOne({namespace: '/namespace484'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace484'})");
@@ -14560,7 +14075,6 @@ module.exports.socketioListen = function(server) {
     const namespace485 = io.of('/namespace485');
     namespace485.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace485');
             ChatRoom.findOne({namespace: '/namespace485'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace485'})");
@@ -14590,7 +14104,6 @@ module.exports.socketioListen = function(server) {
     const namespace486 = io.of('/namespace486');
     namespace486.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace486');
             ChatRoom.findOne({namespace: '/namespace486'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace486'})");
@@ -14620,7 +14133,6 @@ module.exports.socketioListen = function(server) {
     const namespace487 = io.of('/namespace487');
     namespace487.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace487');
             ChatRoom.findOne({namespace: '/namespace487'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace487'})");
@@ -14650,7 +14162,6 @@ module.exports.socketioListen = function(server) {
     const namespace488 = io.of('/namespace488');
     namespace488.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace488');
             ChatRoom.findOne({namespace: '/namespace488'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace488'})");
@@ -14680,7 +14191,6 @@ module.exports.socketioListen = function(server) {
     const namespace489 = io.of('/namespace489');
     namespace489.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace489');
             ChatRoom.findOne({namespace: '/namespace489'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace489'})");
@@ -14710,7 +14220,6 @@ module.exports.socketioListen = function(server) {
     const namespace490 = io.of('/namespace490');
     namespace490.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace490');
             ChatRoom.findOne({namespace: '/namespace490'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace490'})");
@@ -14740,7 +14249,6 @@ module.exports.socketioListen = function(server) {
     const namespace491 = io.of('/namespace491');
     namespace491.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace491');
             ChatRoom.findOne({namespace: '/namespace491'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace491'})");
@@ -14770,7 +14278,6 @@ module.exports.socketioListen = function(server) {
     const namespace492 = io.of('/namespace492');
     namespace492.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace492');
             ChatRoom.findOne({namespace: '/namespace492'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace492'})");
@@ -14800,7 +14307,6 @@ module.exports.socketioListen = function(server) {
     const namespace493 = io.of('/namespace493');
     namespace493.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace493');
             ChatRoom.findOne({namespace: '/namespace493'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace493'})");
@@ -14830,7 +14336,6 @@ module.exports.socketioListen = function(server) {
     const namespace494 = io.of('/namespace494');
     namespace494.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace494');
             ChatRoom.findOne({namespace: '/namespace494'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace494'})");
@@ -14860,7 +14365,6 @@ module.exports.socketioListen = function(server) {
     const namespace495 = io.of('/namespace495');
     namespace495.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace495');
             ChatRoom.findOne({namespace: '/namespace495'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace495'})");
@@ -14890,7 +14394,6 @@ module.exports.socketioListen = function(server) {
     const namespace496 = io.of('/namespace496');
     namespace496.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace496');
             ChatRoom.findOne({namespace: '/namespace496'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace496'})");
@@ -14920,7 +14423,6 @@ module.exports.socketioListen = function(server) {
     const namespace497 = io.of('/namespace497');
     namespace497.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace497');
             ChatRoom.findOne({namespace: '/namespace497'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace497'})");
@@ -14950,7 +14452,6 @@ module.exports.socketioListen = function(server) {
     const namespace498 = io.of('/namespace498');
     namespace498.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace498');
             ChatRoom.findOne({namespace: '/namespace498'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace498'})");
@@ -14980,7 +14481,6 @@ module.exports.socketioListen = function(server) {
     const namespace499 = io.of('/namespace499');
     namespace499.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace499');
             ChatRoom.findOne({namespace: '/namespace499'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace499'})");
@@ -15010,7 +14510,6 @@ module.exports.socketioListen = function(server) {
     const namespace500 = io.of('/namespace500');
     namespace500.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace500');
             ChatRoom.findOne({namespace: '/namespace500'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace500'})");
@@ -15040,7 +14539,6 @@ module.exports.socketioListen = function(server) {
     const namespace501 = io.of('/namespace501');
     namespace501.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace501');
             ChatRoom.findOne({namespace: '/namespace501'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace501'})");
@@ -15070,7 +14568,6 @@ module.exports.socketioListen = function(server) {
     const namespace502 = io.of('/namespace502');
     namespace502.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace502');
             ChatRoom.findOne({namespace: '/namespace502'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace502'})");
@@ -15100,7 +14597,6 @@ module.exports.socketioListen = function(server) {
     const namespace503 = io.of('/namespace503');
     namespace503.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace503');
             ChatRoom.findOne({namespace: '/namespace503'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace503'})");
@@ -15130,7 +14626,6 @@ module.exports.socketioListen = function(server) {
     const namespace504 = io.of('/namespace504');
     namespace504.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace504');
             ChatRoom.findOne({namespace: '/namespace504'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace504'})");
@@ -15160,7 +14655,6 @@ module.exports.socketioListen = function(server) {
     const namespace505 = io.of('/namespace505');
     namespace505.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace505');
             ChatRoom.findOne({namespace: '/namespace505'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace505'})");
@@ -15190,7 +14684,6 @@ module.exports.socketioListen = function(server) {
     const namespace506 = io.of('/namespace506');
     namespace506.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace506');
             ChatRoom.findOne({namespace: '/namespace506'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace506'})");
@@ -15220,7 +14713,6 @@ module.exports.socketioListen = function(server) {
     const namespace507 = io.of('/namespace507');
     namespace507.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace507');
             ChatRoom.findOne({namespace: '/namespace507'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace507'})");
@@ -15250,7 +14742,6 @@ module.exports.socketioListen = function(server) {
     const namespace508 = io.of('/namespace508');
     namespace508.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace508');
             ChatRoom.findOne({namespace: '/namespace508'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace508'})");
@@ -15280,7 +14771,6 @@ module.exports.socketioListen = function(server) {
     const namespace509 = io.of('/namespace509');
     namespace509.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace509');
             ChatRoom.findOne({namespace: '/namespace509'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace509'})");
@@ -15310,7 +14800,6 @@ module.exports.socketioListen = function(server) {
     const namespace510 = io.of('/namespace510');
     namespace510.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace510');
             ChatRoom.findOne({namespace: '/namespace510'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace510'})");
@@ -15340,7 +14829,6 @@ module.exports.socketioListen = function(server) {
     const namespace511 = io.of('/namespace511');
     namespace511.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace511');
             ChatRoom.findOne({namespace: '/namespace511'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace511'})");
@@ -15370,7 +14858,6 @@ module.exports.socketioListen = function(server) {
     const namespace512 = io.of('/namespace512');
     namespace512.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace512');
             ChatRoom.findOne({namespace: '/namespace512'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace512'})");
@@ -15400,7 +14887,6 @@ module.exports.socketioListen = function(server) {
     const namespace513 = io.of('/namespace513');
     namespace513.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace513');
             ChatRoom.findOne({namespace: '/namespace513'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace513'})");
@@ -15430,7 +14916,6 @@ module.exports.socketioListen = function(server) {
     const namespace514 = io.of('/namespace514');
     namespace514.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace514');
             ChatRoom.findOne({namespace: '/namespace514'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace514'})");
@@ -15460,7 +14945,6 @@ module.exports.socketioListen = function(server) {
     const namespace515 = io.of('/namespace515');
     namespace515.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace515');
             ChatRoom.findOne({namespace: '/namespace515'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace515'})");
@@ -15490,7 +14974,6 @@ module.exports.socketioListen = function(server) {
     const namespace516 = io.of('/namespace516');
     namespace516.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace516');
             ChatRoom.findOne({namespace: '/namespace516'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace516'})");
@@ -15520,7 +15003,6 @@ module.exports.socketioListen = function(server) {
     const namespace517 = io.of('/namespace517');
     namespace517.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace517');
             ChatRoom.findOne({namespace: '/namespace517'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace517'})");
@@ -15550,7 +15032,6 @@ module.exports.socketioListen = function(server) {
     const namespace518 = io.of('/namespace518');
     namespace518.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace518');
             ChatRoom.findOne({namespace: '/namespace518'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace518'})");
@@ -15580,7 +15061,6 @@ module.exports.socketioListen = function(server) {
     const namespace519 = io.of('/namespace519');
     namespace519.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace519');
             ChatRoom.findOne({namespace: '/namespace519'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace519'})");
@@ -15610,7 +15090,6 @@ module.exports.socketioListen = function(server) {
     const namespace520 = io.of('/namespace520');
     namespace520.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace520');
             ChatRoom.findOne({namespace: '/namespace520'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace520'})");
@@ -15640,7 +15119,6 @@ module.exports.socketioListen = function(server) {
     const namespace521 = io.of('/namespace521');
     namespace521.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace521');
             ChatRoom.findOne({namespace: '/namespace521'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace521'})");
@@ -15670,7 +15148,6 @@ module.exports.socketioListen = function(server) {
     const namespace522 = io.of('/namespace522');
     namespace522.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace522');
             ChatRoom.findOne({namespace: '/namespace522'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace522'})");
@@ -15700,7 +15177,6 @@ module.exports.socketioListen = function(server) {
     const namespace523 = io.of('/namespace523');
     namespace523.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace523');
             ChatRoom.findOne({namespace: '/namespace523'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace523'})");
@@ -15730,7 +15206,6 @@ module.exports.socketioListen = function(server) {
     const namespace524 = io.of('/namespace524');
     namespace524.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace524');
             ChatRoom.findOne({namespace: '/namespace524'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace524'})");
@@ -15760,7 +15235,6 @@ module.exports.socketioListen = function(server) {
     const namespace525 = io.of('/namespace525');
     namespace525.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace525');
             ChatRoom.findOne({namespace: '/namespace525'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace525'})");
@@ -15790,7 +15264,6 @@ module.exports.socketioListen = function(server) {
     const namespace526 = io.of('/namespace526');
     namespace526.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace526');
             ChatRoom.findOne({namespace: '/namespace526'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace526'})");
@@ -15820,7 +15293,6 @@ module.exports.socketioListen = function(server) {
     const namespace527 = io.of('/namespace527');
     namespace527.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace527');
             ChatRoom.findOne({namespace: '/namespace527'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace527'})");
@@ -15850,7 +15322,6 @@ module.exports.socketioListen = function(server) {
     const namespace528 = io.of('/namespace528');
     namespace528.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace528');
             ChatRoom.findOne({namespace: '/namespace528'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace528'})");
@@ -15880,7 +15351,6 @@ module.exports.socketioListen = function(server) {
     const namespace529 = io.of('/namespace529');
     namespace529.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace529');
             ChatRoom.findOne({namespace: '/namespace529'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace529'})");
@@ -15910,7 +15380,6 @@ module.exports.socketioListen = function(server) {
     const namespace530 = io.of('/namespace530');
     namespace530.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace530');
             ChatRoom.findOne({namespace: '/namespace530'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace530'})");
@@ -15940,7 +15409,6 @@ module.exports.socketioListen = function(server) {
     const namespace531 = io.of('/namespace531');
     namespace531.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace531');
             ChatRoom.findOne({namespace: '/namespace531'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace531'})");
@@ -15970,7 +15438,6 @@ module.exports.socketioListen = function(server) {
     const namespace532 = io.of('/namespace532');
     namespace532.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace532');
             ChatRoom.findOne({namespace: '/namespace532'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace532'})");
@@ -16000,7 +15467,6 @@ module.exports.socketioListen = function(server) {
     const namespace533 = io.of('/namespace533');
     namespace533.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace533');
             ChatRoom.findOne({namespace: '/namespace533'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace533'})");
@@ -16030,7 +15496,6 @@ module.exports.socketioListen = function(server) {
     const namespace534 = io.of('/namespace534');
     namespace534.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace534');
             ChatRoom.findOne({namespace: '/namespace534'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace534'})");
@@ -16060,7 +15525,6 @@ module.exports.socketioListen = function(server) {
     const namespace535 = io.of('/namespace535');
     namespace535.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace535');
             ChatRoom.findOne({namespace: '/namespace535'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace535'})");
@@ -16090,7 +15554,6 @@ module.exports.socketioListen = function(server) {
     const namespace536 = io.of('/namespace536');
     namespace536.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace536');
             ChatRoom.findOne({namespace: '/namespace536'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace536'})");
@@ -16120,7 +15583,6 @@ module.exports.socketioListen = function(server) {
     const namespace537 = io.of('/namespace537');
     namespace537.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace537');
             ChatRoom.findOne({namespace: '/namespace537'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace537'})");
@@ -16150,7 +15612,6 @@ module.exports.socketioListen = function(server) {
     const namespace538 = io.of('/namespace538');
     namespace538.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace538');
             ChatRoom.findOne({namespace: '/namespace538'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace538'})");
@@ -16180,7 +15641,6 @@ module.exports.socketioListen = function(server) {
     const namespace539 = io.of('/namespace539');
     namespace539.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace539');
             ChatRoom.findOne({namespace: '/namespace539'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace539'})");
@@ -16210,7 +15670,6 @@ module.exports.socketioListen = function(server) {
     const namespace540 = io.of('/namespace540');
     namespace540.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace540');
             ChatRoom.findOne({namespace: '/namespace540'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace540'})");
@@ -16240,7 +15699,6 @@ module.exports.socketioListen = function(server) {
     const namespace541 = io.of('/namespace541');
     namespace541.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace541');
             ChatRoom.findOne({namespace: '/namespace541'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace541'})");
@@ -16270,7 +15728,6 @@ module.exports.socketioListen = function(server) {
     const namespace542 = io.of('/namespace542');
     namespace542.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace542');
             ChatRoom.findOne({namespace: '/namespace542'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace542'})");
@@ -16300,7 +15757,6 @@ module.exports.socketioListen = function(server) {
     const namespace543 = io.of('/namespace543');
     namespace543.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace543');
             ChatRoom.findOne({namespace: '/namespace543'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace543'})");
@@ -16330,7 +15786,6 @@ module.exports.socketioListen = function(server) {
     const namespace544 = io.of('/namespace544');
     namespace544.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace544');
             ChatRoom.findOne({namespace: '/namespace544'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace544'})");
@@ -16360,7 +15815,6 @@ module.exports.socketioListen = function(server) {
     const namespace545 = io.of('/namespace545');
     namespace545.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace545');
             ChatRoom.findOne({namespace: '/namespace545'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace545'})");
@@ -16390,7 +15844,6 @@ module.exports.socketioListen = function(server) {
     const namespace546 = io.of('/namespace546');
     namespace546.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace546');
             ChatRoom.findOne({namespace: '/namespace546'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace546'})");
@@ -16420,7 +15873,6 @@ module.exports.socketioListen = function(server) {
     const namespace547 = io.of('/namespace547');
     namespace547.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace547');
             ChatRoom.findOne({namespace: '/namespace547'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace547'})");
@@ -16450,7 +15902,6 @@ module.exports.socketioListen = function(server) {
     const namespace548 = io.of('/namespace548');
     namespace548.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace548');
             ChatRoom.findOne({namespace: '/namespace548'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace548'})");
@@ -16480,7 +15931,6 @@ module.exports.socketioListen = function(server) {
     const namespace549 = io.of('/namespace549');
     namespace549.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace549');
             ChatRoom.findOne({namespace: '/namespace549'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace549'})");
@@ -16510,7 +15960,6 @@ module.exports.socketioListen = function(server) {
     const namespace550 = io.of('/namespace550');
     namespace550.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace550');
             ChatRoom.findOne({namespace: '/namespace550'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace550'})");
@@ -16540,7 +15989,6 @@ module.exports.socketioListen = function(server) {
     const namespace551 = io.of('/namespace551');
     namespace551.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace551');
             ChatRoom.findOne({namespace: '/namespace551'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace551'})");
@@ -16570,7 +16018,6 @@ module.exports.socketioListen = function(server) {
     const namespace552 = io.of('/namespace552');
     namespace552.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace552');
             ChatRoom.findOne({namespace: '/namespace552'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace552'})");
@@ -16600,7 +16047,6 @@ module.exports.socketioListen = function(server) {
     const namespace553 = io.of('/namespace553');
     namespace553.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace553');
             ChatRoom.findOne({namespace: '/namespace553'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace553'})");
@@ -16630,7 +16076,6 @@ module.exports.socketioListen = function(server) {
     const namespace554 = io.of('/namespace554');
     namespace554.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace554');
             ChatRoom.findOne({namespace: '/namespace554'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace554'})");
@@ -16660,7 +16105,6 @@ module.exports.socketioListen = function(server) {
     const namespace555 = io.of('/namespace555');
     namespace555.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace555');
             ChatRoom.findOne({namespace: '/namespace555'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace555'})");
@@ -16690,7 +16134,6 @@ module.exports.socketioListen = function(server) {
     const namespace556 = io.of('/namespace556');
     namespace556.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace556');
             ChatRoom.findOne({namespace: '/namespace556'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace556'})");
@@ -16720,7 +16163,6 @@ module.exports.socketioListen = function(server) {
     const namespace557 = io.of('/namespace557');
     namespace557.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace557');
             ChatRoom.findOne({namespace: '/namespace557'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace557'})");
@@ -16750,7 +16192,6 @@ module.exports.socketioListen = function(server) {
     const namespace558 = io.of('/namespace558');
     namespace558.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace558');
             ChatRoom.findOne({namespace: '/namespace558'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace558'})");
@@ -16780,7 +16221,6 @@ module.exports.socketioListen = function(server) {
     const namespace559 = io.of('/namespace559');
     namespace559.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace559');
             ChatRoom.findOne({namespace: '/namespace559'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace559'})");
@@ -16810,7 +16250,6 @@ module.exports.socketioListen = function(server) {
     const namespace560 = io.of('/namespace560');
     namespace560.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace560');
             ChatRoom.findOne({namespace: '/namespace560'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace560'})");
@@ -16840,7 +16279,6 @@ module.exports.socketioListen = function(server) {
     const namespace561 = io.of('/namespace561');
     namespace561.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace561');
             ChatRoom.findOne({namespace: '/namespace561'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace561'})");
@@ -16870,7 +16308,6 @@ module.exports.socketioListen = function(server) {
     const namespace562 = io.of('/namespace562');
     namespace562.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace562');
             ChatRoom.findOne({namespace: '/namespace562'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace562'})");
@@ -16900,7 +16337,6 @@ module.exports.socketioListen = function(server) {
     const namespace563 = io.of('/namespace563');
     namespace563.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace563');
             ChatRoom.findOne({namespace: '/namespace563'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace563'})");
@@ -16930,7 +16366,6 @@ module.exports.socketioListen = function(server) {
     const namespace564 = io.of('/namespace564');
     namespace564.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace564');
             ChatRoom.findOne({namespace: '/namespace564'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace564'})");
@@ -16960,7 +16395,6 @@ module.exports.socketioListen = function(server) {
     const namespace565 = io.of('/namespace565');
     namespace565.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace565');
             ChatRoom.findOne({namespace: '/namespace565'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace565'})");
@@ -16990,7 +16424,6 @@ module.exports.socketioListen = function(server) {
     const namespace566 = io.of('/namespace566');
     namespace566.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace566');
             ChatRoom.findOne({namespace: '/namespace566'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace566'})");
@@ -17020,7 +16453,6 @@ module.exports.socketioListen = function(server) {
     const namespace567 = io.of('/namespace567');
     namespace567.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace567');
             ChatRoom.findOne({namespace: '/namespace567'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace567'})");
@@ -17050,7 +16482,6 @@ module.exports.socketioListen = function(server) {
     const namespace568 = io.of('/namespace568');
     namespace568.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace568');
             ChatRoom.findOne({namespace: '/namespace568'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace568'})");
@@ -17080,7 +16511,6 @@ module.exports.socketioListen = function(server) {
     const namespace569 = io.of('/namespace569');
     namespace569.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace569');
             ChatRoom.findOne({namespace: '/namespace569'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace569'})");
@@ -17110,7 +16540,6 @@ module.exports.socketioListen = function(server) {
     const namespace570 = io.of('/namespace570');
     namespace570.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace570');
             ChatRoom.findOne({namespace: '/namespace570'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace570'})");
@@ -17140,7 +16569,6 @@ module.exports.socketioListen = function(server) {
     const namespace571 = io.of('/namespace571');
     namespace571.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace571');
             ChatRoom.findOne({namespace: '/namespace571'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace571'})");
@@ -17170,7 +16598,6 @@ module.exports.socketioListen = function(server) {
     const namespace572 = io.of('/namespace572');
     namespace572.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace572');
             ChatRoom.findOne({namespace: '/namespace572'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace572'})");
@@ -17200,7 +16627,6 @@ module.exports.socketioListen = function(server) {
     const namespace573 = io.of('/namespace573');
     namespace573.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace573');
             ChatRoom.findOne({namespace: '/namespace573'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace573'})");
@@ -17230,7 +16656,6 @@ module.exports.socketioListen = function(server) {
     const namespace574 = io.of('/namespace574');
     namespace574.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace574');
             ChatRoom.findOne({namespace: '/namespace574'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace574'})");
@@ -17260,7 +16685,6 @@ module.exports.socketioListen = function(server) {
     const namespace575 = io.of('/namespace575');
     namespace575.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace575');
             ChatRoom.findOne({namespace: '/namespace575'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace575'})");
@@ -17290,7 +16714,6 @@ module.exports.socketioListen = function(server) {
     const namespace576 = io.of('/namespace576');
     namespace576.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace576');
             ChatRoom.findOne({namespace: '/namespace576'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace576'})");
@@ -17320,7 +16743,6 @@ module.exports.socketioListen = function(server) {
     const namespace577 = io.of('/namespace577');
     namespace577.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace577');
             ChatRoom.findOne({namespace: '/namespace577'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace577'})");
@@ -17350,7 +16772,6 @@ module.exports.socketioListen = function(server) {
     const namespace578 = io.of('/namespace578');
     namespace578.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace578');
             ChatRoom.findOne({namespace: '/namespace578'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace578'})");
@@ -17380,7 +16801,6 @@ module.exports.socketioListen = function(server) {
     const namespace579 = io.of('/namespace579');
     namespace579.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace579');
             ChatRoom.findOne({namespace: '/namespace579'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace579'})");
@@ -17410,7 +16830,6 @@ module.exports.socketioListen = function(server) {
     const namespace580 = io.of('/namespace580');
     namespace580.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace580');
             ChatRoom.findOne({namespace: '/namespace580'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace580'})");
@@ -17440,7 +16859,6 @@ module.exports.socketioListen = function(server) {
     const namespace581 = io.of('/namespace581');
     namespace581.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace581');
             ChatRoom.findOne({namespace: '/namespace581'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace581'})");
@@ -17470,7 +16888,6 @@ module.exports.socketioListen = function(server) {
     const namespace582 = io.of('/namespace582');
     namespace582.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace582');
             ChatRoom.findOne({namespace: '/namespace582'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace582'})");
@@ -17500,7 +16917,6 @@ module.exports.socketioListen = function(server) {
     const namespace583 = io.of('/namespace583');
     namespace583.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace583');
             ChatRoom.findOne({namespace: '/namespace583'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace583'})");
@@ -17530,7 +16946,6 @@ module.exports.socketioListen = function(server) {
     const namespace584 = io.of('/namespace584');
     namespace584.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace584');
             ChatRoom.findOne({namespace: '/namespace584'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace584'})");
@@ -17560,7 +16975,6 @@ module.exports.socketioListen = function(server) {
     const namespace585 = io.of('/namespace585');
     namespace585.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace585');
             ChatRoom.findOne({namespace: '/namespace585'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace585'})");
@@ -17590,7 +17004,6 @@ module.exports.socketioListen = function(server) {
     const namespace586 = io.of('/namespace586');
     namespace586.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace586');
             ChatRoom.findOne({namespace: '/namespace586'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace586'})");
@@ -17620,7 +17033,6 @@ module.exports.socketioListen = function(server) {
     const namespace587 = io.of('/namespace587');
     namespace587.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace587');
             ChatRoom.findOne({namespace: '/namespace587'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace587'})");
@@ -17650,7 +17062,6 @@ module.exports.socketioListen = function(server) {
     const namespace588 = io.of('/namespace588');
     namespace588.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace588');
             ChatRoom.findOne({namespace: '/namespace588'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace588'})");
@@ -17680,7 +17091,6 @@ module.exports.socketioListen = function(server) {
     const namespace589 = io.of('/namespace589');
     namespace589.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace589');
             ChatRoom.findOne({namespace: '/namespace589'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace589'})");
@@ -17710,7 +17120,6 @@ module.exports.socketioListen = function(server) {
     const namespace590 = io.of('/namespace590');
     namespace590.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace590');
             ChatRoom.findOne({namespace: '/namespace590'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace590'})");
@@ -17740,7 +17149,6 @@ module.exports.socketioListen = function(server) {
     const namespace591 = io.of('/namespace591');
     namespace591.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace591');
             ChatRoom.findOne({namespace: '/namespace591'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace591'})");
@@ -17770,7 +17178,6 @@ module.exports.socketioListen = function(server) {
     const namespace592 = io.of('/namespace592');
     namespace592.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace592');
             ChatRoom.findOne({namespace: '/namespace592'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace592'})");
@@ -17800,7 +17207,6 @@ module.exports.socketioListen = function(server) {
     const namespace593 = io.of('/namespace593');
     namespace593.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace593');
             ChatRoom.findOne({namespace: '/namespace593'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace593'})");
@@ -17830,7 +17236,6 @@ module.exports.socketioListen = function(server) {
     const namespace594 = io.of('/namespace594');
     namespace594.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace594');
             ChatRoom.findOne({namespace: '/namespace594'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace594'})");
@@ -17860,7 +17265,6 @@ module.exports.socketioListen = function(server) {
     const namespace595 = io.of('/namespace595');
     namespace595.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace595');
             ChatRoom.findOne({namespace: '/namespace595'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace595'})");
@@ -17890,7 +17294,6 @@ module.exports.socketioListen = function(server) {
     const namespace596 = io.of('/namespace596');
     namespace596.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace596');
             ChatRoom.findOne({namespace: '/namespace596'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace596'})");
@@ -17920,7 +17323,6 @@ module.exports.socketioListen = function(server) {
     const namespace597 = io.of('/namespace597');
     namespace597.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace597');
             ChatRoom.findOne({namespace: '/namespace597'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace597'})");
@@ -17950,7 +17352,6 @@ module.exports.socketioListen = function(server) {
     const namespace598 = io.of('/namespace598');
     namespace598.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace598');
             ChatRoom.findOne({namespace: '/namespace598'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace598'})");
@@ -17980,7 +17381,6 @@ module.exports.socketioListen = function(server) {
     const namespace599 = io.of('/namespace599');
     namespace599.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace599');
             ChatRoom.findOne({namespace: '/namespace599'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace599'})");
@@ -18010,7 +17410,6 @@ module.exports.socketioListen = function(server) {
     const namespace600 = io.of('/namespace600');
     namespace600.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace600');
             ChatRoom.findOne({namespace: '/namespace600'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace600'})");
@@ -18040,7 +17439,6 @@ module.exports.socketioListen = function(server) {
     const namespace601 = io.of('/namespace601');
     namespace601.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace601');
             ChatRoom.findOne({namespace: '/namespace601'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace601'})");
@@ -18070,7 +17468,6 @@ module.exports.socketioListen = function(server) {
     const namespace602 = io.of('/namespace602');
     namespace602.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace602');
             ChatRoom.findOne({namespace: '/namespace602'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace602'})");
@@ -18100,7 +17497,6 @@ module.exports.socketioListen = function(server) {
     const namespace603 = io.of('/namespace603');
     namespace603.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace603');
             ChatRoom.findOne({namespace: '/namespace603'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace603'})");
@@ -18130,7 +17526,6 @@ module.exports.socketioListen = function(server) {
     const namespace604 = io.of('/namespace604');
     namespace604.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace604');
             ChatRoom.findOne({namespace: '/namespace604'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace604'})");
@@ -18160,7 +17555,6 @@ module.exports.socketioListen = function(server) {
     const namespace605 = io.of('/namespace605');
     namespace605.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace605');
             ChatRoom.findOne({namespace: '/namespace605'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace605'})");
@@ -18190,7 +17584,6 @@ module.exports.socketioListen = function(server) {
     const namespace606 = io.of('/namespace606');
     namespace606.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace606');
             ChatRoom.findOne({namespace: '/namespace606'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace606'})");
@@ -18220,7 +17613,6 @@ module.exports.socketioListen = function(server) {
     const namespace607 = io.of('/namespace607');
     namespace607.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace607');
             ChatRoom.findOne({namespace: '/namespace607'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace607'})");
@@ -18250,7 +17642,6 @@ module.exports.socketioListen = function(server) {
     const namespace608 = io.of('/namespace608');
     namespace608.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace608');
             ChatRoom.findOne({namespace: '/namespace608'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace608'})");
@@ -18280,7 +17671,6 @@ module.exports.socketioListen = function(server) {
     const namespace609 = io.of('/namespace609');
     namespace609.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace609');
             ChatRoom.findOne({namespace: '/namespace609'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace609'})");
@@ -18310,7 +17700,6 @@ module.exports.socketioListen = function(server) {
     const namespace610 = io.of('/namespace610');
     namespace610.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace610');
             ChatRoom.findOne({namespace: '/namespace610'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace610'})");
@@ -18340,7 +17729,6 @@ module.exports.socketioListen = function(server) {
     const namespace611 = io.of('/namespace611');
     namespace611.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace611');
             ChatRoom.findOne({namespace: '/namespace611'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace611'})");
@@ -18370,7 +17758,6 @@ module.exports.socketioListen = function(server) {
     const namespace612 = io.of('/namespace612');
     namespace612.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace612');
             ChatRoom.findOne({namespace: '/namespace612'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace612'})");
@@ -18400,7 +17787,6 @@ module.exports.socketioListen = function(server) {
     const namespace613 = io.of('/namespace613');
     namespace613.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace613');
             ChatRoom.findOne({namespace: '/namespace613'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace613'})");
@@ -18430,7 +17816,6 @@ module.exports.socketioListen = function(server) {
     const namespace614 = io.of('/namespace614');
     namespace614.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace614');
             ChatRoom.findOne({namespace: '/namespace614'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace614'})");
@@ -18460,7 +17845,6 @@ module.exports.socketioListen = function(server) {
     const namespace615 = io.of('/namespace615');
     namespace615.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace615');
             ChatRoom.findOne({namespace: '/namespace615'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace615'})");
@@ -18490,7 +17874,6 @@ module.exports.socketioListen = function(server) {
     const namespace616 = io.of('/namespace616');
     namespace616.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace616');
             ChatRoom.findOne({namespace: '/namespace616'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace616'})");
@@ -18520,7 +17903,6 @@ module.exports.socketioListen = function(server) {
     const namespace617 = io.of('/namespace617');
     namespace617.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace617');
             ChatRoom.findOne({namespace: '/namespace617'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace617'})");
@@ -18550,7 +17932,6 @@ module.exports.socketioListen = function(server) {
     const namespace618 = io.of('/namespace618');
     namespace618.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace618');
             ChatRoom.findOne({namespace: '/namespace618'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace618'})");
@@ -18580,7 +17961,6 @@ module.exports.socketioListen = function(server) {
     const namespace619 = io.of('/namespace619');
     namespace619.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace619');
             ChatRoom.findOne({namespace: '/namespace619'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace619'})");
@@ -18610,7 +17990,6 @@ module.exports.socketioListen = function(server) {
     const namespace620 = io.of('/namespace620');
     namespace620.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace620');
             ChatRoom.findOne({namespace: '/namespace620'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace620'})");
@@ -18640,7 +18019,6 @@ module.exports.socketioListen = function(server) {
     const namespace621 = io.of('/namespace621');
     namespace621.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace621');
             ChatRoom.findOne({namespace: '/namespace621'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace621'})");
@@ -18670,7 +18048,6 @@ module.exports.socketioListen = function(server) {
     const namespace622 = io.of('/namespace622');
     namespace622.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace622');
             ChatRoom.findOne({namespace: '/namespace622'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace622'})");
@@ -18700,7 +18077,6 @@ module.exports.socketioListen = function(server) {
     const namespace623 = io.of('/namespace623');
     namespace623.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace623');
             ChatRoom.findOne({namespace: '/namespace623'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace623'})");
@@ -18730,7 +18106,6 @@ module.exports.socketioListen = function(server) {
     const namespace624 = io.of('/namespace624');
     namespace624.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace624');
             ChatRoom.findOne({namespace: '/namespace624'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace624'})");
@@ -18760,7 +18135,6 @@ module.exports.socketioListen = function(server) {
     const namespace625 = io.of('/namespace625');
     namespace625.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace625');
             ChatRoom.findOne({namespace: '/namespace625'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace625'})");
@@ -18790,7 +18164,6 @@ module.exports.socketioListen = function(server) {
     const namespace626 = io.of('/namespace626');
     namespace626.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace626');
             ChatRoom.findOne({namespace: '/namespace626'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace626'})");
@@ -18820,7 +18193,6 @@ module.exports.socketioListen = function(server) {
     const namespace627 = io.of('/namespace627');
     namespace627.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace627');
             ChatRoom.findOne({namespace: '/namespace627'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace627'})");
@@ -18850,7 +18222,6 @@ module.exports.socketioListen = function(server) {
     const namespace628 = io.of('/namespace628');
     namespace628.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace628');
             ChatRoom.findOne({namespace: '/namespace628'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace628'})");
@@ -18880,7 +18251,6 @@ module.exports.socketioListen = function(server) {
     const namespace629 = io.of('/namespace629');
     namespace629.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace629');
             ChatRoom.findOne({namespace: '/namespace629'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace629'})");
@@ -18910,7 +18280,6 @@ module.exports.socketioListen = function(server) {
     const namespace630 = io.of('/namespace630');
     namespace630.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace630');
             ChatRoom.findOne({namespace: '/namespace630'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace630'})");
@@ -18940,7 +18309,6 @@ module.exports.socketioListen = function(server) {
     const namespace631 = io.of('/namespace631');
     namespace631.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace631');
             ChatRoom.findOne({namespace: '/namespace631'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace631'})");
@@ -18970,7 +18338,6 @@ module.exports.socketioListen = function(server) {
     const namespace632 = io.of('/namespace632');
     namespace632.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace632');
             ChatRoom.findOne({namespace: '/namespace632'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace632'})");
@@ -19000,7 +18367,6 @@ module.exports.socketioListen = function(server) {
     const namespace633 = io.of('/namespace633');
     namespace633.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace633');
             ChatRoom.findOne({namespace: '/namespace633'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace633'})");
@@ -19030,7 +18396,6 @@ module.exports.socketioListen = function(server) {
     const namespace634 = io.of('/namespace634');
     namespace634.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace634');
             ChatRoom.findOne({namespace: '/namespace634'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace634'})");
@@ -19060,7 +18425,6 @@ module.exports.socketioListen = function(server) {
     const namespace635 = io.of('/namespace635');
     namespace635.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace635');
             ChatRoom.findOne({namespace: '/namespace635'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace635'})");
@@ -19090,7 +18454,6 @@ module.exports.socketioListen = function(server) {
     const namespace636 = io.of('/namespace636');
     namespace636.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace636');
             ChatRoom.findOne({namespace: '/namespace636'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace636'})");
@@ -19120,7 +18483,6 @@ module.exports.socketioListen = function(server) {
     const namespace637 = io.of('/namespace637');
     namespace637.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace637');
             ChatRoom.findOne({namespace: '/namespace637'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace637'})");
@@ -19150,7 +18512,6 @@ module.exports.socketioListen = function(server) {
     const namespace638 = io.of('/namespace638');
     namespace638.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace638');
             ChatRoom.findOne({namespace: '/namespace638'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace638'})");
@@ -19180,7 +18541,6 @@ module.exports.socketioListen = function(server) {
     const namespace639 = io.of('/namespace639');
     namespace639.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace639');
             ChatRoom.findOne({namespace: '/namespace639'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace639'})");
@@ -19210,7 +18570,6 @@ module.exports.socketioListen = function(server) {
     const namespace640 = io.of('/namespace640');
     namespace640.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace640');
             ChatRoom.findOne({namespace: '/namespace640'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace640'})");
@@ -19240,7 +18599,6 @@ module.exports.socketioListen = function(server) {
     const namespace641 = io.of('/namespace641');
     namespace641.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace641');
             ChatRoom.findOne({namespace: '/namespace641'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace641'})");
@@ -19270,7 +18628,6 @@ module.exports.socketioListen = function(server) {
     const namespace642 = io.of('/namespace642');
     namespace642.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace642');
             ChatRoom.findOne({namespace: '/namespace642'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace642'})");
@@ -19300,7 +18657,6 @@ module.exports.socketioListen = function(server) {
     const namespace643 = io.of('/namespace643');
     namespace643.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace643');
             ChatRoom.findOne({namespace: '/namespace643'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace643'})");
@@ -19330,7 +18686,6 @@ module.exports.socketioListen = function(server) {
     const namespace644 = io.of('/namespace644');
     namespace644.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace644');
             ChatRoom.findOne({namespace: '/namespace644'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace644'})");
@@ -19360,7 +18715,6 @@ module.exports.socketioListen = function(server) {
     const namespace645 = io.of('/namespace645');
     namespace645.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace645');
             ChatRoom.findOne({namespace: '/namespace645'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace645'})");
@@ -19390,7 +18744,6 @@ module.exports.socketioListen = function(server) {
     const namespace646 = io.of('/namespace646');
     namespace646.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace646');
             ChatRoom.findOne({namespace: '/namespace646'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace646'})");
@@ -19420,7 +18773,6 @@ module.exports.socketioListen = function(server) {
     const namespace647 = io.of('/namespace647');
     namespace647.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace647');
             ChatRoom.findOne({namespace: '/namespace647'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace647'})");
@@ -19450,7 +18802,6 @@ module.exports.socketioListen = function(server) {
     const namespace648 = io.of('/namespace648');
     namespace648.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace648');
             ChatRoom.findOne({namespace: '/namespace648'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace648'})");
@@ -19480,7 +18831,6 @@ module.exports.socketioListen = function(server) {
     const namespace649 = io.of('/namespace649');
     namespace649.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace649');
             ChatRoom.findOne({namespace: '/namespace649'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace649'})");
@@ -19510,7 +18860,6 @@ module.exports.socketioListen = function(server) {
     const namespace650 = io.of('/namespace650');
     namespace650.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace650');
             ChatRoom.findOne({namespace: '/namespace650'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace650'})");
@@ -19540,7 +18889,6 @@ module.exports.socketioListen = function(server) {
     const namespace651 = io.of('/namespace651');
     namespace651.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace651');
             ChatRoom.findOne({namespace: '/namespace651'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace651'})");
@@ -19570,7 +18918,6 @@ module.exports.socketioListen = function(server) {
     const namespace652 = io.of('/namespace652');
     namespace652.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace652');
             ChatRoom.findOne({namespace: '/namespace652'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace652'})");
@@ -19600,7 +18947,6 @@ module.exports.socketioListen = function(server) {
     const namespace653 = io.of('/namespace653');
     namespace653.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace653');
             ChatRoom.findOne({namespace: '/namespace653'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace653'})");
@@ -19630,7 +18976,6 @@ module.exports.socketioListen = function(server) {
     const namespace654 = io.of('/namespace654');
     namespace654.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace654');
             ChatRoom.findOne({namespace: '/namespace654'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace654'})");
@@ -19660,7 +19005,6 @@ module.exports.socketioListen = function(server) {
     const namespace655 = io.of('/namespace655');
     namespace655.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace655');
             ChatRoom.findOne({namespace: '/namespace655'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace655'})");
@@ -19690,7 +19034,6 @@ module.exports.socketioListen = function(server) {
     const namespace656 = io.of('/namespace656');
     namespace656.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace656');
             ChatRoom.findOne({namespace: '/namespace656'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace656'})");
@@ -19720,7 +19063,6 @@ module.exports.socketioListen = function(server) {
     const namespace657 = io.of('/namespace657');
     namespace657.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace657');
             ChatRoom.findOne({namespace: '/namespace657'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace657'})");
@@ -19750,7 +19092,6 @@ module.exports.socketioListen = function(server) {
     const namespace658 = io.of('/namespace658');
     namespace658.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace658');
             ChatRoom.findOne({namespace: '/namespace658'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace658'})");
@@ -19780,7 +19121,6 @@ module.exports.socketioListen = function(server) {
     const namespace659 = io.of('/namespace659');
     namespace659.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace659');
             ChatRoom.findOne({namespace: '/namespace659'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace659'})");
@@ -19810,7 +19150,6 @@ module.exports.socketioListen = function(server) {
     const namespace660 = io.of('/namespace660');
     namespace660.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace660');
             ChatRoom.findOne({namespace: '/namespace660'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace660'})");
@@ -19840,7 +19179,6 @@ module.exports.socketioListen = function(server) {
     const namespace661 = io.of('/namespace661');
     namespace661.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace661');
             ChatRoom.findOne({namespace: '/namespace661'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace661'})");
@@ -19870,7 +19208,6 @@ module.exports.socketioListen = function(server) {
     const namespace662 = io.of('/namespace662');
     namespace662.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace662');
             ChatRoom.findOne({namespace: '/namespace662'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace662'})");
@@ -19900,7 +19237,6 @@ module.exports.socketioListen = function(server) {
     const namespace663 = io.of('/namespace663');
     namespace663.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace663');
             ChatRoom.findOne({namespace: '/namespace663'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace663'})");
@@ -19930,7 +19266,6 @@ module.exports.socketioListen = function(server) {
     const namespace664 = io.of('/namespace664');
     namespace664.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace664');
             ChatRoom.findOne({namespace: '/namespace664'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace664'})");
@@ -19960,7 +19295,6 @@ module.exports.socketioListen = function(server) {
     const namespace665 = io.of('/namespace665');
     namespace665.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace665');
             ChatRoom.findOne({namespace: '/namespace665'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace665'})");
@@ -19990,7 +19324,6 @@ module.exports.socketioListen = function(server) {
     const namespace666 = io.of('/namespace666');
     namespace666.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace666');
             ChatRoom.findOne({namespace: '/namespace666'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace666'})");
@@ -20020,7 +19353,6 @@ module.exports.socketioListen = function(server) {
     const namespace667 = io.of('/namespace667');
     namespace667.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace667');
             ChatRoom.findOne({namespace: '/namespace667'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace667'})");
@@ -20050,7 +19382,6 @@ module.exports.socketioListen = function(server) {
     const namespace668 = io.of('/namespace668');
     namespace668.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace668');
             ChatRoom.findOne({namespace: '/namespace668'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace668'})");
@@ -20080,7 +19411,6 @@ module.exports.socketioListen = function(server) {
     const namespace669 = io.of('/namespace669');
     namespace669.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace669');
             ChatRoom.findOne({namespace: '/namespace669'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace669'})");
@@ -20110,7 +19440,6 @@ module.exports.socketioListen = function(server) {
     const namespace670 = io.of('/namespace670');
     namespace670.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace670');
             ChatRoom.findOne({namespace: '/namespace670'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace670'})");
@@ -20140,7 +19469,6 @@ module.exports.socketioListen = function(server) {
     const namespace671 = io.of('/namespace671');
     namespace671.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace671');
             ChatRoom.findOne({namespace: '/namespace671'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace671'})");
@@ -20170,7 +19498,6 @@ module.exports.socketioListen = function(server) {
     const namespace672 = io.of('/namespace672');
     namespace672.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace672');
             ChatRoom.findOne({namespace: '/namespace672'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace672'})");
@@ -20200,7 +19527,6 @@ module.exports.socketioListen = function(server) {
     const namespace673 = io.of('/namespace673');
     namespace673.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace673');
             ChatRoom.findOne({namespace: '/namespace673'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace673'})");
@@ -20230,7 +19556,6 @@ module.exports.socketioListen = function(server) {
     const namespace674 = io.of('/namespace674');
     namespace674.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace674');
             ChatRoom.findOne({namespace: '/namespace674'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace674'})");
@@ -20260,7 +19585,6 @@ module.exports.socketioListen = function(server) {
     const namespace675 = io.of('/namespace675');
     namespace675.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace675');
             ChatRoom.findOne({namespace: '/namespace675'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace675'})");
@@ -20290,7 +19614,6 @@ module.exports.socketioListen = function(server) {
     const namespace676 = io.of('/namespace676');
     namespace676.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace676');
             ChatRoom.findOne({namespace: '/namespace676'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace676'})");
@@ -20320,7 +19643,6 @@ module.exports.socketioListen = function(server) {
     const namespace677 = io.of('/namespace677');
     namespace677.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace677');
             ChatRoom.findOne({namespace: '/namespace677'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace677'})");
@@ -20350,7 +19672,6 @@ module.exports.socketioListen = function(server) {
     const namespace678 = io.of('/namespace678');
     namespace678.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace678');
             ChatRoom.findOne({namespace: '/namespace678'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace678'})");
@@ -20380,7 +19701,6 @@ module.exports.socketioListen = function(server) {
     const namespace679 = io.of('/namespace679');
     namespace679.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace679');
             ChatRoom.findOne({namespace: '/namespace679'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace679'})");
@@ -20410,7 +19730,6 @@ module.exports.socketioListen = function(server) {
     const namespace680 = io.of('/namespace680');
     namespace680.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace680');
             ChatRoom.findOne({namespace: '/namespace680'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace680'})");
@@ -20440,7 +19759,6 @@ module.exports.socketioListen = function(server) {
     const namespace681 = io.of('/namespace681');
     namespace681.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace681');
             ChatRoom.findOne({namespace: '/namespace681'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace681'})");
@@ -20470,7 +19788,6 @@ module.exports.socketioListen = function(server) {
     const namespace682 = io.of('/namespace682');
     namespace682.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace682');
             ChatRoom.findOne({namespace: '/namespace682'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace682'})");
@@ -20500,7 +19817,6 @@ module.exports.socketioListen = function(server) {
     const namespace683 = io.of('/namespace683');
     namespace683.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace683');
             ChatRoom.findOne({namespace: '/namespace683'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace683'})");
@@ -20530,7 +19846,6 @@ module.exports.socketioListen = function(server) {
     const namespace684 = io.of('/namespace684');
     namespace684.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace684');
             ChatRoom.findOne({namespace: '/namespace684'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace684'})");
@@ -20560,7 +19875,6 @@ module.exports.socketioListen = function(server) {
     const namespace685 = io.of('/namespace685');
     namespace685.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace685');
             ChatRoom.findOne({namespace: '/namespace685'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace685'})");
@@ -20590,7 +19904,6 @@ module.exports.socketioListen = function(server) {
     const namespace686 = io.of('/namespace686');
     namespace686.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace686');
             ChatRoom.findOne({namespace: '/namespace686'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace686'})");
@@ -20620,7 +19933,6 @@ module.exports.socketioListen = function(server) {
     const namespace687 = io.of('/namespace687');
     namespace687.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace687');
             ChatRoom.findOne({namespace: '/namespace687'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace687'})");
@@ -20650,7 +19962,6 @@ module.exports.socketioListen = function(server) {
     const namespace688 = io.of('/namespace688');
     namespace688.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace688');
             ChatRoom.findOne({namespace: '/namespace688'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace688'})");
@@ -20680,7 +19991,6 @@ module.exports.socketioListen = function(server) {
     const namespace689 = io.of('/namespace689');
     namespace689.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace689');
             ChatRoom.findOne({namespace: '/namespace689'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace689'})");
@@ -20710,7 +20020,6 @@ module.exports.socketioListen = function(server) {
     const namespace690 = io.of('/namespace690');
     namespace690.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace690');
             ChatRoom.findOne({namespace: '/namespace690'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace690'})");
@@ -20740,7 +20049,6 @@ module.exports.socketioListen = function(server) {
     const namespace691 = io.of('/namespace691');
     namespace691.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace691');
             ChatRoom.findOne({namespace: '/namespace691'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace691'})");
@@ -20770,7 +20078,6 @@ module.exports.socketioListen = function(server) {
     const namespace692 = io.of('/namespace692');
     namespace692.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace692');
             ChatRoom.findOne({namespace: '/namespace692'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace692'})");
@@ -20800,7 +20107,6 @@ module.exports.socketioListen = function(server) {
     const namespace693 = io.of('/namespace693');
     namespace693.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace693');
             ChatRoom.findOne({namespace: '/namespace693'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace693'})");
@@ -20830,7 +20136,6 @@ module.exports.socketioListen = function(server) {
     const namespace694 = io.of('/namespace694');
     namespace694.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace694');
             ChatRoom.findOne({namespace: '/namespace694'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace694'})");
@@ -20860,7 +20165,6 @@ module.exports.socketioListen = function(server) {
     const namespace695 = io.of('/namespace695');
     namespace695.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace695');
             ChatRoom.findOne({namespace: '/namespace695'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace695'})");
@@ -20890,7 +20194,6 @@ module.exports.socketioListen = function(server) {
     const namespace696 = io.of('/namespace696');
     namespace696.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace696');
             ChatRoom.findOne({namespace: '/namespace696'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace696'})");
@@ -20920,7 +20223,6 @@ module.exports.socketioListen = function(server) {
     const namespace697 = io.of('/namespace697');
     namespace697.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace697');
             ChatRoom.findOne({namespace: '/namespace697'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace697'})");
@@ -20950,7 +20252,6 @@ module.exports.socketioListen = function(server) {
     const namespace698 = io.of('/namespace698');
     namespace698.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace698');
             ChatRoom.findOne({namespace: '/namespace698'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace698'})");
@@ -20980,7 +20281,6 @@ module.exports.socketioListen = function(server) {
     const namespace699 = io.of('/namespace699');
     namespace699.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace699');
             ChatRoom.findOne({namespace: '/namespace699'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace699'})");
@@ -21010,7 +20310,6 @@ module.exports.socketioListen = function(server) {
     const namespace700 = io.of('/namespace700');
     namespace700.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace700');
             ChatRoom.findOne({namespace: '/namespace700'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace700'})");
@@ -21040,7 +20339,6 @@ module.exports.socketioListen = function(server) {
     const namespace701 = io.of('/namespace701');
     namespace701.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace701');
             ChatRoom.findOne({namespace: '/namespace701'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace701'})");
@@ -21070,7 +20368,6 @@ module.exports.socketioListen = function(server) {
     const namespace702 = io.of('/namespace702');
     namespace702.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace702');
             ChatRoom.findOne({namespace: '/namespace702'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace702'})");
@@ -21100,7 +20397,6 @@ module.exports.socketioListen = function(server) {
     const namespace703 = io.of('/namespace703');
     namespace703.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace703');
             ChatRoom.findOne({namespace: '/namespace703'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace703'})");
@@ -21130,7 +20426,6 @@ module.exports.socketioListen = function(server) {
     const namespace704 = io.of('/namespace704');
     namespace704.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace704');
             ChatRoom.findOne({namespace: '/namespace704'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace704'})");
@@ -21160,7 +20455,6 @@ module.exports.socketioListen = function(server) {
     const namespace705 = io.of('/namespace705');
     namespace705.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace705');
             ChatRoom.findOne({namespace: '/namespace705'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace705'})");
@@ -21190,7 +20484,6 @@ module.exports.socketioListen = function(server) {
     const namespace706 = io.of('/namespace706');
     namespace706.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace706');
             ChatRoom.findOne({namespace: '/namespace706'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace706'})");
@@ -21220,7 +20513,6 @@ module.exports.socketioListen = function(server) {
     const namespace707 = io.of('/namespace707');
     namespace707.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace707');
             ChatRoom.findOne({namespace: '/namespace707'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace707'})");
@@ -21250,7 +20542,6 @@ module.exports.socketioListen = function(server) {
     const namespace708 = io.of('/namespace708');
     namespace708.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace708');
             ChatRoom.findOne({namespace: '/namespace708'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace708'})");
@@ -21280,7 +20571,6 @@ module.exports.socketioListen = function(server) {
     const namespace709 = io.of('/namespace709');
     namespace709.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace709');
             ChatRoom.findOne({namespace: '/namespace709'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace709'})");
@@ -21310,7 +20600,6 @@ module.exports.socketioListen = function(server) {
     const namespace710 = io.of('/namespace710');
     namespace710.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace710');
             ChatRoom.findOne({namespace: '/namespace710'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace710'})");
@@ -21340,7 +20629,6 @@ module.exports.socketioListen = function(server) {
     const namespace711 = io.of('/namespace711');
     namespace711.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace711');
             ChatRoom.findOne({namespace: '/namespace711'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace711'})");
@@ -21370,7 +20658,6 @@ module.exports.socketioListen = function(server) {
     const namespace712 = io.of('/namespace712');
     namespace712.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace712');
             ChatRoom.findOne({namespace: '/namespace712'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace712'})");
@@ -21400,7 +20687,6 @@ module.exports.socketioListen = function(server) {
     const namespace713 = io.of('/namespace713');
     namespace713.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace713');
             ChatRoom.findOne({namespace: '/namespace713'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace713'})");
@@ -21430,7 +20716,6 @@ module.exports.socketioListen = function(server) {
     const namespace714 = io.of('/namespace714');
     namespace714.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace714');
             ChatRoom.findOne({namespace: '/namespace714'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace714'})");
@@ -21460,7 +20745,6 @@ module.exports.socketioListen = function(server) {
     const namespace715 = io.of('/namespace715');
     namespace715.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace715');
             ChatRoom.findOne({namespace: '/namespace715'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace715'})");
@@ -21490,7 +20774,6 @@ module.exports.socketioListen = function(server) {
     const namespace716 = io.of('/namespace716');
     namespace716.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace716');
             ChatRoom.findOne({namespace: '/namespace716'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace716'})");
@@ -21520,7 +20803,6 @@ module.exports.socketioListen = function(server) {
     const namespace717 = io.of('/namespace717');
     namespace717.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace717');
             ChatRoom.findOne({namespace: '/namespace717'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace717'})");
@@ -21550,7 +20832,6 @@ module.exports.socketioListen = function(server) {
     const namespace718 = io.of('/namespace718');
     namespace718.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace718');
             ChatRoom.findOne({namespace: '/namespace718'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace718'})");
@@ -21580,7 +20861,6 @@ module.exports.socketioListen = function(server) {
     const namespace719 = io.of('/namespace719');
     namespace719.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace719');
             ChatRoom.findOne({namespace: '/namespace719'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace719'})");
@@ -21610,7 +20890,6 @@ module.exports.socketioListen = function(server) {
     const namespace720 = io.of('/namespace720');
     namespace720.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace720');
             ChatRoom.findOne({namespace: '/namespace720'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace720'})");
@@ -21640,7 +20919,6 @@ module.exports.socketioListen = function(server) {
     const namespace721 = io.of('/namespace721');
     namespace721.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace721');
             ChatRoom.findOne({namespace: '/namespace721'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace721'})");
@@ -21670,7 +20948,6 @@ module.exports.socketioListen = function(server) {
     const namespace722 = io.of('/namespace722');
     namespace722.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace722');
             ChatRoom.findOne({namespace: '/namespace722'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace722'})");
@@ -21700,7 +20977,6 @@ module.exports.socketioListen = function(server) {
     const namespace723 = io.of('/namespace723');
     namespace723.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace723');
             ChatRoom.findOne({namespace: '/namespace723'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace723'})");
@@ -21730,7 +21006,6 @@ module.exports.socketioListen = function(server) {
     const namespace724 = io.of('/namespace724');
     namespace724.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace724');
             ChatRoom.findOne({namespace: '/namespace724'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace724'})");
@@ -21760,7 +21035,6 @@ module.exports.socketioListen = function(server) {
     const namespace725 = io.of('/namespace725');
     namespace725.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace725');
             ChatRoom.findOne({namespace: '/namespace725'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace725'})");
@@ -21790,7 +21064,6 @@ module.exports.socketioListen = function(server) {
     const namespace726 = io.of('/namespace726');
     namespace726.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace726');
             ChatRoom.findOne({namespace: '/namespace726'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace726'})");
@@ -21820,7 +21093,6 @@ module.exports.socketioListen = function(server) {
     const namespace727 = io.of('/namespace727');
     namespace727.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace727');
             ChatRoom.findOne({namespace: '/namespace727'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace727'})");
@@ -21850,7 +21122,6 @@ module.exports.socketioListen = function(server) {
     const namespace728 = io.of('/namespace728');
     namespace728.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace728');
             ChatRoom.findOne({namespace: '/namespace728'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace728'})");
@@ -21880,7 +21151,6 @@ module.exports.socketioListen = function(server) {
     const namespace729 = io.of('/namespace729');
     namespace729.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace729');
             ChatRoom.findOne({namespace: '/namespace729'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace729'})");
@@ -21910,7 +21180,6 @@ module.exports.socketioListen = function(server) {
     const namespace730 = io.of('/namespace730');
     namespace730.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace730');
             ChatRoom.findOne({namespace: '/namespace730'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace730'})");
@@ -21940,7 +21209,6 @@ module.exports.socketioListen = function(server) {
     const namespace731 = io.of('/namespace731');
     namespace731.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace731');
             ChatRoom.findOne({namespace: '/namespace731'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace731'})");
@@ -21970,7 +21238,6 @@ module.exports.socketioListen = function(server) {
     const namespace732 = io.of('/namespace732');
     namespace732.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace732');
             ChatRoom.findOne({namespace: '/namespace732'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace732'})");
@@ -22000,7 +21267,6 @@ module.exports.socketioListen = function(server) {
     const namespace733 = io.of('/namespace733');
     namespace733.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace733');
             ChatRoom.findOne({namespace: '/namespace733'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace733'})");
@@ -22030,7 +21296,6 @@ module.exports.socketioListen = function(server) {
     const namespace734 = io.of('/namespace734');
     namespace734.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace734');
             ChatRoom.findOne({namespace: '/namespace734'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace734'})");
@@ -22060,7 +21325,6 @@ module.exports.socketioListen = function(server) {
     const namespace735 = io.of('/namespace735');
     namespace735.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace735');
             ChatRoom.findOne({namespace: '/namespace735'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace735'})");
@@ -22090,7 +21354,6 @@ module.exports.socketioListen = function(server) {
     const namespace736 = io.of('/namespace736');
     namespace736.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace736');
             ChatRoom.findOne({namespace: '/namespace736'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace736'})");
@@ -22120,7 +21383,6 @@ module.exports.socketioListen = function(server) {
     const namespace737 = io.of('/namespace737');
     namespace737.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace737');
             ChatRoom.findOne({namespace: '/namespace737'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace737'})");
@@ -22150,7 +21412,6 @@ module.exports.socketioListen = function(server) {
     const namespace738 = io.of('/namespace738');
     namespace738.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace738');
             ChatRoom.findOne({namespace: '/namespace738'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace738'})");
@@ -22180,7 +21441,6 @@ module.exports.socketioListen = function(server) {
     const namespace739 = io.of('/namespace739');
     namespace739.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace739');
             ChatRoom.findOne({namespace: '/namespace739'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace739'})");
@@ -22210,7 +21470,6 @@ module.exports.socketioListen = function(server) {
     const namespace740 = io.of('/namespace740');
     namespace740.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace740');
             ChatRoom.findOne({namespace: '/namespace740'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace740'})");
@@ -22240,7 +21499,6 @@ module.exports.socketioListen = function(server) {
     const namespace741 = io.of('/namespace741');
     namespace741.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace741');
             ChatRoom.findOne({namespace: '/namespace741'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace741'})");
@@ -22270,7 +21528,6 @@ module.exports.socketioListen = function(server) {
     const namespace742 = io.of('/namespace742');
     namespace742.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace742');
             ChatRoom.findOne({namespace: '/namespace742'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace742'})");
@@ -22300,7 +21557,6 @@ module.exports.socketioListen = function(server) {
     const namespace743 = io.of('/namespace743');
     namespace743.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace743');
             ChatRoom.findOne({namespace: '/namespace743'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace743'})");
@@ -22330,7 +21586,6 @@ module.exports.socketioListen = function(server) {
     const namespace744 = io.of('/namespace744');
     namespace744.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace744');
             ChatRoom.findOne({namespace: '/namespace744'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace744'})");
@@ -22360,7 +21615,6 @@ module.exports.socketioListen = function(server) {
     const namespace745 = io.of('/namespace745');
     namespace745.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace745');
             ChatRoom.findOne({namespace: '/namespace745'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace745'})");
@@ -22390,7 +21644,6 @@ module.exports.socketioListen = function(server) {
     const namespace746 = io.of('/namespace746');
     namespace746.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace746');
             ChatRoom.findOne({namespace: '/namespace746'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace746'})");
@@ -22420,7 +21673,6 @@ module.exports.socketioListen = function(server) {
     const namespace747 = io.of('/namespace747');
     namespace747.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace747');
             ChatRoom.findOne({namespace: '/namespace747'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace747'})");
@@ -22450,7 +21702,6 @@ module.exports.socketioListen = function(server) {
     const namespace748 = io.of('/namespace748');
     namespace748.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace748');
             ChatRoom.findOne({namespace: '/namespace748'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace748'})");
@@ -22480,7 +21731,6 @@ module.exports.socketioListen = function(server) {
     const namespace749 = io.of('/namespace749');
     namespace749.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace749');
             ChatRoom.findOne({namespace: '/namespace749'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace749'})");
@@ -22510,7 +21760,6 @@ module.exports.socketioListen = function(server) {
     const namespace750 = io.of('/namespace750');
     namespace750.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace750');
             ChatRoom.findOne({namespace: '/namespace750'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace750'})");
@@ -22540,7 +21789,6 @@ module.exports.socketioListen = function(server) {
     const namespace751 = io.of('/namespace751');
     namespace751.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace751');
             ChatRoom.findOne({namespace: '/namespace751'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace751'})");
@@ -22570,7 +21818,6 @@ module.exports.socketioListen = function(server) {
     const namespace752 = io.of('/namespace752');
     namespace752.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace752');
             ChatRoom.findOne({namespace: '/namespace752'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace752'})");
@@ -22600,7 +21847,6 @@ module.exports.socketioListen = function(server) {
     const namespace753 = io.of('/namespace753');
     namespace753.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace753');
             ChatRoom.findOne({namespace: '/namespace753'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace753'})");
@@ -22630,7 +21876,6 @@ module.exports.socketioListen = function(server) {
     const namespace754 = io.of('/namespace754');
     namespace754.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace754');
             ChatRoom.findOne({namespace: '/namespace754'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace754'})");
@@ -22660,7 +21905,6 @@ module.exports.socketioListen = function(server) {
     const namespace755 = io.of('/namespace755');
     namespace755.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace755');
             ChatRoom.findOne({namespace: '/namespace755'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace755'})");
@@ -22690,7 +21934,6 @@ module.exports.socketioListen = function(server) {
     const namespace756 = io.of('/namespace756');
     namespace756.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace756');
             ChatRoom.findOne({namespace: '/namespace756'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace756'})");
@@ -22720,7 +21963,6 @@ module.exports.socketioListen = function(server) {
     const namespace757 = io.of('/namespace757');
     namespace757.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace757');
             ChatRoom.findOne({namespace: '/namespace757'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace757'})");
@@ -22750,7 +21992,6 @@ module.exports.socketioListen = function(server) {
     const namespace758 = io.of('/namespace758');
     namespace758.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace758');
             ChatRoom.findOne({namespace: '/namespace758'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace758'})");
@@ -22780,7 +22021,6 @@ module.exports.socketioListen = function(server) {
     const namespace759 = io.of('/namespace759');
     namespace759.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace759');
             ChatRoom.findOne({namespace: '/namespace759'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace759'})");
@@ -22810,7 +22050,6 @@ module.exports.socketioListen = function(server) {
     const namespace760 = io.of('/namespace760');
     namespace760.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace760');
             ChatRoom.findOne({namespace: '/namespace760'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace760'})");
@@ -22840,7 +22079,6 @@ module.exports.socketioListen = function(server) {
     const namespace761 = io.of('/namespace761');
     namespace761.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace761');
             ChatRoom.findOne({namespace: '/namespace761'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace761'})");
@@ -22870,7 +22108,6 @@ module.exports.socketioListen = function(server) {
     const namespace762 = io.of('/namespace762');
     namespace762.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace762');
             ChatRoom.findOne({namespace: '/namespace762'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace762'})");
@@ -22900,7 +22137,6 @@ module.exports.socketioListen = function(server) {
     const namespace763 = io.of('/namespace763');
     namespace763.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace763');
             ChatRoom.findOne({namespace: '/namespace763'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace763'})");
@@ -22930,7 +22166,6 @@ module.exports.socketioListen = function(server) {
     const namespace764 = io.of('/namespace764');
     namespace764.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace764');
             ChatRoom.findOne({namespace: '/namespace764'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace764'})");
@@ -22960,7 +22195,6 @@ module.exports.socketioListen = function(server) {
     const namespace765 = io.of('/namespace765');
     namespace765.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace765');
             ChatRoom.findOne({namespace: '/namespace765'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace765'})");
@@ -22990,7 +22224,6 @@ module.exports.socketioListen = function(server) {
     const namespace766 = io.of('/namespace766');
     namespace766.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace766');
             ChatRoom.findOne({namespace: '/namespace766'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace766'})");
@@ -23020,7 +22253,6 @@ module.exports.socketioListen = function(server) {
     const namespace767 = io.of('/namespace767');
     namespace767.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace767');
             ChatRoom.findOne({namespace: '/namespace767'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace767'})");
@@ -23050,7 +22282,6 @@ module.exports.socketioListen = function(server) {
     const namespace768 = io.of('/namespace768');
     namespace768.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace768');
             ChatRoom.findOne({namespace: '/namespace768'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace768'})");
@@ -23080,7 +22311,6 @@ module.exports.socketioListen = function(server) {
     const namespace769 = io.of('/namespace769');
     namespace769.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace769');
             ChatRoom.findOne({namespace: '/namespace769'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace769'})");
@@ -23110,7 +22340,6 @@ module.exports.socketioListen = function(server) {
     const namespace770 = io.of('/namespace770');
     namespace770.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace770');
             ChatRoom.findOne({namespace: '/namespace770'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace770'})");
@@ -23140,7 +22369,6 @@ module.exports.socketioListen = function(server) {
     const namespace771 = io.of('/namespace771');
     namespace771.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace771');
             ChatRoom.findOne({namespace: '/namespace771'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace771'})");
@@ -23170,7 +22398,6 @@ module.exports.socketioListen = function(server) {
     const namespace772 = io.of('/namespace772');
     namespace772.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace772');
             ChatRoom.findOne({namespace: '/namespace772'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace772'})");
@@ -23200,7 +22427,6 @@ module.exports.socketioListen = function(server) {
     const namespace773 = io.of('/namespace773');
     namespace773.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace773');
             ChatRoom.findOne({namespace: '/namespace773'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace773'})");
@@ -23230,7 +22456,6 @@ module.exports.socketioListen = function(server) {
     const namespace774 = io.of('/namespace774');
     namespace774.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace774');
             ChatRoom.findOne({namespace: '/namespace774'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace774'})");
@@ -23260,7 +22485,6 @@ module.exports.socketioListen = function(server) {
     const namespace775 = io.of('/namespace775');
     namespace775.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace775');
             ChatRoom.findOne({namespace: '/namespace775'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace775'})");
@@ -23290,7 +22514,6 @@ module.exports.socketioListen = function(server) {
     const namespace776 = io.of('/namespace776');
     namespace776.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace776');
             ChatRoom.findOne({namespace: '/namespace776'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace776'})");
@@ -23320,7 +22543,6 @@ module.exports.socketioListen = function(server) {
     const namespace777 = io.of('/namespace777');
     namespace777.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace777');
             ChatRoom.findOne({namespace: '/namespace777'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace777'})");
@@ -23350,7 +22572,6 @@ module.exports.socketioListen = function(server) {
     const namespace778 = io.of('/namespace778');
     namespace778.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace778');
             ChatRoom.findOne({namespace: '/namespace778'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace778'})");
@@ -23380,7 +22601,6 @@ module.exports.socketioListen = function(server) {
     const namespace779 = io.of('/namespace779');
     namespace779.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace779');
             ChatRoom.findOne({namespace: '/namespace779'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace779'})");
@@ -23410,7 +22630,6 @@ module.exports.socketioListen = function(server) {
     const namespace780 = io.of('/namespace780');
     namespace780.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace780');
             ChatRoom.findOne({namespace: '/namespace780'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace780'})");
@@ -23440,7 +22659,6 @@ module.exports.socketioListen = function(server) {
     const namespace781 = io.of('/namespace781');
     namespace781.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace781');
             ChatRoom.findOne({namespace: '/namespace781'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace781'})");
@@ -23470,7 +22688,6 @@ module.exports.socketioListen = function(server) {
     const namespace782 = io.of('/namespace782');
     namespace782.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace782');
             ChatRoom.findOne({namespace: '/namespace782'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace782'})");
@@ -23500,7 +22717,6 @@ module.exports.socketioListen = function(server) {
     const namespace783 = io.of('/namespace783');
     namespace783.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace783');
             ChatRoom.findOne({namespace: '/namespace783'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace783'})");
@@ -23530,7 +22746,6 @@ module.exports.socketioListen = function(server) {
     const namespace784 = io.of('/namespace784');
     namespace784.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace784');
             ChatRoom.findOne({namespace: '/namespace784'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace784'})");
@@ -23560,7 +22775,6 @@ module.exports.socketioListen = function(server) {
     const namespace785 = io.of('/namespace785');
     namespace785.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace785');
             ChatRoom.findOne({namespace: '/namespace785'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace785'})");
@@ -23590,7 +22804,6 @@ module.exports.socketioListen = function(server) {
     const namespace786 = io.of('/namespace786');
     namespace786.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace786');
             ChatRoom.findOne({namespace: '/namespace786'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace786'})");
@@ -23620,7 +22833,6 @@ module.exports.socketioListen = function(server) {
     const namespace787 = io.of('/namespace787');
     namespace787.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace787');
             ChatRoom.findOne({namespace: '/namespace787'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace787'})");
@@ -23650,7 +22862,6 @@ module.exports.socketioListen = function(server) {
     const namespace788 = io.of('/namespace788');
     namespace788.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace788');
             ChatRoom.findOne({namespace: '/namespace788'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace788'})");
@@ -23680,7 +22891,6 @@ module.exports.socketioListen = function(server) {
     const namespace789 = io.of('/namespace789');
     namespace789.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace789');
             ChatRoom.findOne({namespace: '/namespace789'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace789'})");
@@ -23710,7 +22920,6 @@ module.exports.socketioListen = function(server) {
     const namespace790 = io.of('/namespace790');
     namespace790.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace790');
             ChatRoom.findOne({namespace: '/namespace790'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace790'})");
@@ -23740,7 +22949,6 @@ module.exports.socketioListen = function(server) {
     const namespace791 = io.of('/namespace791');
     namespace791.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace791');
             ChatRoom.findOne({namespace: '/namespace791'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace791'})");
@@ -23770,7 +22978,6 @@ module.exports.socketioListen = function(server) {
     const namespace792 = io.of('/namespace792');
     namespace792.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace792');
             ChatRoom.findOne({namespace: '/namespace792'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace792'})");
@@ -23800,7 +23007,6 @@ module.exports.socketioListen = function(server) {
     const namespace793 = io.of('/namespace793');
     namespace793.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace793');
             ChatRoom.findOne({namespace: '/namespace793'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace793'})");
@@ -23830,7 +23036,6 @@ module.exports.socketioListen = function(server) {
     const namespace794 = io.of('/namespace794');
     namespace794.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace794');
             ChatRoom.findOne({namespace: '/namespace794'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace794'})");
@@ -23860,7 +23065,6 @@ module.exports.socketioListen = function(server) {
     const namespace795 = io.of('/namespace795');
     namespace795.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace795');
             ChatRoom.findOne({namespace: '/namespace795'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace795'})");
@@ -23890,7 +23094,6 @@ module.exports.socketioListen = function(server) {
     const namespace796 = io.of('/namespace796');
     namespace796.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace796');
             ChatRoom.findOne({namespace: '/namespace796'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace796'})");
@@ -23920,7 +23123,6 @@ module.exports.socketioListen = function(server) {
     const namespace797 = io.of('/namespace797');
     namespace797.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace797');
             ChatRoom.findOne({namespace: '/namespace797'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace797'})");
@@ -23950,7 +23152,6 @@ module.exports.socketioListen = function(server) {
     const namespace798 = io.of('/namespace798');
     namespace798.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace798');
             ChatRoom.findOne({namespace: '/namespace798'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace798'})");
@@ -23980,7 +23181,6 @@ module.exports.socketioListen = function(server) {
     const namespace799 = io.of('/namespace799');
     namespace799.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace799');
             ChatRoom.findOne({namespace: '/namespace799'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace799'})");
@@ -24010,7 +23210,6 @@ module.exports.socketioListen = function(server) {
     const namespace800 = io.of('/namespace800');
     namespace800.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace800');
             ChatRoom.findOne({namespace: '/namespace800'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace800'})");
@@ -24040,7 +23239,6 @@ module.exports.socketioListen = function(server) {
     const namespace801 = io.of('/namespace801');
     namespace801.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace801');
             ChatRoom.findOne({namespace: '/namespace801'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace801'})");
@@ -24070,7 +23268,6 @@ module.exports.socketioListen = function(server) {
     const namespace802 = io.of('/namespace802');
     namespace802.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace802');
             ChatRoom.findOne({namespace: '/namespace802'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace802'})");
@@ -24100,7 +23297,6 @@ module.exports.socketioListen = function(server) {
     const namespace803 = io.of('/namespace803');
     namespace803.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace803');
             ChatRoom.findOne({namespace: '/namespace803'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace803'})");
@@ -24130,7 +23326,6 @@ module.exports.socketioListen = function(server) {
     const namespace804 = io.of('/namespace804');
     namespace804.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace804');
             ChatRoom.findOne({namespace: '/namespace804'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace804'})");
@@ -24160,7 +23355,6 @@ module.exports.socketioListen = function(server) {
     const namespace805 = io.of('/namespace805');
     namespace805.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace805');
             ChatRoom.findOne({namespace: '/namespace805'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace805'})");
@@ -24190,7 +23384,6 @@ module.exports.socketioListen = function(server) {
     const namespace806 = io.of('/namespace806');
     namespace806.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace806');
             ChatRoom.findOne({namespace: '/namespace806'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace806'})");
@@ -24220,7 +23413,6 @@ module.exports.socketioListen = function(server) {
     const namespace807 = io.of('/namespace807');
     namespace807.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace807');
             ChatRoom.findOne({namespace: '/namespace807'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace807'})");
@@ -24250,7 +23442,6 @@ module.exports.socketioListen = function(server) {
     const namespace808 = io.of('/namespace808');
     namespace808.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace808');
             ChatRoom.findOne({namespace: '/namespace808'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace808'})");
@@ -24280,7 +23471,6 @@ module.exports.socketioListen = function(server) {
     const namespace809 = io.of('/namespace809');
     namespace809.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace809');
             ChatRoom.findOne({namespace: '/namespace809'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace809'})");
@@ -24310,7 +23500,6 @@ module.exports.socketioListen = function(server) {
     const namespace810 = io.of('/namespace810');
     namespace810.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace810');
             ChatRoom.findOne({namespace: '/namespace810'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace810'})");
@@ -24340,7 +23529,6 @@ module.exports.socketioListen = function(server) {
     const namespace811 = io.of('/namespace811');
     namespace811.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace811');
             ChatRoom.findOne({namespace: '/namespace811'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace811'})");
@@ -24370,7 +23558,6 @@ module.exports.socketioListen = function(server) {
     const namespace812 = io.of('/namespace812');
     namespace812.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace812');
             ChatRoom.findOne({namespace: '/namespace812'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace812'})");
@@ -24400,7 +23587,6 @@ module.exports.socketioListen = function(server) {
     const namespace813 = io.of('/namespace813');
     namespace813.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace813');
             ChatRoom.findOne({namespace: '/namespace813'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace813'})");
@@ -24430,7 +23616,6 @@ module.exports.socketioListen = function(server) {
     const namespace814 = io.of('/namespace814');
     namespace814.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace814');
             ChatRoom.findOne({namespace: '/namespace814'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace814'})");
@@ -24460,7 +23645,6 @@ module.exports.socketioListen = function(server) {
     const namespace815 = io.of('/namespace815');
     namespace815.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace815');
             ChatRoom.findOne({namespace: '/namespace815'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace815'})");
@@ -24490,7 +23674,6 @@ module.exports.socketioListen = function(server) {
     const namespace816 = io.of('/namespace816');
     namespace816.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace816');
             ChatRoom.findOne({namespace: '/namespace816'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace816'})");
@@ -24520,7 +23703,6 @@ module.exports.socketioListen = function(server) {
     const namespace817 = io.of('/namespace817');
     namespace817.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace817');
             ChatRoom.findOne({namespace: '/namespace817'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace817'})");
@@ -24550,7 +23732,6 @@ module.exports.socketioListen = function(server) {
     const namespace818 = io.of('/namespace818');
     namespace818.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace818');
             ChatRoom.findOne({namespace: '/namespace818'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace818'})");
@@ -24580,7 +23761,6 @@ module.exports.socketioListen = function(server) {
     const namespace819 = io.of('/namespace819');
     namespace819.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace819');
             ChatRoom.findOne({namespace: '/namespace819'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace819'})");
@@ -24610,7 +23790,6 @@ module.exports.socketioListen = function(server) {
     const namespace820 = io.of('/namespace820');
     namespace820.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace820');
             ChatRoom.findOne({namespace: '/namespace820'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace820'})");
@@ -24640,7 +23819,6 @@ module.exports.socketioListen = function(server) {
     const namespace821 = io.of('/namespace821');
     namespace821.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace821');
             ChatRoom.findOne({namespace: '/namespace821'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace821'})");
@@ -24670,7 +23848,6 @@ module.exports.socketioListen = function(server) {
     const namespace822 = io.of('/namespace822');
     namespace822.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace822');
             ChatRoom.findOne({namespace: '/namespace822'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace822'})");
@@ -24700,7 +23877,6 @@ module.exports.socketioListen = function(server) {
     const namespace823 = io.of('/namespace823');
     namespace823.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace823');
             ChatRoom.findOne({namespace: '/namespace823'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace823'})");
@@ -24730,7 +23906,6 @@ module.exports.socketioListen = function(server) {
     const namespace824 = io.of('/namespace824');
     namespace824.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace824');
             ChatRoom.findOne({namespace: '/namespace824'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace824'})");
@@ -24760,7 +23935,6 @@ module.exports.socketioListen = function(server) {
     const namespace825 = io.of('/namespace825');
     namespace825.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace825');
             ChatRoom.findOne({namespace: '/namespace825'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace825'})");
@@ -24790,7 +23964,6 @@ module.exports.socketioListen = function(server) {
     const namespace826 = io.of('/namespace826');
     namespace826.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace826');
             ChatRoom.findOne({namespace: '/namespace826'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace826'})");
@@ -24820,7 +23993,6 @@ module.exports.socketioListen = function(server) {
     const namespace827 = io.of('/namespace827');
     namespace827.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace827');
             ChatRoom.findOne({namespace: '/namespace827'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace827'})");
@@ -24850,7 +24022,6 @@ module.exports.socketioListen = function(server) {
     const namespace828 = io.of('/namespace828');
     namespace828.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace828');
             ChatRoom.findOne({namespace: '/namespace828'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace828'})");
@@ -24880,7 +24051,6 @@ module.exports.socketioListen = function(server) {
     const namespace829 = io.of('/namespace829');
     namespace829.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace829');
             ChatRoom.findOne({namespace: '/namespace829'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace829'})");
@@ -24910,7 +24080,6 @@ module.exports.socketioListen = function(server) {
     const namespace830 = io.of('/namespace830');
     namespace830.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace830');
             ChatRoom.findOne({namespace: '/namespace830'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace830'})");
@@ -24940,7 +24109,6 @@ module.exports.socketioListen = function(server) {
     const namespace831 = io.of('/namespace831');
     namespace831.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace831');
             ChatRoom.findOne({namespace: '/namespace831'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace831'})");
@@ -24970,7 +24138,6 @@ module.exports.socketioListen = function(server) {
     const namespace832 = io.of('/namespace832');
     namespace832.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace832');
             ChatRoom.findOne({namespace: '/namespace832'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace832'})");
@@ -25000,7 +24167,6 @@ module.exports.socketioListen = function(server) {
     const namespace833 = io.of('/namespace833');
     namespace833.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace833');
             ChatRoom.findOne({namespace: '/namespace833'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace833'})");
@@ -25030,7 +24196,6 @@ module.exports.socketioListen = function(server) {
     const namespace834 = io.of('/namespace834');
     namespace834.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace834');
             ChatRoom.findOne({namespace: '/namespace834'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace834'})");
@@ -25060,7 +24225,6 @@ module.exports.socketioListen = function(server) {
     const namespace835 = io.of('/namespace835');
     namespace835.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace835');
             ChatRoom.findOne({namespace: '/namespace835'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace835'})");
@@ -25090,7 +24254,6 @@ module.exports.socketioListen = function(server) {
     const namespace836 = io.of('/namespace836');
     namespace836.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace836');
             ChatRoom.findOne({namespace: '/namespace836'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace836'})");
@@ -25120,7 +24283,6 @@ module.exports.socketioListen = function(server) {
     const namespace837 = io.of('/namespace837');
     namespace837.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace837');
             ChatRoom.findOne({namespace: '/namespace837'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace837'})");
@@ -25150,7 +24312,6 @@ module.exports.socketioListen = function(server) {
     const namespace838 = io.of('/namespace838');
     namespace838.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace838');
             ChatRoom.findOne({namespace: '/namespace838'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace838'})");
@@ -25180,7 +24341,6 @@ module.exports.socketioListen = function(server) {
     const namespace839 = io.of('/namespace839');
     namespace839.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace839');
             ChatRoom.findOne({namespace: '/namespace839'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace839'})");
@@ -25210,7 +24370,6 @@ module.exports.socketioListen = function(server) {
     const namespace840 = io.of('/namespace840');
     namespace840.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace840');
             ChatRoom.findOne({namespace: '/namespace840'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace840'})");
@@ -25240,7 +24399,6 @@ module.exports.socketioListen = function(server) {
     const namespace841 = io.of('/namespace841');
     namespace841.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace841');
             ChatRoom.findOne({namespace: '/namespace841'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace841'})");
@@ -25270,7 +24428,6 @@ module.exports.socketioListen = function(server) {
     const namespace842 = io.of('/namespace842');
     namespace842.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace842');
             ChatRoom.findOne({namespace: '/namespace842'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace842'})");
@@ -25300,7 +24457,6 @@ module.exports.socketioListen = function(server) {
     const namespace843 = io.of('/namespace843');
     namespace843.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace843');
             ChatRoom.findOne({namespace: '/namespace843'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace843'})");
@@ -25330,7 +24486,6 @@ module.exports.socketioListen = function(server) {
     const namespace844 = io.of('/namespace844');
     namespace844.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace844');
             ChatRoom.findOne({namespace: '/namespace844'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace844'})");
@@ -25360,7 +24515,6 @@ module.exports.socketioListen = function(server) {
     const namespace845 = io.of('/namespace845');
     namespace845.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace845');
             ChatRoom.findOne({namespace: '/namespace845'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace845'})");
@@ -25390,7 +24544,6 @@ module.exports.socketioListen = function(server) {
     const namespace846 = io.of('/namespace846');
     namespace846.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace846');
             ChatRoom.findOne({namespace: '/namespace846'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace846'})");
@@ -25420,7 +24573,6 @@ module.exports.socketioListen = function(server) {
     const namespace847 = io.of('/namespace847');
     namespace847.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace847');
             ChatRoom.findOne({namespace: '/namespace847'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace847'})");
@@ -25450,7 +24602,6 @@ module.exports.socketioListen = function(server) {
     const namespace848 = io.of('/namespace848');
     namespace848.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace848');
             ChatRoom.findOne({namespace: '/namespace848'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace848'})");
@@ -25480,7 +24631,6 @@ module.exports.socketioListen = function(server) {
     const namespace849 = io.of('/namespace849');
     namespace849.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace849');
             ChatRoom.findOne({namespace: '/namespace849'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace849'})");
@@ -25510,7 +24660,6 @@ module.exports.socketioListen = function(server) {
     const namespace850 = io.of('/namespace850');
     namespace850.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace850');
             ChatRoom.findOne({namespace: '/namespace850'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace850'})");
@@ -25540,7 +24689,6 @@ module.exports.socketioListen = function(server) {
     const namespace851 = io.of('/namespace851');
     namespace851.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace851');
             ChatRoom.findOne({namespace: '/namespace851'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace851'})");
@@ -25570,7 +24718,6 @@ module.exports.socketioListen = function(server) {
     const namespace852 = io.of('/namespace852');
     namespace852.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace852');
             ChatRoom.findOne({namespace: '/namespace852'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace852'})");
@@ -25600,7 +24747,6 @@ module.exports.socketioListen = function(server) {
     const namespace853 = io.of('/namespace853');
     namespace853.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace853');
             ChatRoom.findOne({namespace: '/namespace853'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace853'})");
@@ -25630,7 +24776,6 @@ module.exports.socketioListen = function(server) {
     const namespace854 = io.of('/namespace854');
     namespace854.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace854');
             ChatRoom.findOne({namespace: '/namespace854'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace854'})");
@@ -25660,7 +24805,6 @@ module.exports.socketioListen = function(server) {
     const namespace855 = io.of('/namespace855');
     namespace855.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace855');
             ChatRoom.findOne({namespace: '/namespace855'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace855'})");
@@ -25690,7 +24834,6 @@ module.exports.socketioListen = function(server) {
     const namespace856 = io.of('/namespace856');
     namespace856.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace856');
             ChatRoom.findOne({namespace: '/namespace856'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace856'})");
@@ -25720,7 +24863,6 @@ module.exports.socketioListen = function(server) {
     const namespace857 = io.of('/namespace857');
     namespace857.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace857');
             ChatRoom.findOne({namespace: '/namespace857'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace857'})");
@@ -25750,7 +24892,6 @@ module.exports.socketioListen = function(server) {
     const namespace858 = io.of('/namespace858');
     namespace858.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace858');
             ChatRoom.findOne({namespace: '/namespace858'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace858'})");
@@ -25780,7 +24921,6 @@ module.exports.socketioListen = function(server) {
     const namespace859 = io.of('/namespace859');
     namespace859.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace859');
             ChatRoom.findOne({namespace: '/namespace859'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace859'})");
@@ -25810,7 +24950,6 @@ module.exports.socketioListen = function(server) {
     const namespace860 = io.of('/namespace860');
     namespace860.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace860');
             ChatRoom.findOne({namespace: '/namespace860'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace860'})");
@@ -25840,7 +24979,6 @@ module.exports.socketioListen = function(server) {
     const namespace861 = io.of('/namespace861');
     namespace861.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace861');
             ChatRoom.findOne({namespace: '/namespace861'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace861'})");
@@ -25870,7 +25008,6 @@ module.exports.socketioListen = function(server) {
     const namespace862 = io.of('/namespace862');
     namespace862.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace862');
             ChatRoom.findOne({namespace: '/namespace862'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace862'})");
@@ -25900,7 +25037,6 @@ module.exports.socketioListen = function(server) {
     const namespace863 = io.of('/namespace863');
     namespace863.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace863');
             ChatRoom.findOne({namespace: '/namespace863'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace863'})");
@@ -25930,7 +25066,6 @@ module.exports.socketioListen = function(server) {
     const namespace864 = io.of('/namespace864');
     namespace864.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace864');
             ChatRoom.findOne({namespace: '/namespace864'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace864'})");
@@ -25960,7 +25095,6 @@ module.exports.socketioListen = function(server) {
     const namespace865 = io.of('/namespace865');
     namespace865.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace865');
             ChatRoom.findOne({namespace: '/namespace865'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace865'})");
@@ -25990,7 +25124,6 @@ module.exports.socketioListen = function(server) {
     const namespace866 = io.of('/namespace866');
     namespace866.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace866');
             ChatRoom.findOne({namespace: '/namespace866'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace866'})");
@@ -26020,7 +25153,6 @@ module.exports.socketioListen = function(server) {
     const namespace867 = io.of('/namespace867');
     namespace867.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace867');
             ChatRoom.findOne({namespace: '/namespace867'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace867'})");
@@ -26050,7 +25182,6 @@ module.exports.socketioListen = function(server) {
     const namespace868 = io.of('/namespace868');
     namespace868.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace868');
             ChatRoom.findOne({namespace: '/namespace868'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace868'})");
@@ -26080,7 +25211,6 @@ module.exports.socketioListen = function(server) {
     const namespace869 = io.of('/namespace869');
     namespace869.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace869');
             ChatRoom.findOne({namespace: '/namespace869'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace869'})");
@@ -26110,7 +25240,6 @@ module.exports.socketioListen = function(server) {
     const namespace870 = io.of('/namespace870');
     namespace870.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace870');
             ChatRoom.findOne({namespace: '/namespace870'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace870'})");
@@ -26140,7 +25269,6 @@ module.exports.socketioListen = function(server) {
     const namespace871 = io.of('/namespace871');
     namespace871.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace871');
             ChatRoom.findOne({namespace: '/namespace871'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace871'})");
@@ -26170,7 +25298,6 @@ module.exports.socketioListen = function(server) {
     const namespace872 = io.of('/namespace872');
     namespace872.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace872');
             ChatRoom.findOne({namespace: '/namespace872'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace872'})");
@@ -26200,7 +25327,6 @@ module.exports.socketioListen = function(server) {
     const namespace873 = io.of('/namespace873');
     namespace873.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace873');
             ChatRoom.findOne({namespace: '/namespace873'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace873'})");
@@ -26230,7 +25356,6 @@ module.exports.socketioListen = function(server) {
     const namespace874 = io.of('/namespace874');
     namespace874.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace874');
             ChatRoom.findOne({namespace: '/namespace874'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace874'})");
@@ -26260,7 +25385,6 @@ module.exports.socketioListen = function(server) {
     const namespace875 = io.of('/namespace875');
     namespace875.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace875');
             ChatRoom.findOne({namespace: '/namespace875'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace875'})");
@@ -26290,7 +25414,6 @@ module.exports.socketioListen = function(server) {
     const namespace876 = io.of('/namespace876');
     namespace876.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace876');
             ChatRoom.findOne({namespace: '/namespace876'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace876'})");
@@ -26320,7 +25443,6 @@ module.exports.socketioListen = function(server) {
     const namespace877 = io.of('/namespace877');
     namespace877.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace877');
             ChatRoom.findOne({namespace: '/namespace877'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace877'})");
@@ -26350,7 +25472,6 @@ module.exports.socketioListen = function(server) {
     const namespace878 = io.of('/namespace878');
     namespace878.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace878');
             ChatRoom.findOne({namespace: '/namespace878'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace878'})");
@@ -26380,7 +25501,6 @@ module.exports.socketioListen = function(server) {
     const namespace879 = io.of('/namespace879');
     namespace879.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace879');
             ChatRoom.findOne({namespace: '/namespace879'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace879'})");
@@ -26410,7 +25530,6 @@ module.exports.socketioListen = function(server) {
     const namespace880 = io.of('/namespace880');
     namespace880.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace880');
             ChatRoom.findOne({namespace: '/namespace880'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace880'})");
@@ -26440,7 +25559,6 @@ module.exports.socketioListen = function(server) {
     const namespace881 = io.of('/namespace881');
     namespace881.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace881');
             ChatRoom.findOne({namespace: '/namespace881'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace881'})");
@@ -26470,7 +25588,6 @@ module.exports.socketioListen = function(server) {
     const namespace882 = io.of('/namespace882');
     namespace882.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace882');
             ChatRoom.findOne({namespace: '/namespace882'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace882'})");
@@ -26500,7 +25617,6 @@ module.exports.socketioListen = function(server) {
     const namespace883 = io.of('/namespace883');
     namespace883.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace883');
             ChatRoom.findOne({namespace: '/namespace883'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace883'})");
@@ -26530,7 +25646,6 @@ module.exports.socketioListen = function(server) {
     const namespace884 = io.of('/namespace884');
     namespace884.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace884');
             ChatRoom.findOne({namespace: '/namespace884'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace884'})");
@@ -26560,7 +25675,6 @@ module.exports.socketioListen = function(server) {
     const namespace885 = io.of('/namespace885');
     namespace885.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace885');
             ChatRoom.findOne({namespace: '/namespace885'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace885'})");
@@ -26590,7 +25704,6 @@ module.exports.socketioListen = function(server) {
     const namespace886 = io.of('/namespace886');
     namespace886.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace886');
             ChatRoom.findOne({namespace: '/namespace886'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace886'})");
@@ -26620,7 +25733,6 @@ module.exports.socketioListen = function(server) {
     const namespace887 = io.of('/namespace887');
     namespace887.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace887');
             ChatRoom.findOne({namespace: '/namespace887'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace887'})");
@@ -26650,7 +25762,6 @@ module.exports.socketioListen = function(server) {
     const namespace888 = io.of('/namespace888');
     namespace888.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace888');
             ChatRoom.findOne({namespace: '/namespace888'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace888'})");
@@ -26680,7 +25791,6 @@ module.exports.socketioListen = function(server) {
     const namespace889 = io.of('/namespace889');
     namespace889.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace889');
             ChatRoom.findOne({namespace: '/namespace889'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace889'})");
@@ -26710,7 +25820,6 @@ module.exports.socketioListen = function(server) {
     const namespace890 = io.of('/namespace890');
     namespace890.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace890');
             ChatRoom.findOne({namespace: '/namespace890'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace890'})");
@@ -26740,7 +25849,6 @@ module.exports.socketioListen = function(server) {
     const namespace891 = io.of('/namespace891');
     namespace891.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace891');
             ChatRoom.findOne({namespace: '/namespace891'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace891'})");
@@ -26770,7 +25878,6 @@ module.exports.socketioListen = function(server) {
     const namespace892 = io.of('/namespace892');
     namespace892.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace892');
             ChatRoom.findOne({namespace: '/namespace892'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace892'})");
@@ -26800,7 +25907,6 @@ module.exports.socketioListen = function(server) {
     const namespace893 = io.of('/namespace893');
     namespace893.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace893');
             ChatRoom.findOne({namespace: '/namespace893'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace893'})");
@@ -26830,7 +25936,6 @@ module.exports.socketioListen = function(server) {
     const namespace894 = io.of('/namespace894');
     namespace894.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace894');
             ChatRoom.findOne({namespace: '/namespace894'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace894'})");
@@ -26860,7 +25965,6 @@ module.exports.socketioListen = function(server) {
     const namespace895 = io.of('/namespace895');
     namespace895.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace895');
             ChatRoom.findOne({namespace: '/namespace895'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace895'})");
@@ -26890,7 +25994,6 @@ module.exports.socketioListen = function(server) {
     const namespace896 = io.of('/namespace896');
     namespace896.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace896');
             ChatRoom.findOne({namespace: '/namespace896'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace896'})");
@@ -26920,7 +26023,6 @@ module.exports.socketioListen = function(server) {
     const namespace897 = io.of('/namespace897');
     namespace897.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace897');
             ChatRoom.findOne({namespace: '/namespace897'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace897'})");
@@ -26950,7 +26052,6 @@ module.exports.socketioListen = function(server) {
     const namespace898 = io.of('/namespace898');
     namespace898.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace898');
             ChatRoom.findOne({namespace: '/namespace898'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace898'})");
@@ -26980,7 +26081,6 @@ module.exports.socketioListen = function(server) {
     const namespace899 = io.of('/namespace899');
     namespace899.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace899');
             ChatRoom.findOne({namespace: '/namespace899'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace899'})");
@@ -27010,7 +26110,6 @@ module.exports.socketioListen = function(server) {
     const namespace900 = io.of('/namespace900');
     namespace900.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace900');
             ChatRoom.findOne({namespace: '/namespace900'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace900'})");
@@ -27040,7 +26139,6 @@ module.exports.socketioListen = function(server) {
     const namespace901 = io.of('/namespace901');
     namespace901.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace901');
             ChatRoom.findOne({namespace: '/namespace901'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace901'})");
@@ -27070,7 +26168,6 @@ module.exports.socketioListen = function(server) {
     const namespace902 = io.of('/namespace902');
     namespace902.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace902');
             ChatRoom.findOne({namespace: '/namespace902'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace902'})");
@@ -27100,7 +26197,6 @@ module.exports.socketioListen = function(server) {
     const namespace903 = io.of('/namespace903');
     namespace903.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace903');
             ChatRoom.findOne({namespace: '/namespace903'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace903'})");
@@ -27130,7 +26226,6 @@ module.exports.socketioListen = function(server) {
     const namespace904 = io.of('/namespace904');
     namespace904.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace904');
             ChatRoom.findOne({namespace: '/namespace904'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace904'})");
@@ -27160,7 +26255,6 @@ module.exports.socketioListen = function(server) {
     const namespace905 = io.of('/namespace905');
     namespace905.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace905');
             ChatRoom.findOne({namespace: '/namespace905'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace905'})");
@@ -27190,7 +26284,6 @@ module.exports.socketioListen = function(server) {
     const namespace906 = io.of('/namespace906');
     namespace906.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace906');
             ChatRoom.findOne({namespace: '/namespace906'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace906'})");
@@ -27220,7 +26313,6 @@ module.exports.socketioListen = function(server) {
     const namespace907 = io.of('/namespace907');
     namespace907.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace907');
             ChatRoom.findOne({namespace: '/namespace907'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace907'})");
@@ -27250,7 +26342,6 @@ module.exports.socketioListen = function(server) {
     const namespace908 = io.of('/namespace908');
     namespace908.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace908');
             ChatRoom.findOne({namespace: '/namespace908'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace908'})");
@@ -27280,7 +26371,6 @@ module.exports.socketioListen = function(server) {
     const namespace909 = io.of('/namespace909');
     namespace909.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace909');
             ChatRoom.findOne({namespace: '/namespace909'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace909'})");
@@ -27310,7 +26400,6 @@ module.exports.socketioListen = function(server) {
     const namespace910 = io.of('/namespace910');
     namespace910.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace910');
             ChatRoom.findOne({namespace: '/namespace910'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace910'})");
@@ -27340,7 +26429,6 @@ module.exports.socketioListen = function(server) {
     const namespace911 = io.of('/namespace911');
     namespace911.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace911');
             ChatRoom.findOne({namespace: '/namespace911'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace911'})");
@@ -27370,7 +26458,6 @@ module.exports.socketioListen = function(server) {
     const namespace912 = io.of('/namespace912');
     namespace912.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace912');
             ChatRoom.findOne({namespace: '/namespace912'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace912'})");
@@ -27400,7 +26487,6 @@ module.exports.socketioListen = function(server) {
     const namespace913 = io.of('/namespace913');
     namespace913.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace913');
             ChatRoom.findOne({namespace: '/namespace913'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace913'})");
@@ -27430,7 +26516,6 @@ module.exports.socketioListen = function(server) {
     const namespace914 = io.of('/namespace914');
     namespace914.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace914');
             ChatRoom.findOne({namespace: '/namespace914'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace914'})");
@@ -27460,7 +26545,6 @@ module.exports.socketioListen = function(server) {
     const namespace915 = io.of('/namespace915');
     namespace915.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace915');
             ChatRoom.findOne({namespace: '/namespace915'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace915'})");
@@ -27490,7 +26574,6 @@ module.exports.socketioListen = function(server) {
     const namespace916 = io.of('/namespace916');
     namespace916.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace916');
             ChatRoom.findOne({namespace: '/namespace916'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace916'})");
@@ -27520,7 +26603,6 @@ module.exports.socketioListen = function(server) {
     const namespace917 = io.of('/namespace917');
     namespace917.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace917');
             ChatRoom.findOne({namespace: '/namespace917'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace917'})");
@@ -27550,7 +26632,6 @@ module.exports.socketioListen = function(server) {
     const namespace918 = io.of('/namespace918');
     namespace918.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace918');
             ChatRoom.findOne({namespace: '/namespace918'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace918'})");
@@ -27580,7 +26661,6 @@ module.exports.socketioListen = function(server) {
     const namespace919 = io.of('/namespace919');
     namespace919.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace919');
             ChatRoom.findOne({namespace: '/namespace919'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace919'})");
@@ -27610,7 +26690,6 @@ module.exports.socketioListen = function(server) {
     const namespace920 = io.of('/namespace920');
     namespace920.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace920');
             ChatRoom.findOne({namespace: '/namespace920'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace920'})");
@@ -27640,7 +26719,6 @@ module.exports.socketioListen = function(server) {
     const namespace921 = io.of('/namespace921');
     namespace921.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace921');
             ChatRoom.findOne({namespace: '/namespace921'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace921'})");
@@ -27670,7 +26748,6 @@ module.exports.socketioListen = function(server) {
     const namespace922 = io.of('/namespace922');
     namespace922.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace922');
             ChatRoom.findOne({namespace: '/namespace922'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace922'})");
@@ -27700,7 +26777,6 @@ module.exports.socketioListen = function(server) {
     const namespace923 = io.of('/namespace923');
     namespace923.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace923');
             ChatRoom.findOne({namespace: '/namespace923'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace923'})");
@@ -27730,7 +26806,6 @@ module.exports.socketioListen = function(server) {
     const namespace924 = io.of('/namespace924');
     namespace924.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace924');
             ChatRoom.findOne({namespace: '/namespace924'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace924'})");
@@ -27760,7 +26835,6 @@ module.exports.socketioListen = function(server) {
     const namespace925 = io.of('/namespace925');
     namespace925.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace925');
             ChatRoom.findOne({namespace: '/namespace925'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace925'})");
@@ -27790,7 +26864,6 @@ module.exports.socketioListen = function(server) {
     const namespace926 = io.of('/namespace926');
     namespace926.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace926');
             ChatRoom.findOne({namespace: '/namespace926'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace926'})");
@@ -27820,7 +26893,6 @@ module.exports.socketioListen = function(server) {
     const namespace927 = io.of('/namespace927');
     namespace927.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace927');
             ChatRoom.findOne({namespace: '/namespace927'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace927'})");
@@ -27850,7 +26922,6 @@ module.exports.socketioListen = function(server) {
     const namespace928 = io.of('/namespace928');
     namespace928.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace928');
             ChatRoom.findOne({namespace: '/namespace928'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace928'})");
@@ -27880,7 +26951,6 @@ module.exports.socketioListen = function(server) {
     const namespace929 = io.of('/namespace929');
     namespace929.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace929');
             ChatRoom.findOne({namespace: '/namespace929'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace929'})");
@@ -27910,7 +26980,6 @@ module.exports.socketioListen = function(server) {
     const namespace930 = io.of('/namespace930');
     namespace930.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace930');
             ChatRoom.findOne({namespace: '/namespace930'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace930'})");
@@ -27940,7 +27009,6 @@ module.exports.socketioListen = function(server) {
     const namespace931 = io.of('/namespace931');
     namespace931.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace931');
             ChatRoom.findOne({namespace: '/namespace931'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace931'})");
@@ -27970,7 +27038,6 @@ module.exports.socketioListen = function(server) {
     const namespace932 = io.of('/namespace932');
     namespace932.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace932');
             ChatRoom.findOne({namespace: '/namespace932'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace932'})");
@@ -28000,7 +27067,6 @@ module.exports.socketioListen = function(server) {
     const namespace933 = io.of('/namespace933');
     namespace933.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace933');
             ChatRoom.findOne({namespace: '/namespace933'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace933'})");
@@ -28030,7 +27096,6 @@ module.exports.socketioListen = function(server) {
     const namespace934 = io.of('/namespace934');
     namespace934.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace934');
             ChatRoom.findOne({namespace: '/namespace934'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace934'})");
@@ -28060,7 +27125,6 @@ module.exports.socketioListen = function(server) {
     const namespace935 = io.of('/namespace935');
     namespace935.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace935');
             ChatRoom.findOne({namespace: '/namespace935'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace935'})");
@@ -28090,7 +27154,6 @@ module.exports.socketioListen = function(server) {
     const namespace936 = io.of('/namespace936');
     namespace936.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace936');
             ChatRoom.findOne({namespace: '/namespace936'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace936'})");
@@ -28120,7 +27183,6 @@ module.exports.socketioListen = function(server) {
     const namespace937 = io.of('/namespace937');
     namespace937.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace937');
             ChatRoom.findOne({namespace: '/namespace937'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace937'})");
@@ -28150,7 +27212,6 @@ module.exports.socketioListen = function(server) {
     const namespace938 = io.of('/namespace938');
     namespace938.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace938');
             ChatRoom.findOne({namespace: '/namespace938'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace938'})");
@@ -28180,7 +27241,6 @@ module.exports.socketioListen = function(server) {
     const namespace939 = io.of('/namespace939');
     namespace939.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace939');
             ChatRoom.findOne({namespace: '/namespace939'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace939'})");
@@ -28210,7 +27270,6 @@ module.exports.socketioListen = function(server) {
     const namespace940 = io.of('/namespace940');
     namespace940.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace940');
             ChatRoom.findOne({namespace: '/namespace940'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace940'})");
@@ -28240,7 +27299,6 @@ module.exports.socketioListen = function(server) {
     const namespace941 = io.of('/namespace941');
     namespace941.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace941');
             ChatRoom.findOne({namespace: '/namespace941'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace941'})");
@@ -28270,7 +27328,6 @@ module.exports.socketioListen = function(server) {
     const namespace942 = io.of('/namespace942');
     namespace942.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace942');
             ChatRoom.findOne({namespace: '/namespace942'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace942'})");
@@ -28300,7 +27357,6 @@ module.exports.socketioListen = function(server) {
     const namespace943 = io.of('/namespace943');
     namespace943.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace943');
             ChatRoom.findOne({namespace: '/namespace943'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace943'})");
@@ -28330,7 +27386,6 @@ module.exports.socketioListen = function(server) {
     const namespace944 = io.of('/namespace944');
     namespace944.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace944');
             ChatRoom.findOne({namespace: '/namespace944'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace944'})");
@@ -28360,7 +27415,6 @@ module.exports.socketioListen = function(server) {
     const namespace945 = io.of('/namespace945');
     namespace945.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace945');
             ChatRoom.findOne({namespace: '/namespace945'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace945'})");
@@ -28390,7 +27444,6 @@ module.exports.socketioListen = function(server) {
     const namespace946 = io.of('/namespace946');
     namespace946.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace946');
             ChatRoom.findOne({namespace: '/namespace946'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace946'})");
@@ -28420,7 +27473,6 @@ module.exports.socketioListen = function(server) {
     const namespace947 = io.of('/namespace947');
     namespace947.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace947');
             ChatRoom.findOne({namespace: '/namespace947'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace947'})");
@@ -28450,7 +27502,6 @@ module.exports.socketioListen = function(server) {
     const namespace948 = io.of('/namespace948');
     namespace948.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace948');
             ChatRoom.findOne({namespace: '/namespace948'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace948'})");
@@ -28480,7 +27531,6 @@ module.exports.socketioListen = function(server) {
     const namespace949 = io.of('/namespace949');
     namespace949.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace949');
             ChatRoom.findOne({namespace: '/namespace949'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace949'})");
@@ -28510,7 +27560,6 @@ module.exports.socketioListen = function(server) {
     const namespace950 = io.of('/namespace950');
     namespace950.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace950');
             ChatRoom.findOne({namespace: '/namespace950'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace950'})");
@@ -28540,7 +27589,6 @@ module.exports.socketioListen = function(server) {
     const namespace951 = io.of('/namespace951');
     namespace951.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace951');
             ChatRoom.findOne({namespace: '/namespace951'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace951'})");
@@ -28570,7 +27618,6 @@ module.exports.socketioListen = function(server) {
     const namespace952 = io.of('/namespace952');
     namespace952.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace952');
             ChatRoom.findOne({namespace: '/namespace952'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace952'})");
@@ -28600,7 +27647,6 @@ module.exports.socketioListen = function(server) {
     const namespace953 = io.of('/namespace953');
     namespace953.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace953');
             ChatRoom.findOne({namespace: '/namespace953'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace953'})");
@@ -28630,7 +27676,6 @@ module.exports.socketioListen = function(server) {
     const namespace954 = io.of('/namespace954');
     namespace954.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace954');
             ChatRoom.findOne({namespace: '/namespace954'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace954'})");
@@ -28660,7 +27705,6 @@ module.exports.socketioListen = function(server) {
     const namespace955 = io.of('/namespace955');
     namespace955.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace955');
             ChatRoom.findOne({namespace: '/namespace955'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace955'})");
@@ -28690,7 +27734,6 @@ module.exports.socketioListen = function(server) {
     const namespace956 = io.of('/namespace956');
     namespace956.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace956');
             ChatRoom.findOne({namespace: '/namespace956'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace956'})");
@@ -28720,7 +27763,6 @@ module.exports.socketioListen = function(server) {
     const namespace957 = io.of('/namespace957');
     namespace957.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace957');
             ChatRoom.findOne({namespace: '/namespace957'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace957'})");
@@ -28750,7 +27792,6 @@ module.exports.socketioListen = function(server) {
     const namespace958 = io.of('/namespace958');
     namespace958.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace958');
             ChatRoom.findOne({namespace: '/namespace958'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace958'})");
@@ -28780,7 +27821,6 @@ module.exports.socketioListen = function(server) {
     const namespace959 = io.of('/namespace959');
     namespace959.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace959');
             ChatRoom.findOne({namespace: '/namespace959'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace959'})");
@@ -28810,7 +27850,6 @@ module.exports.socketioListen = function(server) {
     const namespace960 = io.of('/namespace960');
     namespace960.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace960');
             ChatRoom.findOne({namespace: '/namespace960'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace960'})");
@@ -28840,7 +27879,6 @@ module.exports.socketioListen = function(server) {
     const namespace961 = io.of('/namespace961');
     namespace961.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace961');
             ChatRoom.findOne({namespace: '/namespace961'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace961'})");
@@ -28870,7 +27908,6 @@ module.exports.socketioListen = function(server) {
     const namespace962 = io.of('/namespace962');
     namespace962.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace962');
             ChatRoom.findOne({namespace: '/namespace962'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace962'})");
@@ -28900,7 +27937,6 @@ module.exports.socketioListen = function(server) {
     const namespace963 = io.of('/namespace963');
     namespace963.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace963');
             ChatRoom.findOne({namespace: '/namespace963'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace963'})");
@@ -28930,7 +27966,6 @@ module.exports.socketioListen = function(server) {
     const namespace964 = io.of('/namespace964');
     namespace964.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace964');
             ChatRoom.findOne({namespace: '/namespace964'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace964'})");
@@ -28960,7 +27995,6 @@ module.exports.socketioListen = function(server) {
     const namespace965 = io.of('/namespace965');
     namespace965.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace965');
             ChatRoom.findOne({namespace: '/namespace965'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace965'})");
@@ -28990,7 +28024,6 @@ module.exports.socketioListen = function(server) {
     const namespace966 = io.of('/namespace966');
     namespace966.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace966');
             ChatRoom.findOne({namespace: '/namespace966'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace966'})");
@@ -29020,7 +28053,6 @@ module.exports.socketioListen = function(server) {
     const namespace967 = io.of('/namespace967');
     namespace967.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace967');
             ChatRoom.findOne({namespace: '/namespace967'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace967'})");
@@ -29050,7 +28082,6 @@ module.exports.socketioListen = function(server) {
     const namespace968 = io.of('/namespace968');
     namespace968.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace968');
             ChatRoom.findOne({namespace: '/namespace968'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace968'})");
@@ -29080,7 +28111,6 @@ module.exports.socketioListen = function(server) {
     const namespace969 = io.of('/namespace969');
     namespace969.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace969');
             ChatRoom.findOne({namespace: '/namespace969'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace969'})");
@@ -29110,7 +28140,6 @@ module.exports.socketioListen = function(server) {
     const namespace970 = io.of('/namespace970');
     namespace970.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace970');
             ChatRoom.findOne({namespace: '/namespace970'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace970'})");
@@ -29140,7 +28169,6 @@ module.exports.socketioListen = function(server) {
     const namespace971 = io.of('/namespace971');
     namespace971.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace971');
             ChatRoom.findOne({namespace: '/namespace971'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace971'})");
@@ -29170,7 +28198,6 @@ module.exports.socketioListen = function(server) {
     const namespace972 = io.of('/namespace972');
     namespace972.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace972');
             ChatRoom.findOne({namespace: '/namespace972'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace972'})");
@@ -29200,7 +28227,6 @@ module.exports.socketioListen = function(server) {
     const namespace973 = io.of('/namespace973');
     namespace973.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace973');
             ChatRoom.findOne({namespace: '/namespace973'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace973'})");
@@ -29230,7 +28256,6 @@ module.exports.socketioListen = function(server) {
     const namespace974 = io.of('/namespace974');
     namespace974.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace974');
             ChatRoom.findOne({namespace: '/namespace974'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace974'})");
@@ -29260,7 +28285,6 @@ module.exports.socketioListen = function(server) {
     const namespace975 = io.of('/namespace975');
     namespace975.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace975');
             ChatRoom.findOne({namespace: '/namespace975'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace975'})");
@@ -29290,7 +28314,6 @@ module.exports.socketioListen = function(server) {
     const namespace976 = io.of('/namespace976');
     namespace976.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace976');
             ChatRoom.findOne({namespace: '/namespace976'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace976'})");
@@ -29320,7 +28343,6 @@ module.exports.socketioListen = function(server) {
     const namespace977 = io.of('/namespace977');
     namespace977.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace977');
             ChatRoom.findOne({namespace: '/namespace977'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace977'})");
@@ -29350,7 +28372,6 @@ module.exports.socketioListen = function(server) {
     const namespace978 = io.of('/namespace978');
     namespace978.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace978');
             ChatRoom.findOne({namespace: '/namespace978'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace978'})");
@@ -29380,7 +28401,6 @@ module.exports.socketioListen = function(server) {
     const namespace979 = io.of('/namespace979');
     namespace979.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace979');
             ChatRoom.findOne({namespace: '/namespace979'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace979'})");
@@ -29410,7 +28430,6 @@ module.exports.socketioListen = function(server) {
     const namespace980 = io.of('/namespace980');
     namespace980.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace980');
             ChatRoom.findOne({namespace: '/namespace980'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace980'})");
@@ -29440,7 +28459,6 @@ module.exports.socketioListen = function(server) {
     const namespace981 = io.of('/namespace981');
     namespace981.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace981');
             ChatRoom.findOne({namespace: '/namespace981'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace981'})");
@@ -29470,7 +28488,6 @@ module.exports.socketioListen = function(server) {
     const namespace982 = io.of('/namespace982');
     namespace982.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace982');
             ChatRoom.findOne({namespace: '/namespace982'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace982'})");
@@ -29500,7 +28517,6 @@ module.exports.socketioListen = function(server) {
     const namespace983 = io.of('/namespace983');
     namespace983.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace983');
             ChatRoom.findOne({namespace: '/namespace983'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace983'})");
@@ -29530,7 +28546,6 @@ module.exports.socketioListen = function(server) {
     const namespace984 = io.of('/namespace984');
     namespace984.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace984');
             ChatRoom.findOne({namespace: '/namespace984'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace984'})");
@@ -29560,7 +28575,6 @@ module.exports.socketioListen = function(server) {
     const namespace985 = io.of('/namespace985');
     namespace985.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace985');
             ChatRoom.findOne({namespace: '/namespace985'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace985'})");
@@ -29590,7 +28604,6 @@ module.exports.socketioListen = function(server) {
     const namespace986 = io.of('/namespace986');
     namespace986.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace986');
             ChatRoom.findOne({namespace: '/namespace986'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace986'})");
@@ -29620,7 +28633,6 @@ module.exports.socketioListen = function(server) {
     const namespace987 = io.of('/namespace987');
     namespace987.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace987');
             ChatRoom.findOne({namespace: '/namespace987'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace987'})");
@@ -29650,7 +28662,6 @@ module.exports.socketioListen = function(server) {
     const namespace988 = io.of('/namespace988');
     namespace988.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace988');
             ChatRoom.findOne({namespace: '/namespace988'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace988'})");
@@ -29680,7 +28691,6 @@ module.exports.socketioListen = function(server) {
     const namespace989 = io.of('/namespace989');
     namespace989.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace989');
             ChatRoom.findOne({namespace: '/namespace989'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace989'})");
@@ -29710,7 +28720,6 @@ module.exports.socketioListen = function(server) {
     const namespace990 = io.of('/namespace990');
     namespace990.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace990');
             ChatRoom.findOne({namespace: '/namespace990'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace990'})");
@@ -29740,7 +28749,6 @@ module.exports.socketioListen = function(server) {
     const namespace991 = io.of('/namespace991');
     namespace991.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace991');
             ChatRoom.findOne({namespace: '/namespace991'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace991'})");
@@ -29770,7 +28778,6 @@ module.exports.socketioListen = function(server) {
     const namespace992 = io.of('/namespace992');
     namespace992.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace992');
             ChatRoom.findOne({namespace: '/namespace992'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace992'})");
@@ -29800,7 +28807,6 @@ module.exports.socketioListen = function(server) {
     const namespace993 = io.of('/namespace993');
     namespace993.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace993');
             ChatRoom.findOne({namespace: '/namespace993'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace993'})");
@@ -29830,7 +28836,6 @@ module.exports.socketioListen = function(server) {
     const namespace994 = io.of('/namespace994');
     namespace994.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace994');
             ChatRoom.findOne({namespace: '/namespace994'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace994'})");
@@ -29860,7 +28865,6 @@ module.exports.socketioListen = function(server) {
     const namespace995 = io.of('/namespace995');
     namespace995.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace995');
             ChatRoom.findOne({namespace: '/namespace995'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace995'})");
@@ -29890,7 +28894,6 @@ module.exports.socketioListen = function(server) {
     const namespace996 = io.of('/namespace996');
     namespace996.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace996');
             ChatRoom.findOne({namespace: '/namespace996'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace996'})");
@@ -29920,7 +28923,6 @@ module.exports.socketioListen = function(server) {
     const namespace997 = io.of('/namespace997');
     namespace997.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace997');
             ChatRoom.findOne({namespace: '/namespace997'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace997'})");
@@ -29950,7 +28952,6 @@ module.exports.socketioListen = function(server) {
     const namespace998 = io.of('/namespace998');
     namespace998.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace998');
             ChatRoom.findOne({namespace: '/namespace998'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace998'})");
@@ -29980,7 +28981,6 @@ module.exports.socketioListen = function(server) {
     const namespace999 = io.of('/namespace999');
     namespace999.on('connection', function(socket) {
         socket.on('chat message', function(msg) {
-            console.log('Received chat messsage through namespace999');
             ChatRoom.findOne({namespace: '/namespace999'}, function(err, chatRoom) {
                 if (err) {
                     console.log("XXX: Error at ChatRoom.findOne({namespace: '/namespace999'})");
