@@ -40,11 +40,6 @@ function socket(current_user_name, namespace_id) {
     });
 }
 
-// match button on click:
-//    - switch the current user to the socket room for that match
-
-
-
 function renderMatches(matchObj){
     const profileId = window.location.search.substring(1); // returns url query w/o "?"
     const matches = matchObj.matches;
