@@ -17,16 +17,15 @@ passport.use(new GoogleStrategy({
             // Hack alert!!! Removing the last 6 characters ('?sz=50') from profilePictureUrl to get full-size image
             profilePictureUrl = profilePictureUrl.substring(0, profilePictureUrl.length - 6)
             user = new User({
-            name            : profile.displayName,
-            fbid            : profile.id,
-            profilePicture  : profilePictureUrl
-        });
+                name            : profile.displayName,
+                fbid            : profile.id,
+                profilePicture  : profilePictureUrl
+            });
 
-        user.save(function(err) {
-            if (err) console.log(err);
-
-            return done(err, user);
-        });
+            user.save(function(err) {
+                if (err) console.log(err);
+                return done(err, user);
+            });
         } else {
             return done(err, user);
         }
