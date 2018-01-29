@@ -36,7 +36,7 @@
 }
 
 .card {
-  width:95%;
+  width:auto;
   /*height: 350px;*/
   padding-bottom:0px;
   border:none;
@@ -106,9 +106,9 @@
 .selected {
   opacity: .5;
   border-style: solid;
-  border-width: 10px;
-  border-color: #fff0;
-
+  border-width: 6px;
+  border-color: #1113;
+  border-radius: .25rem;
 }
 
 .overlay {
@@ -127,16 +127,16 @@
 
 .check-icon {
   position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 60px;
-    color: white;
-    background-color: #fff0;
-    height: 25%;
-    width: 25%;
-    text-align: center;
-    line-height: 100%;
-    opacity: 0;
+  top: 37%;
+  left: 42%;
+  font-size: 100px;
+  color: white;
+  background-color: #fff0;
+  height: auto;
+  width: auto;
+  text-align: center;
+  line-height: 100%;
+  opacity: 0;
 }
 
 .information {

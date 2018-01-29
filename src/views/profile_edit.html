@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <nav class="navbar navbar-inverse bg-inverse navbar-expand-lg navbar-light" style="background-color: #fff; box-shadow: 3px 3px 5px grey;">
         <a class="navbar-brand" href="#">
-            <img src="https://image.freepik.com/free-icon/chef-hat-on-a-plate-from-side-view_318-61041.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+            <img src="https://image.freepik.com/free-icon/chef-hat-on-a-plate-from-side-view_318-61041.jpg" width="30" height="30" class="d-inline-block align-top" alt="" style="display: inline-block!important;">
             potluck
         </a>
         <div class="navbar-nav" id="nav-item-container">
@@ -22,7 +22,8 @@
 <!--       <div class="large-profile-container text-center my-4">
         <div class="circle-avatar" id="profile-image"></div>
       </div> -->
-      <hr>
+<!--       <hr> -->
+<br>
       <div id="name-container">
         <!-- name inserted here -->
         <div class="container">
@@ -31,13 +32,12 @@
       </div>
       <div class="media">
         <div class="col-6">
-          <img id="user-profile-image" src="http://www.joewigdahl.com/wp-content/uploads/MG_2407-906x640.jpg" class="img-fluid rounded media-object" style="width: 50%">
+          <img id="user-profile-image" src="http://www.joewigdahl.com/wp-content/uploads/MG_2407-906x640.jpg" class="img-fluid rounded media-object" style="width: 70%">
         </div>
         <div class="col-6">
           <h4 class="media-heading">about</h4>
           <br>
-          <textarea name="bio" form="user-bio" id="user-bio-text" > "user's pre-existing bio 
-            from server, can be edited, when done, need to send this to server and save" </textarea>
+          <textarea name="bio" form="user-bio" id="user-bio-text" placeholder="say something about yourself!" style="margin-top: 0px;margin-bottom: 0px;height: 110px;width: 90%;"></textarea>
           <div>
             <button id="change-bio-btn">save changes</button> 
             <!-- ^ Add event listener -->
