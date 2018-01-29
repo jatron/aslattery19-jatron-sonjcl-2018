@@ -120,6 +120,8 @@ function renderMatches(matchObj, current_user_name){
 
             const namespace_id = this.id;
 
+            renderMessageHistory(namespace_id);
+
             //call updateSocket function to switch the namespace
             updateSocket(current_user_name, namespace_id);
 
@@ -210,6 +212,14 @@ function renderMatches(matchObj, current_user_name){
                 };
                 mealsBar.appendChild(card);
             };
+    }
+}
+
+function renderMessageHistory(namespace_id) {
+    // Delete all messages on page
+    var messages = document.getElementById("messages");
+    while (messages.firstChild) {
+        messages.removeChild(messages.firstChild);
     }
 }
 
