@@ -6,7 +6,11 @@ function main() {
     // add user string later from profileId
     // make below work once server routes work
     get('api/matches', {userId : profileId}, function(matchObj) {
-        renderMatches(matchObj);
+        get('api/profile', {userId: profileId}, function(profile) {
+            renderMatches(matchObj, profile.name);
+        }, function() {
+            console.log("Couldn't access profile :(");
+        });
     }, function() {
         console.log("Couldn't access matches :(");
     });
@@ -40,7 +44,7 @@ function socket(current_user_name, namespace_id) {
     });
 }
 
-function renderMatches(matchObj){
+function renderMatches(matchObj, current_user_name){
     const profileId = window.location.search.substring(1); // returns url query w/o "?"
     const matches = matchObj.matches;
 
@@ -69,7 +73,7 @@ function renderMatches(matchObj){
             // GET meals for that user
             renderMatchMeals(match);
 
-            const current_user_name = "Alexis Slattery"; // match.nameOfUserLoggedIn
+
             const namespace_id = this.id;
 
             //call socket function to switch the room
