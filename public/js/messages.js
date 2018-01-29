@@ -3,6 +3,7 @@
 // Global variables
 var socket;
 var button_id;
+var namespacesInitialized = [];
 
 function main() {
     const profileId = window.location.search.substring(1); // returns url query w/o "?"
@@ -34,11 +35,20 @@ function updateSocket(current_user_name, namespace_id) {
     button_id = namespace_id.substr(1); // remove '/' character at the beginning of namespace_id
     button[0].setAttribute("id", button_id);
 
-    // TODO: Do this only if socket.on hasn't been created yet
-    socket.on('chat message', function(msg){
-        console.log('new message; userName:', msg.userName, '; message:', msg.message, '; namespace:', namespace_id);
-        $('#messages').append($('<li>').text(msg.userName + ": " + msg.message));
-    });
+    // Only call socket.on() once for each namespace
+    var isNamespaceInitialized = false;
+    for (var i = 0; i < namespacesInitialized.length; i++) {
+        if (namespacesInitialized[i] === namespace_id) {
+            isNamespaceInitialized = true;
+        }
+    }
+    if (isNamespaceInitialized === false) {
+        socket.on('chat message', function(msg){
+            console.log('new message; userName:', msg.userName, '; message:', msg.message, '; namespace:', namespace_id);
+            $('#messages').append($('<li>').text(msg.userName + ": " + msg.message));
+        });
+        namespacesInitialized.push(namespace_id);
+    }
 }
 
 function renderMatches(matchObj, current_user_name){
