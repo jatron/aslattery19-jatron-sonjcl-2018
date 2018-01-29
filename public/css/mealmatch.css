@@ -152,25 +152,31 @@
   display: inline-block;
 }
 
+
 #bioDiv {
-  position: absolute;
-  height: 100px;
-  width: 300px;
-  left: 20%;
-  top:3%;
-  border-color: black;
-  border-width: 3px;
+    position: absolute;
+    top: 15%;
+    height: 33%;
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: 5px;
+
+
 }
 
 
 #mealsDiv {
-  height: 150px;
+  height: 50%;
+  margin: 0;
+
 }
 
 .mealPhoto {
   height: 100%;
   width: auto;
   padding: 5px;
+  border-radius: 0.5rem;
 }
 
 .list{
@@ -179,6 +185,9 @@
 
 .imgContainer{
   float:left;
+  height: 70%;
+  width: 40%;
+  padding: 1%;
 }
 
 
@@ -212,17 +221,11 @@
 
 #profileNameDiv {
     position: absolute;
-    left: 20%;
+    left: 50%;
     top: 5%;
 }
 
-#bioDiv {
-    position: absolute;
-    top: 20%;
-    height: 20%;
-    border: 1px solid black;
-    border-radius: 8px;
-}
+
 
 .center {
     margin: auto;
@@ -243,4 +246,7 @@
   transform: translate(-50%, -50%);
 }
 
+#profilePic {
+  border-radius: 5px;
+}
 
