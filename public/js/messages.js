@@ -26,7 +26,7 @@ function main() {
 
 }
 
-function updateSocket(current_user_name, namespace_id) {
+function updateSocket(current_user_name, namespace_id, match) {
     // join the correct namespace
     socket = io(namespace_id);
 
@@ -45,6 +45,7 @@ function updateSocket(current_user_name, namespace_id) {
     if (isNamespaceInitialized === false) {
         socket.on('chat message', function(msg){
             $('#messages').append($('<li>').text(msg.userName + ": " + msg.message));
+            match.messages.push({userName: msg.userName, message: msg.message});
         });
         namespacesInitialized.push(namespace_id);
     }
@@ -119,7 +120,7 @@ function renderMatches(matchObj, current_user_name){
             renderMessageHistory(namespace_id, match);
 
             //call updateSocket function to switch the namespace
-            updateSocket(current_user_name, namespace_id);
+            updateSocket(current_user_name, namespace_id, match);
 
         });
 
