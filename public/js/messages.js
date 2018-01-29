@@ -1,5 +1,9 @@
 // client side javascript for messages page
 
+// Global variables
+var socket;
+var button_id;
+
 function main() {
     const profileId = window.location.search.substring(1); // returns url query w/o "?"
     // get all profile info needed to render user profile
@@ -21,26 +25,19 @@ function main() {
 
 }
 
-function socket(current_user_name, namespace_id) {
+function updateSocket(current_user_name, namespace_id) {
     // join the correct namespace
-    var socket = io(namespace_id);
+    socket = io(namespace_id);
 
     // set send button id to namespace id so the message goes to the correct match
     var button = document.getElementsByClassName("send-button");
-    const button_id = namespace_id.substr(1); // remove '/' character at the beginning of namespace_id
+    button_id = namespace_id.substr(1); // remove '/' character at the beginning of namespace_id
     button[0].setAttribute("id", button_id);
 
+    // TODO: Do this only if socket.on hasn't been created yet
     socket.on('chat message', function(msg){
+        console.log('new message; userName:', msg.userName, '; message:', msg.message, '; namespace:', namespace_id);
         $('#messages').append($('<li>').text(msg.userName + ": " + msg.message));
-    });
-
-    $('form').submit(function(){
-        socket.emit('chat message', {
-            userName    : current_user_name,
-            message     : $('#' + button_id).val()
-        });
-        $('#' + button_id).val('');
-        return false;
     });
 }
 
@@ -82,7 +79,7 @@ function renderMatches(matchObj, current_user_name){
                 // create input box
                 const inputBox = document.createElement("input");
                 inputBox.className = "send-button";
-                inputBox.setAttribute("id", "id") // The id will be changed later upon calling socket()
+                inputBox.setAttribute("id", "id") // The id will be changed later upon calling updateSocket()
                 inputBox.setAttribute("autocomplete", "off");
 
                 // create send button
@@ -96,6 +93,16 @@ function renderMatches(matchObj, current_user_name){
                 // render chatPrompt
                 const messagesBar = document.getElementById("messages-bar");
                 messagesBar.appendChild(chatPrompt);
+
+                // Create event listener for form once
+                $('form').submit(function(){
+                    socket.emit('chat message', {
+                        userName    : current_user_name,
+                        message     : $('#' + button_id).val()
+                    });
+                    $('#' + button_id).val('');
+                    return false;
+                });
             }
 
             // GET meals for that user
@@ -103,8 +110,8 @@ function renderMatches(matchObj, current_user_name){
 
             const namespace_id = this.id;
 
-            //call socket function to switch the room
-            socket(current_user_name, namespace_id);
+            //call updateSocket function to switch the namespace
+            updateSocket(current_user_name, namespace_id);
 
         });
 
