@@ -107,7 +107,7 @@ function renderMatches(matchObj){
             
         console.log("button id: " + matchBtn.id);
         //console.log("match name = " + match.name);
-        matchCard.className = 'mt-4 card';
+        matchCard.className = 'mt-4 ml-4 mr-4 card';
         matchBtn.setAttribute("type", "button");
 
         matchBtn.value = match.name;
@@ -143,7 +143,7 @@ function renderMatches(matchObj){
             // add get request to pull meals from db
             // render meals in rightmost col ("meals-bar")
             const mealsBar = document.getElementById('meals-bar');
-            mealsBar.innerHTML = "Meal Bar";  // clear HTML before loading new user's meals
+            mealsBar.innerHTML = "Match Cookbook";  // clear HTML before loading new user's meals
             console.log("in render meals function: match ID = " + match.userId);
             get('api/profile', {userId : match.userId}, function(user) {
                 
@@ -156,7 +156,7 @@ function renderMatches(matchObj){
             function renderMeals(meal, index, arr) {
                 // let li = document.createElement('li');
                 const card = document.createElement('div');
-                card.setAttribute('id', meal.name);
+                card.setAttribute('id', meal.key);
                 card.className = 'mt-4';
 
                 const cardBody = document.createElement('div');
@@ -173,10 +173,11 @@ function renderMatches(matchObj){
                 const btnBox = document.createElement('div')
                 btnBox.className = 'btn-group'
 
-                renderDropdown(meal.tagline, 'tagline');
-                renderDropdown(meal.description, 'description');
-                renderDropdown(meal.allergens, 'allergens');
-                renderDropdown(meal.ingredients, 'ingredients');
+                // render dropdwn buttons: they don;t resize well so sonj is taking it out
+                // renderDropdown(meal.tagline, 'tagline');
+                // renderDropdown(meal.description, 'description');
+                // renderDropdown(meal.allergens, 'allergens');
+                // renderDropdown(meal.ingredients, 'ingredients');
 
 
                 // render dropdown button
