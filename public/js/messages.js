@@ -116,7 +116,7 @@ function renderMatches(matchObj, current_user_name){
 
             const namespace_id = this.id;
 
-            renderMessageHistory(namespace_id);
+            renderMessageHistory(namespace_id, match);
 
             //call updateSocket function to switch the namespace
             updateSocket(current_user_name, namespace_id);
@@ -210,12 +210,17 @@ function renderMatches(matchObj, current_user_name){
     }
 }
 
-function renderMessageHistory(namespace_id) {
+function renderMessageHistory(namespace_id, match) {
     // Delete all messages on page
     var messages = document.getElementById("messages");
     while (messages.firstChild) {
         messages.removeChild(messages.firstChild);
     }
+
+    // Add messages for new namespace
+    match.messages.forEach(function(msg) {
+        $('#messages').append($('<li>').text(msg.userName + ": " + msg.message));
+    });
 }
 
 main();
