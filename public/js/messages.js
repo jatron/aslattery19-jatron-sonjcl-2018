@@ -8,18 +8,11 @@ function main() {
     get('api/matches', {userId : profileId}, function(matchObj) {
         renderMatches(matchObj);
     }, function() {
-    console.log("Couldn't access matches :(");
+        console.log("Couldn't access matches :(");
     });
 
     get('/api/whoami', {}, function(user) {
-    renderNavbar(user);
-    });
-
-    get('api/profile', {userId : profileId}, function(userData) {
-        name = userData.name;
-        //socket(name);
-    }, function(){
-        console.log("was unable to get user info :(");
+        renderNavbar(user);
     });
 
 }
