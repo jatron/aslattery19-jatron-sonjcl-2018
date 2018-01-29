@@ -18,7 +18,7 @@ function main() {
 }
 
 function socket(current_user_name, namespace_id) {
-    // join the correct room
+    // join the correct namespace
     var socket = io(namespace_id);
 
     // set send button id to namespace id so the message goes to the correct match
@@ -32,7 +32,7 @@ function socket(current_user_name, namespace_id) {
 
     $('form').submit(function(){
         socket.emit('chat message', {
-            userName    : 'Fake userName', // TODO: get the actual user's name
+            userName    : current_user_name,
             message     : $('#' + button_id).val()
         });
         $('#' + button_id).val('');
