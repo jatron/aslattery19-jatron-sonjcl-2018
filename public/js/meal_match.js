@@ -178,7 +178,7 @@ for (var k = 0; k < profileButtons.length; k++) {
         get('api/meal_author_profile', {mealKey : this.id}, function(authorData){
             document.getElementById("profileName").innerHTML = authorData.name;
             document.getElementById("profilePic").setAttribute("src", authorData.profilePicture);
-            document.getElementById("profilePic").setAttribute("style", "height:100px;width:100px");
+            // document.getElementById("profilePic").setAttribute("style", "height:100px;width:100px");
             document.getElementById("bioDiv").innerHTML = authorData.bio;
             
             mealCards = document.getElementsByClassName("mealPhoto");
