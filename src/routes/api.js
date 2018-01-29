@@ -7,7 +7,8 @@ const uuidv4 = require('uuid/v4');
 // models
 const User = require('../models/user');
 const Picture = require('../models/picture');
-const ServerState = require('../models/ServerState');
+const ServerState = require('../models/serverState');
+const ChatRoom = require('../models/chatRoom')
 const Helpers = require('../helpers/helpers');
 const mySocketio = require('../mySocketio');
 
@@ -541,9 +542,21 @@ router.get('/matches',
                             name        : matchUser.name,
                             namespace   : user.matches[matchIndex].namespace
                         }
-                        matchesJson.matches.push(matchJson);
-                        matchIndex++;
-                        addMatches();
+                        ChatRoom.findOne({namespace: user.matches[matchIndex].namespace}, function(err, chatRoom) {
+                            if (err) {
+                                console.log('XXX: Error in addMatches()->User.findOne({_id: user.matches[matchIndex].userId})->ChatRoom.findOne({namespace: user.matches[matchIndex].namespace})');
+                                console.log(err);
+                                return;
+                            }
+                            if (!chatRoom) {
+                                matchJson.messages = [];
+                            } else {
+                                matchJson.messages = chatRoom.messages;
+                            }
+                            matchesJson.matches.push(matchJson);
+                            matchIndex++;
+                            addMatches();
+                        });
                     });
                 }
             }

@@ -116,7 +116,8 @@ get('api/matches', {userId : String}, successCallback, failureCallback);
       {
         userId      :   String,
         name        :   String,
-        namespace   :   String
+        namespace   :   String,
+        messages    :   [{userName : String, message : String}, {...}, {...}, ...]
       },
       {
         ...
