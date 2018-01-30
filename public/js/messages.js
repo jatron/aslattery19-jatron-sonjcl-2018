@@ -26,7 +26,7 @@ function main() {
 
 }
 
-function updateSocket(current_user_name, namespace_id) {
+function updateSocket(current_user_name, namespace_id, match) {
     // join the correct namespace
     socket = io(namespace_id);
 
@@ -44,8 +44,8 @@ function updateSocket(current_user_name, namespace_id) {
     }
     if (isNamespaceInitialized === false) {
         socket.on('chat message', function(msg){
-            console.log('new message; userName:', msg.userName, '; message:', msg.message, '; namespace:', namespace_id);
             $('#messages').append($('<li>').text(msg.userName + ": " + msg.message));
+            match.messages.push({userName: msg.userName, message: msg.message});
         });
         namespacesInitialized.push(namespace_id);
     }
@@ -61,15 +61,17 @@ function renderMatches(matchObj, current_user_name){
         const matchCard = document.createElement("div");
         const matchBtn = document.createElement("btn");
 
-        console.log("INFO: ", match);
         const namespace_id = match.namespace;
-        console.log("NAMESPACE: ", namespace_id);
         // set button ID to socket room id
         matchBtn.setAttribute("id", namespace_id);
 
+<<<<<<< HEAD
         console.log("button id: " + matchBtn.id);
         //console.log("match name = " + match.name);
         matchCard.className = 'mt-4 ml-4 mr-4 card';
+=======
+        matchCard.className = 'mt-4 card';
+>>>>>>> master
         matchBtn.setAttribute("type", "button");
 
         matchBtn.value = match.name;
@@ -126,8 +128,10 @@ function renderMatches(matchObj, current_user_name){
 
             const namespace_id = this.id;
 
+            renderMessageHistory(namespace_id, match);
+
             //call updateSocket function to switch the namespace
-            updateSocket(current_user_name, namespace_id);
+            updateSocket(current_user_name, namespace_id, match);
 
         });
 
@@ -146,6 +150,7 @@ function renderMatches(matchObj, current_user_name){
             mealsBar.innerHTML = "";  // clear HTML before loading new user's meals
             document.getElementById("meal-title").innerHTML= match.name + "'s Meals";
             console.log("in render meals function: match ID = " + match.userId);
+
             get('api/profile', {userId : match.userId}, function(user) {
 
                 user.meals.forEach(renderMeals);  // render all meals for the match
@@ -219,6 +224,19 @@ function renderMatches(matchObj, current_user_name){
                 mealsBar.appendChild(card);
             };
     }
+}
+
+function renderMessageHistory(namespace_id, match) {
+    // Delete all messages on page
+    var messages = document.getElementById("messages");
+    while (messages.firstChild) {
+        messages.removeChild(messages.firstChild);
+    }
+
+    // Add messages for new namespace
+    match.messages.forEach(function(msg) {
+        $('#messages').append($('<li>').text(msg.userName + ": " + msg.message));
+    });
 }
 
 main();

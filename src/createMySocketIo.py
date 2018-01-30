@@ -17,7 +17,6 @@ for i in range(1000):
     f.write("    const %s = io.of('/%s');\n" % (namespaceName, namespaceName))
     f.write("    %s.on('connection', function(socket) {\n" % namespaceName)
     f.write("        socket.on('chat message', function(msg) {\n")
-    f.write("            console.log('Received chat messsage through %s');\n" % namespaceName)
     f.write("            ChatRoom.findOne({namespace: '/%s'}, function(err, chatRoom) {\n" % namespaceName)
     f.write("                if (err) {\n")
     f.write("                    console.log(\"XXX: Error at ChatRoom.findOne({namespace: '/%s'})\");\n" % namespaceName)
