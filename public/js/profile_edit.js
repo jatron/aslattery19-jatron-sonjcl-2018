@@ -71,8 +71,18 @@ function renderUserData(user) {
     addMealBtn.addEventListener("click", function(){
 
         const files = document.getElementById("new-meal-image").files;
+
+        // $(this).attr("disabled", "disabled");
+        // setTimeout('$(#add-meal-btn).removeAttr("disabled")', 10);
+        // addMealBtn.setAttribute("data-dismiss","modal");
         if (!files.length) {
             return alert('Please choose a file to upload first.');
+        } else {
+            $('.modal').modal('toggle');
+            // addMealBtn.attr("disabled", "disabled");
+            // setTimeout( function() { 
+            //     addMealBtn.attr("disabled", "false");
+            // }, 50);
         }
         const file = files[0];
 
