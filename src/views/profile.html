@@ -2,49 +2,70 @@
 <html>
   <head>
     <title>potluck | profile</title>
+        <!-- stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
   </head>
   <body id="body">
+        <link rel="stylesheet" type="text/css" href="/static/css/profile.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
         <nav class="navbar navbar-inverse bg-inverse navbar-expand-lg navbar-light" style="background-color: #fff; box-shadow: 3px 2px 5px grey;">
             <a class="navbar-brand" href="/">
-                <img src="https://image.freepik.com/free-icon/chef-hat-on-a-plate-from-side-view_318-61041.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
-                potluck
+                <img src="https://image.freepik.com/free-icon/chef-hat-on-a-plate-from-side-view_318-61041.jpg" width="30" height="30" class="d-inline-block align-top" alt="" style="display: inline-block!important;"> potluck
             </a>
             <div class="navbar-nav" id="nav-item-container">
             <!-- navbar items are inserted here -->
             </div>
-        </nav>
+    </nav>
         <br>
-        <div style="background: #fff; opacity: 0.9" >
-            <div class="container text-center" id="profile-container" style="background: #fff;">
-              <div id="name-container">
-                <!-- name inserted here -->
-                <div class="container">
-                  <a href="profile_edit" class="btn" id="edit-profile-btn" role="button">edit profile</a>
+        <div class="non-navbar" style="background: #fff; opacity: 0.9" >
+            <div class="container text-center" id="profile-container">
+                <div class="media">
+                    <div class="col-6" id="profileImageDiv">
+                      <img id="user-profile-image" src="" class="img-fluid rounded media-object">
+                      <a href="profile_edit" class="btn" id="edit-profile-btn" role="button">Edit Profile</a>
+                    </div>
+                    <div class="col-6" id="bioDiv">
+                        <div id="name-container">
+                            <!-- Name Goes Here -->
+                        </div>
+
+                        <div class="bio" id="profile-description-div">
+                            <textarea class="textarea" readonly style="resize:none;" id="profile-description">
+                                <!-- Bio Goes Here -->
+                            </textarea>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="media">
-                <div class="col-6">
-                  <img id="user-profile-image" src="" class="img-fluid rounded media-object" style="width: 50%">
-                </div>
-                <div class="col-6">
-                  <h4 class="media-heading">about</h4>
-                  <br>
-                  <div class="bio" id="profile-description"> 
-                    
-                  </div>
-                </div>
-              </div>
-              <div class="row mt-4">
-                <div class="col-12">
-                  <h4>cookbook</h4>
-                  <br>
-                  <div class="" id="cookbook-card">
-                      <!-- favorite foods here -->
-                  </div>
-                </div>
-              </div>
             </div>
+
+            <div id="meals-container">
+                <div class="row"> 
+                    <div class = "column">
+                        <div class="card card-inverse" style="display:none;"> </div>
+                        <div class="card card-inverse" style="display:none;"> </div>
+                        <div class="card card-inverse" style="display:none;"> </div>
+                    </div>
+
+                    <div class = "column">
+                        <div class="card card-inverse" style="display:none;"> </div>
+                        <div class="card card-inverse" style="display:none;"> </div>
+                        <div class="card card-inverse" style="display:none;"> </div>
+                    </div>
+
+                    <div class = "column">
+                        <div class="card card-inverse" style="display:none;"> </div>
+                        <div class="card card-inverse" style="display:none;"> </div>
+                        <div class="card card-inverse" style="display:none;"> </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
         </div>
   </body>
 
