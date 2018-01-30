@@ -48,7 +48,7 @@ function renderUserData(user) {
 	// rendering cookbook
 	const cookbookCard = document.getElementById('meals-container');
 
-    const firstNineMeals = user.meals.slice(0,8);
+    const firstNineMeals = user.meals.slice(0,9);
     console.log(firstNineMeals);
 	firstNineMeals.forEach(renderMeals);
 
