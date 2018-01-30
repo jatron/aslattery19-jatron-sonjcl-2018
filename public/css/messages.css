@@ -24,7 +24,8 @@
   display: none;
 }
 
-.h1, h1 .unica{
-    font-family: 'Unica One';
+h1 .bar-title{
+    font-family: '';
     font-size: 1.5rem;
+    font-weight: 300;
 }

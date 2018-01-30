@@ -47,6 +47,7 @@ function renderUserData(user) {
     // rendering name
     const nameContainer = document.getElementById('name-container');
     const nameHeader = document.createElement('h1');
+    nameHeader.setAttribute('style', 'font-weight:300;');
     nameHeader.innerHTML = user.name;
     nameContainer.prepend(nameHeader);
 

@@ -23,6 +23,7 @@ function renderUserData(user) {
 	const nameContainer = document.getElementById('name-container');
 	const nameHeader = document.createElement('h1');
 	nameHeader.innerHTML = user.name;
+    nameHeader.setAttribute('style', 'font-weight:300;');
     nameContainer.prepend(nameHeader);
 
     // rendering school
