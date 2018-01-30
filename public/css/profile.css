@@ -62,7 +62,7 @@ body {
 #meals-container {
     position: absolute;
     top: 60%;
-    width: 90%;
+    width: 100%;
 }
 
 #user-profile-image {
