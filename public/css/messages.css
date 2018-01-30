@@ -53,7 +53,7 @@ h1 .bar-title{
 
 .user-me {
     /*float right*/
-    background-color: blue;
+/*    background-color: blue;*/
     display: block;
     float: right;
     width: 60%;
@@ -62,11 +62,12 @@ h1 .bar-title{
 
 .user-other {
     /*float left*/
-    background-color: gray;
+/*    background-color: gray;*/
     display: block;
     float: left;
     width: 60%;
     text-align: center;
 }
+
 
 
