@@ -184,9 +184,9 @@
 #bioDiv {
     position: absolute;
     top: 22%;
-    left: 30%;
+    left: 40%;
     height: 30%;
-    width: 60%;
+    width: 50%;
     border: 1px solid black;
     border-radius: 8px;
     margin: 1%;
@@ -284,7 +284,7 @@
     height: 20%;
     width: auto;
     border-width: 0px;
-    left: 30%;
+    left: 40%;
     background: #fff0;  
 }
 
