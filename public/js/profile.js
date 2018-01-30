@@ -122,7 +122,7 @@ function renderUserData(user) {
         infoIcon.setAttribute('class', 'fa fa-info-circle');
         infoIcon.setAttribute('id', 'fa-info-circle');
         infoIcon.setAttribute('aria-hidden', 'true');
-        infoIcon.setAttribute('style', "font-size:30px");
+        infoIcon.setAttribute('style', "font-size:30px;text-shadow: 3px 3px 20px #272634;");
         infoButton.appendChild(infoIcon);
 
 

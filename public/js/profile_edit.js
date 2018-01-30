@@ -206,7 +206,7 @@ function renderUserData(user) {
     const deleteBtn = document.createElement('button');
     deleteBtn.className = 'btn delete-btn';
     deleteBtn.setAttribute('type', 'button');
-    deleteBtn.setAttribute('style', "position:absolute;")
+    deleteBtn.setAttribute('style', "position:absolute; text-shadow: 3px 3px 20px #272634;")
     deleteBtn.innerHTML = 'Delete';
     buttonGroupDiv.appendChild(deleteBtn);
 

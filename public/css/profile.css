@@ -19,6 +19,7 @@ body {
     width: 75%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 1rem;
+    overflow: auto;
 }
 
 .media-heading {
@@ -46,8 +47,8 @@ body {
     position: absolute;
     top: 2%;
     height: 50%;
-    width: 90%;
-    margin-left: 15%;
+    width: 100%;
+    margin-left: 20%;
     margin-right: 20%;
 }
 
@@ -181,16 +182,6 @@ body {
 }
 
 /* BUTTONS */
-.btn {
-  background: #fff0;
-  border: none; /* Remove borders */
-  color: white; /* White text */
-  padding: 11px; /* Some padding */
-  font-size: 16px; /* Set a font size */
-  cursor: pointer; /* Mouse pointer on hover */
-  text-shadow: 3px 3px 20px #272634;  /*shadow*/
-}
-
 
 .btn {
   background: #fff0;
@@ -199,7 +190,7 @@ body {
   padding: 11px; /* Some padding */
   font-size: 16px; /* Set a font size */
   cursor: pointer; /* Mouse pointer on hover */
-  text-shadow: 3px 3px 20px #272634;  /*shadow*/
+  /*text-shadow: 3px 3px 20px #272634;*/  /*shadow*/
 }
 
 .btn-group {
