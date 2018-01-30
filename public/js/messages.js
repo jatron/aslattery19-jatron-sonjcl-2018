@@ -55,10 +55,10 @@ function updateSocket(current_user_name, namespace_id, match) {
             if (msg.userId === profileId) {
                 console.log(msg.userName);
                 newMsg.className = 'user-me';  // marks msg as my msg, css will float right, color, etc.
-                newMsg.setAttribute('style','background-color: #509fc178;');
+                newMsg.setAttribute('style','background-color: #81cbea6e;');
             } else {
                 newMsg.className = 'user-other';  // same as user-me but for other user
-                newMsg.setAttribute('style','background-color: #e59ff96e;');
+                newMsg.setAttribute('style','background-color: #ced5e0;');
             }
             $('#messages').append(newMsg);  // ($('<li>').text(msg.userName + ": " + msg.message));
             match.messages.push({userName: msg.userName, message: msg.message, userId: msg.userId});
