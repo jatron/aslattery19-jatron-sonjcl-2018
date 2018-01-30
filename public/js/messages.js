@@ -67,7 +67,7 @@ function renderMatches(matchObj, current_user_name){
 
         console.log("button id: " + matchBtn.id);
         //console.log("match name = " + match.name);
-        matchCard.className = 'mt-4 ml-4 mr-4 card';
+        matchCard.className = 'm-1 card match-btn';
         matchBtn.setAttribute("type", "button");
 
         matchBtn.value = match.name;

@@ -34,4 +34,9 @@ h1 .bar-title{
     padding: 5px 10px;
     word-wrap: break-word;
     border-radius: 20rem;
+    background: #6564632b;
+}
+
+.match-btn {
+    height: 10%
 }
