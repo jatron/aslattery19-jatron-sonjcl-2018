@@ -116,6 +116,11 @@ function renderMatches(matchObj, current_user_name){
                 });
             }
 
+            // on click: Change Column titles: Chat with X, X's Meals
+            document.getElementById("chat-title").innerHTML= "Chat with "+ match.name;
+            
+
+
             // GET meals for that user
             renderMatchMeals(match);
 
@@ -137,8 +142,9 @@ function renderMatches(matchObj, current_user_name){
             // FIX THIS!! IMPLEMENT RENDER MEALS STUFF!! to show on meal render bar!!
             // add get request to pull meals from db
             // render meals in rightmost col ("meals-bar")
-            const mealsBar = document.getElementById('meals-bar');
-            mealsBar.innerHTML = "Match Cookbook";  // clear HTML before loading new user's meals
+            const mealsBar = document.getElementById('meals-bar-meal-div');
+            mealsBar.innerHTML = "";  // clear HTML before loading new user's meals
+            document.getElementById("meal-title").innerHTML= match.name + "'s Meals";
             console.log("in render meals function: match ID = " + match.userId);
             get('api/profile', {userId : match.userId}, function(user) {
 
