@@ -107,6 +107,7 @@ function renderMatches(matchObj, current_user_name){
                 $('form').submit(function(){
                     socket.emit('chat message', {
                         userName    : current_user_name,
+                        userId      : profileId,
                         message     : $('#' + button_id).val()
                     });
                     $('#' + button_id).val('');
