@@ -35,6 +35,8 @@ function updateSocket(current_user_name, namespace_id, match) {
     button_id = namespace_id.substr(1); // remove '/' character at the beginning of namespace_id
     button[0].setAttribute("id", button_id);
 
+    const profileId = window.location.search.substring(1);
+
     // Only call socket.on() once for each namespace
     var isNamespaceInitialized = false;
     for (var i = 0; i < namespacesInitialized.length; i++) {
@@ -44,8 +46,22 @@ function updateSocket(current_user_name, namespace_id, match) {
     }
     if (isNamespaceInitialized === false) {
         socket.on('chat message', function(msg){
-            $('#messages').append($('<li>').text(msg.userName + ": " + msg.message));
-            match.messages.push({userName: msg.userName, message: msg.message});
+            var newMsg = document.createElement('li');
+            // newMsg.setAttribute("user", );
+            // newMsg.setAttribute("text", );
+            console.log("userId: " + msg.userId);
+            console.log("profileId: " + profileId);
+            newMsg.innerHTML = '<span style="font-weight: 700;">' + msg.userName + ":  " + "</span>" + msg.message;
+            if (msg.userId === profileId) {
+                console.log(msg.userName);
+                newMsg.className = 'user-me';  // marks msg as my msg, css will float right, color, etc.
+                newMsg.setAttribute('style','background-color: #509fc178;');
+            } else {
+                newMsg.className = 'user-other';  // same as user-me but for other user
+                newMsg.setAttribute('style','background-color: #e59ff96e;');
+            }
+            $('#messages').append(newMsg);  // ($('<li>').text(msg.userName + ": " + msg.message));
+            match.messages.push({userName: msg.userName, message: msg.message, userId: msg.userId});
         });
         namespacesInitialized.push(namespace_id);
     }
@@ -60,6 +76,7 @@ function renderMatches(matchObj, current_user_name){
         const matchBar = document.getElementById("match-bar");
         const matchCard = document.createElement("div");
         const matchBtn = document.createElement("btn");
+        // const matchImg = ;  // add match profile later
 
         const namespace_id = match.namespace;
         // set button ID to socket room id
@@ -67,11 +84,13 @@ function renderMatches(matchObj, current_user_name){
 
         console.log("button id: " + matchBtn.id);
         //console.log("match name = " + match.name);
-        matchCard.className = 'mt-4 ml-4 mr-4 card';
+        matchCard.className = 'm-1 card match-card';
+        
+        matchBtn.className = 'match-btn'
         matchBtn.setAttribute("type", "button");
 
         matchBtn.value = match.name;
-        matchBtn.innerHTML = match.name;
+        matchBtn.innerHTML = '<span class="match-name-span">' + match.name + '</span>';  // put name into span
 
 
         //make match btn clickable and render match's meals
@@ -107,6 +126,7 @@ function renderMatches(matchObj, current_user_name){
                 $('form').submit(function(){
                     socket.emit('chat message', {
                         userName    : current_user_name,
+                        userId      : profileId,
                         message     : $('#' + button_id).val()
                     });
                     $('#' + button_id).val('');
@@ -223,6 +243,8 @@ function renderMatches(matchObj, current_user_name){
 }
 
 function renderMessageHistory(namespace_id, match) {
+    const profileId = window.location.search.substring(1);
+
     // Delete all messages on page
     var messages = document.getElementById("messages");
     while (messages.firstChild) {
@@ -231,7 +253,20 @@ function renderMessageHistory(namespace_id, match) {
 
     // Add messages for new namespace
     match.messages.forEach(function(msg) {
-        $('#messages').append($('<li>').text(msg.userName + ": " + msg.message));
+        var newMsg = document.createElement('li');
+        console.log("userId: " + msg.userId);
+        console.log("profileId: " + profileId);
+        newMsg.innerHTML = '<span style="font-weight: 700;">' + msg.userName + ":  " + "</span>" + msg.message;
+        if (msg.userId === profileId) {
+            console.log(msg.userName);
+            newMsg.className = 'user-me';  // marks msg as my msg, css will float right, color, etc.
+            newMsg.setAttribute('style','background-color: #81cbea6e;');
+        } else {
+            newMsg.className = 'user-other';  // same as user-me but for other user
+            newMsg.setAttribute('style','background-color: #ced5e0;');
+        }
+        $('#messages').append(newMsg);
+        // $('#messages').append($('<li>').text(msg.userName + ": " + msg.message));
     });
 }
 

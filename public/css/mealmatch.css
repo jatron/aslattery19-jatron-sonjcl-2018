@@ -79,6 +79,7 @@
   width: 30%;
   top: 0;
   left: 0;
+  z-index:100;
 }
 
 .next-button-div {
@@ -123,12 +124,13 @@
   transition: .5s ease;
   opacity: 0.8;
   text-align: center;
+  z-index: 5;
 }
 
 .check-icon {
   position: absolute;
   top: 37%;
-  left: 42%;
+  left: 41%;
   font-size: 100px;
   color: white;
   background-color: #fff0;
@@ -216,7 +218,8 @@
   position: absolute;
   right: 0;
   top: 0;
-  margin-right: 0.5%;
+  margin-right: 2%;
+  margin-top: 1%;
 }
 
 .center {

@@ -75,6 +75,7 @@ function renderMeals(mealsData) {
         checkIcon.className = "fa fa-thumbs-o-up"
         checkIcon.setAttribute("aria-hidden", "true");
         checkIconDiv.appendChild(checkIcon);
+        checkIcon.setAttribute("style", "position:  absolute;top: 35%;left: 42%;display: inline-block;");
 
 
         //add buttons
@@ -134,6 +135,7 @@ for (var i = 0; i < cards.length; i++) {
         // only let them like - no unliking
         const checkIcon = document.getElementById(this.id + '-likeIcon');
         checkIcon.setAttribute("style", "opacity:100");
+
 
         post('api/like', {userId : window.location.search.substring(1), mealKey : this.id}, function(){
             console.log("like was a success!");
