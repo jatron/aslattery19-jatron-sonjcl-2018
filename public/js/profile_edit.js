@@ -120,115 +120,131 @@ function renderUserData(user) {
     });
 
     // rendering cookbook
-    const cookbookCard = document.getElementById('cookbook-card');
-    user.meals.forEach(renderMeals);
+    const cookbookCard = document.getElementById('meals-container');
+
+    const firstNineMeals = user.meals.slice(0,8);
+    console.log(firstNineMeals);
+    firstNineMeals.forEach(renderMeals);
 
     function renderMeals(meal, index, arr) {
-        console.log(userId);
-        const card = document.createElement('div');
-        card.setAttribute('id', meal.name);
-        card.className = 'mt-4';
+    cards = document.getElementsByClassName("card card-inverse");
 
-        const cardBody = document.createElement('div');
-        cardBody.className = 'card-body';
-        card.appendChild(cardBody);
+    // let li = document.createElement('li');
+    //const card = document.createElement('div');
+    const card = cards[index];
+    console.log(card);
+    //card.setAttribute('id', meal.name);
+    //card.className = 'mt-4';
 
-        const mealImage = document.createElement('img');
-        mealImage.className = 'meal-image-url';
-        mealImage.setAttribute('src', meal.url);
-        mealImage.className = 'rounded img-fluid';
-        cardBody.appendChild(mealImage);
 
-        // make button box div so that buttons are together
-        const btnBox = document.createElement('div')
-        btnBox.className = 'btn-group'
+    const mealImage = document.createElement('img');
+    mealImage.className = 'meal-image-url';
+    mealImage.setAttribute('src', meal.url);
+    mealImage.className = 'card-img';
+    mealImage.setAttribute("id", meal.key);
+    console.log(mealImage.id);
 
-        renderDropdown(meal.tagline, 'tagline');
-        renderDropdown(meal.description, 'description');
-        renderDropdown(meal.allergens, 'allergens');
-        renderDropdown(meal.ingredients, 'ingredients');
+    card.appendChild(mealImage);
 
-        const deleteBtn = document.createElement('button');
-        deleteBtn.className = 'btn delete-btn';
-        deleteBtn.setAttribute('type', 'button');
-        deleteBtn.innerHTML = 'Delete';
 
-        // delete image here/send request to server to delete, reload page
-        deleteBtn.addEventListener("click", function(){
-            // make JSON delete obj
-            const deleteMealObject = {};
-            deleteMealObject.mealKey = meal.key;
-            // console.log(deleteMealObject);
-            //post JSON delete obj
-            post('api/delete_meal', deleteMealObject, function() {
-            console.log("meal deleted!");
-            }, function() {
-            console.log("Couldn't delete meal :(");
-            });
-            // make deleted meal hidden:
-            card.style.display = "none";
-        }); 
-        btnBox.appendChild(deleteBtn);
+    // add overlay with information
+    var overlay = document.createElement("div");
+    overlay.setAttribute("id", meal.key + "-info-overlay");
+    overlay.className = 'overlay';
+    card.appendChild(overlay)
 
-        // make change bio buttton functional 
-        const changeBioBtn = document.getElementById("done-btn");
-        changeBioBtn.addEventListener("click", function(){
-            const newUserBioText = document.getElementById("user-bio-text").value;
-            console.log(newUserBioText);
-            // make JSON bio obj
-            const newBioObject = {};
+    var overlayInfo = document.createElement("div");
+    overlayInfo.setAttribute("class", "information");
+    overlay.appendChild(overlayInfo);
 
-            newBioObject.userId = userId;
-            newBioObject.bio = newUserBioText;
-            //post JSON bio obj
-            post('api/bio', newBioObject, function() {
-            console.log("bio uploaded!");
-            }, function() {
-            console.log("Couldn't change bio");
-            });
+    var description = document.createElement("p");
+    description.innerHTML = meal.description;
+    overlayInfo.appendChild(description);
+
+    var ingredientsTitle = document.createElement("b");
+    ingredientsTitle.innerHTML = "Ingredients:"
+    overlayInfo.appendChild(ingredientsTitle);
+
+    var ingredients = document.createElement("p");
+    ingredients.innerHTML = meal.ingredients;
+    overlayInfo.appendChild(ingredients);
+
+    var allergensTitle = document.createElement("b");
+    allergensTitle.innerHTML = "Allergens:";
+    overlayInfo.appendChild(allergensTitle);
+
+    var allergens = document.createElement("p");
+    allergens.innerHTML = meal.allergens;
+    overlayInfo.appendChild(allergens);
+
+
+    var buttonGroupDiv = document.createElement("div");
+    buttonGroupDiv.setAttribute("class", "btn-group");
+    buttonGroupDiv.setAttribute("id", "button-group");
+    buttonGroupDiv.setAttribute("role", "group");
+    card.appendChild(buttonGroupDiv);
+
+    //add info button
+    var infoButton = document.createElement('button');
+    infoButton.setAttribute('type', "button");
+    infoButton.setAttribute("id", meal.key + '-info');
+    infoButton.setAttribute('class', "btn info-button");
+    buttonGroupDiv.appendChild(infoButton);
+    // add info icon
+    var infoIcon = document.createElement('i');
+    infoIcon.setAttribute('class', 'fa fa-info-circle');
+    infoIcon.setAttribute('id', 'fa-info-circle');
+    infoIcon.setAttribute('aria-hidden', 'true');
+    infoIcon.setAttribute('style', "font-size:30px");
+    infoButton.appendChild(infoIcon);
+
+
+    const deleteBtn = document.createElement('button');
+    deleteBtn.className = 'btn delete-btn';
+    deleteBtn.setAttribute('type', 'button');
+    deleteBtn.setAttribute('style', "position:absolute;")
+    deleteBtn.innerHTML = 'Delete';
+    buttonGroupDiv.appendChild(deleteBtn);
+
+    // delete image here/send request to server to delete, reload page
+    deleteBtn.addEventListener("click", function(){
+        // make JSON delete obj
+        const deleteMealObject = {};
+        deleteMealObject.mealKey = meal.key;
+        // console.log(deleteMealObject);
+        //post JSON delete obj
+        post('api/delete_meal', deleteMealObject, function() {
+        console.log("meal deleted!");
+        }, function() {
+        console.log("Couldn't delete meal :(");
         });
-
-        // render dropdown button
-        function renderDropdown(item, itemName) {
-            const dropdownDiv = document.createElement('div');
-            dropdownDiv.className = 'dropdown col-xs-1';
-            
-            const dropdownBtn = document.createElement('button');
-            dropdownBtn.className = 'btn btn-secondary dropdown-toggle';
-            dropdownBtn.setAttribute('type', 'button');
-            dropdownBtn.setAttribute('data-toggle', 'dropdown');
-            dropdownBtn.setAttribute('aria-haspopup', 'true');
-            dropdownBtn.setAttribute('aria-expanded', 'false');
-            dropdownBtn.setAttribute('id', 'dropdownMenuButton');
-            dropdownBtn.innerHTML = itemName;
-            dropdownDiv.appendChild(dropdownBtn);
- 
-            // rendering dropdown menu
-            const dropdownMenu = document.createElement('div');
-            dropdownMenu.className = 'dropdown-menu';
-            dropdownBtn.setAttribute('aria-labelledby', 'dropdownMenuButton');
-            dropdownDiv.appendChild(dropdownMenu);
-
-            // FUTURE: ADD MENU ITEM DATA, ONE FOR EACH OF INFO SECTIONS
-            // i.e. ingredients, allergy warnings
-            const menuItem = document.createElement('a');
-            menuItem.className = 'dropdown-item';
-            menuItem.innerHTML = item;
-
-            // add blurb
-            dropdownMenu.appendChild(menuItem);
-
-            btnBox.appendChild(dropdownDiv);
-            // btnBox.setAttribute('id', meal.key + '-btnbox');
-            card.appendChild(btnBox);
-            // card.setAttribute('id', meal.key + '-card');
+        // make deleted meal hidden:
+        card.style.display = "none";
+    }); 
 
 
-        };
+    // make change bio buttton functional 
+    const changeBioBtn = document.getElementById("done-btn");
+    changeBioBtn.addEventListener("click", function(){
+        const newUserBioText = document.getElementById("user-bio-text").value;
+        console.log(newUserBioText);
+        // make JSON bio obj
+        const newBioObject = {};
 
-        cookbookCard.appendChild(card);
-        // mealList.appendChild(card);
-    };
+        newBioObject.userId = userId;
+        newBioObject.bio = newUserBioText;
+        //post JSON bio obj
+        post('api/bio', newBioObject, function() {
+        console.log("bio uploaded!");
+        }, function() {
+        console.log("Couldn't change bio");
+        });
+    });
+
+    
+    //cookbookCard.appendChild(card);
+    // mealList.appendChild(card);
+};
 
     // cookbookCard.appendChild(mealCards);
 
