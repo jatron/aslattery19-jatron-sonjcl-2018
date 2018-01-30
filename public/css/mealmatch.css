@@ -150,27 +150,33 @@
   height: 50%;
   margin-bottom: 1%;
   display: inline-block;
+  padding: 2.5%;
 }
+
 
 #bioDiv {
-  position: absolute;
-  height: 100px;
-  width: 300px;
-  left: 20%;
-  top:3%;
-  border-color: black;
-  border-width: 3px;
+    position: absolute;
+    top: 15%;
+    height: 30%;
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: 5px;
 }
 
-
 #mealsDiv {
-  height: 150px;
+  height: 50%;
+  margin: 0;
+  display: inline-block;
+  width: 100%;
+
 }
 
 .mealPhoto {
   height: 100%;
   width: auto;
   padding: 5px;
+  border-radius: 0.5rem;
 }
 
 .list{
@@ -179,6 +185,9 @@
 
 .imgContainer{
   float:left;
+  height: 70%;
+  width: auto;
+  padding: 1%;
 }
 
 
@@ -210,20 +219,6 @@
   margin-right: 0.5%;
 }
 
-#profileNameDiv {
-    position: absolute;
-    left: 20%;
-    top: 5%;
-}
-
-#bioDiv {
-    position: absolute;
-    top: 20%;
-    height: 20%;
-    border: 1px solid black;
-    border-radius: 8px;
-}
-
 .center {
     margin: auto;
     width: 90%;
@@ -243,4 +238,28 @@
   transform: translate(-50%, -50%);
 }
 
+#profilePic {
+  border-radius: 5px;
+}
 
+
+#profileName {
+    position: absolute;
+    margin: 5px;
+    border: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 5px;
+    top:0;
+    width: 40%;
+}
+
+#profileModal {
+    border-radius: 1rem;
+    width: 40%
+    display:inline-block;
+}
+
+#mealsWrapper {
+    text-align: center;
+}
