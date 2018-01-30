@@ -65,13 +65,9 @@ function renderMatches(matchObj, current_user_name){
         // set button ID to socket room id
         matchBtn.setAttribute("id", namespace_id);
 
-<<<<<<< HEAD
         console.log("button id: " + matchBtn.id);
         //console.log("match name = " + match.name);
         matchCard.className = 'mt-4 ml-4 mr-4 card';
-=======
-        matchCard.className = 'mt-4 card';
->>>>>>> master
         matchBtn.setAttribute("type", "button");
 
         matchBtn.value = match.name;
