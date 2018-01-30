@@ -47,32 +47,30 @@ function renderUserData(user) {
 
 	// rendering cookbook
 	const cookbookCard = document.getElementById('meals-container');
-	user.meals.forEach(renderMeals);
+
+    const firstNineMeals = user.meals.slice(0,8);
+    console.log(firstNineMeals);
+	firstNineMeals.forEach(renderMeals);
 
 	function renderMeals(meal, index, arr) {
         cards = document.getElementsByClassName("card card-inverse");
-        //console.log(meal);
-
-
 
 		// let li = document.createElement('li');
         //const card = document.createElement('div');
         const card = cards[index];
-        card.setAttribute('id', meal.name);
+        console.log(card);
+        //card.setAttribute('id', meal.name);
         //card.className = 'mt-4';
 
-        const cardBody = document.createElement('div');
-        cardBody.className = 'card-body';
-        card.appendChild(cardBody);
 
         const mealImage = document.createElement('img');
         mealImage.className = 'meal-image-url';
         mealImage.setAttribute('src', meal.url);
-        mealImage.className = 'rounded img-fluid';
+        mealImage.className = 'card-img';
         mealImage.setAttribute("id", meal.key);
         console.log(mealImage.id);
 
-        cardBody.appendChild(mealImage);
+        card.appendChild(mealImage);
 
 
         // add overlay with information
@@ -108,6 +106,7 @@ function renderUserData(user) {
 
         var buttonGroupDiv = document.createElement("div");
         buttonGroupDiv.setAttribute("class", "btn-group");
+        buttonGroupDiv.setAttribute("id", "button-group");
         buttonGroupDiv.setAttribute("role", "group");
         card.appendChild(buttonGroupDiv);
 
@@ -137,44 +136,44 @@ function renderUserData(user) {
 
 
         // render dropdown button
-        function renderDropdown(item, itemName) {
-            const dropdownDiv = document.createElement('div');
-            dropdownDiv.className = 'dropdown col-xs-1';
+        // function renderDropdown(item, itemName) {
+        //     const dropdownDiv = document.createElement('div');
+        //     dropdownDiv.className = 'dropdown col-xs-1';
             
-            const dropdownBtn = document.createElement('button');
-            dropdownBtn.className = 'btn btn-secondary dropdown-toggle';
-            dropdownBtn.setAttribute('type', 'button');
-            dropdownBtn.setAttribute('data-toggle', 'dropdown');
-            dropdownBtn.setAttribute('aria-haspopup', 'true');
-            dropdownBtn.setAttribute('aria-expanded', 'false');
-            dropdownBtn.setAttribute('id', 'dropdownMenuButton');
-            dropdownBtn.innerHTML = itemName;
-            dropdownDiv.appendChild(dropdownBtn);
+        //     const dropdownBtn = document.createElement('button');
+        //     dropdownBtn.className = 'btn btn-secondary dropdown-toggle';
+        //     dropdownBtn.setAttribute('type', 'button');
+        //     dropdownBtn.setAttribute('data-toggle', 'dropdown');
+        //     dropdownBtn.setAttribute('aria-haspopup', 'true');
+        //     dropdownBtn.setAttribute('aria-expanded', 'false');
+        //     dropdownBtn.setAttribute('id', 'dropdownMenuButton');
+        //     dropdownBtn.innerHTML = itemName;
+        //     dropdownDiv.appendChild(dropdownBtn);
  
-            // rendering dropdown menu
-            const dropdownMenu = document.createElement('div');
-            dropdownMenu.className = 'dropdown-menu';
-            dropdownBtn.setAttribute('aria-labelledby', 'dropdownMenuButton');
-            dropdownDiv.appendChild(dropdownMenu);
+        //     // rendering dropdown menu
+        //     const dropdownMenu = document.createElement('div');
+        //     dropdownMenu.className = 'dropdown-menu';
+        //     dropdownBtn.setAttribute('aria-labelledby', 'dropdownMenuButton');
+        //     dropdownDiv.appendChild(dropdownMenu);
 
-            // FUTURE: ADD MENU ITEM DATA, ONE FOR EACH OF INFO SECTIONS
-            // i.e. ingredients, allergy warnings
-            const menuItem = document.createElement('a');
-            menuItem.className = 'dropdown-item';
-            menuItem.innerHTML = item;
+        //     // FUTURE: ADD MENU ITEM DATA, ONE FOR EACH OF INFO SECTIONS
+        //     // i.e. ingredients, allergy warnings
+        //     const menuItem = document.createElement('a');
+        //     menuItem.className = 'dropdown-item';
+        //     menuItem.innerHTML = item;
 
-            // add blurb
-            dropdownMenu.appendChild(menuItem);
+        //     // add blurb
+        //     dropdownMenu.appendChild(menuItem);
 
-            btnBox.appendChild(dropdownDiv);
-            // btnBox.setAttribute('id', meal.key + '-btnbox');
-            card.appendChild(btnBox);
-            // card.setAttribute('id', meal.key + '-card');
+        //     btnBox.appendChild(dropdownDiv);
+        //     // btnBox.setAttribute('id', meal.key + '-btnbox');
+        //     card.appendChild(btnBox);
+        //     // card.setAttribute('id', meal.key + '-card');
 
 
-        };
+        // };
 
-        cookbookCard.appendChild(card);
+        //cookbookCard.appendChild(card);
 		// mealList.appendChild(card);
     };
 
