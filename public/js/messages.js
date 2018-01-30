@@ -34,6 +34,7 @@ function updateSocket(current_user_name, namespace_id, match) {
     var button = document.getElementsByClassName("send-button");
     button_id = namespace_id.substr(1); // remove '/' character at the beginning of namespace_id
     button[0].setAttribute("id", button_id);
+    button[0].setAttribute("style", "cursor: pointer;");
 
     const profileId = window.location.search.substring(1);
 

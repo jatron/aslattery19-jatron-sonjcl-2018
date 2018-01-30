@@ -43,6 +43,7 @@ h1 .bar-title{
 
 .match-btn {
     height: 100%;
+    font-weight: 100;
 }
 
 .match-name-span {
@@ -67,6 +68,18 @@ h1 .bar-title{
     float: left;
     width: 60%;
     text-align: center;
+}
+
+.match-name-span {
+    position: absolute;
+    top: 33%;
+    left: 0;
+    /* right: 33%; */
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
 }
 
 

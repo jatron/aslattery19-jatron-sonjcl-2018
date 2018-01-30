@@ -84,6 +84,9 @@ function renderUserData(user) {
         const newMealIngredients = document.getElementById("new-meal-ingredients").value;
         // console.log(newMealIngredients);
         const newMealAllergens = document.getElementById("new-meal-allergens").value;
+        if (!(newMealAllergens)) {
+            newMealAllergens = "none";
+        }
         // console.log(newMealAllergens);
 
         // make JSON bio obj
