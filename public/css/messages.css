@@ -33,10 +33,40 @@ h1 .bar-title{
 #messages li {
     padding: 5px 10px;
     word-wrap: break-word;
-    border-radius: 20rem;
+    border-radius: 1rem;
     background: #6564632b;
 }
 
-.match-btn {
-    height: 10%
+.match-card {
+    height: 5rem;
 }
+
+.match-btn {
+    height: 100%;
+}
+
+.match-name-span {
+    position: absolute;
+    top:1.5rem;
+    left:7rem;
+}
+
+.user-me {
+    /*float right*/
+    background-color: blue;
+    display: block;
+    float: right;
+    width: 60%;
+    text-align: center;
+}
+
+.user-other {
+    /*float left*/
+    background-color: gray;
+    display: block;
+    float: left;
+    width: 60%;
+    text-align: center;
+}
+
+
