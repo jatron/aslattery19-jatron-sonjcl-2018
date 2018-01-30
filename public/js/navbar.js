@@ -15,9 +15,9 @@ function renderNavbar(user) {
 
   // NOTE: this check is a lowkey hack
   if (user._id !== undefined) {
-    navbarDiv.appendChild(newNavbarItem('Meal Match', '/meal_match?' + user._id));
+    navbarDiv.appendChild(newNavbarItem('Meals', '/meal_match?' + user._id));
     navbarDiv.appendChild(newNavbarItem('Profile', '/profile?' + user._id));
-    navbarDiv.appendChild(newNavbarItem('Messages', '/messages?' + user._id));
+    navbarDiv.appendChild(newNavbarItem('Matches', '/messages?' + user._id));
     navbarDiv.appendChild(newNavbarItem('Logout', '/#'));
   } else {
     navbarDiv.appendChild(newNavbarItem('Login', '/auth/google'));
