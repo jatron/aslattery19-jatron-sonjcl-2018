@@ -13,3 +13,107 @@ body {
     cursor: pointer;
 }
 
+.media {
+    position: absolute;
+    height: 100%;
+    width: 75%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 1rem;
+}
+
+.media-heading {
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+}
+
+.non-navbar {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.textarea {
+    border: none;
+    border-radius: 1rem;
+    resize: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#profile-container {
+    position: absolute;
+    top: 2%;
+    height: 50%;
+    width: 90%;
+    margin-left: 15%;
+    margin-right: 20%;
+}
+
+#profileImageDiv {
+    height: 70%;
+    width: 30%;
+    position: absolute;
+    left: 5%;
+    top: 10%;
+}
+
+#meals-container {
+    position: absolute;
+    top: 60%;
+    width: 90%;
+}
+
+#user-profile-image {
+    position: absolute;
+    left: 0;
+    height: 90%;
+    top:5%;
+}
+
+#bioDiv {
+    position: absolute;
+    left: 40%;
+    text-align: left;
+    height: 67%;
+    top:10%;
+    left: 38%;
+}
+
+#profile-description-div {
+    border: 1px solid grey;
+    border-radius: 1rem;
+    position: absolute;
+    height: 71%;
+    width: 100%;
+    line-height: 1.5rem;
+}
+
+#profile-description {
+    padding: 10px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+}
+
+#edit-profile-btn {
+    position: absolute;
+    top: 95%;
+    left: 17%;
+}
+
+#done-btn {
+    position: absolute;
+    top: 95%;
+    left: 17%;
+}
+
+#user-bio-text {
+    padding: 10px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+}
+
+

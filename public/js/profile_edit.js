@@ -63,7 +63,7 @@ function renderUserData(user) {
     $("#user-bio-text").html(user.bio);
 
     //render done btn take user back to profile page
-    document.getElementById('done-btn').setAttribute('href', "profile?" + userId);
+    document.getElementById('done-btn').setAttribute('href', "profile?" + userId); 
 
 
     //upload new meal!
@@ -171,7 +171,7 @@ function renderUserData(user) {
         btnBox.appendChild(deleteBtn);
 
         // make change bio buttton functional 
-        const changeBioBtn = document.getElementById("change-bio-btn");
+        const changeBioBtn = document.getElementById("done-btn");
         changeBioBtn.addEventListener("click", function(){
             const newUserBioText = document.getElementById("user-bio-text").value;
             console.log(newUserBioText);
@@ -187,7 +187,6 @@ function renderUserData(user) {
             console.log("Couldn't change bio");
             });
         });
-
 
         // render dropdown button
         function renderDropdown(item, itemName) {

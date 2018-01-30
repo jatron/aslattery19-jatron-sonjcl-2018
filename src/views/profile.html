@@ -4,6 +4,7 @@
     <title>potluck | profile</title>
   </head>
   <body id="body">
+        <link rel="stylesheet" type="text/css" href="/static/css/profile.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
         <nav class="navbar navbar-inverse bg-inverse navbar-expand-lg navbar-light" style="background-color: #fff; box-shadow: 3px 3px 5px grey;">
             <a class="navbar-brand" href="/">
@@ -15,36 +16,42 @@
             </div>
         </nav>
         <br>
-        <div style="background: #fff; opacity: 0.9" >
-            <div class="container text-center" id="profile-container" style="background: #fff;">
-              <div id="name-container">
-                <!-- name inserted here -->
-                <div class="container">
-                  <a href="profile_edit" class="btn" id="edit-profile-btn" role="button">edit profile</a>
+        <div class="non-navbar" style="background: #fff; opacity: 0.9" >
+            <div class="container text-center" id="profile-container">
+                <div class="media">
+                    <div class="col-6" id="profileImageDiv">
+                      <img id="user-profile-image" src="" class="img-fluid rounded media-object">
+                      <a href="profile_edit" class="btn" id="edit-profile-btn" role="button">edit profile</a>
+                    </div>
+                    <div class="col-6" id="bioDiv">
+                        <div id="name-container">
+                            <!-- Name Goes Here -->
+                        </div>
+
+                        <div class="bio" id="profile-description-div">
+                            <textarea class="textarea" readonly style="resize:none;" id="profile-description">
+                                <!-- Bio Goes Here -->
+                            </textarea>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="media">
-                <div class="col-6">
-                  <img id="user-profile-image" src="" class="img-fluid rounded media-object" style="width: 50%">
-                </div>
-                <div class="col-6">
-                  <h4 class="media-heading">about</h4>
-                  <br>
-                  <div class="bio" id="profile-description"> 
-                    
-                  </div>
-                </div>
-              </div>
-              <div class="row mt-4">
-                <div class="col-12">
-                  <h4>cookbook</h4>
-                  <br>
-                  <div class="" id="cookbook-card">
-                      <!-- favorite foods here -->
-                  </div>
-                </div>
-              </div>
             </div>
+
+            <div id="meals-container">
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <h4>cookbook</h4>
+
+                        <div class="" id="cookbook-card">
+                        <!-- favorite foods here -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
         </div>
   </body>
 
