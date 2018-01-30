@@ -132,6 +132,7 @@ function renderUserData(user) {
     // let li = document.createElement('li');
     //const card = document.createElement('div');
     const card = cards[index];
+    card.setAttribute("style", "display:inline-block");
     console.log(card);
     //card.setAttribute('id', meal.name);
     //card.className = 'mt-4';
