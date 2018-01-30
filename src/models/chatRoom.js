@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 // define a schema
 const ChatRoomModelSchema = new mongoose.Schema ({
     namespace       : String,
-    messages        : [{userName: String, message: String}]
+    messages        : [{userName: String, userId: String, message: String}]
 });
 
 // compile model from schema
