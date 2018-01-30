@@ -83,7 +83,7 @@ function renderUserData(user) {
         // console.log(newMealDescription);
         const newMealIngredients = document.getElementById("new-meal-ingredients").value;
         // console.log(newMealIngredients);
-        const newMealAllergens = document.getElementById("new-meal-allergens").value;
+        var newMealAllergens = document.getElementById("new-meal-allergens").value;
         if (!(newMealAllergens)) {
             newMealAllergens = "none";
         }
