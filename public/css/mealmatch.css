@@ -148,15 +148,15 @@
   width: 100%;
 }
 
-#profilePictureDiv {
+/*#profilePictureDiv {
   height: 50%;
   margin-bottom: 1%;
   display: inline-block;
   padding: 2.5%;
-}
+}*/
 
 
-#bioDiv {
+/*#bioDiv {
     position: absolute;
     top: 15%;
     height: 30%;
@@ -164,15 +164,42 @@
     border: 1px solid black;
     border-radius: 8px;
     margin: 5px;
-}
+}*/
 
-#mealsDiv {
+/*#mealsDiv {
   height: 50%;
   margin: 0;
   display: inline-block;
   width: 100%;
 
+}*/
+
+#profilePictureDiv {
+  position: absolute;
+  margin: 2%;
+  left: 0;
+  height: 50%;
 }
+
+#bioDiv {
+    position: absolute;
+    top: 22%;
+    left: 30%;
+    height: 30%;
+    width: 60%;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: 1%;
+}
+
+#mealsDiv {
+    margin: 1%;
+    position: relative;
+    top: 58%;
+    height: 35%;
+
+}
+
 
 .mealPhoto {
   height: 100%;
@@ -186,10 +213,11 @@
 }
 
 .imgContainer{
-  float:left;
-  height: 70%;
-  width: auto;
-  padding: 1%;
+    height: 100%;
+    width: auto;
+    padding: 1%;
+    display: inline-block;
+    margin: 1%;
 }
 
 
@@ -248,13 +276,16 @@
 
 #profileName {
     position: absolute;
-    margin: 5px;
-    border: none;
+    margin: 1%;
     font-weight: bold;
     font-size: 1.5rem;
-    padding: 5px;
-    top:0;
-    width: 40%;
+    /* padding: 5px; */
+    top: 0;
+    height: 20%;
+    width: auto;
+    border-width: 0px;
+    left: 30%;
+    background: #fff0;  
 }
 
 #profileModal {
