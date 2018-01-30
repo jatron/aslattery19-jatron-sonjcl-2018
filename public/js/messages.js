@@ -1,5 +1,10 @@
 // client side javascript for messages page
 
+// Global variables
+var socket;
+var button_id;
+var namespacesInitialized = [];
+
 function main() {
     const profileId = window.location.search.substring(1); // returns url query w/o "?"
     // get all profile info needed to render user profile
@@ -21,27 +26,29 @@ function main() {
 
 }
 
-function socket(current_user_name, namespace_id) {
+function updateSocket(current_user_name, namespace_id, match) {
     // join the correct namespace
-    var socket = io(namespace_id);
+    socket = io(namespace_id);
 
     // set send button id to namespace id so the message goes to the correct match
     var button = document.getElementsByClassName("send-button");
-    const button_id = namespace_id.substr(1); // remove '/' character at the beginning of namespace_id
+    button_id = namespace_id.substr(1); // remove '/' character at the beginning of namespace_id
     button[0].setAttribute("id", button_id);
 
-    socket.on('chat message', function(msg){
-        $('#messages').append($('<li>').text(msg.userName + ": " + msg.message));
-    });
-
-    $('form').submit(function(){
-        socket.emit('chat message', {
-            userName    : current_user_name,
-            message     : $('#' + button_id).val()
+    // Only call socket.on() once for each namespace
+    var isNamespaceInitialized = false;
+    for (var i = 0; i < namespacesInitialized.length; i++) {
+        if (namespacesInitialized[i] === namespace_id) {
+            isNamespaceInitialized = true;
+        }
+    }
+    if (isNamespaceInitialized === false) {
+        socket.on('chat message', function(msg){
+            $('#messages').append($('<li>').text(msg.userName + ": " + msg.message));
+            match.messages.push({userName: msg.userName, message: msg.message});
         });
-        $('#' + button_id).val('');
-        return false;
-    });
+        namespacesInitialized.push(namespace_id);
+    }
 }
 
 function renderMatches(matchObj, current_user_name){
@@ -54,13 +61,10 @@ function renderMatches(matchObj, current_user_name){
         const matchCard = document.createElement("div");
         const matchBtn = document.createElement("btn");
 
-        console.log("INFO: ", match);
         const namespace_id = match.namespace;
-        console.log("NAMESPACE: ", namespace_id);
         // set button ID to socket room id
         matchBtn.setAttribute("id", namespace_id);
 
-        console.log("button id: " + matchBtn.id);
         matchCard.className = 'mt-4 card';
         matchBtn.setAttribute("type", "button");
 
@@ -82,7 +86,7 @@ function renderMatches(matchObj, current_user_name){
                 // create input box
                 const inputBox = document.createElement("input");
                 inputBox.className = "send-button";
-                inputBox.setAttribute("id", "id") // The id will be changed later upon calling socket()
+                inputBox.setAttribute("id", "id") // The id will be changed later upon calling updateSocket()
                 inputBox.setAttribute("autocomplete", "off");
 
                 // create send button
@@ -96,6 +100,16 @@ function renderMatches(matchObj, current_user_name){
                 // render chatPrompt
                 const messagesBar = document.getElementById("messages-bar");
                 messagesBar.appendChild(chatPrompt);
+
+                // Create event listener for form once
+                $('form').submit(function(){
+                    socket.emit('chat message', {
+                        userName    : current_user_name,
+                        message     : $('#' + button_id).val()
+                    });
+                    $('#' + button_id).val('');
+                    return false;
+                });
             }
 
             // GET meals for that user
@@ -103,8 +117,10 @@ function renderMatches(matchObj, current_user_name){
 
             const namespace_id = this.id;
 
-            //call socket function to switch the room
-            socket(current_user_name, namespace_id);
+            renderMessageHistory(namespace_id, match);
+
+            //call updateSocket function to switch the namespace
+            updateSocket(current_user_name, namespace_id, match);
 
         });
 
@@ -121,7 +137,6 @@ function renderMatches(matchObj, current_user_name){
             // render meals in rightmost col ("meals-bar")
             const mealsBar = document.getElementById('meals-bar');
             mealsBar.innerHTML = "Meal Bar";  // clear HTML before loading new user's meals
-            console.log("in render meals function: match ID = " + match.userId);
             get('api/profile', {userId : match.userId}, function(user) {
 
                 user.meals.forEach(renderMeals);  // render all meals for the match
@@ -194,6 +209,19 @@ function renderMatches(matchObj, current_user_name){
                 mealsBar.appendChild(card);
             };
     }
+}
+
+function renderMessageHistory(namespace_id, match) {
+    // Delete all messages on page
+    var messages = document.getElementById("messages");
+    while (messages.firstChild) {
+        messages.removeChild(messages.firstChild);
+    }
+
+    // Add messages for new namespace
+    match.messages.forEach(function(msg) {
+        $('#messages').append($('<li>').text(msg.userName + ": " + msg.message));
+    });
 }
 
 main();
